@@ -1,0 +1,18 @@
+[submodule "lib/cmsis/stm32g4xx_hal_driver"]
+	path = lib/cmsis/stm32g4xx_hal_driver
+	url = https://github.com/STMicroelectronics/stm32g4xx_hal_driver
+[submodule "lib/cmsis/stm32g4xx-nucleo-bsp"]
+	path = lib/cmsis/stm32g4xx-nucleo-bsp
+	url = https://github.com/STMicroelectronics/stm32g4xx-nucleo-bsp
+[submodule "lib/cmsis/cmsis_device_g4"]
+	path = lib/cmsis/cmsis_device_g4
+	url = https://github.com/STMicroelectronics/cmsis_device_g4
+[submodule "lib/cmsis/CMSIS_6"]
+	path = lib/cmsis/CMSIS_6
+	url = https://github.com/ARM-software/CMSIS_6
+[submodule "lib/FreeRTOS-Kernel"]
+	path = lib/FreeRTOS-Kernel
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel
+[submodule "lib/greatest"]
+	path = lib/greatest
+	url = https://github.com/silentbicycle/greatest

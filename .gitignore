@@ -1,0 +1,7 @@
+*.bin
+*.elf
+*.map
+.deps/
+.obj/
+*.*~
+*.org.*
