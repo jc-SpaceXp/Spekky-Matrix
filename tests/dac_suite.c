@@ -26,9 +26,18 @@ TEST data_alignment_tx_12bit_right(void)
 	PASS();
 }
 
+TEST data_alignment_tx_12bit_left(void)
+{
+	uint16_t input_data = 0x0192;
+	trigger_dac_transfer(&some_dac_tx_reg_12bit, input_data, TwelveBitLeft);
+	ASSERT_EQ(some_dac_tx_reg_12bit, 0x1920); // only upper 12 bits of reg are filled
+	PASS();
+}
+
 SUITE(dac_driver)
 {
 	RUN_TEST(data_alignment_tx_8bit);
 	RUN_TEST(data_alignment_tx_12bit_right);
+	RUN_TEST(data_alignment_tx_12bit_left);
 }
 

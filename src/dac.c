@@ -6,6 +6,8 @@ static uint16_t align_dac_input_data(enum DacDataAlignment dac_align, uint16_t d
 
 	if (dac_align == TwelveBitRight) {
 		aligned_data = data & 0xFFF;
+	} else if (dac_align == TwelveBitLeft) {
+		aligned_data = data << 4;
 	}
 
 	return aligned_data;
