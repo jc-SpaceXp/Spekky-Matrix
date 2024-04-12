@@ -1,5 +1,5 @@
 #include "stm32g4_main.h"
-#include "gpio_g431.h"
+#include "stm32g4xx_audio.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -21,16 +21,13 @@ void vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName)
 static void task1(void *args __attribute((unused)))
 {
 	for (;;) {
-		HAL_GPIO_TogglePin(LED2_GPIO_PORT, LED2_PIN);
 		vTaskDelay(pdMS_TO_TICKS(100));
 	}
 }
 
 int main (void)
 {
-	HAL_Init();
-
-	gpio_setup();
+	setup_hw_dac();
 
 	xTaskCreate(task1, "Flash_LED", 100, NULL, configMAX_PRIORITIES-1, NULL);
 	vTaskStartScheduler();
