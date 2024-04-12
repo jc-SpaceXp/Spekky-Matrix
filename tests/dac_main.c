@@ -1,5 +1,5 @@
 #include "greatest.h"
-#include "suite_001.h"
+#include "dac_suite.h"
 
 
 GREATEST_MAIN_DEFS();
@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 
 	GREATEST_MAIN_BEGIN();
 
-	RUN_SUITE(suite_001);
+	RUN_SUITE(dac_driver);
 
 	GREATEST_MAIN_END(); // exapnds to a return statement
 }

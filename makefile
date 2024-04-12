@@ -64,7 +64,7 @@ STMHALSRCS += $(STMHALDIR)/Src/stm32g4xx_hal_gpio.c
 STMHALOBJS := $(STMHALSRCS:%.c=$(OBJDIR)/%.o)
 
 TARGET = stm32g4_main
-TESTTARGET = all_tests
+DACTESTTARGET = dac_tests
 
 TESTCC := gcc
 TESTSIZE := size
@@ -76,14 +76,15 @@ TESTOBJDIR := $(OBJDIR)/$(TESTDIR)
 TESTCPPFLAGS := -I $(INCDIR) -I $(TESTLIBDIR) -I $(TESTDIR) -I $(MOCKLIBDIR)
 TESTCFLAGS := $(COMMON_CFLAGS) $(CMSIS_CPPFLAGS)
 
-TESTSRCS := $(wildcard $(TESTDIR)/*.c)
-TESTOBJS := $(TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
+DAC_TESTSRCS := $(TESTDIR)/dac_suite.c $(TESTDIR)/dac_main.c
+DAC_TESTSRCS += $(SRCDIR)/dac.c
+DAC_TESTOBJS := $(DAC_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 
 
 .PHONY: all clean tests srcdepdir cmsis_modules_git_update freertos_git_update \
 test_modules_git_update flash-erase flash-write flash-backup
 all: $(TARGET).elf $(TARGET).bin
-tests: $(TESTTARGET).elf
+tests: $(DACTESTTARGET).elf
 
 flash-backup:
 	$(FLASH) read BIN_BACKUP.bin 0x08000000 0x20000
@@ -154,7 +155,7 @@ test_modules_git_update:
 	git submodule update --init --remote $(LIBDIR)/greatest
 
 # Unit test builds
-all_tests.elf: $(TESTOBJS) | test_modules_git_update
+$(DACTESTTARGET).elf: $(DAC_TESTOBJS) | test_modules_git_update
 	@echo "Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
@@ -167,7 +168,7 @@ $(TESTOBJDIR)/%.o: %.c
 
 clean:
 	@echo "Cleaning build"
-	-$(RM) $(TARGET).{elf,bin} $(TESTTARGET).elf
+	-$(RM) $(TARGET).{elf,bin} $(DACTESTTARGET).elf
 	-$(RM) -rf $(OBJDIR) $(DEPDIR)
 
 -include $(wildcard $(SRCDEPS))
