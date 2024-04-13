@@ -16,6 +16,24 @@ static struct DacTxRegisters some_dac_regs = {
 	&some_dac_tx_reg_8bit, &some_dac_tx_reg_12bit_right, &some_dac_tx_reg_12bit_left
 };
 
+struct DacTxTest {
+	uint16_t input_data;
+	enum DacDataAlignment dac_align;
+	uint16_t expected_result;
+};
+
+static uint32_t check_dac_tx_reg(struct DacTxRegisters dac, enum DacDataAlignment dac_align)
+{
+	uint32_t* dac_tx = dac.dac_8bit;
+	if (dac_align == TwelveBitRight) {
+		dac_tx = dac.dac_12bit_right;
+	} else if (dac_align == TwelveBitLeft) {
+		dac_tx = dac.dac_12bit_left;
+	}
+
+	return *dac_tx;
+}
+
 TEST data_alignment_tx_8bit(void)
 {
 	uint8_t input_data = 0x01;
@@ -40,28 +58,39 @@ TEST data_alignment_tx_12bit_left(void)
 	PASS();
 }
 
-TEST data_alignment_tx_8bit_alt(void)
+
+TEST dac_data_tx_alignment(struct DacTxTest dac_inputs)
 {
-	uint8_t input_data = 0x51;
-	trigger_dac(some_dac_regs, input_data, EightBit);
-	ASSERT_EQ(some_dac_tx_reg_8bit, (uint16_t) input_data);
+	trigger_dac(some_dac_regs, dac_inputs.input_data, dac_inputs.dac_align);
+	ASSERT_EQ_FMT(check_dac_tx_reg(some_dac_regs, dac_inputs.dac_align)
+	             , dac_inputs.expected_result
+	             , "%X");
 	PASS();
 }
 
-TEST data_alignment_tx_12bit_right_alt(void)
+
+TEST snprintf_return_val(bool sn_error)
 {
-	uint16_t input_data = 0x3191;
-	trigger_dac(some_dac_regs, input_data, TwelveBitRight);
-	ASSERT_EQ(some_dac_tx_reg_12bit_right, input_data & 0xFFF); // only 12 bits are kept
+	ASSERT_FALSE(sn_error);
 	PASS();
 }
 
-TEST data_alignment_tx_12bit_left_alt(void)
+void loop_test_dac_data_tx_alignment(void)
 {
-	uint16_t input_data = 0x0412;
-	trigger_dac(some_dac_regs, input_data, TwelveBitLeft);
-	ASSERT_EQ(some_dac_tx_reg_12bit_left, 0x4120); // only upper 12 bits of reg are filled
-	PASS();
+	struct DacTxTest dac_tx[3] = {
+		{ 0x2E, EightBit, 0x2E }
+		, { 0xF31A, TwelveBitRight, 0x031A}
+		, { 0x0442, TwelveBitLeft,  0x4420}
+	};
+	for (int i = 0; i < 3; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(dac_data_tx_alignment, dac_tx[i]);
+	}
 }
 
 SUITE(dac_driver)
@@ -69,8 +98,7 @@ SUITE(dac_driver)
 	RUN_TEST(data_alignment_tx_8bit);
 	RUN_TEST(data_alignment_tx_12bit_right);
 	RUN_TEST(data_alignment_tx_12bit_left);
-	RUN_TEST(data_alignment_tx_8bit_alt);
-	RUN_TEST(data_alignment_tx_12bit_right_alt);
-	RUN_TEST(data_alignment_tx_12bit_left_alt);
+	// looped test
+	loop_test_dac_data_tx_alignment();
 }
 
