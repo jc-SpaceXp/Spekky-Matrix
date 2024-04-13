@@ -13,6 +13,19 @@ static uint16_t align_dac_input_data(enum DacDataAlignment dac_align, uint16_t d
 	return aligned_data;
 }
 
+void trigger_dac(struct DacTxRegisters dac, uint16_t data, enum DacDataAlignment dac_align)
+{
+	uint32_t* dac_tx = dac.dac_8bit;
+
+	if (dac_align == TwelveBitRight) {
+		dac_tx = dac.dac_12bit_right;
+	} else if (dac_align == TwelveBitLeft) {
+		dac_tx = dac.dac_12bit_left;
+	}
+
+	*dac_tx = align_dac_input_data(dac_align, data);
+}
+
 void trigger_dac_transfer(uint32_t* dac_tx, uint16_t data, enum DacDataAlignment dac_align)
 {
 	*dac_tx = align_dac_input_data(dac_align, data);
