@@ -1,7 +1,7 @@
 #include "stm32g4xx_audio.h"
 
 #include "stm32g4xx.h"
-#include "stm32g4xx_ll_spi.h"
+#include "stm32g4xx_ll_dac.h"
 #include "stm32g4xx_hal_gpio.h"
 
 static void dac_gpio_setup(void)
@@ -19,6 +19,11 @@ void setup_hw_dac(void)
 {
 	RCC->AHB2ENR |= RCC_AHB2ENR_DAC1EN;
 	dac_gpio_setup();
+
+	// Triangle wave test
+	DAC1->CR |= LL_DAC_WAVE_AUTO_GENERATION_TRIANGLE;
+	DAC1->CR |= LL_DAC_TRIANGLE_AMPLITUDE_511;
+	DAC1->CR |= DAC_CR_TEN1;
 
 	enable_dac();
 }
