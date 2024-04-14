@@ -15,7 +15,7 @@ static uint16_t align_dac_input_data(enum DacDataAlignment dac_align, uint16_t d
 
 void trigger_dac(struct DacTxRegisters dac, uint16_t data, enum DacDataAlignment dac_align)
 {
-	uint32_t* dac_tx = dac.dac_8bit;
+	volatile uint32_t* dac_tx = dac.dac_8bit;
 
 	if (dac_align == TwelveBitRight) {
 		dac_tx = dac.dac_12bit_right;
@@ -26,7 +26,7 @@ void trigger_dac(struct DacTxRegisters dac, uint16_t data, enum DacDataAlignment
 	*dac_tx = align_dac_input_data(dac_align, data);
 }
 
-void trigger_dac_byte_transfer(uint32_t* dac_tx, uint8_t data)
+void trigger_dac_byte_transfer(volatile uint32_t* dac_tx, uint8_t data)
 {
 	*dac_tx = data;
 }
