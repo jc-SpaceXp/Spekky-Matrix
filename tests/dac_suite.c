@@ -8,7 +8,6 @@
 #include "dac.h"
 
 static uint32_t some_dac_tx_reg_8bit = 0xFFFF;
-static uint32_t some_dac_tx_reg_12bit = 0xFFFF;
 static uint32_t some_dac_tx_reg_12bit_right = 0xFFFF;
 static uint32_t some_dac_tx_reg_12bit_left = 0xFFFF;
 
@@ -41,23 +40,6 @@ TEST data_alignment_tx_8bit(void)
 	ASSERT_EQ(some_dac_tx_reg_8bit, (uint16_t) input_data);
 	PASS();
 }
-
-TEST data_alignment_tx_12bit_right(void)
-{
-	uint16_t input_data = 0x9192;
-	trigger_dac_transfer(&some_dac_tx_reg_12bit, input_data, TwelveBitRight);
-	ASSERT_EQ(some_dac_tx_reg_12bit, input_data & 0xFFF); // only 12 bits are kept
-	PASS();
-}
-
-TEST data_alignment_tx_12bit_left(void)
-{
-	uint16_t input_data = 0x0192;
-	trigger_dac_transfer(&some_dac_tx_reg_12bit, input_data, TwelveBitLeft);
-	ASSERT_EQ(some_dac_tx_reg_12bit, 0x1920); // only upper 12 bits of reg are filled
-	PASS();
-}
-
 
 TEST dac_data_tx_alignment(struct DacTxTest dac_inputs)
 {
@@ -99,9 +81,7 @@ void loop_test_dac_data_tx_alignment(void)
 SUITE(dac_driver)
 {
 	RUN_TEST(data_alignment_tx_8bit);
-	RUN_TEST(data_alignment_tx_12bit_right);
-	RUN_TEST(data_alignment_tx_12bit_left);
-	// looped test
+	// looped tests
 	loop_test_dac_data_tx_alignment();
 }
 

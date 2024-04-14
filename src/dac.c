@@ -26,11 +26,6 @@ void trigger_dac(struct DacTxRegisters dac, uint16_t data, enum DacDataAlignment
 	*dac_tx = align_dac_input_data(dac_align, data);
 }
 
-void trigger_dac_transfer(uint32_t* dac_tx, uint16_t data, enum DacDataAlignment dac_align)
-{
-	*dac_tx = align_dac_input_data(dac_align, data);
-}
-
 void trigger_dac_byte_transfer(uint32_t* dac_tx, uint8_t data)
 {
 	*dac_tx = data;
