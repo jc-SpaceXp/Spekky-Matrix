@@ -8,6 +8,7 @@ static void dac_gpio_setup(void)
 {
 	RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
 	// no GPIO setup required, DAC is mapped to GPIO once DAC is enabled
+	// and GPIO reset state is analogue mode anyways
 }
 
 static void enable_dac(void)
