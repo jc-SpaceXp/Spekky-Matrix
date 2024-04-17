@@ -37,7 +37,9 @@ int main (void)
 	timer_setup(1);
 	setup_hw_dac();
 
-	xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-1, NULL);
+	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-1, NULL);
+	(void) ret_val; // suppress compiler warning
+	assert_param(ret_val == pdPASS);
 	vTaskStartScheduler();
 
 	for (;;) {
