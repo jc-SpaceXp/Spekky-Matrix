@@ -16,3 +16,6 @@
 [submodule "lib/greatest"]
 	path = lib/greatest
 	url = https://github.com/silentbicycle/greatest
+[submodule "lib/cmsis/CMSIS-DSP"]
+	path = lib/cmsis/CMSIS-DSP
+	url = https://github.com/ARM-software/CMSIS-DSP
