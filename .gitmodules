@@ -16,3 +16,6 @@
 [submodule "lib/greatest"]
 	path = lib/greatest
 	url = https://github.com/silentbicycle/greatest
+[submodule "lib/SYLT-FFT"]
+	path = lib/SYLT-FFT
+	url = https://github.com/stg/SYLT-FFT
