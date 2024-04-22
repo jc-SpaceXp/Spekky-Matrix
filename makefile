@@ -34,16 +34,20 @@ RTOSSRCS += $(RTOSDEVDIR)/port.c
 RTOSSRCS += $(RTOSDIR)/portable/MemMang/heap_$(RTOSHEAPCONFIG).c
 RTOSOBJS := $(RTOSSRCS:%.c=$(OBJDIR)/%.o)
 
+FFTDIR := $(LIBDIR)/FFT4CM4F
+
 COMMON_CFLAGS = -Wall -Wextra -std=c11 -g3 -Os
 CMSIS_CPPFLAGS := -DUSE_HAL_DRIVER -DUSE_NUCLEO_32 -DSTM32G431xx
 CMSIS_CPPFLAGS += -I $(STMHALINC) -I $(STMCMSISINC) -I $(ARMCMSISINC) -I $(BSPDIR)
 RTOSCPPFLAGS := -I $(RTOSINCDIR) -I $(RTOSINCDIR)/portable -I $(INCDIR) -I $(RTOSDEVDIR)
+# Fix FFT lib without editing submodule, asm and volatile syntax is incorrect
+FFTCPPFLAGS := -D'asm=__asm__' -D'volatile=__volatile__'
 
 CPUFLAGS = -mcpu=cortex-m4 -mthumb
 FPUFLAGS = -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
 AFLAGS := -D --warn $(CPUFLAGS) -g
-CPPFLAGS := -I $(INCDIR) $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR)
+CPPFLAGS := -I $(INCDIR) $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR) -I $(FFTDIR)
 CFLAGS := $(CPUFLAGS) $(FPUFLAGS) $(COMMON_CFLAGS) -ffunction-sections -fdata-sections
 LDSCRIPT := STM32G431KBTX_FLASH.ld
 LDFLAGS := -T $(LDSCRIPT) -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
@@ -62,6 +66,8 @@ STMHALSRCS := $(STMHALDIR)/Src/stm32g4xx_hal.c
 STMHALSRCS += $(STMHALDIR)/Src/stm32g4xx_hal_cortex.c
 STMHALSRCS += $(STMHALDIR)/Src/stm32g4xx_hal_gpio.c
 STMHALOBJS := $(STMHALSRCS:%.c=$(OBJDIR)/%.o)
+FFTSRCS := $(FFTDIR)/fft4cm4f.c
+FFTOBJS := $(FFTSRCS:%.c=$(OBJDIR)/%.o)
 
 TARGET = stm32g4_main
 DACTESTTARGET = dac_tests
@@ -95,6 +101,10 @@ flash-write: $(TARGET).bin
 flash-erase:
 	$(FLASH) erase
 
+$(OBJDIR)/$(FFTDIR)/%.o: $(FFTDIR)/%.c
+	@echo "Creating FFT objects"
+	@mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(FFTCPPFLAGS) $(CFLAGS) -c $< -o $@
 
 freertos_git_update:
 	@echo "Initializing/updating FreeRTOS submodule"
@@ -134,7 +144,7 @@ $(TARGET).bin: $(TARGET).elf
 	@echo "Creating binary image"
 	$(OBJCOPY) -O binary $^ $@
 
-$(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) \
+$(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) $(FFTOBJS) \
 | cmsis_modules_git_update
 	@echo "Linking objects"
 	$(CC) $(LDFLAGS) $(LDLIBS) $(CPUFLAGS) $(FPUFLAGS) $^ -o $@
