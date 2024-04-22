@@ -19,3 +19,6 @@
 [submodule "lib/SYLT-FFT"]
 	path = lib/SYLT-FFT
 	url = https://github.com/stg/SYLT-FFT
+[submodule "lib/FFT4CM4F"]
+	path = lib/FFT4CM4F
+	url = https://github.com/Stenzel/FFT4CM4F
