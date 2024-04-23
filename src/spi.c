@@ -27,11 +27,3 @@ void trigger_spi_transfer(volatile uint32_t* spi_tx_reg, uint16_t data)
 	//        unused bits are ignored on hardware
 	*spi_tx_reg = data; // No checks in place so far e.g. is TXFIFO full etc.
 }
-
-void trigger_spi_byte_transfer(volatile uint32_t* spi_tx_reg, uint8_t data)
-{
-	// STM32: Writes initiate TXFIFO, reads ineract w/ RXFIFO
-	// STM32: Data size should be set to 8 bits for 8 bit SPI transfers
-	//        unused bits are ignored on hardware
-	*((volatile uint8_t*) spi_tx_reg) = data;
-}
