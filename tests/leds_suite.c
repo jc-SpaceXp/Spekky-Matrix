@@ -13,6 +13,15 @@ static struct MaximMax2719 some_led_matrix;
 static uint32_t some_gpio_port_x = 0xFFFF;
 static uint32_t some_gpio_port_c = 0xFFFF;
 
+static void setup_led_matrix_tests(void* arg)
+{
+	unsigned int cs_pin = 9;
+	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_c, cs_pin);
+	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
+
+	(void) arg; // remove unused warning
+}
+
 
 TEST led_cs_pin_set_correctly(void)
 {
@@ -31,9 +40,6 @@ TEST led_matrix_data_bus(void)
 	uint8_t data = 0xF1;
 	uint8_t address = 0x2F;
 	uint16_t expected_result = 0x0FF1;
-	unsigned int cs_pin = 2;
-	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_x, cs_pin);
-	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
 
 	ASSERT_EQ(expected_result, led_matrix_data_out(data, address));
 	PASS();
@@ -42,6 +48,7 @@ TEST led_matrix_data_bus(void)
 
 SUITE(leds_driver)
 {
+	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
 	RUN_TEST(led_cs_pin_set_correctly);
 	RUN_TEST(led_matrix_data_bus);
 }
