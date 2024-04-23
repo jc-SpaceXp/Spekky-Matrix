@@ -12,3 +12,9 @@ void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
 {
 	*dest = *src;
 }
+
+uint16_t led_matrix_data_out(uint8_t data, uint8_t address)
+{
+	unsigned int data_address = address & 0x0F; // address in only 4 bits wide
+	return (data_address << 8) | data;
+}

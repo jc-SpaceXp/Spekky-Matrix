@@ -9,5 +9,6 @@ void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , unsigned int pin);
 
 void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src);
+uint16_t led_matrix_data_out(uint8_t data, uint8_t address);
 
 #endif /* LED_MATRIX_H */
