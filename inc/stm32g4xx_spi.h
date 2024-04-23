@@ -19,7 +19,7 @@
 #define GPIO_RSX_PORT    GPIOA
 
 void setup_hw_spi(void);
-bool tx_ready_to_transmit(void);
-bool tx_complete(void);
+bool spi_tx_ready_to_transmit(void);
+bool spi_tx_complete(void);
 
 #endif /* STM32G4xx_SPI_H */

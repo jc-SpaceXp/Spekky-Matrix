@@ -78,14 +78,14 @@ void setup_hw_spi(void)
 	enable_spi();
 }
 
-bool tx_ready_to_transmit(void)
+bool spi_tx_ready_to_transmit(void)
 {
 	// TXE = 1 if any data can be sent over without an overrun
 	bool is_ready = SPI1->SR & SPI_SR_TXE;
 	return is_ready;
 }
 
-bool tx_complete(void)
+bool spi_tx_complete(void)
 {
 	// For master:
 	// BSY bit is set if ongoing tx is occuring
