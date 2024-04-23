@@ -26,6 +26,11 @@ static void setup_led_matrix_tests(void* arg)
 	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_c, cs_pin);
 	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
 
+	RESET_FAKE(assert_spi_pin);
+	RESET_FAKE(deassert_spi_pin);
+	RESET_FAKE(trigger_spi_transfer);
+	FFF_RESET_HISTORY();
+
 	(void) arg; // remove unused warning
 }
 
