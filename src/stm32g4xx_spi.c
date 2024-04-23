@@ -63,7 +63,7 @@ void setup_hw_spi(void)
 	// LED matrix is write only (setup as simplex, master transmit only)
 	SPI1->CR1 |= SPI_CR1_BIDIOE | SPI_CR1_BIDIMODE; // Write only with unidirectional data lines
 
-	SPI1->CR2 |= LL_SPI_DATAWIDTH_8BIT;
+	SPI1->CR2 |= LL_SPI_DATAWIDTH_16BIT;
 
 	// Enable SPI module once setup is complete
 	enable_spi();
