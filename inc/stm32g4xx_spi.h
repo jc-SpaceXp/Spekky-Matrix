@@ -12,11 +12,6 @@
 #define SPI_MOSI_PORT  GPIOB
 #define SPI_CS_PIN     11     // Treated as GPIO
 #define SPI_CS_PORT    GPIOA
-// GPIO managed pins, additional signals for ST7789
-#define GPIO_DCX_PIN     12
-#define GPIO_DCX_PORT    GPIOA
-#define GPIO_RSX_PIN     0
-#define GPIO_RSX_PORT    GPIOA
 
 void setup_hw_spi(void);
 bool spi_tx_ready_to_transmit(void);

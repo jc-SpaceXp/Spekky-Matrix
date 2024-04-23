@@ -21,16 +21,12 @@ static void spi_gpio_setup(void)
 	GPIOB->MODER &= ~ (eGET_REG(GPIO_MODER_MODE, SPI_CLK_PIN)
 	                  | eGET_REG(GPIO_MODER_MODE, SPI_MISO_PIN)
 	                  | eGET_REG(GPIO_MODER_MODE, SPI_MOSI_PIN));
-	GPIOA->MODER &= ~ (eGET_REG(GPIO_MODER_MODE, SPI_CS_PIN)
-	                  | eGET_REG(GPIO_MODER_MODE, GPIO_DCX_PIN)
-	                  | eGET_REG(GPIO_MODER_MODE, GPIO_RSX_PIN));
+	GPIOA->MODER &= ~ eGET_REG(GPIO_MODER_MODE, SPI_CS_PIN);
 	// Set GPIO (and SPI1 CS) to outputs and SPI1 to AF
 	GPIOB->MODER |= eGET_REG_BIT1(GPIO_MODER_MODE, SPI_CLK_PIN)
 	                | eGET_REG_BIT1(GPIO_MODER_MODE, SPI_MOSI_PIN);
 	GPIOA->MODER |= eGET_REG_BIT0(GPIO_MODER_MODE, SPI_CS_PIN)
-	                | eGET_REG_BIT1(GPIO_MODER_MODE, SPI_MISO_PIN)
-	                | eGET_REG_BIT0(GPIO_MODER_MODE, GPIO_DCX_PIN)
-	                | eGET_REG_BIT0(GPIO_MODER_MODE, GPIO_RSX_PIN);
+	                | eGET_REG_BIT1(GPIO_MODER_MODE, SPI_MISO_PIN);
 	// Use SPI alternative function
 	GPIOB->AFR[0] |= (GPIO_AF5_SPI1 << eGET_AFRL_REG(GPIO_AFRL_AFSEL, SPI_CLK_PIN))
 	                 | (GPIO_AF5_SPI1 << eGET_AFRL_REG(GPIO_AFRL_AFSEL, SPI_MISO_PIN))
@@ -40,13 +36,9 @@ static void spi_gpio_setup(void)
 	GPIOB->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_CLK_PIN)
 	                  | eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_MISO_PIN)
 	                  | eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_MOSI_PIN);
-	GPIOA->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_CS_PIN)
-	                  | eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, GPIO_DCX_PIN)
-	                  | eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, GPIO_RSX_PIN);
+	GPIOA->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_CS_PIN);
 	// Clear reset bit on B4 (MISO, no pull-up or pull-down)
 	GPIOB->PUPDR &= ~eGET_REG(GPIO_PUPDR_PUPD, SPI_MISO_PIN);
-	// Ensure RSX is inactive immediately
-	GPIOA->ODR |= eGET_REG(GPIO_ODR_OD, GPIO_RSX_PIN);
 }
 
 static void enable_spi(void)
@@ -68,8 +60,7 @@ void setup_hw_spi(void)
 	SPI1->CR1 |= SPI_CR1_MSTR; // STM32 is master
 	SPI1->CR1 |= SPI_CR1_SSM; // Manage NSS via software
 	SPI1->CR1 |= SPI_CR1_SSI; // Avoid MODEF SPI1 fault
-	// Adafruit ST7789 display is write only according to the datasheet
-	// Setup as simplex, master transmit only
+	// LED matrix is write only (setup as simplex, master transmit only)
 	SPI1->CR1 |= SPI_CR1_BIDIOE | SPI_CR1_BIDIMODE; // Write only with unidirectional data lines
 
 	SPI1->CR2 |= LL_SPI_DATAWIDTH_8BIT;
