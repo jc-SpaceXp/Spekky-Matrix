@@ -19,3 +19,6 @@
 [submodule "lib/cmsis/CMSIS-DSP"]
 	path = lib/cmsis/CMSIS-DSP
 	url = https://github.com/ARM-software/CMSIS-DSP
+[submodule "lib/fff"]
+	path = lib/fff
+	url = https://github.com/meekrosoft/fff
