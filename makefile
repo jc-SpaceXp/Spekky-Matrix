@@ -65,6 +65,7 @@ STMHALOBJS := $(STMHALSRCS:%.c=$(OBJDIR)/%.o)
 
 TARGET = stm32g4_main
 DACTESTTARGET = dac_tests
+LEDSTESTTARGET = leds_tests
 
 TESTCC := gcc
 TESTSIZE := size
@@ -79,12 +80,15 @@ TESTCFLAGS := $(COMMON_CFLAGS) $(CMSIS_CPPFLAGS)
 DAC_TESTSRCS := $(TESTDIR)/dac_suite.c $(TESTDIR)/dac_main.c
 DAC_TESTSRCS += $(SRCDIR)/dac.c
 DAC_TESTOBJS := $(DAC_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
+LEDS_TESTSRCS := $(TESTDIR)/leds_suite.c $(TESTDIR)/leds_main.c
+LEDS_TESTSRCS += $(SRCDIR)/led_matrix.c
+LEDS_TESTOBJS := $(LEDS_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 
 
 .PHONY: all clean tests srcdepdir cmsis_modules_git_update freertos_git_update \
 test_modules_git_update flash-erase flash-write flash-backup
 all: $(TARGET).elf $(TARGET).bin
-tests: $(DACTESTTARGET).elf
+tests: $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf
 
 flash-backup:
 	$(FLASH) read BIN_BACKUP.bin 0x08000000 0x20000
@@ -160,6 +164,11 @@ $(DACTESTTARGET).elf: $(DAC_TESTOBJS) | test_modules_git_update
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
 
+$(LEDSTESTTARGET).elf: $(LEDS_TESTOBJS) | test_modules_git_update
+	@echo "Linking test objects"
+	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
+	$(TESTSIZE) $@
+
 $(TESTOBJDIR)/%.o: %.c
 	@echo "Creating test objects"
 	@mkdir -p $(@D)
@@ -168,7 +177,7 @@ $(TESTOBJDIR)/%.o: %.c
 
 clean:
 	@echo "Cleaning build"
-	-$(RM) $(TARGET).{elf,bin} $(DACTESTTARGET).elf
+	-$(RM) $(TARGET).{elf,bin} $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf
 	-$(RM) -rf $(OBJDIR) $(DEPDIR)
 
 -include $(wildcard $(SRCDEPS))
