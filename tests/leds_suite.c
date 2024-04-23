@@ -12,6 +12,8 @@ DEFINE_FFF_GLOBALS;
 FAKE_VOID_FUNC(assert_spi_pin, volatile uint32_t*, unsigned int);
 FAKE_VOID_FUNC(deassert_spi_pin, volatile uint32_t*, unsigned int);
 FAKE_VOID_FUNC(trigger_spi_transfer, volatile uint32_t*, uint16_t);
+FAKE_VALUE_FUNC(bool, spi_tx_ready_to_transmit);
+FAKE_VALUE_FUNC(bool, spi_tx_complete);
 
 static struct LedSpiPin some_cs_pin;
 static struct MaximMax2719 some_led_matrix;
@@ -30,6 +32,10 @@ static void setup_led_matrix_tests(void* arg)
 	RESET_FAKE(deassert_spi_pin);
 	RESET_FAKE(trigger_spi_transfer);
 	FFF_RESET_HISTORY();
+
+	// Avoid inifinte loops, no spi hw so assume spi is free and tx is complete immediately
+	spi_tx_ready_to_transmit_fake.return_val = true;
+	spi_tx_complete_fake.return_val = true;
 
 	(void) arg; // remove unused warning
 }
@@ -66,8 +72,10 @@ TEST led_matrix_tx_sequence(void)
 
 	// Verify correct sequence of functions being called
 	ASSERT_EQ((void*) deassert_spi_pin, fff.call_history[0]);
-	ASSERT_EQ((void*) trigger_spi_transfer, fff.call_history[1]);
-	ASSERT_EQ((void*) assert_spi_pin, fff.call_history[2]);
+	ASSERT_EQ((void*) spi_tx_ready_to_transmit, fff.call_history[1]);
+	ASSERT_EQ((void*) trigger_spi_transfer, fff.call_history[2]);
+	ASSERT_EQ((void*) spi_tx_complete, fff.call_history[3]);
+	ASSERT_EQ((void*) assert_spi_pin, fff.call_history[4]);
 	PASS();
 }
 

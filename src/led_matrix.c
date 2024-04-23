@@ -1,5 +1,6 @@
 #include "led_matrix.h"
 #include "spi.h"
+#include "stm32g4xx_spi.h"
 
 void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , volatile uint32_t* assert_addr
@@ -31,7 +32,15 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 	deassert_spi_pin(cs.deassert_address, cs.pin);
 
 	// send data
+	while (!spi_tx_ready_to_transmit()) {
+		// wait for spi to become free
+	}
+
 	trigger_spi_transfer(spi_tx_reg, tx_data);
+
+	while (!spi_tx_complete()) {
+		// wait for spi to finish before pulling any spi pins
+	}
 
 	// Pull CS high
 	assert_spi_pin(cs.assert_address, cs.pin);
