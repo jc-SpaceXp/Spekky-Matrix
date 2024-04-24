@@ -17,12 +17,37 @@ static void led_matrix_test(void)
 	struct MaximMax2719 led_matrix;
 	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
 
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x02, ADDR_INTENSITY);
+	for (int i = 0; i < 100000; ++i) {
+		// lazy delay
+	}
+
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x01, ADDR_INTENSITY);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_DISPTEST_OFF, ADDR_DISPTEST);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_DECODE_NONE, ADDR_DECODE);
 	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_SHUTDOWN_OFF, ADDR_SHUTDOWN);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_DISPTEST_ON, ADDR_DISPTEST);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x07, ADDR_SCANLIMIT); // needs to be above 1 to display more than one row/col
+	// Clear display, 00s need to be writen otherwise random LEDs switch on
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT0);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT1);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT2);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT3);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT4);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT5);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT6);
+	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_DIGIT7);
 
 	for (;;) {
+		for (int i = 0; i < 8; ++i) {
+			for (int k = 0; k < 10000; ++k) { // lazy delay
+				led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x07, ADDR_DIGIT2);
+				led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x07, ADDR_DIGIT4);
+				led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 1 << i, ADDR_DIGIT7);
+			}
+		}
 	}
+	// TOP: LED Matrix (on PCB) LEFT = DIN side, RIGHT=DOUT side
+	//    DIGIT7: Bottom right (DOUT) for 0x01, 0x02 moves towards DIN by 1
+	// BOTTOM (arrow on PCB)
 }
 
 // Must define when using a non-zero config for stack overflow

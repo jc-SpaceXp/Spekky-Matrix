@@ -56,7 +56,7 @@ void setup_hw_spi(void)
 	// CPHA 0 CPOL 0
 	// MSB first
 	// CRC disabled
-	SPI1->CR1 |= LL_SPI_BAUDRATEPRESCALER_DIV16; // test with a slower clock for now
+	SPI1->CR1 |= LL_SPI_BAUDRATEPRESCALER_DIV16; // test with a slower clock for now, max speed is 10MHz for led matrix
 	SPI1->CR1 |= SPI_CR1_MSTR; // STM32 is master
 	SPI1->CR1 |= SPI_CR1_SSM; // Manage NSS via software
 	SPI1->CR1 |= SPI_CR1_SSI; // Avoid MODEF SPI1 fault
