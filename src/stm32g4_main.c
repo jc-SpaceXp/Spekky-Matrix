@@ -45,9 +45,6 @@ static void led_matrix_test(void)
 			}
 		}
 	}
-	// TOP: LED Matrix (on PCB) LEFT = DIN side, RIGHT=DOUT side
-	//    DIGIT7: Bottom right (DOUT) for 0x01, 0x02 moves towards DIN by 1
-	// BOTTOM (arrow on PCB)
 }
 
 // Must define when using a non-zero config for stack overflow

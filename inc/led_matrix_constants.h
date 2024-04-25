@@ -3,6 +3,10 @@
 
 // Address mappings
 #define ADDR_NOP       0x00U
+// TOP = Led Matrix writing on PCB (row0)
+// BOTTOM = array on PCB (row7)
+// LEFT = DIN side
+// RIGHT = DOUT side, writing a 1 in rowX will place a dot in the right most position
 #define ADDR_ROW0      0x01U
 #define ADDR_ROW1      0x02U
 #define ADDR_ROW2      0x03U
