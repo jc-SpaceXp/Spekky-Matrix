@@ -58,8 +58,9 @@ void led_matrix_clear(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg)
 	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW7);
 }
 
-void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg)
+void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg, uint8_t brightness)
 {
+	led_matrix_transfer_data(cs, spi_tx_reg, brightness, ADDR_INTENSITY);
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_DISPTEST_OFF, ADDR_DISPTEST);
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_DECODE_NONE, ADDR_DECODE);
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SHUTDOWN_OFF, ADDR_SHUTDOWN);

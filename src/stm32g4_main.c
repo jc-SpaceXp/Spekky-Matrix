@@ -21,8 +21,7 @@ static void led_matrix_test(void)
 		// lazy delay
 	}
 
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x01, ADDR_INTENSITY);
-	led_matrix_init(led_matrix.cs, &SPI1->DR);
+	led_matrix_init(led_matrix.cs, &SPI1->DR, DATA_INTENSITY_LEVEL1);
 
 	for (;;) {
 		for (int i = 0; i < 8; ++i) {
