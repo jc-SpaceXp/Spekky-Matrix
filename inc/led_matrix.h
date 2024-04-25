@@ -16,5 +16,6 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                              , uint8_t data, uint8_t address);
 
 void led_matrix_clear(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg);
+void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg);
 
 #endif /* LED_MATRIX_H */

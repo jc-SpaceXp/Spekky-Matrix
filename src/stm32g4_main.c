@@ -22,11 +22,7 @@ static void led_matrix_test(void)
 	}
 
 	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0x01, ADDR_INTENSITY);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_DISPTEST_OFF, ADDR_DISPTEST);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_DECODE_NONE, ADDR_DECODE);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_SHUTDOWN_OFF, ADDR_SHUTDOWN);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_SCANLIMIT_7_ROWS_MAX, ADDR_SCANLIMIT); // needs to be above 1 to display more than one row/col
-	led_matrix_clear(led_matrix.cs, &SPI1->DR);
+	led_matrix_init(led_matrix.cs, &SPI1->DR);
 
 	for (;;) {
 		for (int i = 0; i < 8; ++i) {
