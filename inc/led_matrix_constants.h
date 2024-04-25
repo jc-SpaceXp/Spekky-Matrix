@@ -38,14 +38,14 @@
 #define DATA_DECODE_NONE           0x00U
 #define DATA_DECODE_ALL_ROWS       0xFFU
 #define DATA_DECODE_SET_ROWS(x)    (x)
-#define DATA_SCANLIMIT_0_ROWS_MAX    0x00U
-#define DATA_SCANLIMIT_1_ROWS_MAX    0x01U
-#define DATA_SCANLIMIT_2_ROWS_MAX    0x02U
-#define DATA_SCANLIMIT_3_ROWS_MAX    0x03U
-#define DATA_SCANLIMIT_4_ROWS_MAX    0x04U
-#define DATA_SCANLIMIT_5_ROWS_MAX    0x05U
-#define DATA_SCANLIMIT_6_ROWS_MAX    0x06U
-#define DATA_SCANLIMIT_7_ROWS_MAX    0x07U
+#define DATA_SCANLIMIT_1_ROWS_MAX    0x00U // row 0
+#define DATA_SCANLIMIT_2_ROWS_MAX    0x01U // row 0-1
+#define DATA_SCANLIMIT_3_ROWS_MAX    0x02U // row 0-2
+#define DATA_SCANLIMIT_4_ROWS_MAX    0x03U // row 0-3
+#define DATA_SCANLIMIT_5_ROWS_MAX    0x04U // row 0-4
+#define DATA_SCANLIMIT_6_ROWS_MAX    0x05U // row 0-5
+#define DATA_SCANLIMIT_7_ROWS_MAX    0x06U // row 0-6
+#define DATA_SCANLIMIT_8_ROWS_MAX    0x07U // row 0-7
 #define DATA_DISPTEST_ON           0x01U
 #define DATA_DISPTEST_OFF          0x00U
 // Alternative names

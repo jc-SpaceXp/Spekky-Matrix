@@ -63,7 +63,7 @@ void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg)
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_DISPTEST_OFF, ADDR_DISPTEST);
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_DECODE_NONE, ADDR_DECODE);
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SHUTDOWN_OFF, ADDR_SHUTDOWN);
-	// Show all 7 rows, set to 1 on startup
-	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SCANLIMIT_7_ROWS_MAX, ADDR_SCANLIMIT);
+	// Show all 8 rows, set to 1 on startup
+	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SCANLIMIT_8_ROWS_MAX, ADDR_SCANLIMIT);
 	led_matrix_clear(cs, spi_tx_reg);
 }
