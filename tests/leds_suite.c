@@ -18,6 +18,11 @@ FAKE_VALUE_FUNC(bool, spi_tx_complete);
 static struct LedSpiPin some_cs_pin;
 static struct MaximMax2719 some_led_matrix;
 
+struct LedMatrixTxTest {
+	uint8_t address;
+	uint8_t data;
+};
+
 static uint32_t some_gpio_port_x = 0xFFFF;
 static uint32_t some_gpio_port_c = 0xFFFF;
 static uint32_t some_spi_reg = 0xFFFF;
@@ -53,13 +58,12 @@ TEST led_cs_pin_set_correctly(void)
 	PASS();
 }
 
-TEST led_matrix_data_bus(void)
+TEST led_matrix_data_bus(struct LedMatrixTxTest led_matrix)
 {
-	uint8_t data = 0xF1;
-	uint8_t address = 0x2F;
-	uint16_t expected_result = 0x0FF1;
-
-	ASSERT_EQ(expected_result, led_matrix_data_out(data, address));
+	uint16_t expected_result = ((led_matrix.address & 0x0F) << 8) | led_matrix.data;
+	ASSERT_EQ_FMT(expected_result
+	             , led_matrix_data_out(led_matrix.data, led_matrix.address)
+	             , "%.4X");
 	PASS();
 }
 
@@ -79,16 +83,6 @@ TEST led_matrix_tx_sequence(void)
 	PASS();
 }
 
-#if 0
-TEST dac_data_tx_alignment(struct DacTxTest dac_inputs)
-{
-	trigger_dac(some_dac_regs, dac_inputs.input_data, dac_inputs.dac_align);
-	ASSERT_EQ_FMT(check_dac_tx_reg(some_dac_regs, dac_inputs.dac_align)
-	             , dac_inputs.expected_result
-	             , "%X");
-	PASS();
-}
-
 
 TEST snprintf_return_val(bool sn_error)
 {
@@ -96,38 +90,31 @@ TEST snprintf_return_val(bool sn_error)
 	PASS();
 }
 
-void loop_test_dac_data_tx_alignment(void)
+void loop_test_led_matrix_data_input(void)
 {
-	struct DacTxTest dac_tx[9] = {
-		{ 0x2E, EightBit, 0x2E }
-		, { 0xF31A, TwelveBitRight, 0x031A}
-		, { 0x0442, TwelveBitLeft,  0x4420}
-		, { 0xFFFF, EightBit, 0xFF }
-		, { 0x1000, TwelveBitRight, 0x0000}
-		, { 0x3000, TwelveBitLeft,  0x0000}
-		, { 0x1AA, EightBit, 0xAA }
-		, { 0xEFFF, TwelveBitRight, 0x0FFF}
-		, { 0xFFFF, TwelveBitLeft,  0xFFF0}
+
+	struct LedMatrixTxTest led_tx[3] = {
+		{0xF1, 0x2F}
+		, {0x01, 0x01}
+		, {0x09, 0x71}
 	};
-	for (int i = 0; i < 9; ++i) {
+	for (int i = 0; i < 3; ++i) {
 		char test_suffix[5];
 		int sn = snprintf(test_suffix, 4, "%u", i);
 		bool sn_error = (sn > 5) || (sn < 0);
 		greatest_set_test_suffix((const char*) &test_suffix);
 		RUN_TEST1(snprintf_return_val, sn_error);
 		greatest_set_test_suffix((const char*) &test_suffix);
-		RUN_TEST1(dac_data_tx_alignment, dac_tx[i]);
+		RUN_TEST1(led_matrix_data_bus, led_tx[i]);
 	}
 }
-#endif
 
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
 	RUN_TEST(led_cs_pin_set_correctly);
-	RUN_TEST(led_matrix_data_bus);
 	RUN_TEST(led_matrix_tx_sequence);
 	// looped tests
-	//loop_test_dac_data_tx_alignment();
+	loop_test_led_matrix_data_input();
 }
 
