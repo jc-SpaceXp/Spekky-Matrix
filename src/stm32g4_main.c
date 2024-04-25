@@ -26,15 +26,7 @@ static void led_matrix_test(void)
 	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_DECODE_NONE, ADDR_DECODE);
 	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_SHUTDOWN_OFF, ADDR_SHUTDOWN);
 	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, DATA_SCANLIMIT_7_ROWS_MAX, ADDR_SCANLIMIT); // needs to be above 1 to display more than one row/col
-	// Clear display, 00s need to be writen otherwise random LEDs switch on
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW0);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW1);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW2);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW3);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW4);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW5);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW6);
-	led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, 0, ADDR_ROW7);
+	led_matrix_clear(led_matrix.cs, &SPI1->DR);
 
 	for (;;) {
 		for (int i = 0; i < 8; ++i) {

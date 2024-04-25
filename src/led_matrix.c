@@ -45,3 +45,15 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 	// Pull CS high
 	assert_spi_pin(cs.assert_address, cs.pin);
 }
+
+void led_matrix_clear(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg)
+{
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW0);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW1);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW2);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW3);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW4);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW5);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW6);
+	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW7);
+}
