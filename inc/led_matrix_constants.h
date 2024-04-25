@@ -37,7 +37,7 @@
 // otherwise each bit refers to a different segment/line
 #define DATA_DECODE_NONE           0x00U
 #define DATA_DECODE_ALL_ROWS       0xFFU
-#define DATA_DECODE_SET_ROWS(x)    (x) // set bits D7-D0 to set BCD for those
+#define DATA_DECODE_SET_ROWS(x)    (x)
 #define DATA_SCANLIMIT_0_ROWS_MAX    0x00U
 #define DATA_SCANLIMIT_1_ROWS_MAX    0x01U
 #define DATA_SCANLIMIT_2_ROWS_MAX    0x02U
