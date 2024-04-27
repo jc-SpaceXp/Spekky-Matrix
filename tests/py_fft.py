@@ -1,4 +1,3 @@
-#!/home/jamz/python_virtual_environments/nerd_stuff/bin/python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,7 +22,8 @@ def periodically_sampled_waveform(freq, sampling_freq, total_samples, show_sampl
     t = np.arange(0, tlen, tsamp) # 1sec worth of samples == fsamples total
     tend = N/fsamp
 
-    x = np.sin(w*t)
+    # Round to a value which stm32 can replicate
+    x = np.around(np.sin(w*t), 8)
 
     if show_samples:
         print(x)
