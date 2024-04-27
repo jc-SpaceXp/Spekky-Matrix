@@ -8,6 +8,7 @@
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
 #include "fft4cm4f.h"
+#include "hw_verification/py_sine_input_test.h"
 
 
 // Must define when using a non-zero config for stack overflow
@@ -37,9 +38,6 @@ static void dac_task(void *args __attribute((unused)))
 static void fft_task(void *args __attribute((unused)))
 {
 	for (;;) {
-		// Task, placeholder code
-		complex comp_data[256];
-		fftc4_16(&comp_data[0]);
 	}
 }
 
@@ -48,6 +46,8 @@ int main (void)
 	timer_setup(1);
 	setup_hw_dac();
 
+
+#if 0
 	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-1, NULL);
 	(void) ret_val; // suppress compiler warning
 	assert_param(ret_val == pdPASS);
@@ -56,9 +56,14 @@ int main (void)
 	assert_param(ret_val == pdPASS);
 
 	vTaskStartScheduler();
+#endif
+
+	fftr4_1024(sine32f_input_fft); // result stored in array
+	bool r_complete = true; // breakpoint for gdb
+	fftc4_1024(sine32c_input_fft); // result stored in array
+	bool c_complete = true; // breakpoint for gdb
 
 	for (;;) {
-		// FreeRTOS should never let us execute this or return from main
 	}
 
 	return 0;
