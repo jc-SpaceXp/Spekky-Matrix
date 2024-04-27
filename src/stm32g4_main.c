@@ -7,6 +7,8 @@
 #include "task.h"
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
+#include "fft4cm4f.h"
+
 
 // Must define when using a non-zero config for stack overflow
 void vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName)
@@ -32,6 +34,15 @@ static void dac_task(void *args __attribute((unused)))
 	}
 }
 
+static void fft_task(void *args __attribute((unused)))
+{
+	for (;;) {
+		// Task, placeholder code
+		complex comp_data[256];
+		fftc4_16(&comp_data[0]);
+	}
+}
+
 int main (void)
 {
 	timer_setup(1);
@@ -40,6 +51,10 @@ int main (void)
 	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-1, NULL);
 	(void) ret_val; // suppress compiler warning
 	assert_param(ret_val == pdPASS);
+
+	ret_val = xTaskCreate(fft_task, "FFT test", 100, NULL, configMAX_PRIORITIES-1, NULL);
+	assert_param(ret_val == pdPASS);
+
 	vTaskStartScheduler();
 
 	for (;;) {
