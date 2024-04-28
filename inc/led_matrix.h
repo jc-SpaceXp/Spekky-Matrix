@@ -18,4 +18,7 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 void led_matrix_clear(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg);
 void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg, uint8_t brightness);
 
+void led_matrix_set_single(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
+                          , enum AddrRows row_addr, uint8_t col);
+
 #endif /* LED_MATRIX_H */

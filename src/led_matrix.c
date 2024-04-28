@@ -68,3 +68,9 @@ void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg, uint8_t
 	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SCANLIMIT_8_ROWS_MAX, ADDR_SCANLIMIT);
 	led_matrix_clear(cs, spi_tx_reg);
 }
+
+void led_matrix_set_single(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
+                          , enum AddrRows row_addr, uint8_t col)
+{
+	led_matrix_transfer_data(cs, spi_tx_reg, 1 << col, row_addr);
+}

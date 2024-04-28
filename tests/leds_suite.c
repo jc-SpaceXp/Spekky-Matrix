@@ -83,6 +83,18 @@ TEST led_matrix_tx_sequence(void)
 	PASS();
 }
 
+TEST led_matrix_set_one_bit_only(unsigned int col)
+{
+	struct LedMatrixTxTest led_tx = { AddrRow1, col };
+	// 1 moves into a bit pos/column for the data
+	uint16_t expected_result = ((led_tx.address & 0x0F) << 8) | (1 << col);
+
+	led_matrix_set_single(some_led_matrix.cs, &some_spi_reg, led_tx.address, led_tx.data);
+
+	ASSERT_EQ_FMT(expected_result, trigger_spi_transfer_fake.arg1_history[0], "%4X");
+	PASS();
+}
+
 
 TEST snprintf_return_val(bool sn_error)
 {
@@ -109,6 +121,19 @@ void loop_test_led_matrix_data_input(void)
 	}
 }
 
+void loop_test_set_1_bit_in_led_matrix(void)
+{
+	for (int i = 0; i < 8; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_set_one_bit_only, i);
+	}
+}
+
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
@@ -116,5 +141,6 @@ SUITE(leds_driver)
 	RUN_TEST(led_matrix_tx_sequence);
 	// looped tests
 	loop_test_led_matrix_data_input();
+	loop_test_set_1_bit_in_led_matrix();
 }
 
