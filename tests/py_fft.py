@@ -40,7 +40,7 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
     n = np.arange(total_samples)
     T = N/sampling_freq
 
-    X = np.fft.fft(sampled_waveform)
+    X = np.singlecomplex(np.fft.fft(sampled_waveform))
 
     if show_samples:
         print(X)
