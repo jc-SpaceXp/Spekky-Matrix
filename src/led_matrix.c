@@ -15,7 +15,7 @@ void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
 	*dest = *src;
 }
 
-uint16_t led_matrix_data_out(uint8_t data, uint8_t address)
+uint16_t led_matrix_data_out(uint8_t address, uint8_t data)
 {
 	unsigned int data_address = address & 0x0F; // address in only 4 bits wide
 	return (data_address << 8) | data;
@@ -23,10 +23,10 @@ uint16_t led_matrix_data_out(uint8_t data, uint8_t address)
 
 
 void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
-                             , uint8_t data, uint8_t address)
+                             , uint8_t address, uint8_t data)
 {
 
-	uint16_t tx_data = led_matrix_data_out(data, address);
+	uint16_t tx_data = led_matrix_data_out(address, data);
 
 	// Pull CS low
 	deassert_spi_pin(cs.deassert_address, cs.pin);
@@ -48,29 +48,29 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 
 void led_matrix_clear(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg)
 {
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW0);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW1);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW2);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW3);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW4);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW5);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW6);
-	led_matrix_transfer_data(cs, spi_tx_reg, 0x00, ADDR_ROW7);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW0, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW1, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW2, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW3, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW4, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW5, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW6, 0x00);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_ROW7, 0x00);
 }
 
 void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg, uint8_t brightness)
 {
-	led_matrix_transfer_data(cs, spi_tx_reg, brightness, ADDR_BRIGHTNESS);
-	led_matrix_transfer_data(cs, spi_tx_reg, DATA_DISPTEST_OFF, ADDR_DISPTEST);
-	led_matrix_transfer_data(cs, spi_tx_reg, DATA_DECODE_NONE, ADDR_DECODE);
-	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SHUTDOWN_OFF, ADDR_SHUTDOWN);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_BRIGHTNESS, brightness);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_DISPTEST, DATA_DISPTEST_OFF);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_DECODE, DATA_DECODE_NONE);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_SHUTDOWN, DATA_SHUTDOWN_OFF);
 	// Show all 8 rows, set to 1 on startup
-	led_matrix_transfer_data(cs, spi_tx_reg, DATA_SCANLIMIT_8_ROWS_MAX, ADDR_SCANLIMIT);
+	led_matrix_transfer_data(cs, spi_tx_reg, ADDR_SCANLIMIT, DATA_SCANLIMIT_8_ROWS_MAX);
 	led_matrix_clear(cs, spi_tx_reg);
 }
 
 void led_matrix_set_single(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                           , enum AddrRows row_addr, uint8_t col)
 {
-	led_matrix_transfer_data(cs, spi_tx_reg, 1 << col, row_addr);
+	led_matrix_transfer_data(cs, spi_tx_reg, row_addr, 1 << col);
 }

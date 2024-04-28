@@ -11,9 +11,9 @@ void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , unsigned int pin);
 
 void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src);
-uint16_t led_matrix_data_out(uint8_t data, uint8_t address);
+uint16_t led_matrix_data_out(uint8_t address, uint8_t data);
 void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
-                             , uint8_t data, uint8_t address);
+                             , uint8_t address, uint8_t data);
 
 void led_matrix_clear(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg);
 void led_matrix_init(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg, uint8_t brightness);

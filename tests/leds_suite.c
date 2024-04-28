@@ -62,7 +62,7 @@ TEST led_matrix_data_bus(struct LedMatrixTxTest led_matrix)
 {
 	uint16_t expected_result = ((led_matrix.address & 0x0F) << 8) | led_matrix.data;
 	ASSERT_EQ_FMT(expected_result
-	             , led_matrix_data_out(led_matrix.data, led_matrix.address)
+	             , led_matrix_data_out(led_matrix.address, led_matrix.data)
 	             , "%.4X");
 	PASS();
 }
@@ -72,7 +72,7 @@ TEST led_matrix_tx_sequence(void)
 	uint8_t data = 0xFF;
 	uint8_t address = 0x21;
 
-	led_matrix_transfer_data(some_led_matrix.cs, &some_spi_reg, data, address);
+	led_matrix_transfer_data(some_led_matrix.cs, &some_spi_reg, address, data);
 
 	// Verify correct sequence of functions being called
 	ASSERT_EQ((void*) deassert_spi_pin, fff.call_history[0]);
