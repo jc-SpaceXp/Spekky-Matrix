@@ -23,7 +23,7 @@ def periodically_sampled_waveform(freq, sampling_freq, total_samples, show_sampl
     tend = N/fsamp
 
     # Round to a value which stm32 can replicate
-    x = np.around(np.sin(w*t), 8)
+    x = np.float32(np.sin(w*t))
 
     if show_samples:
         print(x)
