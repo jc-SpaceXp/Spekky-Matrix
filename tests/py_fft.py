@@ -8,8 +8,7 @@ def dump_lists_to_file(fft_input, fft_output):
     outfile.close()
     expected_output = "py_sine_output_fft_test.txt"
     outfile = open(expected_output, 'w')
-    outfile.writelines('\n'.join(str(i) for i in fft_output))
-    outfile.close()
+    outfile.writelines('\n'.join(f'{c.real:0.09f}'.ljust(18) + f' {c.imag:+0.09f}j' for c in fft_output))
     return None
 
 def periodically_sampled_waveform(freq, sampling_freq, total_samples, show_samples, show_plot):
