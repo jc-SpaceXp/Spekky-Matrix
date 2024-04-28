@@ -92,4 +92,15 @@
 #define DATA_BRIGHTNESS_LEVEL14    DATA_INTENSITY_LEVEL14
 #define DATA_BRIGHTNESS_LEVEL15    DATA_INTENSITY_LEVEL15 // highest brightness
 
+enum AddrRows {
+	AddrRow0 = ADDR_ROW0
+	, AddrRow1
+	, AddrRow2
+	, AddrRow3
+	, AddrRow4
+	, AddrRow5
+	, AddrRow6
+	, AddrRow7
+};
+
 #endif /* LED_MATRIX_CONSTANTS_H */
