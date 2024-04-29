@@ -27,6 +27,23 @@ static uint32_t some_gpio_port_x = 0xFFFF;
 static uint32_t some_gpio_port_c = 0xFFFF;
 static uint32_t some_spi_reg = 0xFFFF;
 
+
+TEST check_led_matrix_data(uint16_t actual, uint8_t expected)
+{
+	ASSERT_EQ_FMT(expected
+	             , (uint8_t) actual
+	             , "%.2X");
+	PASS();
+}
+
+TEST check_led_matrix_address(uint16_t actual, uint8_t expected)
+{
+	ASSERT_EQ_FMT(expected
+	             , (uint8_t) (actual >> 8)
+	             , "%.2X");
+	PASS();
+}
+
 static void setup_led_matrix_tests(void* arg)
 {
 	unsigned int cs_pin = 9;
@@ -58,12 +75,12 @@ TEST led_cs_pin_set_correctly(void)
 	PASS();
 }
 
-TEST led_matrix_data_bus(struct LedMatrixTxTest led_matrix)
+TEST led_matrix_data_bus(struct LedMatrixTxTest led_tx)
 {
-	uint16_t expected_result = ((led_matrix.address & 0x0F) << 8) | led_matrix.data;
-	ASSERT_EQ_FMT(expected_result
-	             , led_matrix_data_out(led_matrix.address, led_matrix.data)
-	             , "%.4X");
+	uint16_t tx_data = led_matrix_data_out(led_tx.address, led_tx.data);
+
+	CHECK_CALL(check_led_matrix_address(tx_data, led_tx.address & 0x0F));
+	CHECK_CALL(check_led_matrix_data(tx_data, led_tx.data));
 	PASS();
 }
 
@@ -86,12 +103,12 @@ TEST led_matrix_tx_sequence(void)
 TEST led_matrix_set_one_bit_only(unsigned int col)
 {
 	struct LedMatrixTxTest led_tx = { AddrRow1, col };
-	// 1 moves into a bit pos/column for the data
-	uint16_t expected_result = ((led_tx.address & 0x0F) << 8) | (1 << col);
 
 	led_matrix_set_single(some_led_matrix.cs, &some_spi_reg, led_tx.address, led_tx.data);
+	uint16_t tx_data = trigger_spi_transfer_fake.arg1_history[0];
 
-	ASSERT_EQ_FMT(expected_result, trigger_spi_transfer_fake.arg1_history[0], "%4X");
+	CHECK_CALL(check_led_matrix_address(tx_data, led_tx.address & 0x0F));
+	CHECK_CALL(check_led_matrix_data(tx_data, 1 << col));
 	PASS();
 }
 
