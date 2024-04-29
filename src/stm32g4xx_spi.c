@@ -52,11 +52,10 @@ void setup_hw_spi(void)
 	spi_gpio_setup();
 
 	// Deafults: (which don't need changing)
-	// Clock = Fpclk / 2 (see below)
+	// Clock = Fpclk / 2 (max speed is 10MHz for led matrix, for HSI: Fpclk/2 == 8MHz)
 	// CPHA 0 CPOL 0
 	// MSB first
 	// CRC disabled
-	SPI1->CR1 |= LL_SPI_BAUDRATEPRESCALER_DIV16; // test with a slower clock for now, max speed is 10MHz for led matrix
 	SPI1->CR1 |= SPI_CR1_MSTR; // STM32 is master
 	SPI1->CR1 |= SPI_CR1_SSM; // Manage NSS via software
 	SPI1->CR1 |= SPI_CR1_SSI; // Avoid MODEF SPI1 fault
