@@ -22,5 +22,7 @@ void led_matrix_set_single(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                           , enum AddrRows row_addr, uint8_t col);
 void led_matrix_set_line_height(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                                , enum AddrRows row_addr, uint8_t col_height);
+void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
+                                 , const unsigned int (*matrix)[8][8]);
 
 #endif /* LED_MATRIX_H */

@@ -129,6 +129,32 @@ TEST led_matrix_set_one_rows_bits_only(unsigned int col)
 	PASS();
 }
 
+TEST led_matrix_set_matrix_from_2d_array(void)
+{
+	const unsigned int input_array[8][8] = {
+		{1, 0, 0, 0,     0, 0, 0, 0}
+		, {0, 0, 0, 0,   0, 0, 0, 0}
+		, {1, 0, 1, 0,   0, 0, 0, 0}
+		, {1, 1, 1, 0,   0, 1, 0, 0}
+		, {1, 1, 1, 1,   1, 1, 1, 1}
+		, {1, 0, 1, 0,   0, 1, 0, 1}
+		, {0, 0, 0, 1,   0, 1, 1, 1}
+		, {1, 1, 1, 1,   1, 1, 1, 1}
+	};
+	uint8_t expected_data[8] = {0x01, 0x00, 0x05, 0x27, 0xFF, 0xA5, 0xE8, 0xFF};
+
+	led_matrix_set_from_2d_array(some_led_matrix.cs, &some_spi_reg, &input_array);
+
+	ASSERT_EQ(8, trigger_spi_transfer_fake.call_count);
+	for (int i = 0; i < 8; ++i) {
+		uint16_t tx_data = trigger_spi_transfer_fake.arg1_history[i];
+		// AddrRow1 = AddrRow0 + i
+		CHECK_CALL(check_led_matrix_address(tx_data, AddrRow0 + i));
+		CHECK_CALL(check_led_matrix_data(tx_data, expected_data[i]));
+	}
+	PASS();
+}
+
 
 TEST snprintf_return_val(bool sn_error)
 {
@@ -186,6 +212,7 @@ SUITE(leds_driver)
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
 	RUN_TEST(led_cs_pin_set_correctly);
 	RUN_TEST(led_matrix_tx_sequence);
+	RUN_TEST(led_matrix_set_matrix_from_2d_array);
 	// looped tests
 	loop_test_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
