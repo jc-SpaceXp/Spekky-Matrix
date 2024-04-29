@@ -74,3 +74,17 @@ void led_matrix_set_single(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 {
 	led_matrix_transfer_data(cs, spi_tx_reg, row_addr, 1 << col);
 }
+
+void led_matrix_set_line_height(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
+                               , enum AddrRows row_addr, uint8_t col_height)
+{
+	// 0: 0000 0000
+	// 1: 0000 0001
+	// 2: 0000 0011
+	// 3: 0000 0111
+	uint8_t output = 0;
+	for (int i = 0; i < col_height; ++i) {
+		output |= (1 << i);
+	}
+	led_matrix_transfer_data(cs, spi_tx_reg, row_addr, output);
+}

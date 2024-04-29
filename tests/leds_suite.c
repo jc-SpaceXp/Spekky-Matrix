@@ -112,6 +112,23 @@ TEST led_matrix_set_one_bit_only(unsigned int col)
 	PASS();
 }
 
+TEST led_matrix_set_one_rows_bits_only(unsigned int col)
+{
+	// previous result plus 2^nth bit
+	// 0: 0000 0000
+	// 1: 0000 0001
+	// 2: 0000 0011 etc.
+	uint8_t expected_data[9] = {0x00, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF};
+	struct LedMatrixTxTest led_tx = { AddrRow1, col };
+
+	led_matrix_set_line_height(some_led_matrix.cs, &some_spi_reg, led_tx.address, led_tx.data);
+	uint16_t tx_data = trigger_spi_transfer_fake.arg1_history[0];
+
+	CHECK_CALL(check_led_matrix_address(tx_data, led_tx.address & 0x0F));
+	CHECK_CALL(check_led_matrix_data(tx_data, expected_data[col]));
+	PASS();
+}
+
 
 TEST snprintf_return_val(bool sn_error)
 {
@@ -151,6 +168,19 @@ void loop_test_set_1_bit_in_led_matrix(void)
 	}
 }
 
+void loop_test_set_bits_in_same_led_matrix_row(void)
+{
+	for (int i = 0; i < 9; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_set_one_rows_bits_only, i);
+	}
+}
+
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
@@ -159,5 +189,6 @@ SUITE(leds_driver)
 	// looped tests
 	loop_test_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
+	loop_test_set_bits_in_same_led_matrix_row();
 }
 
