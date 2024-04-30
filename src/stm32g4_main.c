@@ -26,9 +26,14 @@ static void led_matrix_test(void)
 	for (;;) {
 		for (int i = 0; i < 8; ++i) {
 			for (int k = 0; k < 10000; ++k) { // lazy delay
-				led_matrix_set_line_height(led_matrix.cs, &SPI1->DR, AddrRow1, 3);
-				led_matrix_set_line_height(led_matrix.cs, &SPI1->DR, AddrRow4, 3);
 				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow7, i);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow6, (i+1) % 8);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow5, (i+2) % 8);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow4, (i+3) % 8);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow3, (i+4) % 8);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow2, (i+5) % 8);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow1, (i+6) % 8);
+				led_matrix_set_single(led_matrix.cs, &SPI1->DR, AddrRow0, (i+7) % 8);
 			}
 		}
 	}
