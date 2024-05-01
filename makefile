@@ -29,7 +29,7 @@ RTOSDEVDIR := $(RTOSDIR)/portable/GCC/ARM_CM4F
 RTOSCONFIGDIR := $(INCDIR)
 RTOSHEAPCONFIG ?= 4
 # Add additional files if necessary
-RTOSSRCS := $(RTOSDIR)/tasks.c $(RTOSDIR)/list.c $(RTOSDIR)/queue.c
+RTOSSRCS := $(RTOSDIR)/tasks.c $(RTOSDIR)/list.c $(RTOSDIR)/queue.c $(RTOSDIR)/timers.c
 RTOSSRCS += $(RTOSDEVDIR)/port.c
 RTOSSRCS += $(RTOSDIR)/portable/MemMang/heap_$(RTOSHEAPCONFIG).c
 RTOSOBJS := $(RTOSSRCS:%.c=$(OBJDIR)/%.o)
