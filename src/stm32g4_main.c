@@ -75,7 +75,7 @@ int main (void)
 
 	led_matrix_setup();
 
-	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-1, NULL);
+	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-2, NULL);
 	(void) ret_val; // suppress compiler warning
 	assert_param(ret_val == pdPASS);
 
