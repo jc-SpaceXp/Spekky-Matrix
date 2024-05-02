@@ -7,7 +7,7 @@
 #include "task.h"
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
-#include "fft4cm4f.h"
+#include "fft.h"
 #include "hw_verification/py_sine_input_test.h"
 
 
@@ -58,10 +58,8 @@ int main (void)
 	vTaskStartScheduler();
 #endif
 
-	fftr4_1024(sine32f_input_fft); // result stored in array
+	fft_forward(sine32c_input_fft, 32); // result stored in array
 	bool r_complete = true; // breakpoint for gdb
-	fftc4_1024(sine32c_input_fft); // result stored in array
-	bool c_complete = true; // breakpoint for gdb
 
 	for (;;) {
 	}
