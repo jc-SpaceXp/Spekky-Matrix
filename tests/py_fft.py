@@ -11,7 +11,7 @@ def dump_lists_to_file(fft_input, fft_output):
     outfile.writelines('\n'.join(f'{c.real:0.09f}'.ljust(18) + f' {c.imag:+0.09f}j' for c in fft_output))
     return None
 
-def periodically_sampled_waveform(freq, sampling_freq, total_samples, show_samples, show_plot):
+def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, show_samples, show_plot):
     freq = freq
     fsamp = sampling_freq
     tsamp = 1.0/fsamp
@@ -22,7 +22,10 @@ def periodically_sampled_waveform(freq, sampling_freq, total_samples, show_sampl
     tend = N/fsamp
 
     # Round to a value which stm32 can replicate
+    int32_max = np.power(2, 31) - 1
     x = np.float32(np.sin(w*t))
+    if integer:
+        x = (int32_max * np.sin(w*t)).astype(np.int32)
 
     if show_samples:
         print(x)
@@ -59,11 +62,12 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
 freq = 10
 fsamp = 2000
 N = 1024 # fft size
-print_sampled_fft_input = True
+print_sampled_fft_input = False
 plot_sampled_fft_input = True
-print_fft_output = True
+print_fft_output = False
 plot_fft_output = True
-x = periodically_sampled_waveform(freq, fsamp, N, print_sampled_fft_input, plot_sampled_fft_input)
+integer = False
+x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input, plot_sampled_fft_input)
 fft_out = fft_ifft_conversion(x, fsamp, N, print_fft_output, plot_fft_output)
 
 #dump_lists_to_file(x, fft_out)
