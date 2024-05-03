@@ -59,7 +59,7 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
     return X
 
 
-freq = 10
+freq = 125  # 64th bin with no spectral leakage
 fsamp = 2000
 N = 1024 # fft size
 print_sampled_fft_input = False
