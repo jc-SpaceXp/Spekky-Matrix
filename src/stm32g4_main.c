@@ -58,18 +58,16 @@ void vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName)
 static void dac_task(void *args __attribute((unused)))
 {
 	// Output to speaker
-	unsigned int frequency = 1000; // Hz
-	tim2_interrupt_frequency(frequency);
-	struct DacTxRegisters dac_tx = { &DAC1->DHR8R1, &DAC1->DHR12R1, &DAC1->DHR12L1 };
-	trigger_dac(dac_tx, 0x00, TwelveBitLeft); // base value of triangle wave
 	for (;;) {
-		// Task (timer is handling dac updated, nothing to do)
+		// Task (dma is handling this for now, nothing to else to do)
 	}
 }
 
 int main (void)
 {
 	timer_setup(1);
+	unsigned int frequency = 1000; // Hz
+	tim2_interrupt_frequency(frequency);
 	setup_hw_dac();
 	setup_hw_spi();
 
