@@ -3,10 +3,9 @@
 
 #include "stm32g4xx.h"
 #include "stm32g4xx_ll_dac.h"
-#include "stm32g4xx_ll_dmamux.h"
 #include "stm32g4xx_ll_dma.h"
+#include "stm32g4xx_ll_dmamux.h"
 #include "stm32g4xx_hal_gpio.h"
-#include "stm32g4xx_ll_dac.h"
 
 
 static void dac_gpio_setup(void)
