@@ -29,7 +29,7 @@ void setup_hw_dac(void)
 	enable_dac();
 }
 
-bool tx_ready_to_transmit(void)
+bool dac_tx_ready_to_transmit(void)
 {
 	bool is_ready = DAC1->SR & DAC_SR_DAC1RDY;
 	return is_ready;
