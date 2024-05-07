@@ -8,6 +8,7 @@
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
 #include "transform_functions.h"
+#include "statistics_functions.h"
 #include "hw_verification/py_sine_125hz_input_test.h"
 
 
@@ -58,13 +59,21 @@ int main (void)
 	vTaskStartScheduler();
 #endif
 
-	arm_rfft_fast_instance_f32 arm_rfft;
-	arm_status status = arm_rfft_fast_init_1024_f32(&arm_rfft);
-
 	uint8_t inverse_fft = 0;
-	float32_t fft_out[1024];
-	arm_rfft_fast_f32(&arm_rfft, sinef_125hz, fft_out, inverse_fft);
-	bool r_complete = true; // breakpoint for gdb
+	uint8_t bit_reverse = 1;
+	arm_cfft_instance_f32 arm_cfft;
+	arm_status c_status = arm_cfft_init_1024_f32(&arm_cfft);
+	arm_cfft_f32(&arm_cfft, sine32c_125hz_2048, inverse_fft, bit_reverse);
+	float32_t bin_mags[1024];
+	arm_cmplx_mag_f32(sine32c_125hz_2048, bin_mags, 1024);
+
+	struct FftBinPeak {
+		float32_t magnitude;
+		uint32_t bin_index;
+	} fft_bin_peak = { 0, 0 };
+	arm_max_f32(bin_mags, 1024, &fft_bin_peak.magnitude, &fft_bin_peak.bin_index);
+
+	bool c_complete = true; // breakpoint for gdb
 
 	for (;;) {
 	}
