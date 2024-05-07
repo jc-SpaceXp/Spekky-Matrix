@@ -7,8 +7,8 @@
 #include "task.h"
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
-#include "fft.h"
-#include "hw_verification/py_sine_input_test.h"
+#include "transform_functions.h"
+#include "hw_verification/py_sine_125hz_input_test.h"
 
 
 // Must define when using a non-zero config for stack overflow
@@ -58,7 +58,12 @@ int main (void)
 	vTaskStartScheduler();
 #endif
 
-	fft_forward(sine32c_input_fft, 32); // result stored in array
+	arm_rfft_fast_instance_f32 arm_rfft;
+	arm_status status = arm_rfft_fast_init_1024_f32(&arm_rfft);
+
+	uint8_t inverse_fft = 0;
+	float32_t fft_out[1024];
+	arm_rfft_fast_f32(&arm_rfft, sinef_125hz, fft_out, inverse_fft);
 	bool r_complete = true; // breakpoint for gdb
 
 	for (;;) {

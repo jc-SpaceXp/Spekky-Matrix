@@ -19,3 +19,6 @@
 [submodule "lib/SYLT-FFT"]
 	path = lib/SYLT-FFT
 	url = https://github.com/stg/SYLT-FFT
+[submodule "lib/cmsis/CMSIS-DSP"]
+	path = lib/cmsis/CMSIS-DSP
+	url = https://github.com/ARM-software/CMSIS-DSP
