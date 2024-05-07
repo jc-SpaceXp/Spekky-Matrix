@@ -91,6 +91,7 @@ int main (void)
 	uint8_t bit_reverse = 1;
 	arm_cfft_instance_f32 arm_cfft;
 	arm_status c_status = arm_cfft_init_1024_f32(&arm_cfft);
+	(void) arm_status; // suppress compiler warning
 	arm_cfft_f32(&arm_cfft, sine32c_125hz_2048, inverse_fft, bit_reverse);
 	float32_t bin_mags[1024];
 	arm_cmplx_mag_f32(sine32c_125hz_2048, bin_mags, 1024);
@@ -101,7 +102,6 @@ int main (void)
 	} fft_bin_peak = { 0, 0 };
 	arm_max_f32(bin_mags, 1024, &fft_bin_peak.magnitude, &fft_bin_peak.bin_index);
 
-	bool c_complete = true; // breakpoint for gdb
 
 	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-2, NULL);
 	(void) ret_val; // suppress compiler warning
