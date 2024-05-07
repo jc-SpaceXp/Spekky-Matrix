@@ -5,3 +5,5 @@
 .obj/
 *.*~
 *.org.*
+py_sine_input_test.txt
+py_sine_output_fft_test.txt
