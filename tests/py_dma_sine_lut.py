@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def dump_lists_to_file(fft_input):
-    expected_input = "py_sine_input_test.txt"
+    expected_input = "py_sine_1hz_lut_input_test.txt"
     outfile = open(expected_input, 'w')
     outfile.writelines('\n'.join(str(i).ljust(23) for i in fft_input))
     outfile.close()
