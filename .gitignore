@@ -5,3 +5,4 @@
 .obj/
 *.*~
 *.org.*
+py_sine_1hz_lut_input_test.txt
