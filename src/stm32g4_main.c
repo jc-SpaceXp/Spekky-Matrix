@@ -91,8 +91,8 @@ int main (void)
 	uint8_t bit_reverse = 1;
 	arm_cfft_instance_f32 arm_cfft;
 	arm_status c_status = arm_cfft_init_1024_f32(&arm_cfft);
-	(void) arm_status; // suppress compiler warning
-	assert_param(arm_status == ARM_MATH_SUCCESS);
+	(void) c_status; // suppress compiler warning
+	assert_param(c_status == ARM_MATH_SUCCESS);
 
 	arm_cfft_f32(&arm_cfft, sine32c_125hz_2048, inverse_fft, bit_reverse);
 	float32_t bin_mags[1024];
