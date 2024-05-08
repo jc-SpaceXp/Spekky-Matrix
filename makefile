@@ -21,7 +21,9 @@ STMCMSISINC := $(STMCMSISDIR)/Include
 ARMCMSISDIR := $(BASECMSISDIR)/CMSIS_6/CMSIS/Core
 ARMCMSISINC := $(ARMCMSISDIR)/Include
 BSPDIR := $(BASECMSISDIR)/stm32g4xx-nucleo-bsp
-CMSISMODULES := $(STMHALDIR) $(STMCMSISDIR) $(BSPDIR) $(BASECMSISDIR)/CMSIS_6
+ARMDSPDIR := $(BASECMSISDIR)/CMSIS-DSP
+ARMDSPINC := $(ARMDSPDIR)/Include
+CMSISMODULES := $(STMHALDIR) $(STMCMSISDIR) $(BSPDIR) $(BASECMSISDIR)/CMSIS_6 $(ARMDSPDIR)
 
 RTOSDIR := $(LIBDIR)/FreeRTOS-Kernel
 RTOSINCDIR := $(RTOSDIR)/include
@@ -34,20 +36,22 @@ RTOSSRCS += $(RTOSDEVDIR)/port.c
 RTOSSRCS += $(RTOSDIR)/portable/MemMang/heap_$(RTOSHEAPCONFIG).c
 RTOSOBJS := $(RTOSSRCS:%.c=$(OBJDIR)/%.o)
 
+
 COMMON_CFLAGS = -Wall -Wextra -std=c11 -g3 -Os
 CMSIS_CPPFLAGS := -DUSE_HAL_DRIVER -DUSE_NUCLEO_32 -DSTM32G431xx
 CMSIS_CPPFLAGS += -I $(STMHALINC) -I $(STMCMSISINC) -I $(ARMCMSISINC) -I $(BSPDIR)
 RTOSCPPFLAGS := -I $(RTOSINCDIR) -I $(RTOSINCDIR)/portable -I $(INCDIR) -I $(RTOSDEVDIR)
+ARMDSPCPPFLAGS := -DDISABLEFLOAT16 -I $(ARMDSPINC) -I $(ARMDSPINC)/dsp
 
 CPUFLAGS = -mcpu=cortex-m4 -mthumb
 FPUFLAGS = -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
 AFLAGS := -D --warn $(CPUFLAGS) -g
-CPPFLAGS := -I $(INCDIR) $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR)
-CFLAGS := $(CPUFLAGS) $(FPUFLAGS) $(COMMON_CFLAGS) -ffunction-sections -fdata-sections
+CPPFLAGS := -I $(INCDIR) $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR) $(ARMDSPCPPFLAGS)
+CFLAGS := $(CPUFLAGS) $(FPUFLAGS) $(COMMON_CFLAGS)
 LDSCRIPT := STM32G431KBTX_FLASH.ld
 LDFLAGS := -T $(LDSCRIPT) -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
-LDFLAGS += -Wl,-Map=main.map,--cref
+LDFLAGS += -Wl,-Map=main.map,--cref,-gc-sections
 LDLIBS :=
 DEPFLAGS = -MT $@ -MMD -MP -MF $(@:$(OBJDIR)/%.o=$(DEPDIR)/%.d)
 
@@ -62,6 +66,20 @@ STMHALSRCS := $(STMHALDIR)/Src/stm32g4xx_hal.c
 STMHALSRCS += $(STMHALDIR)/Src/stm32g4xx_hal_cortex.c
 STMHALSRCS += $(STMHALDIR)/Src/stm32g4xx_hal_gpio.c
 STMHALOBJS := $(STMHALSRCS:%.c=$(OBJDIR)/%.o)
+# Add additional files if necessary
+ARMDSPSRCS := $(ARMDSPDIR)/Source/TransformFunctions/arm_rfft_fast_init_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_rfft_fast_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_cfft_init_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_cfft_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_cfft_radix8_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_bitreversal2.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/BasicMathFunctions/arm_abs_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/BasicMathFunctions/arm_abs_q31.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/StatisticsFunctions/arm_max_f32.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/CommonTables/arm_const_structs.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/CommonTables/arm_common_tables.c
+ARMDSPOBJS := $(ARMDSPSRCS:%.c=$(OBJDIR)/%.o)
 
 TARGET = stm32g4_main
 DACTESTTARGET = dac_tests
@@ -128,6 +146,11 @@ $(STARTUPOBJ): $(STARTUPFILE)
 $(STARTUPFILE):
 $(SYSFILE):
 
+$(OBJDIR)/$(ARMDSPDIR)/%.o: $(ARMDSPDIR)/%.c
+	@echo "Creating DSP objects"
+	@mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -fdata-sections -c $< -o $@
+
 $(OBJDIR)/$(STMHALDIR)/%.o: $(STMHALDIR)/%.c
 	@echo "Creating HAL objects"
 	@mkdir -p $(@D)
@@ -142,7 +165,7 @@ $(TARGET).bin: $(TARGET).elf
 	@echo "Creating binary image"
 	$(OBJCOPY) -O binary $^ $@
 
-$(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) \
+$(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) $(ARMDSPOBJS) \
 | cmsis_modules_git_update
 	@echo "Linking objects"
 	$(CC) $(LDFLAGS) $(LDLIBS) $(CPUFLAGS) $(FPUFLAGS) $^ -o $@
