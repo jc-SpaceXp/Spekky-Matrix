@@ -184,7 +184,7 @@ $(SRCDEPS):
 
 test_modules_git_update:
 	@echo "##### Initializing/updating greatest submodule"
-	git submodule update --init --remote $(LIBDIR)/greatest
+	git submodule update --init --remote $(LIBDIR)/greatest $(LIBDIR)/fff
 
 # Unit test builds
 $(DACTESTTARGET).elf: $(DAC_TESTOBJS) | test_modules_git_update
