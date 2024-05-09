@@ -124,22 +124,22 @@ flash-erase:
 
 
 freertos_git_update:
-	@echo "Initializing/updating FreeRTOS submodule"
+	@echo "##### Initializing/updating FreeRTOS submodule"
 	git submodule update --init --remote $(LIBDIR)/FreeRTOS-Kernel
 
 $(OBJDIR)/$(RTOSDIR)/%.o: $(RTOSDIR)/%.c | freertos_git_update
-	@echo "Creating RTOS objects"
+	@echo "##### Creating RTOS objects"
 	@mkdir -p $(@D)
 	$(CC) $(RTOSCPPFLAGS) $(CFLAGS) -c $< -o $@
 
 
 $(SYSOBJ): $(SYSFILE)
-	@echo "Creating system object"
+	@echo "##### Creating system object"
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 $(STARTUPOBJ): $(STARTUPFILE)
-	@echo "Creating startup object"
+	@echo "##### Creating startup object"
 	@mkdir -p $(@D)
 	$(AS) $(AFLAGS) $< -o $@
 
@@ -148,32 +148,32 @@ $(STARTUPFILE):
 $(SYSFILE):
 
 $(OBJDIR)/$(ARMDSPDIR)/%.o: $(ARMDSPDIR)/%.c
-	@echo "Creating DSP objects"
+	@echo "##### Creating DSP objects"
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -fdata-sections -c $< -o $@
 
 $(OBJDIR)/$(STMHALDIR)/%.o: $(STMHALDIR)/%.c
-	@echo "Creating HAL objects"
+	@echo "##### Creating HAL objects"
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 cmsis_modules_git_update:
-	@echo "Initializing/updating cmsis submodules"
+	@echo "##### Initializing/updating cmsis submodules"
 	git submodule update --init --remote $(CMSISMODULES)
 
 
 $(TARGET).bin: $(TARGET).elf
-	@echo "Creating binary image"
+	@echo "##### Creating binary image"
 	$(OBJCOPY) -O binary $^ $@
 
 $(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) $(ARMDSPOBJS) \
 | cmsis_modules_git_update
-	@echo "Linking objects"
+	@echo "##### Linking objects"
 	$(CC) $(LDFLAGS) $(LDLIBS) $(CPUFLAGS) $(FPUFLAGS) $^ -o $@
 	$(SIZE) $@
 
 $(OBJDIR)/$(SRCDIR)/%.o: $(SRCDIR)/%.c | srcdepdir
-	@echo "Creating objects"
+	@echo "##### Creating objects"
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
 
@@ -183,33 +183,33 @@ srcdepdir :
 $(SRCDEPS):
 
 test_modules_git_update:
-	@echo "Initializing/updating greatest submodule"
+	@echo "##### Initializing/updating greatest submodule"
 	git submodule update --init --remote $(LIBDIR)/greatest
 
 # Unit test builds
 $(DACTESTTARGET).elf: $(DAC_TESTOBJS) | test_modules_git_update
-	@echo "Linking test objects"
+	@echo "##### Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
 
 $(LEDSTESTTARGET).elf: $(LEDS_TESTOBJS) | test_modules_git_update
-	@echo "Linking test objects"
+	@echo "##### Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
 
 $(SPITESTTARGET).elf: $(SPI_TESTOBJS) | test_modules_git_update
-	@echo "Linking test objects"
+	@echo "##### Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
 
 $(TESTOBJDIR)/%.o: %.c
-	@echo "Creating test objects"
+	@echo "##### Creating test objects"
 	@mkdir -p $(@D)
 	$(TESTCC) $(TESTCPPFLAGS) $(TESTCFLAGS) -c $< -o $@
 
 
 clean:
-	@echo "Cleaning build"
+	@echo "##### Cleaning build"
 	-$(RM) $(TARGET).{elf,bin} $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf $(SPITESTTARGET).elf
 	-$(RM) -rf $(OBJDIR) $(DEPDIR)
 
