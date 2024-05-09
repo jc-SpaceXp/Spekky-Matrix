@@ -47,7 +47,7 @@ CPUFLAGS = -mcpu=cortex-m4 -mthumb
 FPUFLAGS = -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
 AFLAGS := -D --warn $(CPUFLAGS) -g
-CPPFLAGS := -I $(INCDIR) $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR) $(ARMDSPCPPFLAGS)
+CPPFLAGS := -I $(INCDIR) -I $(INCDIR)/mcu $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR) $(ARMDSPCPPFLAGS)
 CFLAGS := $(CPUFLAGS) $(FPUFLAGS) $(COMMON_CFLAGS)
 LDSCRIPT := STM32G431KBTX_FLASH.ld
 LDFLAGS := -T $(LDSCRIPT) -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
@@ -56,6 +56,7 @@ LDLIBS :=
 DEPFLAGS = -MT $@ -MMD -MP -MF $(@:$(OBJDIR)/%.o=$(DEPDIR)/%.d)
 
 SRCS := $(wildcard $(SRCDIR)/*.c)
+SRCS += $(wildcard $(SRCDIR)/mcu/*.c)
 SRCOBJS := $(SRCS:%.c=$(OBJDIR)/%.o)
 SRCDEPS := $(SRCS:%.c=$(DEPDIR)/%.d)
 STARTUPFILE := $(STMCMSISDIR)/Source/Templates/gcc/startup_stm32g431xx.s
@@ -177,7 +178,7 @@ $(OBJDIR)/$(SRCDIR)/%.o: $(SRCDIR)/%.c | srcdepdir
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
 
 srcdepdir :
-	@mkdir -p $(DEPDIR)/$(SRCDIR)
+	@mkdir -p $(DEPDIR)/$(SRCDIR) $(DEPDIR)/$(SRCDIR)/mcu
 
 $(SRCDEPS):
 
