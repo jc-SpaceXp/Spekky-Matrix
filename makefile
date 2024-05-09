@@ -82,7 +82,7 @@ ARMDSPSRCS += $(ARMDSPDIR)/Source/CommonTables/arm_const_structs.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/CommonTables/arm_common_tables.c
 ARMDSPOBJS := $(ARMDSPSRCS:%.c=$(OBJDIR)/%.o)
 
-TARGET = stm32g4_main
+TARGET = spekky_matrix
 DACTESTTARGET = dac_tests
 LEDSTESTTARGET = leds_tests
 SPITESTTARGET = spi_tests
