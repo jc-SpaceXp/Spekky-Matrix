@@ -1,17 +1,17 @@
 #include "stm32g4xx.h"
 #include "stm32g4xx_timers.h"
 #include "stm32g4xx_ll_dac.h"
+#include "stm32g4xx_ll_tim.h"
 
 void timer_setup(unsigned int hclk_clock_divider)
 {
 	// Clock division = 1/(PSC + 1) as counting starts from 0
 	__TIM2_CLK_ENABLE();
 	TIM2->CR1 |= TIM_CR1_DIR; // Down counter
-	TIM2->DIER |= TIM_DIER_UIE; // Enable interrupt for TIM overflow/underflow wrap around
 	TIM2->CNT = 0;
 	TIM2->PSC = hclk_clock_divider - 1; // prescalers should be powers of 2
 	TIM2->ARR = 0;
-	NVIC_EnableIRQ(TIM2_IRQn);
+	TIM2->CR2 |= LL_TIM_TRGO_UPDATE; // Needed for DMA as a source
 }
 
 void tim2_interrupt_frequency(unsigned int hz_freq)
@@ -25,12 +25,4 @@ void tim2_interrupt_frequency(unsigned int hz_freq)
 
 	// Enable timer
 	TIM2->CR1 |= TIM_CR1_CEN;
-
-}
-
-void TIM2_IRQHandler(void)
-{
-	// update dac, triangle wave
-	DAC1->SWTRIGR |= DAC_SWTR_CH1;
-	TIM2->SR &= ~TIM_SR_UIF;
 }
