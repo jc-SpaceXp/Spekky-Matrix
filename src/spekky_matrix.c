@@ -1,4 +1,4 @@
-#include "stm32g4_main.h"
+#include "spekky_matrix.h"
 #include "stm32g4xx_spi.h"
 #include "stm32g4xx_audio.h"
 #include "stm32g4xx_timers.h"

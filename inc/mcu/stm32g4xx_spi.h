@@ -6,7 +6,7 @@
 // Don't use GPIO_PIN_x as this is the bit mask not pin number
 #define SPI_CLK_PIN    3
 #define SPI_CLK_PORT   GPIOB
-#define SPI_MISO_PIN   4 // unused in Adafruit ST7789 display
+#define SPI_MISO_PIN   4 // unused in led matrix
 #define SPI_MISO_PORT  GPIOB
 #define SPI_MOSI_PIN   5
 #define SPI_MOSI_PORT  GPIOB
