@@ -25,13 +25,6 @@ static void dac_task(void *args __attribute((unused)))
 	}
 }
 
-static void fft_task(void *args __attribute((unused)))
-{
-	for (;;) {
-		// cannot re-run fft as results would be overwritten
-		// idle task for now
-	}
-}
 
 int main (void)
 {
@@ -65,8 +58,6 @@ int main (void)
 	(void) ret_val; // suppress compiler warning
 	assert_param(ret_val == pdPASS);
 
-	ret_val = xTaskCreate(fft_task, "FFT test", 100, NULL, configMAX_PRIORITIES-2, NULL);
-	assert_param(ret_val == pdPASS);
 
 	TimerHandle_t led_refresh_rate = xTimerCreate("Led matrix refresh rate"
 	                                             , pdMS_TO_TICKS(200)
