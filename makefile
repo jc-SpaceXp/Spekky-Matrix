@@ -47,7 +47,8 @@ CPUFLAGS = -mcpu=cortex-m4 -mthumb
 FPUFLAGS = -mfloat-abi=hard -mfpu=fpv4-sp-d16
 
 AFLAGS := -D --warn $(CPUFLAGS) -g
-CPPFLAGS := -I $(INCDIR) -I $(INCDIR)/mcu $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR) $(ARMDSPCPPFLAGS)
+CPPFLAGS := -I $(INCDIR) -I $(INCDIR)/mcu -I $(INCDIR)/rtos
+CPPFLAGS += $(CMSIS_CPPFLAGS) -I $(RTOSINCDIR) -I $(RTOSDEVDIR) $(ARMDSPCPPFLAGS)
 CFLAGS := $(CPUFLAGS) $(FPUFLAGS) $(COMMON_CFLAGS)
 LDSCRIPT := STM32G431KBTX_FLASH.ld
 LDFLAGS := -T $(LDSCRIPT) -Wl,--start-group -lc -lgcc -lnosys -Wl,--end-group
@@ -57,6 +58,7 @@ DEPFLAGS = -MT $@ -MMD -MP -MF $(@:$(OBJDIR)/%.o=$(DEPDIR)/%.d)
 
 SRCS := $(wildcard $(SRCDIR)/*.c)
 SRCS += $(wildcard $(SRCDIR)/mcu/*.c)
+SRCS += $(wildcard $(SRCDIR)/rtos/*.c)
 SRCOBJS := $(SRCS:%.c=$(OBJDIR)/%.o)
 SRCDEPS := $(SRCS:%.c=$(DEPDIR)/%.d)
 STARTUPFILE := $(STMCMSISDIR)/Source/Templates/gcc/startup_stm32g431xx.s
@@ -94,7 +96,7 @@ TESTDIR = tests
 MOCKLIBDIR = lib/fff
 TESTLIBDIR = lib/greatest
 TESTOBJDIR := $(OBJDIR)/$(TESTDIR)
-TESTCPPFLAGS := -I $(INCDIR) -I $(INCDIR)/mcu -I $(TESTLIBDIR) -I $(TESTDIR) -I $(MOCKLIBDIR)
+TESTCPPFLAGS := -I $(INCDIR) -I $(INCDIR)/mcu -I $(INCDIR)/rtos -I $(TESTLIBDIR) -I $(TESTDIR) -I $(MOCKLIBDIR)
 TESTCFLAGS := $(COMMON_CFLAGS) $(CMSIS_CPPFLAGS)
 
 DAC_TESTSRCS := $(TESTDIR)/dac_suite.c $(TESTDIR)/dac_main.c
@@ -180,7 +182,7 @@ $(OBJDIR)/$(SRCDIR)/%.o: $(SRCDIR)/%.c | srcdepdir
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(DEPFLAGS) -c $< -o $@
 
 srcdepdir :
-	@mkdir -p $(DEPDIR)/$(SRCDIR) $(DEPDIR)/$(SRCDIR)/mcu
+	@mkdir -p $(DEPDIR)/$(SRCDIR) $(DEPDIR)/$(SRCDIR)/mcu $(DEPDIR)/$(SRCDIR)/rtos
 
 $(SRCDEPS):
 
