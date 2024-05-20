@@ -1,3 +1,6 @@
+#ifndef PY_SINE_125HZ_INPUT_TEST_H
+#define PY_SINE_125HZ_INPUT_TEST_H
+
 float32_t sine32f_125hz[1024] = {
 	0.0
 	, 0.38268343
@@ -2052,3 +2055,5 @@ float32_t sine32c_125hz_2048[2048] = {
 	, -0.70710677            , 0
 	, -0.38268343            , 0
 };
+
+#endif /* PY_SINE_125HZ_INPUT_TEST_H */
