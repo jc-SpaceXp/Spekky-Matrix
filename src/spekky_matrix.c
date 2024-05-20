@@ -17,18 +17,6 @@
 #include "hw_verification/py_sine_125hz_input_test.h"
 
 
-// Must define when using a non-zero config for stack overflow
-void vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName)
-{
-	// remove unused warnings from compiler
-	(void) pxTask;
-	(void) pcTaskName;
-	for (;;) {
-		// do nothing
-	}
-}
-
-
 static void dac_task(void *args __attribute((unused)))
 {
 	// Output to speaker
