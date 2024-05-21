@@ -33,8 +33,6 @@ int main (void)
 	setup_hw_spi();
 	led_matrix_setup();
 
-	// Run FFT before RTOS scheduler
-	fake_fft_task();
 
 	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-2, NULL);
 	(void) ret_val; // suppress compiler warning
@@ -49,9 +47,19 @@ int main (void)
 	(void) led_refresh_rate; // suppress compiler warning
 	assert_param(led_refresh_rate == pdPASS);
 
-	BaseType_t led_refresh_start = xTimerStart(led_refresh_rate, 0);
+	BaseType_t led_refresh_start = xTimerStart(led_refresh_rate, 10);
 	(void) led_refresh_start; // suppress compiler warning
 	assert_param(led_refresh_start == pdPASS);
+
+	TimerHandle_t fft_oneshot = xTimerCreate("Fake FFT task"
+	                                        , pdMS_TO_TICKS(4)
+	                                        , pdFALSE
+	                                        , NULL
+	                                        , fft_oneshot_callback);
+
+	BaseType_t fft_oneshot_start = xTimerStart(fft_oneshot, 0);
+	(void) fft_oneshot_start; // suppress compiler warning
+	assert_param(fft_oneshot_start == pdPASS);
 
 	vTaskStartScheduler();
 

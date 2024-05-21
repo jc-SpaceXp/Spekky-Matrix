@@ -7,9 +7,17 @@
 #include "hw_verification/py_sine_125hz_input_test.h"
 
 
-void fake_fft_task(void)
+static float32_t bin_mags[1024];
+
+struct FftBinPeak {
+	float32_t magnitude;
+	uint32_t bin_index;
+};
+
+void fft_oneshot_callback(xTimerHandle pxTimer)
 {
-	// Run FFT before RTOS scheduler
+	(void) pxTimer;
+
 	uint8_t inverse_fft = 0;
 	uint8_t bit_reverse = 1;
 	arm_cfft_instance_f32 arm_cfft;
@@ -18,12 +26,8 @@ void fake_fft_task(void)
 	assert_param(c_status == ARM_MATH_SUCCESS);
 
 	arm_cfft_f32(&arm_cfft, sine32c_125hz_2048, inverse_fft, bit_reverse);
-	float32_t bin_mags[1024];
 	arm_cmplx_mag_f32(sine32c_125hz_2048, bin_mags, 1024);
 
-	struct FftBinPeak {
-		float32_t magnitude;
-		uint32_t bin_index;
-	} fft_bin_peak = { 0, 0 };
+	struct FftBinPeak fft_bin_peak = { 0, 0 };
 	arm_max_f32(bin_mags, 1024, &fft_bin_peak.magnitude, &fft_bin_peak.bin_index);
 }
