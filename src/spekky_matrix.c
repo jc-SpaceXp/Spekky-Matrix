@@ -15,15 +15,6 @@
 #include "stm32g4xx_nucleo.h"
 
 
-static void dac_task(void *args __attribute((unused)))
-{
-	// Output to speaker
-	for (;;) {
-		// Task (dma is handling this for now, nothing to else to do)
-	}
-}
-
-
 int main (void)
 {
 	timer_setup(1);
@@ -32,11 +23,6 @@ int main (void)
 	setup_hw_dac();
 	setup_hw_spi();
 	led_matrix_setup();
-
-
-	BaseType_t ret_val = xTaskCreate(dac_task, "DAC out", 100, NULL, configMAX_PRIORITIES-2, NULL);
-	(void) ret_val; // suppress compiler warning
-	assert_param(ret_val == pdPASS);
 
 
 	TimerHandle_t led_refresh_rate = xTimerCreate("Led matrix refresh rate"

@@ -40,7 +40,8 @@
  *----------------------------------------------------------*/
 
 #define configUSE_PREEMPTION               1
-#define configUSE_IDLE_HOOK                0
+#define configUSE_IDLE_HOOK                1
+#define configIDLE_SHOULD_YIELD            1
 #define configUSE_TICK_HOOK                0
 #define configCPU_CLOCK_HZ                 ( ( unsigned long ) 8000000 ) // HCLK (w/ prescaler of 1/2)
 #define configSYSTICK_CLOCK_HZ             ( configCPU_CLOCK_HZ / 8 ) // CortexM specific, only used if SysTick is clocked differently to CPU clock
@@ -51,7 +52,6 @@
 #define configMAX_TASK_NAME_LEN            ( 11 ) // includes NULL char
 #define configUSE_TRACE_FACILITY           0
 #define configUSE_16_BIT_TICKS             0
-#define configIDLE_SHOULD_YIELD            1
 #define configUSE_MUTEXES                  0
 #define configCHECK_FOR_STACK_OVERFLOW     2
 #define configUSE_TIMERS                   1

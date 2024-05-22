@@ -11,3 +11,11 @@ void vApplicationStackOverflowHook(xTaskHandle pxTask, char *pcTaskName)
 		// do nothing
 	}
 }
+
+// IdleTask must not block
+void vApplicationIdleHook(void)
+{
+	for (;;) {
+		// idle task, do nothing
+	}
+}
