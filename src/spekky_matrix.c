@@ -1,5 +1,6 @@
 #include "spekky_matrix.h"
 #include "stm32g4xx_spi.h"
+#include "stm32g4xx_i2s.h"
 #include "stm32g4xx_audio.h"
 #include "stm32g4xx_timers.h"
 #include "dac.h"
@@ -22,6 +23,7 @@ int main (void)
 	tim2_interrupt_frequency(frequency);
 	setup_hw_dac();
 	setup_hw_spi();
+	setup_hw_i2s();
 	led_matrix_setup();
 
 
