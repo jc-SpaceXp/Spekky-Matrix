@@ -6,6 +6,9 @@
 #include "stm32g4xx_hal_gpio.h"
 #include "stm32g4xx_hal_rcc_ex.h"
 
+uint16_t left_mic_data = 0;
+int rx_ovr_error = 0;
+
 
 static void i2s_gpio_setup(void)
 {
@@ -56,6 +59,10 @@ void setup_hw_i2s(void)
 	SPI2->I2SCFGR |= SPI_I2SCFGR_I2SMOD; // I2S mode
 	SPI2->I2SCFGR |= LL_I2S_MODE_MASTER_RX; // STM32 is master and receiving
 
+	// Enable interrupts for testing, read SPI->DR to prevent overruns
+	SPI2->CR2 |= SPI_CR2_RXNEIE;
+	NVIC_EnableIRQ(SPI2_IRQn);
+
 	// Enable I2S module once setup is complete
 	enable_i2s();
 }
@@ -85,4 +92,22 @@ bool i2s_rx_overrun(void)
 	// can also detect with the ERRIE interrupt
 	// still need to read with this function however to check source of fault
 	return (SPI2->SR & SPI_SR_OVR);
+}
+
+void SPI2_IRQHandler(void)
+{
+	if (i2s_rx_data_in_buffer()) {
+		uint16_t dummy_read = SPI2->DR; // read L/R data to avoid overruns
+		if (i2s_rx_is_lchannel()) {
+			// read_data
+			left_mic_data = dummy_read; // only store L data
+		}
+	}
+	if (i2s_rx_overrun()) {
+		// clear OVR flag
+		rx_ovr_error = SPI2->DR;
+		rx_ovr_error = SPI2->SR;
+		// set global error to true
+		rx_ovr_error = 1;
+	}
 }
