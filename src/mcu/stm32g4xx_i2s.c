@@ -47,7 +47,9 @@ void setup_hw_i2s(void)
 	// Phillips I2S mode
 	// MSB first
 
-	// Setting clock rate to be as close to 44.1 kHz as possible
+	// Minimum clock speed needs to be > 1MHz for I2S mics, otherwise low power mode
+	// Setting Fs >= 16 kHz is suitable
+	// Setting clock rate to be as close to 44.1 kHz as possible, SCK = Fs * 64
 	// Fs = Fi2sclk/(32(1)((2*I2SDIV)+ODD) (for no MCLK I2S setting)
 	// Where Fi2sclk is equal to the APB clock for the SPI/I2S block
 	// which is HCLK * APB prescaler
