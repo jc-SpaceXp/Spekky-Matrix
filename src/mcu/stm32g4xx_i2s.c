@@ -6,7 +6,7 @@
 #include "stm32g4xx_hal_gpio.h"
 #include "stm32g4xx_hal_rcc_ex.h"
 
-uint16_t left_mic_data = 0;
+uint32_t mic_data = 0;
 int rx_ovr_error = 0;
 
 
@@ -43,7 +43,6 @@ void setup_hw_i2s(void)
 	i2s_gpio_setup();
 
 	// Deafults: (which don't need changing)
-	// 16-bit data
 	// CPHA 0 CPOL 0
 	// Phillips I2S mode
 	// MSB first
@@ -56,6 +55,7 @@ void setup_hw_i2s(void)
 	// for 16MHz, ODD = 1 and I2SDIV = 5 are the closest values possible
 	SPI2->I2SPR |= SPI_I2SPR_ODD | 0x05;
 	SPI2->I2SCFGR |= SPI_I2SCFGR_I2SMOD; // I2S mode
+	SPI2->I2SCFGR |= LL_I2S_DATAFORMAT_24B; // 24 bit data
 	SPI2->I2SCFGR |= LL_I2S_MODE_MASTER_RX; // STM32 is master and receiving
 
 	// Enable interrupts for testing, read SPI->DR to prevent overruns
@@ -95,12 +95,17 @@ bool i2s_rx_overrun(void)
 
 void SPI2_IRQHandler(void)
 {
+	static bool first_byte = true;
 	if (i2s_rx_data_in_buffer()) {
 		uint16_t dummy_read = SPI2->DR; // read L/R data to avoid overruns
 		if (i2s_rx_is_lchannel()) {
-			// read_data
-			left_mic_data = dummy_read; // only store L data
+			// read_data into L channel
+			mic_data |= (dummy_read >> 8);
+			if (first_byte) { // MSB
+				mic_data |= (dummy_read << 8);
+			}
 		}
+		first_byte = !first_byte;
 	}
 	if (i2s_rx_overrun()) {
 		// clear OVR flag
