@@ -13,5 +13,8 @@
 #define I2S_WS_PORT    GPIOF
 
 void setup_hw_i2s(void);
+bool i2s_rx_data_in_buffer(void);
+bool i2s_rx_is_lchannel(void);
+bool i2s_rx_is_rchannel(void);
 
 #endif /* STM32G4xx_I2S_H */

@@ -59,3 +59,30 @@ void setup_hw_i2s(void)
 	// Enable I2S module once setup is complete
 	enable_i2s();
 }
+
+bool i2s_rx_data_in_buffer(void)
+{
+	bool data_available = SPI2->SR & SPI_SR_RXNE;
+	return data_available;
+}
+
+bool i2s_rx_is_lchannel(void)
+{
+	// CHSIDE flag is unreliable if OVR flag is set
+	// must ensure no overuns, must read all incoming data
+	bool lchannel = !(SPI2->SR & SPI_SR_CHSIDE);
+	return lchannel;
+}
+
+bool i2s_rx_is_rchannel(void)
+{
+	return !i2s_rx_is_lchannel();
+}
+
+bool i2s_rx_overrun(void)
+{
+	// Clear OVR by reading SPI2->DR and then reading SPI2->SR
+	// can also detect with the ERRIE interrupt
+	// still need to read with this function however to check source of fault
+	return (SPI2->SR & SPI_SR_OVR);
+}
