@@ -52,6 +52,7 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
     if show_plot:
         fig, (ax1, ax2) = plt.subplots(1, 2)
         fig.suptitle('FFT and iFFT')
+
         ax1.stem((n/T), np.abs(X))
         ax1.set_xlabel('Freq (Hz)')
         ax1.set_ylabel('FFT Amplitude')
@@ -59,10 +60,13 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
         secax1.stem(n, np.abs(X))
         secax1.tick_params(axis='x', which='major', pad=15)
         secax1.set_xlabel('FFT Bins')
+
         ax2.plot(tsamp * n, np.fft.ifft(X).real)
         ax2.set_xlabel('Time, seconds (s)')
+
         ax1.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
         ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
+
         plt.show()
     return X
 
