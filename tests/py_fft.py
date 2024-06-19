@@ -39,8 +39,8 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
         plt.show()
     return x
 
-def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_samples, show_plot):
-    tsamp = 1.0/fsamp
+def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_samples):
+    tsamp = 1.0/sampling_freq
     n = np.arange(total_samples)
     T = N/sampling_freq
 
@@ -49,27 +49,32 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
     if show_samples:
         print(X)
 
-    if show_plot:
-        fig, (ax1, ax2) = plt.subplots(1, 2)
-        fig.suptitle('FFT and iFFT')
-
-        ax1.stem((n/T), np.abs(X))
-        ax1.set_xlabel('Freq (Hz)')
-        ax1.set_ylabel('FFT Amplitude')
-        secax1 = ax1.twiny()
-        secax1.stem(n, np.abs(X))
-        secax1.tick_params(axis='x', which='major', pad=15)
-        secax1.set_xlabel('FFT Bins')
-
-        ax2.plot(tsamp * n, np.fft.ifft(X).real)
-        ax2.set_xlabel('Time, seconds (s)')
-
-        ax1.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
-        ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
-
-        plt.show()
     return X
 
+def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
+    tsamp = 1.0/sampling_freq
+    n = np.arange(total_samples)
+    T = N/sampling_freq
+
+    fig, (ax1, ax2) = plt.subplots(1, 2)
+    fig.suptitle('FFT and iFFT')
+
+    ax1.stem((n/T), np.abs(fft_results))
+    ax1.set_xlabel('Freq (Hz)')
+    ax1.set_ylabel('FFT Amplitude')
+    secax1 = ax1.twiny()
+    secax1.stem(n, np.abs(fft_results))
+    secax1.tick_params(axis='x', which='major', pad=15)
+    secax1.set_xlabel('FFT Bins')
+
+    ax2.plot(tsamp * n, np.fft.ifft(fft_results).real)
+    ax2.set_xlabel('Time, seconds (s)')
+
+    ax1.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
+    ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
+
+    plt.show()
+    return None
 
 # Compare theoretical (i2s_debug == False) with actual (i2s_debug == True)
 freq = 1000
@@ -88,7 +93,9 @@ if i2s_debug:
     offset = 0
     x = l_channel_list[offset:N+offset]
 
-fft_out = fft_ifft_conversion(x, fsamp, N, print_fft_output, plot_fft_output)
+fft_out = fft_ifft_conversion(x, fsamp, N, print_fft_output)
+if plot_fft_output:
+    plot_fft_ifft_results(fft_out, fsamp, N)
 
 if dump_results_to_file:
     dump_lists_to_file(x, fft_out)
