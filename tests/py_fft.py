@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.pyplot as mtick
+import matplotlib.ticker as mtick
 from fermion_mic_check import l_channel_list
 
 def dump_lists_to_file(fft_input, fft_output):
