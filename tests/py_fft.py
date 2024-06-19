@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
+import matplotlib.animation as animation
+from functools import partial
 from fermion_mic_check import l_channel_list
 
 def dump_lists_to_file(fft_input, fft_output):
@@ -56,16 +58,15 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
     n = np.arange(total_samples)
     T = N/sampling_freq
 
-    fig, (ax1, ax2) = plt.subplots(1, 2)
     fig.suptitle('FFT and iFFT')
 
     ax1.stem((n/T), np.abs(fft_results))
     ax1.set_xlabel('Freq (Hz)')
     ax1.set_ylabel('FFT Amplitude')
-    secax1 = ax1.twiny()
     secax1.stem(n, np.abs(fft_results))
     secax1.tick_params(axis='x', which='major', pad=15)
     secax1.set_xlabel('FFT Bins')
+    secax1.xaxis.set_label_position('top')
 
     ax2.plot(tsamp * n, np.fft.ifft(fft_results).real)
     ax2.set_xlabel('Time, seconds (s)')
@@ -73,7 +74,23 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
     ax1.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
     ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
 
-    plt.show()
+    return None
+
+def gen_raw_data_iter():
+    offset = 0
+    fft_size = 64
+    raw_data = l_channel_list
+    while (offset + fft_size) < len(raw_data):
+        yield offset
+        offset += fft_size
+
+def animate(frame, fft_fig, ifft_fig, fft_bins_fig, sampling_freq, fft_size):
+    fft_fig.clear()
+    fft_bins_fig.clear()
+    ifft_fig.clear()
+    x = l_channel_list[frame:fft_size+frame]
+    fft_out = fft_ifft_conversion(x, sampling_freq, fft_size, False)
+    plot_fft_ifft_results(fft_out, sampling_freq, fft_size)
     return None
 
 # Compare theoretical (i2s_debug == False) with actual (i2s_debug == True)
@@ -87,6 +104,11 @@ plot_fft_output = True
 integer = True
 i2s_debug = True
 dump_results_to_file = False
+animate_fft = True
+
+# Make global so animate and plot functions can both use
+fig, (ax1, ax2) = plt.subplots(1, 2)
+secax1 = ax1.twiny()
 
 x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input, plot_sampled_fft_input)
 if i2s_debug:
@@ -95,7 +117,15 @@ if i2s_debug:
 
 fft_out = fft_ifft_conversion(x, fsamp, N, print_fft_output)
 if plot_fft_output:
-    plot_fft_ifft_results(fft_out, fsamp, N)
+    if animate_fft:
+        ani = animation.FuncAnimation(fig, partial(animate, fft_fig=ax1, ifft_fig=ax2
+                                                  , fft_bins_fig=secax1
+                                                  , sampling_freq=fsamp, fft_size=64)
+                                     , frames=gen_raw_data_iter, interval=400, save_count=1
+                                     , repeat_delay=3000)
+    else:
+        plot_fft_ifft_results(fft_out, fsamp, N)
+    plt.show()
 
 if dump_results_to_file:
     dump_lists_to_file(x, fft_out)
