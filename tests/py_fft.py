@@ -50,6 +50,7 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
 
     if show_plot:
         fig, (ax1, ax2) = plt.subplots(1, 2)
+        fig.suptitle('FFT and iFFT')
         ax1.stem((n/T), np.abs(X))
         ax1.set_xlabel('Freq (Hz)')
         ax1.set_ylabel('FFT Amplitude')
