@@ -49,13 +49,12 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
         print(X)
 
     if show_plot:
-        plt.subplot(121)
-        plt.stem((n/T), np.abs(X))
-        plt.xlabel('Freq (Hz)')
-        plt.ylabel('FFT Amplitude')
-        plt.subplot(122)
-        plt.plot(tsamp * n, np.fft.ifft(X).real)
-        plt.xlabel('Time, seconds (s)')
+        fig, (ax1, ax2) = plt.subplots(1, 2)
+        ax1.stem((n/T), np.abs(X))
+        ax1.set_xlabel('Freq (Hz)')
+        ax1.set_ylabel('FFT Amplitude')
+        ax2.plot(tsamp * n, np.fft.ifft(X).real)
+        ax2.set_xlabel('Time, seconds (s)')
         plt.show()
     return X
 
