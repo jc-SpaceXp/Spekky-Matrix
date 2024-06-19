@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as mtick
 from fermion_mic_check import l_channel_list
 
 def dump_lists_to_file(fft_input, fft_output):
@@ -60,6 +61,8 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
         secax1.set_xlabel('FFT Bins')
         ax2.plot(tsamp * n, np.fft.ifft(X).real)
         ax2.set_xlabel('Time, seconds (s)')
+        ax1.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
+        ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
         plt.show()
     return X
 
