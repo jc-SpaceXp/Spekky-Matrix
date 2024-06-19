@@ -81,6 +81,7 @@ print_fft_output = False
 plot_fft_output = True
 integer = True
 i2s_debug = True
+dump_results_to_file = False
 
 x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input, plot_sampled_fft_input)
 if i2s_debug:
@@ -89,4 +90,5 @@ if i2s_debug:
 
 fft_out = fft_ifft_conversion(x, fsamp, N, print_fft_output, plot_fft_output)
 
-#dump_lists_to_file(x, fft_out)
+if dump_results_to_file:
+    dump_lists_to_file(x, fft_out)
