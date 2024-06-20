@@ -43,7 +43,7 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
         plt.show()
     return x
 
-def fft_ifft_conversion(sampled_waveform, show_samples):
+def fft_conversion(sampled_waveform, show_samples):
     X = np.singlecomplex(np.fft.fft(sampled_waveform))
 
     if show_samples:
@@ -87,7 +87,7 @@ def animate(frame, fft_fig, ifft_fig, fft_bins_fig, sampling_freq, fft_size):
     fft_bins_fig.clear()
     ifft_fig.clear()
     x = l_channel_list[frame:fft_size+frame]
-    fft_out = fft_ifft_conversion(x, False)
+    fft_out = fft_conversion(x, False)
     plot_fft_ifft_results(fft_out, sampling_freq, fft_size)
     return None
 
@@ -114,7 +114,7 @@ if i2s_debug:
     offset = 0
     x = l_channel_list[offset:N+offset]
 
-fft_out = fft_ifft_conversion(x, print_fft_output)
+fft_out = fft_conversion(x, print_fft_output)
 if plot_fft_output:
     if animate_fft:
         ani = animation.FuncAnimation(fig, partial(animate, fft_fig=ax1, ifft_fig=ax2
