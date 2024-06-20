@@ -12,10 +12,12 @@ def dump_lists_to_file(fft_input, fft_output):
     outfile.close()
     expected_output = "py_sine_output_fft_test.txt"
     outfile = open(expected_output, 'w')
-    outfile.writelines('\n'.join(f'{c.real:0.09f}'.ljust(18) + f' {c.imag:+0.09f}j' for c in fft_output))
+    outfile.writelines('\n'.join(f'{c.real:0.09f}'.ljust(18) + f' {c.imag:+0.09f}j'
+                                for c in fft_output))
     return None
 
-def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, show_samples, show_plot):
+def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, show_samples
+                                 , show_plot):
     freq = freq
     fsamp = sampling_freq
     tsamp = 1.0/fsamp
@@ -110,7 +112,8 @@ animate_fft = True
 fig, (ax1, ax2) = plt.subplots(1, 2)
 secax1 = ax1.twiny()
 
-x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input, plot_sampled_fft_input)
+x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input
+                                 , plot_sampled_fft_input)
 if i2s_debug:
     offset = 0
     x = l_channel_list[offset:N+offset]
