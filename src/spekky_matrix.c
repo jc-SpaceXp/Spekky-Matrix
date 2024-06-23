@@ -19,9 +19,6 @@ uint16_t i2s_dma_data[512] = { 0 };
 
 int main (void)
 {
-	timer_setup(1);
-	unsigned int frequency = 1000; // Hz
-	tim2_interrupt_frequency(frequency);
 	setup_hw_spi();
 	setup_hw_dma(); // used for I2S
 	setup_hw_i2s();
