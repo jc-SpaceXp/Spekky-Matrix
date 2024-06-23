@@ -60,9 +60,6 @@ void setup_hw_i2s(void)
 	SPI2->I2SCFGR |= LL_I2S_DATAFORMAT_24B; // 24 bit data
 	SPI2->I2SCFGR |= LL_I2S_MODE_MASTER_RX; // STM32 is master and receiving
 
-	// Enable interrupts for testing, read SPI->DR to prevent overruns
-	SPI2->CR2 |= SPI_CR2_RXNEIE;
-	NVIC_EnableIRQ(SPI2_IRQn);
 	SPI2->CR2 |= SPI_CR2_RXDMAEN;
 
 	// Enable I2S module once setup is complete
@@ -94,27 +91,4 @@ bool i2s_rx_overrun(void)
 	// can also detect with the ERRIE interrupt
 	// still need to read with this function however to check source of fault
 	return (SPI2->SR & SPI_SR_OVR);
-}
-
-void SPI2_IRQHandler(void)
-{
-	static bool first_byte = true;
-	if (i2s_rx_data_in_buffer()) {
-		uint16_t dummy_read = SPI2->DR; // read L/R data to avoid overruns
-		if (i2s_rx_is_lchannel()) {
-			// read_data into L channel
-			mic_data |= (dummy_read >> 8);
-			if (first_byte) { // MSB
-				mic_data |= (dummy_read << 8);
-			}
-		}
-		first_byte = !first_byte;
-	}
-	if (i2s_rx_overrun()) {
-		// clear OVR flag
-		rx_ovr_error = SPI2->DR;
-		rx_ovr_error = SPI2->SR;
-		// set global error to true
-		rx_ovr_error = 1;
-	}
 }
