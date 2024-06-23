@@ -63,6 +63,7 @@ void setup_hw_i2s(void)
 	// Enable interrupts for testing, read SPI->DR to prevent overruns
 	SPI2->CR2 |= SPI_CR2_RXNEIE;
 	NVIC_EnableIRQ(SPI2_IRQn);
+	SPI2->CR2 |= SPI_CR2_RXDMAEN;
 
 	// Enable I2S module once setup is complete
 	enable_i2s();
