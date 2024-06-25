@@ -43,7 +43,6 @@ void setup_hw_i2s(void)
 	i2s_gpio_setup();
 
 	// Deafults: (which don't need changing)
-	// CPHA 0 CPOL 0
 	// Phillips I2S mode
 	// MSB first
 
@@ -57,6 +56,7 @@ void setup_hw_i2s(void)
 	// for 16MHz, ODD = 1 and I2SDIV = 5 are the closest values possible
 	SPI2->I2SPR |= SPI_I2SPR_ODD | 0x05;
 	SPI2->I2SCFGR |= SPI_I2SCFGR_I2SMOD; // I2S mode
+	SPI2->I2SCFGR |= SPI_I2SCFGR_CKPOL; // Fermion mic is active low
 	SPI2->I2SCFGR |= LL_I2S_DATAFORMAT_24B; // 24 bit data
 	SPI2->I2SCFGR |= LL_I2S_MODE_MASTER_RX; // STM32 is master and receiving
 
