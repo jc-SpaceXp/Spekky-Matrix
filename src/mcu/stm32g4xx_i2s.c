@@ -17,9 +17,10 @@ static void i2s_gpio_setup(void)
 	GPIOF->MODER &= ~ (eGET_REG(GPIO_MODER_MODE, I2S_CLK_PIN)
 	                  | eGET_REG(GPIO_MODER_MODE, I2S_WS_PIN));
 	GPIOA->MODER &= ~ (eGET_REG(GPIO_MODER_MODE, I2S_SD_PIN));
-	// Set GPIO (and I2S SEL) to outputs and SPI2 to AF
+	// Set I2S pins to AF mode (0b10)
 	GPIOF->MODER |= eGET_REG_BIT1(GPIO_MODER_MODE, I2S_CLK_PIN)
 	                | eGET_REG_BIT1(GPIO_MODER_MODE, I2S_WS_PIN);
+	GPIOA->MODER |= eGET_REG_BIT1(GPIO_MODER_MODE, I2S_SD_PIN);
 	// Use SPI alternative function (SPI2 and I2S share same pins/registers)
 	GPIOF->AFR[0] |= (GPIO_AF5_SPI2 << eGET_AFRL_REG(GPIO_AFRL_AFSEL, I2S_CLK_PIN))
 	                 | (GPIO_AF5_SPI2 << eGET_AFRL_REG(GPIO_AFRL_AFSEL, I2S_WS_PIN));
