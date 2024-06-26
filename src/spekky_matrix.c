@@ -1,6 +1,7 @@
 #include "spekky_matrix.h"
+#include "stm32g4xx_dma.h"
 #include "stm32g4xx_spi.h"
-#include "stm32g4xx_audio.h"
+#include "stm32g4xx_i2s.h"
 #include "stm32g4xx_timers.h"
 #include "dac.h"
 #include "spi.h"
@@ -14,14 +15,13 @@
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
 
+uint16_t i2s_dma_data[512] = { 0 };
 
 int main (void)
 {
-	timer_setup(1);
-	unsigned int frequency = 1000; // Hz
-	tim2_interrupt_frequency(frequency);
-	setup_hw_dac();
 	setup_hw_spi();
+	setup_hw_dma(); // used for I2S
+	setup_hw_i2s();
 	led_matrix_setup();
 
 

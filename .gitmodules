@@ -22,3 +22,6 @@
 [submodule "lib/fff"]
 	path = lib/fff
 	url = https://github.com/meekrosoft/fff
+[submodule "lib/SigPlotI2S"]
+	path = lib/SigPlotI2S
+	url = https://github.com/lucasssvaz/SigPlotI2S

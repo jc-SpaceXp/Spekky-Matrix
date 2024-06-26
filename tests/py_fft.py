@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from fermion_mic_check import l_channel_list
 
 def dump_lists_to_file(fft_input, fft_output):
     expected_input = "py_sine_input_test.txt"
@@ -59,15 +60,22 @@ def fft_ifft_conversion(sampled_waveform, sampling_freq, total_samples, show_sam
     return X
 
 
-freq = 125  # 64th bin with no spectral leakage
-fsamp = 2000
-N = 1024 # fft size
+# Compare theoretical (i2s_debug == False) with actual (i2s_debug == True)
+freq = 1000
+fsamp = 1.0/60E-6 # fsamp is one period of WS (~i2s_samp / 2) (measured in PulseView)
+N = 1024 # fft size (or sample count)
 print_sampled_fft_input = False
 plot_sampled_fft_input = False
 print_fft_output = False
 plot_fft_output = True
-integer = False
+integer = True
+i2s_debug = True
+
 x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input, plot_sampled_fft_input)
+if i2s_debug:
+    offset = 0
+    x = l_channel_list[offset:N+offset]
+
 fft_out = fft_ifft_conversion(x, fsamp, N, print_fft_output, plot_fft_output)
 
 #dump_lists_to_file(x, fft_out)
