@@ -6,9 +6,6 @@
 #include "stm32g4xx_hal_gpio.h"
 #include "stm32g4xx_hal_rcc_ex.h"
 
-uint32_t mic_data = 0;
-int rx_ovr_error = 0;
-
 
 static void i2s_gpio_setup(void)
 {
