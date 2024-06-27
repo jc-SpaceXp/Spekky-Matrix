@@ -56,13 +56,13 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
     n = np.arange(total_samples)
     T = N/sampling_freq
 
-    fig.suptitle('FFT and iFFT')
+    fig.suptitle('FFT and iFFT', y=0.995)
 
     ax1.stem((n/T), np.abs(fft_results))
     ax1.set_xlabel('Freq (Hz)')
     ax1.set_ylabel('FFT Amplitude')
     secax1.stem(n, np.abs(fft_results))
-    secax1.tick_params(axis='x', which='major', pad=15)
+    secax1.tick_params(axis='x', which='major', pad=12)
     secax1.set_xlabel('FFT Bins')
     secax1.xaxis.set_label_position('top')
 
