@@ -89,6 +89,7 @@ def animate(frame, fft_fig, ifft_fig, fft_bins_fig, sampling_freq, fft_size):
     x = l_channel_list[frame:fft_size+frame]
     fft_out = fft_conversion(x, show_conversion=False)
     plot_fft_ifft_results(fft_out, sampling_freq, fft_size)
+    #fig.savefig(f'{frame:04d}.png')
     return None
 
 # Compare theoretical (i2s_debug == False) with actual (i2s_debug == True)
