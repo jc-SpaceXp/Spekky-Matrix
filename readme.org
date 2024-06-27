@@ -1,5 +1,12 @@
 ** Spekky Matrix
 A FreeRTOS based project were a spectrum analyser is displayed on a LED matrix board run from a STM32 device
+*** Detailed Description
+A MAX2719 based 8x8 led matrix displays the fast fourier transform (FFT) of
+an incoming audio signal picked up by a microphone. The incoming audio
+is a double buffered DMA signal. The led matrix is driven via the STM32's
+SPI interface. All while internal hardware timers and FreeRTOS are
+responsible for accurate timing e.g. refresh rate of led matrix and data
+acquisition.
 *** Tools
 The following tools are needed to build this project
 - make
