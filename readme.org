@@ -13,8 +13,8 @@ The following tools are needed to build this project
 - [[https://github.com/STMicroelectronics/stm32g4xx_hal_driver][STM32G4 HAL]]
 - [[https://github.com/STMicroelectronics/cmsis_device_g4][CMSIS G4]] CMSIS device library
 - [[https://github.com/silentbicycle/greatest][Greatest]] C test framework
-  
-CMSIS will also produce linker warnings due to newlib e.g. "_write is not implemented and will
-always fail". Another linker warning will appear too: elf has a LOAD segment with RWX permissions.
-There is quite a bit of a size overhead when pulling in all the CMSIS modules. An average project
-would be around ~100Mb.
+
+CMSIS will also produce linker warnings due to newlib e.g. "_write is not
+implemented and will always fail". There is quite a bit of a size overhead
+when pulling in all the CMSIS modules. An average project would be
+around ~100Mb. This increases with FreeRTOS too.
