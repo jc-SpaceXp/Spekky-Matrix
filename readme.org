@@ -9,10 +9,13 @@ The following tools are needed to build this project
 *** Submodules
 - [[https://www.freertos.org/][FreeRTOS]]
 - [[https://www.arm.com/technologies/cmsis][CMSIS V6]]
+- [[https://github.com/ARM-software/CMSIS-DSP][ARM CMSIS DSP]]
 - [[https://github.com/STMicroelectronics/stm32g4xx-nucleo-bsp][STM32G4xx Nucleo BSP]]
 - [[https://github.com/STMicroelectronics/stm32g4xx_hal_driver][STM32G4 HAL]]
 - [[https://github.com/STMicroelectronics/cmsis_device_g4][CMSIS G4]] CMSIS device library
 - [[https://github.com/silentbicycle/greatest][Greatest]] C test framework
+- [[https://github.com/meekrosoft/fff][fff]] C test doubles
+- [[https://github.com/lucasssvaz/SigPlotI2S][SigPlotI2S]] Plot I2S PulseView/Sigrok output data
 
 CMSIS will also produce linker warnings due to newlib e.g. "_write is not
 implemented and will always fail". There is quite a bit of a size overhead
