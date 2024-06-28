@@ -14,19 +14,19 @@ The following tools are needed to build this project
 - [[https://gcc.gnu.org/][gcc]] (for unit tests)
 - [[https://github.com/stlink-org/stlink][st-flash]] in order to interact with the STM32
 *** Progress / Milestones
-[X] Create LED matrix driver for MAX2719 devices
-[X] Drive LED matrix from STM32 using FreeRTOS
-[X] Run FFT off target
-[X] Verify FFT on target (using off target results as a guide)
-[X] Verify that LED matrix can be driven alongside FFT code (manually verified, no delays etc.)
-[X] Capture data from mic
-[X] Verify output of mic from raw logic analyser data (using SigPlotI2S)
-[X] Capture data from mic via DMA
-[X] Perform FFT on this raw logic analyser data with a sine wave test tone (off-target)
-[X] Animate FFT graphs to get a rough estimate of how the LED matrix will display it (off-target)
-[] Perform FFT on mic data sampled by STM32 with a sine wave test tone (off-target)
-[] Verify that LED matrix can be driven along with data capture and processing
-[] Perform FFT on captured mic data to drive LED matrix
+- [X] Create LED matrix driver for MAX2719 devices
+- [X] Drive LED matrix from STM32 using FreeRTOS
+- [X] Run FFT off target
+- [X] Verify FFT on target (using off target results as a guide)
+- [X] Verify that LED matrix can be driven alongside FFT code (manually verified, no delays etc.)
+- [X] Capture data from mic
+- [X] Verify output of mic from raw logic analyser data (using SigPlotI2S)
+- [X] Capture data from mic via DMA
+- [X] Perform FFT on this raw logic analyser data with a sine wave test tone (off-target)
+- [X] Animate FFT graphs to get a rough estimate of how the LED matrix will display it (off-target)
+- [ ] Perform FFT on mic data sampled by STM32 with a sine wave test tone (off-target)
+- [ ] Verify that LED matrix can be driven along with data capture and processing
+- [ ] Perform FFT on captured mic data to drive LED matrix
 *** I2S Mic FFT Data Visualised
 **** Logic Analyser Data (Sine 1kHz Test Tone)
 FFT size = 64, start offset = 0, next offset = 32, FPS = 4
