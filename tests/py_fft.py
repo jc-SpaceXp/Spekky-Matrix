@@ -62,8 +62,8 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
     ax1.set_xlabel('Freq (Hz)')
     ax1.set_ylabel('FFT Amplitude')
     secax1.stem(n, np.abs(fft_results))
-    secax1.tick_params(axis='x', which='major', pad=12)
-    secax1.set_xlabel('FFT Bins')
+    secax1.tick_params(axis='x', which='major')
+    secax1.set_xlabel('FFT Bins', labelpad=2.00)
     secax1.xaxis.set_label_position('top')
 
     ax2.plot(tsamp * n, np.fft.ifft(fft_results).real)
