@@ -69,7 +69,7 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
     ax2.plot(tsamp * n, np.fft.ifft(fft_results).real)
     ax2.set_xlabel('Time, seconds (s)')
 
-    ax1.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
+    ax1.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.2e'))
     ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
 
     return None
