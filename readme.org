@@ -1,20 +1,49 @@
 ** Spekky Matrix
 A FreeRTOS based project were a spectrum analyser is displayed on a LED matrix board run from a STM32 device
+*** Detailed Description
+A MAX2719 based 8x8 led matrix displays the fast fourier transform (FFT) of
+an incoming audio signal picked up by a microphone. The incoming audio
+is a double buffered DMA signal. The led matrix is driven via the STM32's
+SPI interface. All while internal hardware timers and FreeRTOS are
+responsible for accurate timing e.g. refresh rate of led matrix and data
+acquisition.
 *** Tools
 The following tools are needed to build this project
 - make
 - [[https://developer.arm.com/downloads/-/gnu-rm][arm-none-eabi-gcc]]
 - [[https://gcc.gnu.org/][gcc]] (for unit tests)
 - [[https://github.com/stlink-org/stlink][st-flash]] in order to interact with the STM32
+*** Progress / Milestones
+- [X] Create LED matrix driver for MAX2719 devices
+- [X] Drive LED matrix from STM32 using FreeRTOS
+- [X] Run FFT off target
+- [X] Verify FFT on target (using off target results as a guide)
+- [X] Verify that LED matrix can be driven alongside FFT code (manually verified, no delays etc.)
+- [X] Capture data from mic
+- [X] Verify output of mic from raw logic analyser data (using SigPlotI2S)
+- [X] Capture data from mic via DMA
+- [X] Perform FFT on this raw logic analyser data with a sine wave test tone (off-target)
+- [X] Animate FFT graphs to get a rough estimate of how the LED matrix will display it (off-target)
+- [ ] Perform FFT on mic data sampled by STM32 with a sine wave test tone (off-target)
+- [ ] Verify that LED matrix can be driven along with data capture and processing
+- [ ] Perform FFT on captured mic data to drive LED matrix
+*** I2S Mic FFT Data Visualised
+**** Logic Analyser Data (Sine 1kHz Test Tone)
+FFT size = 64, start offset = 0, next offset = 32, FPS = 4
+
+[[file:python_fft_logic_analyser_sine_1k.gif]]
 *** Submodules
 - [[https://www.freertos.org/][FreeRTOS]]
 - [[https://www.arm.com/technologies/cmsis][CMSIS V6]]
+- [[https://github.com/ARM-software/CMSIS-DSP][ARM CMSIS DSP]]
 - [[https://github.com/STMicroelectronics/stm32g4xx-nucleo-bsp][STM32G4xx Nucleo BSP]]
 - [[https://github.com/STMicroelectronics/stm32g4xx_hal_driver][STM32G4 HAL]]
 - [[https://github.com/STMicroelectronics/cmsis_device_g4][CMSIS G4]] CMSIS device library
 - [[https://github.com/silentbicycle/greatest][Greatest]] C test framework
-  
-CMSIS will also produce linker warnings due to newlib e.g. "_write is not implemented and will
-always fail". Another linker warning will appear too: elf has a LOAD segment with RWX permissions.
-There is quite a bit of a size overhead when pulling in all the CMSIS modules. An average project
-would be around ~100Mb.
+- [[https://github.com/meekrosoft/fff][fff]] C test doubles
+- [[https://github.com/lucasssvaz/SigPlotI2S][SigPlotI2S]] Plot I2S PulseView/Sigrok output data
+
+CMSIS will also produce linker warnings due to newlib e.g. "_write is not
+implemented and will always fail". There is quite a bit of a size overhead
+when pulling in all the CMSIS modules. An average project would be
+around ~100Mb. This increases with FreeRTOS too.
