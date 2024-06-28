@@ -51,7 +51,7 @@ def fft_conversion(sampled_waveform, show_conversion):
 
     return X
 
-def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
+def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
     tsamp = 1.0/sampling_freq
     n = np.arange(total_samples)
     T = N/sampling_freq
@@ -61,6 +61,8 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples):
     ax1.stem((n/T), np.abs(fft_results))
     ax1.set_xlabel('Freq (Hz)')
     ax1.set_ylabel('FFT Amplitude')
+    if animate:
+        ax1.set_ylim([0.00, 2.50E11])
     secax1.stem(n, np.abs(fft_results))
     secax1.tick_params(axis='x', which='major')
     secax1.set_xlabel('FFT Bins', labelpad=2.00)
@@ -88,7 +90,7 @@ def animate(frame, fft_fig, ifft_fig, fft_bins_fig, sampling_freq, fft_size):
     ifft_fig.clear()
     x = l_channel_list[frame:fft_size+frame]
     fft_out = fft_conversion(x, show_conversion=False)
-    plot_fft_ifft_results(fft_out, sampling_freq, fft_size)
+    plot_fft_ifft_results(fft_out, sampling_freq, fft_size, animate=True)
     #fig.savefig(f'{frame:04d}.png')
     return None
 
@@ -124,7 +126,7 @@ if plot_fft_output:
                                      , frames=gen_raw_data_iter, interval=400, save_count=1
                                      , repeat_delay=3000)
     else:
-        plot_fft_ifft_results(fft_out, fsamp, N)
+        plot_fft_ifft_results(fft_out, fsamp, N, animate=False)
     plt.show()
 
 if dump_results_to_file:
