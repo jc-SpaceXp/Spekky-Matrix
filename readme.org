@@ -29,10 +29,7 @@ The following tools are needed to build this project
 [] Perform FFT on captured mic data to drive LED matrix
 *** I2S Mic FFT Data Visualised
 **** Logic Analyser Data (Sine 1kHz Test Tone)
-FFT size = 64
-Start offset = 0
-Next offset = 32
-FPS = 4
+FFT size = 64, start offset = 0, next offset = 32, FPS = 4
 
 [[file:python_fft_logic_analyser_sine_1k.gif]]
 *** Submodules
