@@ -112,8 +112,8 @@ SPI_TESTOBJS := $(SPI_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 PRINT_PREFIX = "\#\#\#\#\#"
 
 
-.PHONY: all clean tests srcdepdir cmsis_modules_git_update freertos_git_update \
-test_modules_git_update flash-erase flash-write flash-backup
+.PHONY: all clean tests srcdepdir freertos_update cmsis_update_all sigploti2s_update \
+unit_test_update_all update_all flash-erase flash-write flash-backup
 all: $(TARGET).elf $(TARGET).bin
 tests: $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf $(SPITESTTARGET).elf
 
@@ -126,12 +126,26 @@ flash-write: $(TARGET).bin
 flash-erase:
 	$(FLASH) erase
 
-
-freertos_git_update:
+freertos_update:
 	@echo "$(PRINT_PREFIX) Initializing/updating FreeRTOS submodule"
 	git submodule update --init --remote $(LIBDIR)/FreeRTOS-Kernel
 
-$(OBJDIR)/$(RTOSDIR)/%.o: $(RTOSDIR)/%.c | freertos_git_update
+cmsis_update_all:
+	@echo "$(PRINT_PREFIX) Initializing/updating cmsis submodules"
+	git submodule update --init --remote $(CMSISMODULES)
+
+sigploti2s_update:
+	@echo "$(PRINT_PREFIX) Initializing/updating SigPlotI2S submodules"
+	git submodule update --init --remote $(LIBDIR)/SigPlotI2S
+
+unit_test_update_all:
+	@echo "$(PRINT_PREFIX) Initializing/updating unit test submodules"
+	git submodule update --init --remote $(LIBDIR)/greatest $(LIBDIR)/fff
+
+update_all: freertos_update cmsis_update_all sigploti2s_update unit_test_update_all
+
+
+$(OBJDIR)/$(RTOSDIR)/%.o: $(RTOSDIR)/%.c
 	@echo "$(PRINT_PREFIX) Creating RTOS objects"
 	@mkdir -p $(@D)
 	$(CC) $(RTOSCPPFLAGS) $(CFLAGS) -c $< -o $@
@@ -161,17 +175,12 @@ $(OBJDIR)/$(STMHALDIR)/%.o: $(STMHALDIR)/%.c
 	@mkdir -p $(@D)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-cmsis_modules_git_update:
-	@echo "$(PRINT_PREFIX) Initializing/updating cmsis submodules"
-	git submodule update --init --remote $(CMSISMODULES)
-
 
 $(TARGET).bin: $(TARGET).elf
 	@echo "$(PRINT_PREFIX) Creating binary image"
 	$(OBJCOPY) -O binary $^ $@
 
-$(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) $(ARMDSPOBJS) \
-| cmsis_modules_git_update
+$(TARGET).elf: $(SRCOBJS) $(STARTUPOBJ) $(SYSOBJ) $(STMHALOBJS) $(RTOSOBJS) $(ARMDSPOBJS)
 	@echo "$(PRINT_PREFIX) Linking objects"
 	$(CC) $(LDFLAGS) $(LDLIBS) $(CPUFLAGS) $(FPUFLAGS) $^ -o $@
 	$(SIZE) $@
@@ -186,22 +195,19 @@ srcdepdir :
 
 $(SRCDEPS):
 
-test_modules_git_update:
-	@echo "$(PRINT_PREFIX) Initializing/updating greatest submodule"
-	git submodule update --init --remote $(LIBDIR)/greatest $(LIBDIR)/fff
 
 # Unit test builds
-$(DACTESTTARGET).elf: $(DAC_TESTOBJS) | test_modules_git_update
+$(DACTESTTARGET).elf: $(DAC_TESTOBJS)
 	@echo "$(PRINT_PREFIX) Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
 
-$(LEDSTESTTARGET).elf: $(LEDS_TESTOBJS) | test_modules_git_update
+$(LEDSTESTTARGET).elf: $(LEDS_TESTOBJS)
 	@echo "$(PRINT_PREFIX) Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
 
-$(SPITESTTARGET).elf: $(SPI_TESTOBJS) | test_modules_git_update
+$(SPITESTTARGET).elf: $(SPI_TESTOBJS)
 	@echo "$(PRINT_PREFIX) Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@
