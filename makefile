@@ -88,6 +88,7 @@ TARGET = spekky_matrix
 DACTESTTARGET = dac_tests
 LEDSTESTTARGET = leds_tests
 SPITESTTARGET = spi_tests
+MICTESTTARGET = mic_tests
 
 TESTCC := gcc
 TESTSIZE := size
@@ -108,6 +109,9 @@ LEDS_TESTOBJS := $(LEDS_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 SPI_TESTSRCS := $(TESTDIR)/spi_suite.c $(TESTDIR)/spi_main.c
 SPI_TESTSRCS += $(SRCDIR)/spi.c
 SPI_TESTOBJS := $(SPI_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
+MIC_TESTSRCS := $(TESTDIR)/mic_data_suite.c $(TESTDIR)/mic_data_main.c
+MIC_TESTSRCS += $(SRCDIR)/mic_data_processing.c
+MIC_TESTOBJS := $(MIC_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 
 PRINT_PREFIX = "\#\#\#\#\#"
 
@@ -115,7 +119,7 @@ PRINT_PREFIX = "\#\#\#\#\#"
 .PHONY: all clean tests srcdepdir freertos_update cmsis_update_all sigploti2s_update \
 unit_test_update_all update_all flash-erase flash-write flash-backup
 all: $(TARGET).elf $(TARGET).bin
-tests: $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf $(SPITESTTARGET).elf
+tests: $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf $(SPITESTTARGET).elf $(MICTESTTARGET).elf
 
 flash-backup:
 	$(FLASH) read BIN_BACKUP.bin 0x08000000 0x20000
@@ -208,6 +212,11 @@ $(LEDSTESTTARGET).elf: $(LEDS_TESTOBJS)
 	$(TESTSIZE) $@
 
 $(SPITESTTARGET).elf: $(SPI_TESTOBJS)
+	@echo "$(PRINT_PREFIX) Linking test objects"
+	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
+	$(TESTSIZE) $@
+
+$(MICTESTTARGET).elf: $(MIC_TESTOBJS)
 	@echo "$(PRINT_PREFIX) Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@

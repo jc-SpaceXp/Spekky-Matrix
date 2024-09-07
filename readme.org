@@ -24,9 +24,9 @@ The following tools are needed to build this project
 - [X] Capture data from mic via DMA
 - [X] Perform FFT on this raw logic analyser data with a sine wave test tone (off-target)
 - [X] Animate FFT graphs to get a rough estimate of how the LED matrix will display it (off-target)
-- [ ] Perform FFT on mic data sampled by STM32 with a sine wave test tone (off-target)
-- [ ] Verify that LED matrix can be driven along with data capture and processing
-- [ ] Perform FFT on captured mic data to drive LED matrix
+- [X] Perform FFT on mic data sampled by STM32 with a sine wave test tone (off-target)
+- [X] Verify that LED matrix can be driven along with data capture and processing
+- [X] Perform FFT on captured mic data to drive LED matrix
 *** I2S Mic FFT Data Visualised
 **** Logic Analyser Data (Sine 1kHz Test Tone)
 FFT size = 64, start offset = 0, next offset = 32, FPS = 4

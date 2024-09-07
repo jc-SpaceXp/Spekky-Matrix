@@ -4,6 +4,6 @@
 #include "FreeRTOS.h"
 #include "timers.h"
 
-void fft_oneshot_callback(xTimerHandle pxTimer);
+void fft_processing(void* pvParameters);
 
 #endif /* FFT_RTOS_H */

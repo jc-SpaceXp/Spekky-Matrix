@@ -11,6 +11,7 @@ struct LedSpiPin {
 
 struct MaximMax2719 {
 	struct LedSpiPin cs; // CS, chip select
+	int total_devices;
 };
 
 #endif /* LED_MATRIX_PRIVATE_H */
