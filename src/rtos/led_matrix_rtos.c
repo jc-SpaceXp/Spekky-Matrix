@@ -11,12 +11,11 @@
 
 extern float bin_mags[FFT_DATA_SIZE];
 
-void led_matrix_setup(void)
+void led_matrix_setup(int total_devices)
 {
 	struct LedSpiPin led_cs = { &GPIOA->BSRR, &GPIOA->ODR, SPI_CS_PIN };
 	struct MaximMax2719 led_matrix;
 	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
-	int total_devices = 4;
 	set_total_led_matrix_devices(& led_matrix, total_devices);
 
 	led_matrix_init_all_quick(led_matrix, &SPI1->DR, DATA_BRIGHTNESS_LEVEL1);

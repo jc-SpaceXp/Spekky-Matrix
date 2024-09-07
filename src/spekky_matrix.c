@@ -27,7 +27,8 @@ int main (void)
 	setup_hw_spi();
 	setup_hw_dma(); // used for I2S
 	setup_hw_i2s();
-	led_matrix_setup();
+	int led_matrices = 4;
+	led_matrix_setup(led_matrices);
 
 
 	xDmaFlagQueue = xQueueCreate(1, sizeof(int));
