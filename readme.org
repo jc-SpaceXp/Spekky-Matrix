@@ -31,7 +31,20 @@ The following tools are needed to build this project
 **** Logic Analyser Data (Sine 1kHz Test Tone)
 FFT size = 64, start offset = 0, next offset = 32, FPS = 4
 
-[[file:python_fft_logic_analyser_sine_1k.gif]]
+[[file:media/python_fft_logic_analyser_sine_1k.gif]]
+**** 32x8 LED Matrix (Sine 1kHz Test Tone)
+FFT size = 64, bin resolution = (1/60E-6)/64 --> ~260Hz
+
+Peak expected at the 3rd/4th bin (1000 / 260 = ~3.84)
+
+Note: I measured one Ws period as 60us on PulseView hence the 1/60E-6 above
+
+Note2: The LED bar sensitivity was tweaked locally (current code has less vertical separation
+between the other bars)
+
+[[file:media/led_matrix_1khz.jpg]]
+*** Schematic
+[[file:schematic_v02.pdf]]
 *** Submodules
 - [[https://www.freertos.org/][FreeRTOS]]
 - [[https://www.arm.com/technologies/cmsis][CMSIS V6]]
