@@ -43,6 +43,8 @@ Note2: The LED bar sensitivity was tweaked locally (current code has less vertic
 between the other bars)
 
 [[file:media/led_matrix_1khz.jpg]]
+*** Schematic
+[[file:schematic_v02.pdf]]
 *** Submodules
 - [[https://www.freertos.org/][FreeRTOS]]
 - [[https://www.arm.com/technologies/cmsis][CMSIS V6]]
