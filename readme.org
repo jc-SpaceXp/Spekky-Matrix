@@ -44,7 +44,7 @@ between the other bars)
 
 [[file:media/led_matrix_1khz.jpg]]
 *** Schematic
-[[file:schematic_v02.pdf]]
+[[file:schematic_v03.pdf]]
 *** Submodules
 - [[https://www.freertos.org/][FreeRTOS]]
 - [[https://www.arm.com/technologies/cmsis][CMSIS V6]]
