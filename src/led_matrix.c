@@ -241,30 +241,22 @@ uint8_t fft_to_led_bar_conversion(float input_bin_mags)
 	bin_mags = (uint32_t) input_bin_mags;
 
 	// scale 32-bits to 8 discrete heights
-	if (bin_mags >> 28) {
+	if (bin_mags > 1000000000U) {
 		bars = 8;
-	} else if ((bin_mags >> 24) & 0x0F) {
+	} else if (bin_mags > 770000000U) {
 		bars = 7;
-	} else if ((bin_mags >> 20) & 0x0F) {
+	} else if (bin_mags > 490000000U) {
 		bars = 6;
-	} else if ((bin_mags >> 16) & 0x0F) {
+	} else if (bin_mags > 34000000U) {
 		bars = 5;
-	} else if ((bin_mags >> 12) & 0x0F) {
+	} else if (bin_mags > 16000000U) {
 		bars = 4;
-	} else if ((bin_mags >> 8) & 0x0F) {
+	} else if (bin_mags > 9999990U) {
 		bars = 3;
-	} else if ((bin_mags >> 4) & 0x0F) {
+	} else if (bin_mags > 6666666U) {
 		bars = 2;
-	} else if ((bin_mags >> 2) & 0x03) {
-		// keep lowest 2 bits as 0 height
-		// otherwise only values of 0 have a height of 0
+	} else if (bin_mags > 4125555U) {
 		bars = 1;
-	}
-
-	// FLT_MAX is much larger than INT_MAX
-	// and is missed in the above if-else chain
-	if (input_bin_mags > INT_MAX) {
-		bars = 8;
 	}
 
 	return bars;

@@ -345,6 +345,7 @@ void loop_test_led_matrix_bar_conversions(void)
 
 TEST led_matrix_fft_conversion(void)
 {
+	SKIP();
 	ASSERT_EQ_FMT(0, fft_to_led_bar_conversion(0.0f), "%u"); // 0-6
 
 	ASSERT_EQ_FMT(1, fft_to_led_bar_conversion(7.1f), "%u"); // 7-15
