@@ -92,6 +92,8 @@ MICTESTTARGET = mic_tests
 
 TESTCC := gcc
 TESTSIZE := size
+ASAN ?= 0
+
 
 TESTDIR = tests
 MOCKLIBDIR = lib/fff
@@ -99,6 +101,12 @@ TESTLIBDIR = lib/greatest
 TESTOBJDIR := $(OBJDIR)/$(TESTDIR)
 TESTCPPFLAGS := -I $(INCDIR) -I $(INCDIR)/mcu -I $(INCDIR)/rtos -I $(TESTLIBDIR) -I $(TESTDIR) -I $(MOCKLIBDIR)
 TESTCFLAGS := $(COMMON_CFLAGS) $(CMSIS_CPPFLAGS)
+TESTLDFLAGS :=
+
+ifeq ($(ASAN), 1)
+	TESTCFLAGS += -fsanitize=address,undefined
+	TESTLDFLAGS += -fsanitize=address,undefined
+endif
 
 DAC_TESTSRCS := $(TESTDIR)/dac_suite.c $(TESTDIR)/dac_main.c
 DAC_TESTSRCS += $(SRCDIR)/dac.c
