@@ -2,6 +2,7 @@
 #include "stm32g4xx_spi.h"
 #include "spi.h"
 #include "led_matrix.h"
+#include "stm32g4xx_gpio_debug.h"
 
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
@@ -30,6 +31,7 @@ void led_matrix_update_callback(xTimerHandle pxTimer)
 
 	uint8_t bars[led_matrix.total_devices][8];
 	uint8_t row_outputs[led_matrix.total_devices][8];
+	deassert_gpio_debug_pin();
 	for (int i = 0; i < 8; ++i) {
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
 			// ignore DC component, get FFT bins of 1 to N/2
@@ -48,4 +50,5 @@ void led_matrix_update_callback(xTimerHandle pxTimer)
 		}
 		led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, i + 1, row_outputs[0][i], LatchData);
 	}
+	assert_gpio_debug_pin();
 }

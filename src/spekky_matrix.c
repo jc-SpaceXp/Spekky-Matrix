@@ -2,6 +2,7 @@
 #include "stm32g4xx_dma.h"
 #include "stm32g4xx_spi.h"
 #include "stm32g4xx_i2s.h"
+#include "stm32g4xx_gpio_debug.h"
 #include "stm32g4xx_timers.h"
 #include "dac.h"
 #include "spi.h"
@@ -24,6 +25,7 @@ QueueHandle_t xDmaFlagQueue;
 
 int main (void)
 {
+	setup_hw_gpio_debug();
 	setup_hw_spi();
 	setup_hw_dma(); // used for I2S
 	setup_hw_i2s();
