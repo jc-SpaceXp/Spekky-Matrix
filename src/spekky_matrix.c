@@ -26,16 +26,18 @@ QueueHandle_t xDmaFlagQueue;
 int main (void)
 {
 	setup_hw_gpio_debug();
-	setup_hw_spi();
+	setup_hw_dma(); // used for I2S
+	setup_hw_i2s();
+
 
 	xDmaFlagQueue = xQueueCreate(1, sizeof(int));
 	(void) xDmaFlagQueue; // suppress compiler warning
 	assert_param(xDmaFlagQueue == pdPASS);
 
-	BaseType_t led_timing_task = xTaskCreate(led_matrix_update_callback, "LED task", 512, NULL
-	                                        , configMAX_PRIORITIES - 1, NULL);
-	(void) led_timing_task; // suppress compiler warning
-	assert_param(led_timing_task == pdPASS);
+	BaseType_t fft_task = xTaskCreate(fft_processing, "FFT task", 512, NULL
+	                                 , configMAX_PRIORITIES - 2, NULL);
+	(void) fft_task; // suppress compiler warning
+	assert_param(fft_task == pdPASS);
 
 	vTaskStartScheduler();
 

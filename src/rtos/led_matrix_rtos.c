@@ -2,7 +2,6 @@
 #include "stm32g4xx_spi.h"
 #include "spi.h"
 #include "led_matrix.h"
-#include "stm32g4xx_gpio_debug.h"
 
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
@@ -39,11 +38,9 @@ void led_matrix_update_callback(void* pvParameters)
 			}
 		}
 
-		deassert_gpio_debug_pin();
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
 			led_matrix_convert_bars_to_rows(&bars[dev], BottomToTop, row_outputs[dev]);
 		}
-		assert_gpio_debug_pin();
 
 		for (int i = 0; i < 8; ++i) {
 			// ADDR_ROW0 == 1
