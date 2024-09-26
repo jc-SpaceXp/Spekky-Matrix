@@ -56,9 +56,9 @@ void fft_processing(void* pvParameters)
 		                                               , DATA_LEN_HALF, L);
 		}
 
-		deassert_gpio_debug_pin();
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
-		assert_gpio_debug_pin();
+		deassert_gpio_debug_pin();
 		arm_cmplx_mag_f32(fft_buffer, bin_mags, FFT_DATA_SIZE);
+		assert_gpio_debug_pin();
 	}
 }
