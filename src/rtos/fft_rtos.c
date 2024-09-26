@@ -56,9 +56,9 @@ void fft_processing(void* pvParameters)
 			dma_i2s_halfword_to_word_complex_conversion(&i2s_dma_data[DATA_LEN_HALF], fft_buffer
 		                                               , DATA_LEN_HALF, L);
 		}
+		assert_gpio_debug_pin();
 
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
 		arm_cmplx_mag_f32(fft_buffer, bin_mags, FFT_DATA_SIZE);
-		assert_gpio_debug_pin();
 	}
 }
