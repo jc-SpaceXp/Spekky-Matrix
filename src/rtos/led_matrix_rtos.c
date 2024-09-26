@@ -32,18 +32,18 @@ void led_matrix_update_callback(void* pvParameters)
 	uint8_t bars[led_matrix.total_devices][8];
 	uint8_t row_outputs[led_matrix.total_devices][8];
 	for (;;) {
-		deassert_gpio_debug_pin();
 		for (int i = 0; i < 8; ++i) {
 			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
 				// ignore DC component, get FFT bins of 1 to N/2
 				bars[dev][i] = fft_to_led_bar_conversion(bin_mags[1 + i + (dev * 8)]);
 			}
 		}
-		assert_gpio_debug_pin();
 
+		deassert_gpio_debug_pin();
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
 			led_matrix_convert_bars_to_rows(&bars[dev], BottomToTop, row_outputs[dev]);
 		}
+		assert_gpio_debug_pin();
 
 		for (int i = 0; i < 8; ++i) {
 			// ADDR_ROW0 == 1
