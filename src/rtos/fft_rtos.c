@@ -1,6 +1,7 @@
 #include "fft_rtos.h"
 #include "extern_i2s_dma_data.h"
 #include "mic_data_processing.h"
+#include "stm32g4xx_gpio_debug.h"
 
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
@@ -45,6 +46,7 @@ void fft_processing(void* pvParameters)
 			// delay/block until data is ready
 		}
 
+		deassert_gpio_debug_pin();
 		if (fft_section == 1) {
 			fft_buffer = &fft_buffer1[0];
 			dma_i2s_halfword_to_word_complex_conversion(&i2s_dma_data[0], fft_buffer
@@ -57,5 +59,6 @@ void fft_processing(void* pvParameters)
 
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
 		arm_cmplx_mag_f32(fft_buffer, bin_mags, FFT_DATA_SIZE);
+		assert_gpio_debug_pin();
 	}
 }
