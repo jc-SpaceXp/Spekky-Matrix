@@ -51,6 +51,6 @@ void led_matrix_update_callback(void* pvParameters)
 			}
 			led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, i + 1, row_outputs[0][i], LatchData);
 		}
+		assert_gpio_debug_pin();
 	}
-	assert_gpio_debug_pin();
 }
