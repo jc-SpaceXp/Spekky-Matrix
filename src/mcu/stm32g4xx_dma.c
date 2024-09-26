@@ -1,5 +1,6 @@
 #include "stm32g4xx_dma.h"
 #include "extern_i2s_dma_data.h"
+#include "stm32g4xx_gpio_debug.h"
 #include "fft_constants.h"
 
 #include "stm32g4xx.h"
@@ -54,9 +55,11 @@ void DMA1_Channel1_IRQHandler(void)
 	if (DMA1->ISR & DMA_ISR_HTIF1) {
 		DMA1->IFCR |= DMA_IFCR_CHTIF1;
 		dma_flag = 1;
+		deassert_gpio_debug_pin();
 	} else if (DMA1->ISR & DMA_ISR_TCIF1) {
 		DMA1->IFCR |= DMA_IFCR_CTCIF1;
 		dma_flag = 2;
+		assert_gpio_debug_pin();
 	}
 
 	BaseType_t xHigherPriorityTask = pdFALSE;
