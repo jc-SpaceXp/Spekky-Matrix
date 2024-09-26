@@ -9,14 +9,14 @@ void setup_hw_gpio_debug(void)
 {
 	RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN) | (RCC_AHB2ENR_GPIOBEN);
 	// Set all to inputs
-	GPIOB->MODER &= ~ eGET_REG(GPIO_MODER_MODE, GPIO_DEBUG_PIN);
+	GPIO_DEBUG_PORT->MODER &= ~ eGET_REG(GPIO_MODER_MODE, GPIO_DEBUG_PIN);
 	// Set GPIO to outputs
-	GPIOB->MODER |= eGET_REG_BIT0(GPIO_MODER_MODE, GPIO_DEBUG_PIN);
+	GPIO_DEBUG_PORT->MODER |= eGET_REG_BIT0(GPIO_MODER_MODE, GPIO_DEBUG_PIN);
 	// All GPIO ports/pins are push-pull by default (no need for OTYPER)
 	// High speed pins
-	GPIOB->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, GPIO_DEBUG_PIN);
+	GPIO_DEBUG_PORT->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, GPIO_DEBUG_PIN);
 	// Clear reset bit on B4 (MISO, no pull-up or pull-down)
-	GPIOB->PUPDR &= ~eGET_REG(GPIO_PUPDR_PUPD, GPIO_DEBUG_PIN);
+	GPIO_DEBUG_PORT->PUPDR &= ~eGET_REG(GPIO_PUPDR_PUPD, GPIO_DEBUG_PIN);
 }
 
 // Favour atomic writes rather than reusing spi assert/deassert pin code

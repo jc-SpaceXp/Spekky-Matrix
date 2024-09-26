@@ -4,8 +4,8 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define GPIO_DEBUG_PIN   4 // unused in led matrix
-#define GPIO_DEBUG_PORT   GPIOB
+#define GPIO_DEBUG_PIN    9
+#define GPIO_DEBUG_PORT   GPIOA
 
 void setup_hw_gpio_debug(void);
 void assert_gpio_debug_pin(void);
