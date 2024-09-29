@@ -45,6 +45,11 @@ between the other bars)
 [[file:media/led_matrix_1khz.jpg]]
 *** Schematic
 [[file:schematic_v03.pdf]]
+*** Execution Timeline
+Rough timing of how long each task/sub-task takes to complete
+
+Actual times are a mean of the traces from the timing branch
+[[file:execution_timeline.jpg]]
 *** Submodules
 - [[https://www.freertos.org/][FreeRTOS]]
 - [[https://www.arm.com/technologies/cmsis][CMSIS V6]]
