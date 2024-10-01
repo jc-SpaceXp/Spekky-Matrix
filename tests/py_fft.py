@@ -44,7 +44,7 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
     return x
 
 def fft_conversion(sampled_waveform, show_conversion):
-    X = np.singlecomplex(np.fft.fft(sampled_waveform))
+    X = np.complex64(np.fft.fft(sampled_waveform))
 
     if show_conversion:
         print(X)
