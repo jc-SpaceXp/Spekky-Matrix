@@ -58,12 +58,31 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
 
     fig.suptitle('FFT and iFFT', y=0.995)
 
-    ax1.stem((n/T), np.abs(fft_results))
+    fft_graph = np.abs(fft_results)
+    fft_graph_label = 'FFT Amplitude'
+    if decibel_fft:
+        window_gain = 1
+        acoustic_overload_point = 124
+        dbfs_max = acoustic_overload_point
+        ref_max = np.power(2, 32)
+        if i2s_debug:
+            ref_max = np.power(2, 23)
+        fft_graph = (20 * np.log10(fft_graph / ref_max)) - (dbfs_max * (1 / window_gain))
+        ax1.plot((n/T), fft_graph)
+        fft_graph_label = 'FFT Amplitude (dB)'
+
+    ax1.grid()
+    if not decibel_fft:
+        ax1.stem((n/T), fft_graph)
     ax1.set_xlabel('Freq (Hz)')
-    ax1.set_ylabel('FFT Amplitude')
+    ax1.set_ylabel(fft_graph_label)
     if animate:
-        ax1.set_ylim([0.00, 2.50E11])
-    secax1.stem(n, np.abs(fft_results))
+        if not decibel_fft:
+            ax1.set_ylim([0.00, 2.50E11])
+    if decibel_fft:
+        secax1.plot(n, fft_graph)
+    else:
+        secax1.stem(n, fft_graph)
     secax1.tick_params(axis='x', which='major')
     secax1.set_xlabel('FFT Bins', labelpad=2.00)
     secax1.xaxis.set_label_position('top')
@@ -71,7 +90,8 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
     ax2.plot(tsamp * n, np.fft.ifft(fft_results).real)
     ax2.set_xlabel('Time, seconds (s)')
 
-    ax1.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.2e'))
+    if not decibel_fft:
+        ax1.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.2e'))
     ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
 
     return None
@@ -101,6 +121,7 @@ N = 1024 # fft size (or sample count)
 print_sampled_fft_input = False
 plot_sampled_fft_input = False
 print_fft_output = False
+decibel_fft = True
 plot_fft_output = True
 integer = True
 i2s_debug = True
