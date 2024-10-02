@@ -32,8 +32,7 @@ void led_matrix_update_callback(xTimerHandle pxTimer)
 	uint8_t row_outputs[led_matrix.total_devices][8];
 	for (int i = 0; i < 8; ++i) {
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-			// ignore DC component, get FFT bins of 1 to N/2
-			bars[dev][i] = fft_to_led_bar_conversion(bin_mags[1 + i + (dev * 8)]);
+			bars[dev][i] = fft_to_led_bar_conversion(bin_mags[i + (dev * 8)]);
 		}
 	}
 

@@ -14,7 +14,7 @@
 
 extern QueueHandle_t xDmaFlagQueue;
 
-float32_t bin_mags[FFT_DATA_SIZE];
+float32_t bin_mags[FFT_DATA_SIZE/2];
 static float32_t fft_buffer1[FFT_DATA_SIZE * 2];
 static float32_t fft_buffer2[FFT_DATA_SIZE * 2];
 
@@ -56,6 +56,7 @@ void fft_processing(void* pvParameters)
 		}
 
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
-		arm_cmplx_mag_f32(fft_buffer, bin_mags, FFT_DATA_SIZE);
+		// ignore DC component, any gather real frequencies and Nyquist
+		arm_cmplx_mag_f32(&fft_buffer[2], bin_mags, FFT_DATA_SIZE/2);
 	}
 }
