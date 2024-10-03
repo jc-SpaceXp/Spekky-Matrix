@@ -68,12 +68,16 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
         window_gain = 1
         acoustic_overload_point = 124
         dbfs_max = acoustic_overload_point
-        ref_max = np.power(2, 32)
+        fft_max = np.power(2, 31) - 1
+        mag_ref_max = (fft_max * N) / 2
         if i2s_debug:
-            ref_max = np.power(2, 23)
-        fft_graph = (20 * np.log10(fft_graph / ref_max)) - (dbfs_max * (1 / window_gain))
+            amp_ref_max = np.power(2, 23) - 1
+        # Max value of FFT is 32-bits therefore mag_ref_max doesn't change
+        # even though my I2S data is constrained to 24-bits
+        fft_graph = (20 * np.log10(fft_graph / mag_ref_max))
         ax1.plot((n/T), fft_graph)
-        fft_graph_label = 'FFT Amplitude (dB)'
+        ax1.set_ylim([-dbfs_max, 10])
+        fft_graph_label = 'FFT Amplitude (dB FS)'
 
     ax1.grid()
     if not decibel_fft:
