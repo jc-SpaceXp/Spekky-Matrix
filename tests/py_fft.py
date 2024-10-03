@@ -138,9 +138,9 @@ print_fft_output = False
 decibel_fft = True
 plot_fft_output = True
 integer = True
-i2s_debug = False
+i2s_debug = True
 dump_results_to_file = False
-animate_fft = False
+animate_fft = True
 
 # Make global so animate and plot functions can both use
 fig, (ax1, ax2) = plt.subplots(1, 2)
