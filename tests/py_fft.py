@@ -72,6 +72,12 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
         mag_ref_max = (fft_max * N) / 2
         if i2s_debug:
             amp_ref_max = np.power(2, 23) - 1
+        # 0 values should represent -inf dB
+        # if we set to a really low value we get a dB value below the noise floor
+        # also C math.h log10 function expects argument to be > 0
+        for i in range(len(fft_graph)):
+            if fft_graph[i] == 0:
+                fft_graph[i] = 0.8
         # Max value of FFT is 32-bits therefore mag_ref_max doesn't change
         # even though my I2S data is constrained to 24-bits
         fft_graph = (20 * np.log10(fft_graph / mag_ref_max))
@@ -132,9 +138,9 @@ print_fft_output = False
 decibel_fft = True
 plot_fft_output = True
 integer = True
-i2s_debug = True
+i2s_debug = False
 dump_results_to_file = False
-animate_fft = True
+animate_fft = False
 
 # Make global so animate and plot functions can both use
 fig, (ax1, ax2) = plt.subplots(1, 2)
