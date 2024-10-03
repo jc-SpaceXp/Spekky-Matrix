@@ -23,6 +23,27 @@ TEST snprintf_return_val(bool sn_error)
 }
 
 
+TEST i2s_limits_conversion(void)
+{
+	float test_buffer[4] = { 0 };
+	int16_t limits_buffer[8] = { 0xFFFF, 0xFF00, 0x00, 0x00
+	                           , 0x00, 0x00, 0x00, 0x00 };
+	// data is transmitted MSB first
+	// therefore bits 31-8 are filled rather than 23-0
+	uint32_t expected[2] = {4294967040LU, 0};
+	dma_i2s_halfword_to_word_complex_conversion(limits_buffer, test_buffer, 8, L);
+
+	for (int i = 0; i < 2; ++i) {
+		uint16_t first_bytes = limits_buffer[i * 4];
+		uint16_t second_bytes = limits_buffer[(i * 4) + 1];
+		uint32_t concat_bytes = (((uint32_t) first_bytes) << 16) | second_bytes;
+		ASSERT_EQ_FMT(expected[i], concat_bytes, "%u");
+		ASSERT_EQ_FMT((float) ((int32_t) expected[i]), test_buffer[i], "%f");
+	}
+	PASS();
+}
+
+
 TEST verify_i2s_dma_conversion(const struct DmaConversionLoop setup)
 {
 	float test_buffer[256] = { 0 };
@@ -65,6 +86,7 @@ void loop_dma_conversion_test(void)
 
 SUITE(i2s_mic_data_processing)
 {
+	RUN_TEST(i2s_limits_conversion);
 	// looped tests
 	loop_dma_conversion_test();
 }
