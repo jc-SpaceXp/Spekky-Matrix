@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import matplotlib.animation as animation
 from functools import partial
+from statistics import mean
 from fermion_mic_check import l_channel_list
 
 def dump_lists_to_file(fft_input, fft_output):
@@ -43,7 +44,9 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
         plt.show()
     return x
 
-def fft_conversion(sampled_waveform, show_conversion):
+def fft_conversion(sampled_waveform, show_conversion, remove_dc=False):
+    if remove_dc:
+        sampled_waveform = sampled_waveform - mean(sampled_waveform)
     X = np.complex64(np.fft.fft(sampled_waveform))
 
     if show_conversion:
