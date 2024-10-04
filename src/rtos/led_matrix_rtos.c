@@ -9,7 +9,7 @@
 #include "fft_constants.h"
 
 
-extern float bin_mags[FFT_DATA_SIZE];
+extern float bin_mags[FFT_DATA_SIZE/2];
 struct MaximMax2719 led_matrix;
 
 void led_matrix_setup(int total_devices)
