@@ -12,9 +12,9 @@ void dma_i2s_halfword_to_word_complex_conversion(const int16_t* src, float* dst
 	while (src_offset < (int) input_bytes) {
 		int dst_offset = src_offset / 2;
 		if (channel == R) { dst_offset -= 1; }
-		uint32_t msb_byte = (uint32_t) (*(src + src_offset)) << 16U;
+		uint16_t msb_byte = *(src + src_offset);
 		uint16_t lsb_byte = *(src + src_offset + 1);
-		*(dst + dst_offset) = (float) ((int32_t) msb_byte | lsb_byte);
+		*(dst + dst_offset) = (float) (((int32_t) msb_byte << 8U) | (lsb_byte >> 8U));
 		*(dst + dst_offset + 1) = 0.0f; // complex value
 		src_offset += 4; // skip next channel data
 		dst_offset += 2;
