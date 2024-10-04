@@ -345,41 +345,42 @@ void loop_test_led_matrix_bar_conversions(void)
 
 TEST led_matrix_fft_conversion(void)
 {
-	SKIP();
-	ASSERT_EQ_FMT(0, fft_to_led_bar_conversion(0.0f), "%u"); // 0-6
+	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(-3.99f), "%u"); // above -4 dB FS
+	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(-0.20f), "%u"); // above -4 dB FS
+	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(10.00f), "%u"); // above -4 dB FS (out of range +ve)
 
-	ASSERT_EQ_FMT(1, fft_to_led_bar_conversion(7.1f), "%u"); // 7-15
+	ASSERT_EQ_FMT(7, fft_to_led_bar_conversion(-6.99f), "%u"); // above -7 dB FS
+	ASSERT_EQ_FMT(7, fft_to_led_bar_conversion(-4.00f), "%u"); // above -7 dB FS
+	ASSERT_EQ_FMT(7, fft_to_led_bar_conversion(-5.20f), "%u"); // above -7 dB FS
 
-	ASSERT_EQ_FMT(2, fft_to_led_bar_conversion(49.8f), "%u"); // 16-255
-	ASSERT_EQ_FMT(2, fft_to_led_bar_conversion(255.91f), "%u"); // 16-255
+	ASSERT_EQ_FMT(6, fft_to_led_bar_conversion(-9.99f), "%u"); // above -10 dB FS
+	ASSERT_EQ_FMT(6, fft_to_led_bar_conversion(-7.00f), "%u"); // above -10 dB FS
+	ASSERT_EQ_FMT(6, fft_to_led_bar_conversion(-8.41f), "%u"); // above -10 dB FS
 
-	ASSERT_EQ_FMT(3, fft_to_led_bar_conversion(256.01f), "%u"); // 256-4095
-	ASSERT_EQ_FMT(3, fft_to_led_bar_conversion(4095.87f), "%u"); // 256-4095
+	ASSERT_EQ_FMT(5, fft_to_led_bar_conversion(-12.99f), "%u"); // above -13 dB FS
+	ASSERT_EQ_FMT(5, fft_to_led_bar_conversion(-10.00f), "%u"); // above -13 dB FS
+	ASSERT_EQ_FMT(5, fft_to_led_bar_conversion(-11.11f), "%u"); // above -13 dB FS
 
-	ASSERT_EQ_FMT(4, fft_to_led_bar_conversion(4097.22f), "%u"); // 4096-65535
-	ASSERT_EQ_FMT(4, fft_to_led_bar_conversion(6555.99f), "%u"); // 4096-65535
+	ASSERT_EQ_FMT(4, fft_to_led_bar_conversion(-14.99f), "%u"); // above -15 dB FS
+	ASSERT_EQ_FMT(4, fft_to_led_bar_conversion(-13.00f), "%u"); // above -15 dB FS
+	ASSERT_EQ_FMT(4, fft_to_led_bar_conversion(-14.22f), "%u"); // above -15 dB FS
 
-	ASSERT_EQ_FMT(5, fft_to_led_bar_conversion(65536.43f), "%u"); // 65536-1048575
-	ASSERT_EQ_FMT(5, fft_to_led_bar_conversion(1048575.63f), "%u"); // 65536-1048575
+	ASSERT_EQ_FMT(3, fft_to_led_bar_conversion(-17.99f), "%u"); // above -18 dB FS
+	ASSERT_EQ_FMT(3, fft_to_led_bar_conversion(-15.00f), "%u"); // above -18 dB FS
+	ASSERT_EQ_FMT(3, fft_to_led_bar_conversion(-16.56f), "%u"); // above -18 dB FS
 
-	ASSERT_EQ_FMT(6, fft_to_led_bar_conversion(1048576.66f), "%u"); // 1048575-16777215
-	// fractional part tends to round up after this point
-	ASSERT_EQ_FMT(16777215, (uint32_t) 16777215.41f, "%u"); // 1048575-16777215
-	ASSERT_EQ_FMT(6, fft_to_led_bar_conversion(16777215.41f), "%u"); // 1048575-16777215
+	ASSERT_EQ_FMT(2, fft_to_led_bar_conversion(-21.99f), "%u"); // above -22 dB FS
+	ASSERT_EQ_FMT(2, fft_to_led_bar_conversion(-18.00f), "%u"); // above -22 dB FS
+	ASSERT_EQ_FMT(2, fft_to_led_bar_conversion(-20.87f), "%u"); // above -22 dB FS
 
-	ASSERT_EQ_FMT(7, fft_to_led_bar_conversion(16777216.03f), "%u"); // 16777216-268435455
-	ASSERT_EQ_FMT(268435440, (uint32_t) 268435440.31f, "%u");
-	ASSERT_EQ_FMT(7, fft_to_led_bar_conversion(268435440.31f), "%u"); // 16777216-268435455
+	ASSERT_EQ_FMT(1, fft_to_led_bar_conversion(-26.99f), "%u"); // above -27 dB FS
+	ASSERT_EQ_FMT(1, fft_to_led_bar_conversion(-22.00f), "%u"); // above -27 dB FS
+	ASSERT_EQ_FMT(1, fft_to_led_bar_conversion(-25.50f), "%u"); // above -27 dB FS
 
-	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(268435456.47f), "%u"); // 268435456-INT32_MAX
-	// example of odd rounding up
-	ASSERT_EQ_FMT(268435456, (uint32_t) 268435451.47f, "%u");
-	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(268435454.47f), "%u"); // 268435456-INT32_MAX
-	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(0x7FFFFFFFU), "%u"); // 268435456-INT32_MAX
-	// INT32_MAX as signed bit is negative which always gets converted to 0's
-
-	// Check that values above INT32_MAX are treated correctly
-	ASSERT_EQ_FMT(8, fft_to_led_bar_conversion(FLT_MAX), "%u"); // 268435456-INT32_MAX
+	ASSERT_EQ_FMT(0, fft_to_led_bar_conversion(-27.00f), "%u"); // below -27 dB FS
+	ASSERT_EQ_FMT(0, fft_to_led_bar_conversion(-40.00f), "%u"); // below -27 dB FS
+	ASSERT_EQ_FMT(0, fft_to_led_bar_conversion(-156.99f), "%u"); // below -27 dB FS
+	ASSERT_EQ_FMT(0, fft_to_led_bar_conversion(-14341456.99f), "%u"); // below -27 dB FS
 
 	PASS();
 }

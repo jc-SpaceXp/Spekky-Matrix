@@ -9,7 +9,7 @@
 #include "fft_constants.h"
 
 
-extern float bin_mags[FFT_DATA_SIZE/2];
+extern float db_bin_mags[FFT_DATA_SIZE/2];
 struct MaximMax2719 led_matrix;
 
 void led_matrix_setup(int total_devices)
@@ -32,7 +32,7 @@ void led_matrix_update_callback(xTimerHandle pxTimer)
 	uint8_t row_outputs[led_matrix.total_devices][8];
 	for (int i = 0; i < 8; ++i) {
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-			bars[dev][i] = fft_to_led_bar_conversion(bin_mags[i + (dev * 8)]);
+			bars[dev][i] = fft_to_led_bar_conversion(db_bin_mags[i + (dev * 8)]);
 		}
 	}
 
