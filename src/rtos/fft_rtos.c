@@ -55,23 +55,8 @@ void fft_task_processing(void* pvParameters)
 		                                               , DATA_LEN_HALF, L);
 		}
 
-		// test max amplitude square wave
-		// 16777215 == (int32_t) 0x00FFFFFF
-		for (int i = 0; i < (int) FFT_DATA_SIZE; ++i) {
-			fft_buffer[i * 2] = 16777215.0f;
-			fft_buffer[(i * 2) + 1] = 0.0f; // complex part
-		}
-		for (int i = FFT_DATA_SIZE; i < (int) (FFT_DATA_SIZE * 2); ++i) {
-			int k = i - FFT_DATA_SIZE;
-			fft_buffer[(k * 2) + FFT_DATA_SIZE] = 0.0f;
-			fft_buffer[(k * 2) + 1 + FFT_DATA_SIZE] = 0.0f; // complex part
-		}
-
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
 		// ignore DC component, any gather real frequencies and Nyquist
 		arm_cmplx_mag_f32(&fft_buffer[2], bin_mags, FFT_DATA_SIZE/2);
-		for (;;) {
-			// gdb trap
-		}
 	}
 }
