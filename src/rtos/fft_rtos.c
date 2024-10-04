@@ -56,9 +56,9 @@ void fft_task_processing(void* pvParameters)
 		}
 
 		// test max amplitude square wave
-		// -256 == (int32_t) 0xFFFFFF00
+		// 16777215 == (int32_t) 0x00FFFFFF
 		for (int i = 0; i < (int) FFT_DATA_SIZE; ++i) {
-			fft_buffer[i * 2] = -256.0f;
+			fft_buffer[i * 2] = 16777215.0f;
 			fft_buffer[(i * 2) + 1] = 0.0f; // complex part
 		}
 		for (int i = FFT_DATA_SIZE; i < (int) (FFT_DATA_SIZE * 2); ++i) {
