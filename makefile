@@ -89,6 +89,7 @@ DACTESTTARGET = dac_tests
 LEDSTESTTARGET = leds_tests
 SPITESTTARGET = spi_tests
 MICTESTTARGET = mic_tests
+FFTPROCESSINGTESTTARGET = fft_processing_tests
 
 TESTCC := gcc
 TESTSIZE := size
@@ -120,6 +121,9 @@ SPI_TESTOBJS := $(SPI_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 MIC_TESTSRCS := $(TESTDIR)/mic_data_suite.c $(TESTDIR)/mic_data_main.c
 MIC_TESTSRCS += $(SRCDIR)/mic_data_processing.c
 MIC_TESTOBJS := $(MIC_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
+FFTPROCESSING_TESTSRCS := $(TESTDIR)/fft_processing_suite.c $(TESTDIR)/fft_processing_main.c
+FFTPROCESSING_TESTSRCS += $(SRCDIR)/fft_processing.c
+FFTPROCESSING_TESTOBJS := $(FFTPROCESSING_TESTSRCS:%.c=$(TESTOBJDIR)/%.o)
 
 PRINT_PREFIX = "\#\#\#\#\#"
 
@@ -127,7 +131,8 @@ PRINT_PREFIX = "\#\#\#\#\#"
 .PHONY: all clean tests srcdepdir freertos_update cmsis_update_all sigploti2s_update \
 unit_test_update_all update_all flash-erase flash-write flash-backup
 all: $(TARGET).elf $(TARGET).bin
-tests: $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf $(SPITESTTARGET).elf $(MICTESTTARGET).elf
+tests: $(DACTESTTARGET).elf $(LEDSTESTTARGET).elf $(SPITESTTARGET).elf $(MICTESTTARGET).elf \
+$(FFTPROCESSINGTESTTARGET).elf
 
 flash-backup:
 	$(FLASH) read BIN_BACKUP.bin 0x08000000 0x20000
@@ -225,6 +230,12 @@ $(SPITESTTARGET).elf: $(SPI_TESTOBJS)
 	$(TESTSIZE) $@
 
 $(MICTESTTARGET).elf: $(MIC_TESTOBJS)
+	@echo "$(PRINT_PREFIX) Linking test objects"
+	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
+	$(TESTSIZE) $@
+
+$(FFTPROCESSINGTESTTARGET).elf: TESTLDLIBS = -lm
+$(FFTPROCESSINGTESTTARGET).elf: $(FFTPROCESSING_TESTOBJS)
 	@echo "$(PRINT_PREFIX) Linking test objects"
 	$(TESTCC) $(TESTLDFLAGS) $(TESTLDLIBS) $^ -o $@
 	$(TESTSIZE) $@

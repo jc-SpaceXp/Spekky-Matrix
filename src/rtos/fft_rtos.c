@@ -27,7 +27,7 @@ void __attribute__((optimize("O0"))) fix_fft_bin_index(struct FftBinPeak* peak) 
 	peak->bin_index += 1; // ignored DC component, add 1 to correct index
 }
 
-void fft_processing(void* pvParameters)
+void fft_task_processing(void* pvParameters)
 {
 	(void) pvParameters;
 
