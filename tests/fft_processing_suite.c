@@ -39,7 +39,9 @@ TEST basic_average_bin_test(void)
 
 	average_bin_2d_array(2, 9, src, dst);
 
-	ASSERT_MEM_EQ(expected, dst, 9);
+	for (int i = 0; i < 9; ++i) {
+		ASSERT_IN_RANGE(expected[i], dst[i], 0.3f);
+	}
 	PASS();
 }
 
