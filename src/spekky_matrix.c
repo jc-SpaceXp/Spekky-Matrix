@@ -36,7 +36,7 @@ int main (void)
 	assert_param(xDmaFlagQueue == pdPASS);
 
 	TimerHandle_t led_refresh_rate = xTimerCreate("Led matrix refresh rate"
-	                                             , pdMS_TO_TICKS(120)
+	                                             , pdMS_TO_TICKS(20)
 	                                             , pdTRUE
 	                                             , NULL
 	                                             , led_matrix_update_callback);
