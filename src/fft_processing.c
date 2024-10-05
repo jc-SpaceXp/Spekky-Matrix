@@ -20,3 +20,23 @@ void real_fft_to_db_fs(const float* src, float* dst, unsigned int real_fft_size)
 		dst[i] = 20 * log10(complex_mag / adjusted_fft_max_ref);
 	}
 }
+
+
+void average_bin_2d_array(unsigned int total_arrays, unsigned int length
+                         , const float (*src)[length], float* dst)
+{
+	float sum[length];
+	for (int bin = 0; bin < (int) length; ++bin) {
+		sum[bin] = 0;
+	}
+
+	for (int buffer = 0; buffer < (int) total_arrays; ++buffer) {
+		for (int bin = 0; bin < (int) length; ++bin) {
+			sum[bin] += src[buffer][bin];
+		}
+	}
+
+	for (int bin = 0; bin < (int) length; ++bin) {
+		dst[bin] = sum[bin] / total_arrays;
+	}
+}

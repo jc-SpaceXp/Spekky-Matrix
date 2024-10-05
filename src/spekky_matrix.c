@@ -21,6 +21,7 @@
 uint16_t i2s_dma_data[DATA_LEN] = { 0 };
 
 QueueHandle_t xDmaFlagQueue;
+QueueHandle_t xFftCompleteFlagQueue;
 
 int main (void)
 {
@@ -35,22 +36,19 @@ int main (void)
 	(void) xDmaFlagQueue; // suppress compiler warning
 	assert_param(xDmaFlagQueue == pdPASS);
 
-	TimerHandle_t led_refresh_rate = xTimerCreate("Led matrix refresh rate"
-	                                             , pdMS_TO_TICKS(120)
-	                                             , pdTRUE
-	                                             , NULL
-	                                             , led_matrix_update_callback);
-	(void) led_refresh_rate; // suppress compiler warning
-	assert_param(led_refresh_rate == pdPASS);
-
-	BaseType_t led_refresh_start = xTimerStart(led_refresh_rate, 0);
-	(void) led_refresh_start; // suppress compiler warning
-	assert_param(led_refresh_start == pdPASS);
+	xFftCompleteFlagQueue = xQueueCreate(1, sizeof(int));
+	(void) xFftCompleteFlagQueue; // suppress compiler warning
+	assert_param(xFftCompleteFlagQueue == pdPASS);
 
 	BaseType_t fft_task = xTaskCreate(fft_task_processing, "FFT task", 512, NULL
 	                                 , configMAX_PRIORITIES - 2, NULL);
 	(void) fft_task; // suppress compiler warning
 	assert_param(fft_task == pdPASS);
+
+	BaseType_t led_task = xTaskCreate(led_matrix_update_task, "LED task", 256, NULL
+	                                 , configMAX_PRIORITIES - 3, NULL);
+	(void) led_task; // suppress compiler warning
+	assert_param(led_task == pdPASS);
 
 	vTaskStartScheduler();
 

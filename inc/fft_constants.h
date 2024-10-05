@@ -9,4 +9,6 @@
 // other 2 16-bits of data are ignored e.g. L or R channel
 // which is 1/4 and then 1/2 that due to DMA double buffering
 
+#define FFT_AVERAGE  5U
+
 #endif /* FFT_CONSTANTS_H */
