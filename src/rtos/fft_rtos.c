@@ -20,14 +20,6 @@ float32_t db_bin_mags[FFT_DATA_SIZE/2];
 static float32_t fft_buffer1[FFT_DATA_SIZE * 2];
 static float32_t fft_buffer2[FFT_DATA_SIZE * 2];
 
-struct FftBinPeak {
-	float32_t magnitude;
-	uint32_t bin_index;
-};
-
-void __attribute__((optimize("O0"))) fix_fft_bin_index(struct FftBinPeak* peak) {
-	peak->bin_index += 1; // ignored DC component, add 1 to correct index
-}
 
 void fft_task_processing(void* pvParameters)
 {
