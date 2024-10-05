@@ -31,11 +31,11 @@ TEST max_amp_square_wave_to_db_fs(void)
 TEST basic_average_bin_test(void)
 {
 	float src[2][9] = {
-		{1, 2, 3, 4, 5, 6, 7, 8, 9 }
-		, {1, 2, 3, 4, 5, 6, 7, 8, 9 }
+		{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f }
+		, {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f }
 	};
-	float dst[9] = { 0 };
-	float expected[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	float dst[9] = { 0.0f };
+	float expected[9] = { 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f };
 
 	average_bin_2d_array(2, 9, src, dst);
 
@@ -48,13 +48,13 @@ TEST basic_average_bin_test(void)
 TEST average_buffered_bin_test(void)
 {
 	float src[4][9] = {
-		{1, 2, 3, 4, 5, 6, 7, 8, 9 }
-		, {1, 2, 3, 4, 5, 6, 7, 8, 9 }
-		, {5, 6, 7, 8, 9, 10, 11, 12, 13 }
-		, {5, 6, 7, 8, 9, 10, 11, 12, 13 }
+		{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f }
+		, {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f }
+		, {5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 12.0f, 13.0f }
+		, {5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 12.0f, 13.0f }
 	};
-	float dst[9] = { 0 };
-	float expected[9] = {5, 6, 7, 8, 9.0f, 10, 11, 12, 13, };
+	float dst[9] = { 0.0f };
+	float expected[9] = { 5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 12.0f, 13.0f };
 	float (*src_offset)[9] = &src[2];
 
 	average_bin_2d_array(2, 9, src_offset, dst);
@@ -68,13 +68,13 @@ TEST average_buffered_bin_test(void)
 TEST average_buffered_bin_test_with_zeros(void)
 {
 	float src[4][9] = {
-		{1, 2, 3, 4, 5, 6, 7, 8, 9 }
-		, {1, 2, 3, 4, 5, 6, 7, 8, 9 }
-		, {5, 6, 7, 8, 9, 10, 11, 0, 13 }
-		, {5, 6, 7, 8, 9, 10, 11, 0, 13 }
+		{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f }
+		, {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f }
+		, {5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 0.0f, 13.0f }
+		, {5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 0.0f, 13.0f }
 	};
-	float dst[9] = { 0 };
-	float expected[9] = {5, 6, 7, 8, 9, 10, 11, 0, 13, };
+	float dst[9] = { 0.0f };
+	float expected[9] = { 5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 0.0f, 13.0f };
 	float (*src_offset)[9] = &src[2];
 
 	average_bin_2d_array(2, 9, src_offset, dst);
