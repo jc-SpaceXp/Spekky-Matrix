@@ -54,7 +54,27 @@ TEST average_buffered_bin_test(void)
 		, {5, 6, 7, 8, 9, 10, 11, 12, 13 }
 	};
 	float dst[9] = { 0 };
-	float expected[9] = {5, 6, 7, 8, 9, 10, 11, 12, 13, };
+	float expected[9] = {5, 6, 7, 8, 9.0f, 10, 11, 12, 13, };
+	float (*src_offset)[9] = &src[2];
+
+	average_bin_2d_array(2, 9, src_offset, dst);
+
+	for (int i = 0; i < 9; ++i) {
+		ASSERT_IN_RANGE(expected[i], dst[i], 0.3f);
+	}
+	PASS();
+}
+
+TEST average_buffered_bin_test_with_zeros(void)
+{
+	float src[4][9] = {
+		{1, 2, 3, 4, 5, 6, 7, 8, 9 }
+		, {1, 2, 3, 4, 5, 6, 7, 8, 9 }
+		, {5, 6, 7, 8, 9, 10, 11, 0, 13 }
+		, {5, 6, 7, 8, 9, 10, 11, 0, 13 }
+	};
+	float dst[9] = { 0 };
+	float expected[9] = {5, 6, 7, 8, 9, 10, 11, 0, 13, };
 	float (*src_offset)[9] = &src[2];
 
 	average_bin_2d_array(2, 9, src_offset, dst);
@@ -71,5 +91,6 @@ SUITE(fft_suite)
 	RUN_TEST(max_amp_square_wave_to_db_fs);
 	RUN_TEST(basic_average_bin_test);
 	RUN_TEST(average_buffered_bin_test);
+	RUN_TEST(average_buffered_bin_test_with_zeros);
 }
 
