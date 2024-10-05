@@ -16,7 +16,7 @@
 extern QueueHandle_t xDmaFlagQueue;
 extern QueueHandle_t xFftCompleteFlagQueue;
 
-float32_t bin_mags[4][FFT_DATA_SIZE/2];
+float32_t bin_mags[6][FFT_DATA_SIZE/2];
 float32_t average_bin_mags[FFT_DATA_SIZE/2];
 float32_t db_bin_mags[FFT_DATA_SIZE/2];
 static float32_t fft_buffer1[FFT_DATA_SIZE * 2];
@@ -60,8 +60,8 @@ void fft_task_processing(void* pvParameters)
 
 
 		fft_counter += 1;
-		if (fft_counter > 3) {
-			average_bin_2d_array(4, FFT_DATA_SIZE/2, bin_mags, average_bin_mags);
+		if (fft_counter > 5) {
+			average_bin_2d_array(6, FFT_DATA_SIZE/2, bin_mags, average_bin_mags);
 			real_fft_to_db_fs(average_bin_mags, db_bin_mags, FFT_DATA_SIZE/2);
 
 			xQueueSendToFront(xFftCompleteFlagQueue, &fft_counter, 0);
