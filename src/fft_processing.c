@@ -23,7 +23,7 @@ void real_fft_to_db_fs(const float* src, float* dst, unsigned int real_fft_size)
 
 
 void average_bin_2d_array(unsigned int total_arrays, unsigned int length
-                         , const float src[total_arrays][length], float* dst)
+                         , const float (*src)[length], float* dst)
 {
 	float sum[length];
 	for (int buffer = 0; buffer < (int) total_arrays; ++buffer) {
