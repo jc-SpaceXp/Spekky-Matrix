@@ -1,6 +1,7 @@
 #include "fft_rtos.h"
 #include "extern_i2s_dma_data.h"
 #include "mic_data_processing.h"
+#include "fft_processing.h"
 
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_nucleo.h"
@@ -14,7 +15,8 @@
 
 extern QueueHandle_t xDmaFlagQueue;
 
-float32_t bin_mags[FFT_DATA_SIZE];
+float32_t bin_mags[FFT_DATA_SIZE/2];
+float32_t db_bin_mags[FFT_DATA_SIZE/2];
 static float32_t fft_buffer1[FFT_DATA_SIZE * 2];
 static float32_t fft_buffer2[FFT_DATA_SIZE * 2];
 
@@ -27,7 +29,7 @@ void __attribute__((optimize("O0"))) fix_fft_bin_index(struct FftBinPeak* peak) 
 	peak->bin_index += 1; // ignored DC component, add 1 to correct index
 }
 
-void fft_processing(void* pvParameters)
+void fft_task_processing(void* pvParameters)
 {
 	(void) pvParameters;
 
@@ -56,6 +58,9 @@ void fft_processing(void* pvParameters)
 		}
 
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
-		arm_cmplx_mag_f32(fft_buffer, bin_mags, FFT_DATA_SIZE);
+		// ignore DC component, any gather real frequencies and Nyquist
+		arm_cmplx_mag_f32(&fft_buffer[2], bin_mags, FFT_DATA_SIZE/2);
+
+		real_fft_to_db_fs(bin_mags, db_bin_mags, FFT_DATA_SIZE/2);
 	}
 }

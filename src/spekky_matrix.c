@@ -47,7 +47,7 @@ int main (void)
 	(void) led_refresh_start; // suppress compiler warning
 	assert_param(led_refresh_start == pdPASS);
 
-	BaseType_t fft_task = xTaskCreate(fft_processing, "FFT task", 512, NULL
+	BaseType_t fft_task = xTaskCreate(fft_task_processing, "FFT task", 512, NULL
 	                                 , configMAX_PRIORITIES - 2, NULL);
 	(void) fft_task; // suppress compiler warning
 	assert_param(fft_task == pdPASS);

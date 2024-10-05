@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import matplotlib.animation as animation
 from functools import partial
+from statistics import mean
 from fermion_mic_check import l_channel_list
 
 def dump_lists_to_file(fft_input, fft_output):
@@ -31,7 +32,8 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
     int32_max = np.power(2, 31) - 1
     x = np.float32(np.sin(w*t))
     if integer:
-        x = (int32_max * np.sin(w*t)).astype(np.int32)
+        x = [int32_max] * int(N / 2)
+        x[len(x):] = [0] * int(N / 2)
 
     if show_samples:
         print(x)
@@ -43,8 +45,10 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
         plt.show()
     return x
 
-def fft_conversion(sampled_waveform, show_conversion):
-    X = np.singlecomplex(np.fft.fft(sampled_waveform))
+def fft_conversion(sampled_waveform, show_conversion, remove_dc=False):
+    if remove_dc:
+        sampled_waveform = sampled_waveform - mean(sampled_waveform)
+    X = np.complex64(np.fft.fft(sampled_waveform))
 
     if show_conversion:
         print(X)
@@ -58,12 +62,41 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
 
     fig.suptitle('FFT and iFFT', y=0.995)
 
-    ax1.stem((n/T), np.abs(fft_results))
+    fft_graph = np.abs(fft_results)
+    fft_graph_label = 'FFT Amplitude'
+    if decibel_fft:
+        window_gain = 1
+        acoustic_overload_point = 124
+        dbfs_max = acoustic_overload_point
+        fft_max = np.power(2, 31) - 1
+        mag_ref_max = (fft_max * N) / 2
+        if i2s_debug:
+            amp_ref_max = np.power(2, 23) - 1
+        # 0 values should represent -inf dB
+        # if we set to a really low value we get a dB value below the noise floor
+        # also C math.h log10 function expects argument to be > 0
+        for i in range(len(fft_graph)):
+            if fft_graph[i] == 0:
+                fft_graph[i] = 0.8
+        # Max value of FFT is 32-bits therefore mag_ref_max doesn't change
+        # even though my I2S data is constrained to 24-bits
+        fft_graph = (20 * np.log10(fft_graph / mag_ref_max))
+        ax1.plot((n/T), fft_graph)
+        ax1.set_ylim([-dbfs_max, 10])
+        fft_graph_label = 'FFT Amplitude (dB FS)'
+
+    ax1.grid()
+    if not decibel_fft:
+        ax1.stem((n/T), fft_graph)
     ax1.set_xlabel('Freq (Hz)')
-    ax1.set_ylabel('FFT Amplitude')
+    ax1.set_ylabel(fft_graph_label)
     if animate:
-        ax1.set_ylim([0.00, 2.50E11])
-    secax1.stem(n, np.abs(fft_results))
+        if not decibel_fft:
+            ax1.set_ylim([0.00, 2.50E11])
+    if decibel_fft:
+        secax1.plot(n, fft_graph)
+    else:
+        secax1.stem(n, fft_graph)
     secax1.tick_params(axis='x', which='major')
     secax1.set_xlabel('FFT Bins', labelpad=2.00)
     secax1.xaxis.set_label_position('top')
@@ -71,7 +104,8 @@ def plot_fft_ifft_results(fft_results, sampling_freq, total_samples, animate):
     ax2.plot(tsamp * n, np.fft.ifft(fft_results).real)
     ax2.set_xlabel('Time, seconds (s)')
 
-    ax1.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.2e'))
+    if not decibel_fft:
+        ax1.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.2e'))
     ax2.yaxis.set_major_formatter(mtick.ScalarFormatter(useMathText=True))
 
     return None
@@ -101,6 +135,7 @@ N = 1024 # fft size (or sample count)
 print_sampled_fft_input = False
 plot_sampled_fft_input = False
 print_fft_output = False
+decibel_fft = True
 plot_fft_output = True
 integer = True
 i2s_debug = True

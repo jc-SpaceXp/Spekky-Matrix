@@ -4,6 +4,6 @@
 #include "FreeRTOS.h"
 #include "timers.h"
 
-void fft_processing(void* pvParameters);
+void fft_task_processing(void* pvParameters);
 
 #endif /* FFT_RTOS_H */

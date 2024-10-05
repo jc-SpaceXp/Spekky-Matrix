@@ -237,34 +237,26 @@ void led_matrix_convert_bars_to_rows(uint8_t (*col_heights)[8], enum LedDirectio
 uint8_t fft_to_led_bar_conversion(float input_bin_mags)
 {
 	uint8_t bars = 0;
-	uint32_t bin_mags = 0;
-	bin_mags = (uint32_t) input_bin_mags;
+	int32_t db_fs = 0;
+	db_fs = (int32_t) input_bin_mags;
 
-	// scale 32-bits to 8 discrete heights
-	if (bin_mags >> 28) {
+	// scale to 0 dB FS to mic sensitivity (-25 to -27 dB FS in my case)
+	if (db_fs > -4) {
 		bars = 8;
-	} else if ((bin_mags >> 24) & 0x0F) {
+	} else if (db_fs > -7) {
 		bars = 7;
-	} else if ((bin_mags >> 20) & 0x0F) {
+	} else if (db_fs > -10) {
 		bars = 6;
-	} else if ((bin_mags >> 16) & 0x0F) {
+	} else if (db_fs > -13) {
 		bars = 5;
-	} else if ((bin_mags >> 12) & 0x0F) {
+	} else if (db_fs > -15) {
 		bars = 4;
-	} else if ((bin_mags >> 8) & 0x0F) {
+	} else if (db_fs > -18) {
 		bars = 3;
-	} else if ((bin_mags >> 4) & 0x0F) {
+	} else if (db_fs > -22) {
 		bars = 2;
-	} else if ((bin_mags >> 2) & 0x03) {
-		// keep lowest 2 bits as 0 height
-		// otherwise only values of 0 have a height of 0
+	} else if (db_fs > -27) {
 		bars = 1;
-	}
-
-	// FLT_MAX is much larger than INT_MAX
-	// and is missed in the above if-else chain
-	if (input_bin_mags > INT_MAX) {
-		bars = 8;
 	}
 
 	return bars;
