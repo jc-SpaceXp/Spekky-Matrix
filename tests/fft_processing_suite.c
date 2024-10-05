@@ -28,9 +28,26 @@ TEST max_amp_square_wave_to_db_fs(void)
 	PASS();
 }
 
+TEST basic_average_bin_test(void)
+{
+	float src[2][10] = {
+		{1, 2, 3, 4, 5, 6, 7, 8, 9 }
+		, {1, 2, 3, 4, 5, 6, 7, 8, 9 }
+	};
+	float dst[10] = { 0 };
+	float expected[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+	average_bin_2d_array(2, 10, src, dst);
+
+	ASSERT_MEM_EQ(expected, dst, 10);
+
+	PASS();
+}
+
 
 SUITE(fft_suite)
 {
 	RUN_TEST(max_amp_square_wave_to_db_fs);
+	RUN_TEST(basic_average_bin_test);
 }
 
