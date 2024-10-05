@@ -14,6 +14,7 @@
 #include "fft_constants.h"
 
 extern QueueHandle_t xDmaFlagQueue;
+extern QueueHandle_t xFftCompleteFlagQueue;
 
 float32_t bin_mags[FFT_DATA_SIZE/2];
 float32_t db_bin_mags[FFT_DATA_SIZE/2];
@@ -33,6 +34,7 @@ void fft_task_processing(void* pvParameters)
 	assert_param(c_status == ARM_MATH_SUCCESS);
 
 	int fft_section = 0;
+	int fft_complete = 1;
 	float32_t* fft_buffer = &fft_buffer1[0];
 	for (;;) {
 		while (!xQueueReceive(xDmaFlagQueue, &fft_section, portMAX_DELAY)) {
@@ -49,10 +51,13 @@ void fft_task_processing(void* pvParameters)
 		                                               , DATA_LEN_HALF, L);
 		}
 
+
 		arm_cfft_f32(&arm_cfft, fft_buffer, inverse_fft, bit_reverse);
 		// ignore DC component, any gather real frequencies and Nyquist
 		arm_cmplx_mag_f32(&fft_buffer[2], bin_mags, FFT_DATA_SIZE/2);
 
 		real_fft_to_db_fs(bin_mags, db_bin_mags, FFT_DATA_SIZE/2);
+
+		xQueueSendToFront(xFftCompleteFlagQueue, &fft_complete, pdMS_TO_TICKS(2));
 	}
 }
