@@ -18,7 +18,7 @@ def dump_lists_to_file(fft_input, fft_output):
     return None
 
 def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, show_samples
-                                 , show_plot):
+                                 , show_plot, remove_dc, window):
     freq = freq
     fsamp = sampling_freq
     tsamp = 1.0/fsamp
@@ -32,8 +32,13 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
     int32_max = np.power(2, 31) - 1
     x = np.float32(np.sin(w*t))
     if integer:
-        x = [int32_max] * int(N / 2)
-        x[len(x):] = [0] * int(N / 2)
+        x = [int32_max] * int(N)
+
+    if remove_dc:
+        x = x - mean(x)
+
+    if window:
+        x = x * np.blackman(N)
 
     if show_samples:
         print(x)
@@ -45,9 +50,7 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
         plt.show()
     return x
 
-def fft_conversion(sampled_waveform, show_conversion, remove_dc=False):
-    if remove_dc:
-        sampled_waveform = sampled_waveform - mean(sampled_waveform)
+def fft_conversion(sampled_waveform, show_conversion):
     X = np.complex64(np.fft.fft(sampled_waveform))
 
     if show_conversion:
@@ -139,15 +142,17 @@ decibel_fft = True
 plot_fft_output = True
 integer = True
 i2s_debug = True
+remove_dc = True
+window = True
 dump_results_to_file = False
-animate_fft = True
+animate_fft = False
 
 # Make global so animate and plot functions can both use
 fig, (ax1, ax2) = plt.subplots(1, 2)
 secax1 = ax1.twiny()
 
 x = periodically_sampled_waveform(integer, freq, fsamp, N, print_sampled_fft_input
-                                 , plot_sampled_fft_input)
+                                 , plot_sampled_fft_input, remove_dc, window)
 if i2s_debug:
     offset = 0
     x = l_channel_list[offset:N+offset]
