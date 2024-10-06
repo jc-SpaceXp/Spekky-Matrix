@@ -78,6 +78,7 @@ ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_cfft_radix8_f32.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/TransformFunctions/arm_bitreversal2.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/BasicMathFunctions/arm_abs_f32.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/BasicMathFunctions/arm_abs_q31.c
+ARMDSPSRCS += $(ARMDSPDIR)/Source/BasicMathFunctions/arm_mult_f32.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/ComplexMathFunctions/arm_cmplx_mag_f32.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/StatisticsFunctions/arm_max_f32.c
 ARMDSPSRCS += $(ARMDSPDIR)/Source/CommonTables/arm_const_structs.c
