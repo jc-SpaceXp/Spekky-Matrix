@@ -8,6 +8,7 @@
 #include "transform_functions.h"
 #include "statistics_functions.h"
 #include "basic_math_functions.h"
+#include "window_functions.h"
 
 #include "FreeRTOS.h"
 #include "queue.h"
@@ -24,23 +25,26 @@ static float32_t data_buffer1[FFT_DATA_SIZE * 2];
 static float32_t data_buffer2[FFT_DATA_SIZE * 2];
 static float32_t fft_input[FFT_DATA_SIZE * 2];
 
-const float32_t window_func[FFT_DATA_SIZE * 2] = {
-	1, 1, 1, 1,   1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
-	, 1, 1, 1, 1, 1, 1, 1, 1
+// via: arm_blackman_harris_92db_f32(window_func, FFT_DATA_SIZE); gdb output
+// adjusted for complex data e.g. FFT_DATA_SIZE blackman harris interleaved with 0's
+// b[i], 0, b[i+1], 0 format
+const float32_t complex_window_func[FFT_DATA_SIZE * 2] = {
+	5.99687919e-05,  0, 0.000199495815, 0, 0.000656468794, 0, 0.00154587673,  0
+	, 0.00305913622, 0, 0.00546273123,  0, 0.0090958653,   0, 0.014364982,    0
+	, 0.0217358209,  0, 0.0317205638,   0, 0.0448606685,   0, 0.0617044829,   0
+	, 0.0827803537,  0, 0.108565629,    0, 0.139452726,    0, 0.175714359,    0
+	, 0.21747002,    0, 0.264654964,    0, 0.316995889,    0, 0.373994321,    0
+	, 0.434919626,   0, 0.498813659,    0, 0.564508379,    0, 0.630654693,    0
+	, 0.695764124,   0, 0.758259773,    0, 0.816535234,    0, 0.869019151,    0
+	, 0.914240956,   0, 0.950894117,    0, 0.977894962,    0, 0.994431198,    0
+	, 1,             0, 0.994431138,    0, 0.977894843,    0, 0.950894058,    0
+	, 0.914240956,   0, 0.869019091,    0, 0.816535056,    0, 0.758259594,    0
+	, 0.695764065,   0, 0.630654752,    0, 0.56450808,     0, 0.49881354,     0
+	, 0.434919268,   0, 0.373994231,    0, 0.316995889,    0, 0.264654785,    0
+	, 0.21746999,    0, 0.175714269,    0, 0.139452651,    0, 0.108565524,    0
+	, 0.0827803165,  0, 0.061704468,    0, 0.0448606201,   0, 0.0317205489,   0
+	, 0.021735793,   0, 0.0143649699,   0, 0.00909586065,  0, 0.0054627629,   0
+	, 0.00305913808, 0, 0.00154588651,  0, 0.00065645203,  0, 0.000199492089, 0
 };
 
 
@@ -74,13 +78,11 @@ void fft_task_processing(void* pvParameters)
 		                                               , DATA_LEN_HALF, L);
 		}
 
-
-		arm_mult_f32(data_buffer, window_func, fft_input, FFT_DATA_SIZE * 2);
+		arm_mult_f32(data_buffer, complex_window_func, fft_input, FFT_DATA_SIZE * 2);
 
 		arm_cfft_f32(&arm_cfft, fft_input, inverse_fft, bit_reverse);
 		// ignore DC component, any gather real frequencies and Nyquist
 		arm_cmplx_mag_f32(&fft_input[2], &bin_mags[fft_counter][0], FFT_DATA_SIZE/2);
-
 
 		fft_counter += 1;
 		if (fft_counter == (int) (FFT_AVERAGE * 2)) {

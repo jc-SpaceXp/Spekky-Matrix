@@ -17,7 +17,7 @@ void real_fft_to_db_fs(const float* src, float* dst, unsigned int real_fft_size)
 		if (!complex_mag) {
 			complex_mag = 0.8;
 		}
-		dst[i] = 20 * log10(complex_mag / adjusted_fft_max_ref);
+		dst[i] = 20 * log10(complex_mag / adjusted_fft_max_ref) + 3.0f;
 	}
 }
 
