@@ -28,11 +28,16 @@ def periodically_sampled_waveform(integer, freq, sampling_freq, total_samples, s
     t = np.arange(0, tlen, tsamp) # 1sec worth of samples == fsamples total
     tend = N/fsamp
 
+    dc_only = False
+
     # Round to a value which stm32 can replicate
     int32_max = np.power(2, 31) - 1
     x = np.float32(np.sin(w*t))
     if integer:
-        x = [int32_max] * int(N)
+        x = [int32_max] * int(N / 2)
+        x[len(x):] = [0] * int(N / 2)
+        if dc_only:
+            x = [int32_max] * int(N)
 
     if remove_dc:
         x = x - mean(x)
