@@ -83,14 +83,14 @@ void fft_task_processing(void* pvParameters)
 
 
 		fft_counter += 1;
-		if (fft_counter > (int) (FFT_AVERAGE * 2 - 1)) {
+		if (fft_counter == (int) (FFT_AVERAGE * 2)) {
 			average_bin_2d_array(FFT_AVERAGE, FFT_DATA_SIZE/2, &bin_mags[FFT_AVERAGE]
 			                    , average_bin_mags);
 			real_fft_to_db_fs(average_bin_mags, db_bin_mags, FFT_DATA_SIZE/2);
 
 			xQueueSendToFront(xFftCompleteFlagQueue, &fft_counter, pdMS_TO_TICKS(2));
 			fft_counter = 0;
-		} else if (fft_counter > (int) (FFT_AVERAGE - 1)) {
+		} else if (fft_counter == (int) FFT_AVERAGE) {
 			average_bin_2d_array(FFT_AVERAGE, FFT_DATA_SIZE/2, bin_mags, average_bin_mags);
 			real_fft_to_db_fs(average_bin_mags, db_bin_mags, FFT_DATA_SIZE/2);
 
