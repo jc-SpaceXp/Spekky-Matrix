@@ -78,6 +78,13 @@ void fft_task_processing(void* pvParameters)
 		                                               , DATA_LEN_HALF, L);
 		}
 
+		float32_t dc_signal = 0.0f;
+		arm_mean_f32(data_buffer, FFT_DATA_SIZE * 2, &dc_signal);
+		dc_signal *= 2.0f; // data is complex { a, 0, b, 0 .. }, double to adjust for 0j's
+		for (int i = 0; i < (int) FFT_DATA_SIZE; ++i) {
+			data_buffer[i * 2] = data_buffer[i * 2] - dc_signal;
+		}
+
 		arm_mult_f32(data_buffer, complex_window_func, fft_input, FFT_DATA_SIZE * 2);
 
 		arm_cfft_f32(&arm_cfft, fft_input, inverse_fft, bit_reverse);
