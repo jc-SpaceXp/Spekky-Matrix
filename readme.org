@@ -44,6 +44,15 @@ Peak expected at the 7th/8th bin (2000 / 260 = ~7.69)
 Peak expected at the 15th/16th bin (4000 / 260 = ~15.36)
 
 [[file:media/blackman_harris_sine_4k.gif]]
+***** 32x8 LED Matrix (Sine Sweep Test)
+Since the measures I2S Ws period is 60us, this gives us a sampling frequency of 16.66 kHz.
+ Giving us a visual representation of 0-8.88 kHz with Spekky Matrix
+
+[[https://www.youtube.com/watch?v=dU80Fagdy28][Sine sweep source (youtube link)]]
+
+Note: Gif is played at 2.5x speed, see mp4 for realtime playback and audio of sweep test
+
+[[file:media/blackman_harris_sine_sweep.gif]]
 *** Schematic
 [[file:schematic_v03.pdf]]
 *** Execution Timeline
