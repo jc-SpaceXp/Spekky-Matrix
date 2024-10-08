@@ -32,17 +32,27 @@ The following tools are needed to build this project
 FFT size = 64, start offset = 0, next offset = 32, FPS = 4
 
 [[file:media/python_fft_logic_analyser_sine_1k.gif]]
-**** 32x8 LED Matrix (Sine 1kHz Test Tone)
+**** Spekky Matrix Calculations
 FFT size = 64, bin resolution = (1/60E-6)/64 --> ~260Hz
 
-Peak expected at the 3rd/4th bin (1000 / 260 = ~3.84)
-
 Note: I measured one Ws period as 60us on PulseView hence the 1/60E-6 above
+***** 32x8 LED Matrix (Sine 2kHz Test Tone)
+Peak expected at the 7th/8th bin (2000 / 260 = ~7.69)
 
-Note2: The LED bar sensitivity was tweaked locally (current code has less vertical separation
-between the other bars)
+[[file:media/blackman_harris_sine_2k.gif]]
+***** 32x8 LED Matrix (Sine 4kHz Test Tone)
+Peak expected at the 15th/16th bin (4000 / 260 = ~15.36)
 
-[[file:media/led_matrix_1khz.jpg]]
+[[file:media/blackman_harris_sine_4k.gif]]
+***** 32x8 LED Matrix (Sine Sweep Test)
+Since the measures I2S Ws period is 60us, this gives us a sampling frequency of 16.66 kHz.
+ Giving us a visual representation of 0-8.88 kHz with Spekky Matrix
+
+[[https://www.youtube.com/watch?v=dU80Fagdy28][Sine sweep source (youtube link)]]
+
+Note: Gif is played at 2.5x speed, see mp4 for realtime playback and audio of sweep test
+
+[[file:media/blackman_harris_sine_sweep.gif]]
 *** Schematic
 [[file:schematic_v03.pdf]]
 *** Execution Timeline
