@@ -45,7 +45,7 @@ Peak expected at the 15th/16th bin (4000 / 260 = ~15.36)
 
 [[file:media/blackman_harris_sine_4k.gif]]
 ***** 32x8 LED Matrix (Sine Sweep Test)
-Since the measures I2S Ws period is 60us, this gives us a sampling frequency of 16.66 kHz.
+Since the I2S Ws period is 60us, this gives us a sampling frequency of 16.66 kHz.
  Giving us a visual representation of 0-8.88 kHz with Spekky Matrix
 
 [[https://www.youtube.com/watch?v=dU80Fagdy28][Sine sweep source (youtube link)]]
