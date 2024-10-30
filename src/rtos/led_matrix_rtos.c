@@ -14,7 +14,7 @@
 
 extern QueueHandle_t xFftCompleteFlagQueue;
 extern float db_bin_mags[FFT_DATA_SIZE/2];
-struct MaximMax2719 led_matrix;
+struct MaximMax7219 led_matrix;
 
 void led_matrix_setup(int total_devices)
 {

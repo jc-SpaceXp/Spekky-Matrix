@@ -17,7 +17,7 @@ FAKE_VALUE_FUNC(bool, spi_tx_ready_to_transmit);
 FAKE_VALUE_FUNC(bool, spi_tx_complete);
 
 static struct LedSpiPin some_cs_pin;
-static struct MaximMax2719 some_led_matrix;
+static struct MaximMax7219 some_led_matrix;
 
 struct LedMatrixTxTest {
 	uint8_t address;
