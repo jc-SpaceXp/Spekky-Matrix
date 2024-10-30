@@ -9,7 +9,7 @@ struct LedSpiPin {
 	unsigned int pin;
 };
 
-struct MaximMax2719 {
+struct MaximMax7219 {
 	struct LedSpiPin cs; // CS, chip select
 	int total_devices;
 };

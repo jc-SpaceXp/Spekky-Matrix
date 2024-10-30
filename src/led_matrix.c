@@ -5,7 +5,7 @@
 #include "stm32g4xx_spi.h"
 
 /*
- * LED Matrix (MAX2719)
+ * LED Matrix (MAX7219)
  *
  * TOP    (writes appear right to left visually, see example below)
  * Row 0  0000 0001 (0x01)
@@ -52,7 +52,7 @@ void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
 	*dest = *src;
 }
 
-void set_total_led_matrix_devices(struct MaximMax2719* matrix, int total_devices)
+void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices)
 {
 	matrix->total_devices = total_devices;
 }
@@ -90,7 +90,7 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 	}
 }
 
-void led_matrix_transfer_data_cascade(struct MaximMax2719 matrix, volatile uint32_t* spi_tx_reg
+void led_matrix_transfer_data_cascade(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
                                      , uint8_t address, uint8_t data, int device_number)
 {
 	// if X devices, must be a total of X calls to led_transfer(), one real, rest NOPs
@@ -109,14 +109,14 @@ void led_matrix_transfer_data_cascade(struct MaximMax2719 matrix, volatile uint3
 	assert_spi_pin(matrix.cs.assert_address, matrix.cs.pin);
 }
 
-void led_matrix_clear(struct MaximMax2719 matrix, volatile uint32_t* spi_tx_reg, int device_number)
+void led_matrix_clear(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg, int device_number)
 {
 	for (unsigned int i = ADDR_ROW0; i <= ADDR_ROW7; ++i) {
 		led_matrix_transfer_data_cascade(matrix, spi_tx_reg, i, 0x00, device_number);
 	}
 }
 
-void led_matrix_init(struct MaximMax2719 matrix, volatile uint32_t* spi_tx_reg
+void led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
                     , uint8_t brightness, int device_number)
 {
 	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_BRIGHTNESS, brightness
@@ -132,7 +132,7 @@ void led_matrix_init(struct MaximMax2719 matrix, volatile uint32_t* spi_tx_reg
 	led_matrix_clear(matrix, spi_tx_reg, device_number);
 }
 
-void led_matrix_init_all_quick(struct MaximMax2719 matrix, volatile uint32_t* spi_tx_reg
+void led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
                               , uint8_t brightness)
 {
 	// All devices must be initialised before power-up
