@@ -36,15 +36,15 @@ FFT size = 64, start offset = 0, next offset = 32, FPS = 4
 FFT size = 64, bin resolution = (1/60E-6)/64 --> ~260Hz
 
 Note: I measured one Ws period as 60us on PulseView hence the 1/60E-6 above
-***** 32x8 LED Matrix (Sine 2kHz Test Tone)
+***** 8x32 LED Matrix (Sine 2kHz Test Tone)
 Peak expected at the 7th/8th bin (2000 / 260 = ~7.69)
 
 [[file:media/blackman_harris_sine_2k.gif]]
-***** 32x8 LED Matrix (Sine 4kHz Test Tone)
+***** 8x32 LED Matrix (Sine 4kHz Test Tone)
 Peak expected at the 15th/16th bin (4000 / 260 = ~15.36)
 
 [[file:media/blackman_harris_sine_4k.gif]]
-***** 32x8 LED Matrix (Sine Sweep Test)
+***** 8x32 LED Matrix (Sine Sweep Test)
 Since the I2S Ws period is 60us, this gives us a sampling frequency of 16.66 kHz.
  Giving us a visual representation of 0-8.88 kHz with Spekky Matrix
 
