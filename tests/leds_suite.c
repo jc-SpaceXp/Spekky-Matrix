@@ -322,7 +322,7 @@ TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 		  , TopToBottom }
 
 		// read as 5 up, 5 up, 5 up etc. (from right to left)
-		// therefore first 4 rows are all filled 4 columns down
+		// therefore last 5 rows are all filled 5 columns up
 		, { {0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05}
 		  , {0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}
 		  , BottomToTop }
