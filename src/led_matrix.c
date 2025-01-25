@@ -203,11 +203,13 @@ static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
 	return output;
 }
 
-void led_matrix_convert_bars_to_rows(uint8_t (*col_heights)[8], enum LedDirection direction
+void led_matrix_convert_bars_to_rows(uint8_t *col_heights
+                                    , unsigned int process_rows, unsigned int process_cols
+                                    , enum LedDirection direction
                                     , uint16_t *row_outputs)
 {
-	for (int row = 0; row < 8; ++row) {
-		uint16_t output = led_matrix_set_line_in_row_conversion((*col_heights)[row]);
+	for (int row = 0; row < (int) process_rows; ++row) {
+		uint16_t output = led_matrix_set_line_in_row_conversion(col_heights[row]);
 
 		if (direction == LeftToRight) {
 			uint16_t upper_byte = reverse_bits_lut[output & 0xFF] << 8;
@@ -215,20 +217,20 @@ void led_matrix_convert_bars_to_rows(uint8_t (*col_heights)[8], enum LedDirectio
 			output = upper_byte | lower_byte;
 		} else if (direction == TopToBottom) {
 			output = 0;
-			for (int bar = 0; bar < 8; ++bar) {
+			for (int bar = 0; bar < (int) process_cols; ++bar) {
 				// check each height exceeds the current row being checked
 				// e.g. if height is equal to one then only 0th row of that bit/bar will be set
-				if ((*col_heights)[bar] > row) {
-					output |= (1 << (7 - bar));
+				if (col_heights[bar] > row) {
+					output |= (1 << (process_cols - 1 - bar));
 				}
 			}
 		} else if (direction == BottomToTop) {
 			output = 0;
-			for (int bar = 0; bar < 8; ++bar) {
+			for (int bar = 0; bar < (int) process_cols; ++bar) {
 				// check each height exceeds the current (inverted) row being checked
 				// e.g. if height is equal to one then only 7th row of that bit/bar will be set
-				if ((*col_heights)[bar] > (7 - row)) {
-					output |= (1 << (7 - bar));
+				if (col_heights[bar] > (process_cols - 1 - row)) {
+					output |= (1 << (process_cols - 1 - bar));
 				}
 			}
 		}

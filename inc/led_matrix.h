@@ -33,7 +33,9 @@ void led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* sp
 void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                                  , const unsigned int (*matrix)[8][8]);
 unsigned int led_matrix_set_bit_in_row_conversion(uint8_t col);
-void led_matrix_convert_bars_to_rows(uint8_t (*col_height)[8], enum LedDirection direction
+void led_matrix_convert_bars_to_rows(uint8_t *col_height
+                                    , unsigned int process_rows, unsigned int process_cols
+                                    , enum LedDirection direction
                                     , uint16_t* row_outputs);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 

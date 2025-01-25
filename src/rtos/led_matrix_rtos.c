@@ -50,7 +50,8 @@ void led_matrix_update_task(void* pvParameters)
 		}
 
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-			led_matrix_convert_bars_to_rows(&bars[dev], BottomToTop, row_outputs[dev]);
+			led_matrix_convert_bars_to_rows(bars[dev], IC_DEVICE_ROWS, IC_DEVICE_COLS
+			                               , BottomToTop, row_outputs[dev]);
 		}
 
 		for (int i = 0; i < IC_DEVICE_ROWS; ++i) {
