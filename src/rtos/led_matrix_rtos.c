@@ -36,7 +36,7 @@ void led_matrix_update_task(void* pvParameters)
 	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
 
 	uint8_t bars[led_matrix.total_devices][IC_DEVICE_COLS];
-	uint8_t row_outputs[led_matrix.total_devices][IC_DEVICE_ROWS];
+	uint16_t row_outputs[led_matrix.total_devices][IC_DEVICE_ROWS];
 	int fft_complete = 0;
 	for (;;) {
 		while (!xQueueReceive(xFftCompleteFlagQueue, &fft_complete, portMAX_DELAY)) {

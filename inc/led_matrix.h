@@ -34,7 +34,7 @@ void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx
                                  , const unsigned int (*matrix)[8][8]);
 unsigned int led_matrix_set_bit_in_row_conversion(uint8_t col);
 void led_matrix_convert_bars_to_rows(uint8_t (*col_height)[8], enum LedDirection direction
-                                    , uint8_t* row_outputs);
+                                    , uint16_t* row_outputs);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 
 #endif /* LED_MATRIX_H */

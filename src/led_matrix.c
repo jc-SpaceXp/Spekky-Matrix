@@ -204,13 +204,15 @@ static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
 }
 
 void led_matrix_convert_bars_to_rows(uint8_t (*col_heights)[8], enum LedDirection direction
-                                    , uint8_t *row_outputs)
+                                    , uint16_t *row_outputs)
 {
 	for (int row = 0; row < 8; ++row) {
-		uint8_t output = led_matrix_set_line_in_row_conversion((*col_heights)[row]);
+		uint16_t output = led_matrix_set_line_in_row_conversion((*col_heights)[row]);
 
 		if (direction == LeftToRight) {
-			output = reverse_bits_lut[output];
+			uint16_t upper_byte = reverse_bits_lut[output & 0xFF] << 8;
+			uint8_t lower_byte = reverse_bits_lut[output >> 8];
+			output = upper_byte | lower_byte;
 		} else if (direction == TopToBottom) {
 			output = 0;
 			for (int bar = 0; bar < 8; ++bar) {
