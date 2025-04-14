@@ -88,9 +88,9 @@ TEST led_cs_pin_set_correctly(void)
 	PASS();
 }
 
-TEST led_matrix_data_bus(struct LedMatrixTxTest led_tx)
+TEST led_matrix_data_bus_max7219(struct LedMatrixTxTest led_tx)
 {
-	uint16_t tx_data = led_matrix_data_out(led_tx.address, led_tx.data);
+	uint16_t tx_data = max7219_led_matrix_spi_data_out(led_tx.address, led_tx.data);
 
 	CHECK_CALL(check_led_matrix_address(tx_data, led_tx.address & 0x0F));
 	CHECK_CALL(check_led_matrix_data(tx_data, led_tx.data));
@@ -178,7 +178,7 @@ void loop_test_led_matrix_data_input(void)
 		greatest_set_test_suffix((const char*) &test_suffix);
 		RUN_TEST1(snprintf_return_val, sn_error);
 		greatest_set_test_suffix((const char*) &test_suffix);
-		RUN_TEST1(led_matrix_data_bus, led_tx[i]);
+		RUN_TEST1(led_matrix_data_bus_max7219, led_tx[i]);
 	}
 }
 

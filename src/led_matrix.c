@@ -57,7 +57,7 @@ void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices
 	matrix->total_devices = total_devices;
 }
 
-uint16_t led_matrix_data_out(uint8_t address, uint8_t data)
+uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data)
 {
 	unsigned int data_address = address & 0x0F; // address in only 4 bits wide
 	return (data_address << 8) | data;
@@ -68,7 +68,7 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                              , uint8_t address, uint8_t data, enum LedLatchData latch)
 {
 
-	uint16_t tx_data = led_matrix_data_out(address, data);
+	uint16_t tx_data = max7219_led_matrix_spi_data_out(address, data);
 
 	// Pull CS low
 	deassert_spi_pin(cs.deassert_address, cs.pin);
