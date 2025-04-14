@@ -24,11 +24,12 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 void led_matrix_transfer_data_cascade(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
                                      , uint8_t address, uint8_t data, int device_number);
 
-void led_matrix_clear(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg, int device_number);
-void led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
-                    , uint8_t brightness, int device_number);
-void led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
-                              , uint8_t brightness);
+void max7219_led_matrix_clear(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
+                             , int device_number);
+void max7219_led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
+                            , uint8_t brightness, int device_number);
+void max7219_led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
+                                      , uint8_t brightness);
 
 void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                                  , const unsigned int (*matrix)[8][8]);

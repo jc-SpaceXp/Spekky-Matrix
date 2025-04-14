@@ -109,15 +109,16 @@ void led_matrix_transfer_data_cascade(struct MaximMax7219 matrix, volatile uint3
 	assert_spi_pin(matrix.cs.assert_address, matrix.cs.pin);
 }
 
-void led_matrix_clear(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg, int device_number)
+void max7219_led_matrix_clear(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
+                                , int device_number)
 {
 	for (unsigned int i = ADDR_ROW0; i <= ADDR_ROW7; ++i) {
 		led_matrix_transfer_data_cascade(matrix, spi_tx_reg, i, 0x00, device_number);
 	}
 }
 
-void led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
-                    , uint8_t brightness, int device_number)
+void max7219_led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
+                            , uint8_t brightness, int device_number)
 {
 	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_BRIGHTNESS, brightness
 	                                , device_number);
@@ -129,11 +130,11 @@ void led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
 	                                , device_number);
 	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_SCANLIMIT
 	                                , DATA_SCANLIMIT_8_ROWS_MAX, device_number);
-	led_matrix_clear(matrix, spi_tx_reg, device_number);
+	max7219_led_matrix_clear(matrix, spi_tx_reg, device_number);
 }
 
-void led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
-                              , uint8_t brightness)
+void max7219_led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
+                                      , uint8_t brightness)
 {
 	// All devices must be initialised before power-up
 	// We can cascade without the need of NOP to set all devices at once
@@ -169,7 +170,7 @@ void led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint32_t* sp
 	                        , LatchData);
 
 	for (int i = 0; i < matrix.total_devices; ++i) {
-		led_matrix_clear(matrix, spi_tx_reg, i);
+		max7219_led_matrix_clear(matrix, spi_tx_reg, i);
 	}
 }
 
