@@ -101,8 +101,9 @@ TEST led_matrix_tx_sequence(void)
 {
 	uint8_t data = 0xFF;
 	uint8_t address = 0x21;
+	uint16_t tx_data = max7219_led_matrix_spi_data_out(address, data);
 
-	led_matrix_transfer_data(some_led_matrix.cs, &some_spi_reg, address, data, LatchData);
+	led_matrix_transfer_data(some_led_matrix.cs, &some_spi_reg, tx_data, LatchData);
 
 	// Verify correct sequence of functions being called
 	ASSERT_EQ((void*) deassert_spi_pin, fff.call_history[0]);
