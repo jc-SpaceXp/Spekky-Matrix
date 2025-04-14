@@ -24,7 +24,7 @@ struct LedMatrixTxTest {
 	uint8_t data;
 };
 
-struct LedMatrixCascadeNopWrites {
+struct Max7219LedMatrixCascadeNopWrites {
 	uint8_t data;
 	uint8_t address;
 	int total_devices;
@@ -164,7 +164,7 @@ TEST snprintf_return_val(bool sn_error)
 	PASS();
 }
 
-void loop_test_led_matrix_data_input(void)
+void loop_test_max7219_led_matrix_data_input(void)
 {
 
 	struct LedMatrixTxTest led_tx[3] = {
@@ -212,7 +212,7 @@ TEST verify_reverse_bits_lut(void)
 }
 
 
-TEST led_matrix_cascade_data_calls(struct LedMatrixCascadeNopWrites* led_cascade)
+TEST max7219_led_matrix_cascade_data_calls(struct Max7219LedMatrixCascadeNopWrites* led_cascade)
 {
 	uint16_t tx_data = max7219_led_matrix_spi_data_out(led_cascade->address, led_cascade->data);
 	int total_devices = led_cascade->total_devices;
@@ -233,9 +233,9 @@ TEST led_matrix_cascade_data_calls(struct LedMatrixCascadeNopWrites* led_cascade
 	PASS();
 }
 
-void loop_test_led_matrix_cascade_data(void)
+void loop_test_max7219_led_matrix_cascade_data(void)
 {
-	struct LedMatrixCascadeNopWrites test_led_cascade[4] = {
+	struct Max7219LedMatrixCascadeNopWrites test_led_cascade[4] = {
 		{ 0x01, 0xEE, 1, 0, { 0 }, {0x01}, {0xEE} }
 		, { 0xFF, 0x21, 2, 0, { 0 }, {0x00, 0xFF}, {ADDR_NOP, 0x21} }
 		, { 0xFF, 0x21, 2, 1, { 0 }, {0xFF, 0x00}, {0x21, ADDR_NOP} }
@@ -249,7 +249,7 @@ void loop_test_led_matrix_cascade_data(void)
 		greatest_set_test_suffix((const char*) &test_suffix);
 		RUN_TEST1(snprintf_return_val, sn_error);
 		greatest_set_test_suffix((const char*) &test_suffix);
-		RUN_TEST1(led_matrix_cascade_data_calls, &test_led_cascade[i]);
+		RUN_TEST1(max7219_led_matrix_cascade_data_calls, &test_led_cascade[i]);
 	}
 }
 
@@ -530,9 +530,9 @@ SUITE(leds_driver)
 	RUN_TEST(verify_reverse_bits_lut);
 	RUN_TEST(led_matrix_fft_conversion);
 	// looped tests
-	loop_test_led_matrix_data_input();
+	loop_test_max7219_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
-	loop_test_led_matrix_cascade_data();
+	loop_test_max7219_led_matrix_cascade_data();
 	loop_test_led_matrix_bar_conversions_8_rows();
 	loop_test_led_matrix_bar_conversions_16_rows();
 }
