@@ -56,7 +56,7 @@ void led_matrix_update_task(void* pvParameters)
 		}
 
 		for (int i = 0; i < IC_DEVICE_ROWS; ++i) {
-			// ADDR_ROW0 == 1
+			// ADDR_ROW0 == 1 (therefore address == i + 1)
 			for (int dev = (led_matrix.total_devices - 1); dev > 0; --dev) {
 				tx_data = max7219_led_matrix_spi_data_out(i + 1, row_outputs[dev][i]);
 				led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, tx_data, NoLatchData);
