@@ -41,7 +41,7 @@ static uint32_t some_gpio_port_c = 0xFFFF;
 static uint32_t some_spi_reg = 0xFFFF;
 
 
-TEST check_led_matrix_data(uint16_t actual, uint8_t expected)
+TEST check_max7219_led_matrix_data(uint16_t actual, uint8_t expected)
 {
 	ASSERT_EQ_FMT(expected
 	             , (uint8_t) actual
@@ -49,7 +49,7 @@ TEST check_led_matrix_data(uint16_t actual, uint8_t expected)
 	PASS();
 }
 
-TEST check_led_matrix_address(uint16_t actual, uint8_t expected)
+TEST check_max7219_led_matrix_address(uint16_t actual, uint8_t expected)
 {
 	ASSERT_EQ_FMT(expected
 	             , (uint8_t) (actual >> 8)
@@ -92,8 +92,8 @@ TEST led_matrix_data_bus_max7219(struct LedMatrixTxTest led_tx)
 {
 	uint16_t tx_data = max7219_led_matrix_spi_data_out(led_tx.address, led_tx.data);
 
-	CHECK_CALL(check_led_matrix_address(tx_data, led_tx.address & 0x0F));
-	CHECK_CALL(check_led_matrix_data(tx_data, led_tx.data));
+	CHECK_CALL(check_max7219_led_matrix_address(tx_data, led_tx.address & 0x0F));
+	CHECK_CALL(check_max7219_led_matrix_data(tx_data, led_tx.data));
 	PASS();
 }
 
@@ -151,8 +151,8 @@ TEST led_matrix_set_matrix_from_2d_array(void)
 	for (int i = 0; i < 8; ++i) {
 		uint16_t tx_data = trigger_spi_transfer_fake.arg1_history[i];
 		// AddrRow1 = AddrRow0 + i
-		CHECK_CALL(check_led_matrix_address(tx_data, AddrRow0 + i));
-		CHECK_CALL(check_led_matrix_data(tx_data, expected_data[i]));
+		CHECK_CALL(check_max7219_led_matrix_address(tx_data, AddrRow0 + i));
+		CHECK_CALL(check_max7219_led_matrix_data(tx_data, expected_data[i]));
 	}
 	PASS();
 }
@@ -226,9 +226,10 @@ TEST max7219_led_matrix_cascade_data_calls(struct Max7219LedMatrixCascadeNopWrit
 
 	ASSERT_EQ_FMT((unsigned int) total_devices, trigger_spi_transfer_fake.call_count, "%u");
 	for (int i = 0; i < total_devices; ++i) {
-		CHECK_CALL(check_led_matrix_address(led_cascade->tx_data[i]
-		                                   , led_cascade->expected_addr[i] & 0x0F));
-		CHECK_CALL(check_led_matrix_data(led_cascade->tx_data[i], led_cascade->expected_data[i]));
+		CHECK_CALL(check_max7219_led_matrix_address(led_cascade->tx_data[i]
+		                                           , led_cascade->expected_addr[i] & 0x0F));
+		CHECK_CALL(check_max7219_led_matrix_data(led_cascade->tx_data[i]
+		                                           , led_cascade->expected_data[i]));
 	}
 	PASS();
 }
