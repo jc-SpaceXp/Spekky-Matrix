@@ -87,22 +87,21 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 	}
 }
 
-void led_matrix_transfer_data_cascade(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
-                                     , uint8_t address, uint8_t data, int device_number)
+void max7219_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
+                                             , volatile uint32_t* spi_tx_reg, uint16_t tx_data
+                                             , int device_number)
 {
 	// if X devices, must be a total of X calls to led_transfer(), one real, rest NOPs
 	int initial_nops = matrix.total_devices - device_number - 1; // -1 for zero index
-	uint16_t tx_data = max7219_led_matrix_spi_data_out(ADDR_NOP, 0x00);
+	uint16_t nop_data = max7219_led_matrix_spi_data_out(ADDR_NOP, 0x00);
 	for (int pre = 0; pre < initial_nops; ++pre) {
-		led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data, NoLatchData);
+		led_matrix_transfer_data(matrix.cs, spi_tx_reg, nop_data, NoLatchData);
 	}
 
-	tx_data = max7219_led_matrix_spi_data_out(address, data);
 	led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data, NoLatchData);
 
-	tx_data = max7219_led_matrix_spi_data_out(ADDR_NOP, 0x00);
 	for (int post = initial_nops + 1; post < matrix.total_devices; ++post) {
-		led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data, NoLatchData);
+		led_matrix_transfer_data(matrix.cs, spi_tx_reg, nop_data, NoLatchData);
 	}
 
 	// Pull CS high
@@ -112,24 +111,31 @@ void led_matrix_transfer_data_cascade(struct MaximMax7219 matrix, volatile uint3
 void max7219_led_matrix_clear(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
                                 , int device_number)
 {
+	uint16_t tx_data = 0;
 	for (unsigned int i = ADDR_ROW0; i <= ADDR_ROW7; ++i) {
-		led_matrix_transfer_data_cascade(matrix, spi_tx_reg, i, 0x00, device_number);
+		tx_data = max7219_led_matrix_spi_data_out(i, 0x00);
+		max7219_led_matrix_transfer_data_cascade(matrix, spi_tx_reg, tx_data, device_number);
 	}
 }
 
 void max7219_led_matrix_init(struct MaximMax7219 matrix, volatile uint32_t* spi_tx_reg
                             , uint8_t brightness, int device_number)
 {
-	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_BRIGHTNESS, brightness
-	                                , device_number);
-	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_DISPTEST, DATA_DISPTEST_OFF
-	                                , device_number);
-	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_DECODE, DATA_DECODE_NONE
-	                                , device_number);
-	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_SHUTDOWN, DATA_SHUTDOWN_OFF
-	                                , device_number);
-	led_matrix_transfer_data_cascade(matrix, spi_tx_reg, ADDR_SCANLIMIT
-	                                , DATA_SCANLIMIT_8_ROWS_MAX, device_number);
+	uint16_t tx_data = max7219_led_matrix_spi_data_out(ADDR_BRIGHTNESS, brightness);
+	max7219_led_matrix_transfer_data_cascade(matrix, spi_tx_reg, tx_data, device_number);
+
+	tx_data = max7219_led_matrix_spi_data_out(ADDR_DISPTEST, DATA_DISPTEST_OFF);
+	max7219_led_matrix_transfer_data_cascade(matrix, spi_tx_reg, tx_data, device_number);
+
+	tx_data = max7219_led_matrix_spi_data_out(ADDR_DECODE, DATA_DECODE_NONE);
+	max7219_led_matrix_transfer_data_cascade(matrix, spi_tx_reg, tx_data, device_number);
+
+	tx_data = max7219_led_matrix_spi_data_out(ADDR_SHUTDOWN, DATA_SHUTDOWN_OFF);
+	max7219_led_matrix_transfer_data_cascade(matrix, spi_tx_reg, tx_data, device_number);
+
+	tx_data = max7219_led_matrix_spi_data_out(ADDR_SCANLIMIT, DATA_SCANLIMIT_8_ROWS_MAX);
+	max7219_led_matrix_transfer_data_cascade(matrix, spi_tx_reg, tx_data, device_number);
+
 	max7219_led_matrix_clear(matrix, spi_tx_reg, device_number);
 }
 

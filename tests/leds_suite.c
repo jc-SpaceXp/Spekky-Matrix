@@ -214,13 +214,12 @@ TEST verify_reverse_bits_lut(void)
 
 TEST led_matrix_cascade_data_calls(struct LedMatrixCascadeNopWrites* led_cascade)
 {
-	uint8_t data = led_cascade->data;
-	uint8_t address = led_cascade->address;
+	uint16_t tx_data = max7219_led_matrix_spi_data_out(led_cascade->address, led_cascade->data);
 	int total_devices = led_cascade->total_devices;
 	set_total_led_matrix_devices(&some_led_matrix, total_devices);
 
-	led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, address, data
-	                                , led_cascade->device_write);
+	max7219_led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, tx_data
+	                                        , led_cascade->device_write);
 	for (int i = 0; i < total_devices; ++i) {
 		led_cascade->tx_data[i] = trigger_spi_transfer_fake.arg1_history[i];
 	}
