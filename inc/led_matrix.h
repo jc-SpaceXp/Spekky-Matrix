@@ -7,6 +7,7 @@
 
 extern const uint8_t reverse_bits_lut[256];
 
+enum LedCascadeReverse { NormalCascade, ReverseCascade };
 // RightToLeft is default direction of MAX7219 LED matrix
 enum LedDirection { RightToLeft, LeftToRight, BottomToTop, TopToBottom };
 enum LedLatchData { NoLatchData, LatchData };
@@ -21,6 +22,10 @@ void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices
 uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data);
 void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                              , uint16_t tx_data, enum LedLatchData latch);
+void generic_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
+                                             , volatile uint32_t* spi_tx_reg, uint16_t* tx_data
+                                             , int total_devices
+                                             , enum LedCascadeReverse reverse_order);
 void max7219_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
                                              , volatile uint32_t* spi_tx_reg, uint16_t tx_data
                                              , int device_number);

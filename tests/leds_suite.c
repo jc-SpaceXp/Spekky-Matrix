@@ -254,6 +254,39 @@ void loop_test_max7219_led_matrix_cascade_data(void)
 	}
 }
 
+TEST generic_led_matrix_cascade_data_calls(enum LedCascadeReverse reverse_order)
+{
+	int total_devices = 2;
+	uint16_t tx_data[2] = { 0x0001, 0xFF00 };
+
+	generic_led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, &tx_data[0]
+	                                        , total_devices, reverse_order);
+
+	ASSERT_EQ_FMT((unsigned int) total_devices, trigger_spi_transfer_fake.call_count, "%u");
+	if (reverse_order == ReverseCascade) {
+		ASSERT_EQ_FMT((uint16_t) tx_data[0], trigger_spi_transfer_fake.arg1_history[1], "%.4X");
+		ASSERT_EQ_FMT((uint16_t) tx_data[1], trigger_spi_transfer_fake.arg1_history[0], "%.4X");
+	} else {
+		ASSERT_EQ_FMT((uint16_t) tx_data[0], trigger_spi_transfer_fake.arg1_history[0], "%.4X");
+		ASSERT_EQ_FMT((uint16_t) tx_data[1], trigger_spi_transfer_fake.arg1_history[1], "%.4X");
+	}
+	PASS();
+}
+
+void loop_test_generic_led_matrix_cascade_data(void)
+{
+	enum LedCascadeReverse cascade_order[2] = { NormalCascade, ReverseCascade };
+	for (int i = 0; i < 2; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(generic_led_matrix_cascade_data_calls, cascade_order[i]);
+	}
+}
+
 TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 {
 	unsigned int rows = 8;
@@ -534,6 +567,7 @@ SUITE(leds_driver)
 	loop_test_max7219_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
 	loop_test_max7219_led_matrix_cascade_data();
+	loop_test_generic_led_matrix_cascade_data();
 	loop_test_led_matrix_bar_conversions_8_rows();
 	loop_test_led_matrix_bar_conversions_16_rows();
 }
