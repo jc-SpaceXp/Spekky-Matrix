@@ -102,7 +102,7 @@ void generic_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
 		}
 	}
 
-	// Pull CS high
+	// Latch data (pull CS high)
 	assert_spi_pin(matrix.cs.assert_address, matrix.cs.pin);
 }
 
