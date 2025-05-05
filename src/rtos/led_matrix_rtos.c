@@ -11,6 +11,9 @@
 
 #include "fft_constants.h"
 
+#define IC_DEVICE_ROWS 8
+#define IC_DEVICE_COLS 8
+
 
 extern QueueHandle_t xFftCompleteFlagQueue;
 extern float db_bin_mags[FFT_DATA_SIZE/2];
@@ -22,7 +25,7 @@ void led_matrix_setup(int total_devices)
 	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
 	set_total_led_matrix_devices(&led_matrix, total_devices);
 
-	led_matrix_init_all_quick(led_matrix, &SPI1->DR, DATA_BRIGHTNESS_LEVEL1);
+	max7219_led_matrix_init_all_quick(led_matrix, &SPI1->DR, DATA_BRIGHTNESS_LEVEL1);
 }
 
 void led_matrix_update_task(void* pvParameters)
@@ -32,30 +35,33 @@ void led_matrix_update_task(void* pvParameters)
 	struct LedSpiPin led_cs = { &GPIOA->BSRR, &GPIOA->ODR, SPI_CS_PIN };
 	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
 
-	uint8_t bars[led_matrix.total_devices][8];
-	uint8_t row_outputs[led_matrix.total_devices][8];
+	uint8_t bars[led_matrix.total_devices][IC_DEVICE_COLS];
+	uint16_t row_outputs[led_matrix.total_devices][IC_DEVICE_ROWS];
+	uint16_t tx_data[led_matrix.total_devices];
 	int fft_complete = 0;
 	for (;;) {
 		while (!xQueueReceive(xFftCompleteFlagQueue, &fft_complete, portMAX_DELAY)) {
 			// delay/block until data is ready
 		}
 
-		for (int i = 0; i < 8; ++i) {
+		for (int i = 0; i < IC_DEVICE_COLS; ++i) {
 			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-				bars[dev][i] = fft_to_led_bar_conversion(db_bin_mags[i + (dev * 8)]);
+				bars[dev][i] = fft_to_led_bar_conversion(db_bin_mags[i + (dev * IC_DEVICE_COLS)]);
 			}
 		}
 
 		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-			led_matrix_convert_bars_to_rows(&bars[dev], BottomToTop, row_outputs[dev]);
+			led_matrix_convert_bars_to_rows(bars[dev], IC_DEVICE_ROWS, IC_DEVICE_COLS
+			                               , BottomToTop, row_outputs[dev]);
 		}
 
-		for (int i = 0; i < 8; ++i) {
-			// ADDR_ROW0 == 1
-			for (int dev = (led_matrix.total_devices - 1); dev > 0; --dev) {
-				led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, i + 1, row_outputs[dev][i], NoLatchData);
+		for (int i = 0; i < IC_DEVICE_ROWS; ++i) {
+			// ADDR_ROW0 == 1 (therefore address == i + 1)
+			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
+				tx_data[dev] = max7219_led_matrix_spi_data_out(i + 1, row_outputs[dev][i]);
 			}
-			led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, i + 1, row_outputs[0][i], LatchData);
+			generic_led_matrix_transfer_data_cascade(led_matrix, &SPI1->DR, tx_data
+			                                        , led_matrix.total_devices, ReverseCascade);
 		}
 	}
 }
