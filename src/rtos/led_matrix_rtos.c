@@ -37,7 +37,7 @@ void led_matrix_update_task(void* pvParameters)
 
 	uint8_t bars[led_matrix.total_devices][IC_DEVICE_COLS];
 	uint16_t row_outputs[led_matrix.total_devices][IC_DEVICE_ROWS];
-	uint16_t tx_data = 0;
+	uint16_t tx_data[led_matrix.total_devices];
 	int fft_complete = 0;
 	for (;;) {
 		while (!xQueueReceive(xFftCompleteFlagQueue, &fft_complete, portMAX_DELAY)) {
@@ -57,12 +57,11 @@ void led_matrix_update_task(void* pvParameters)
 
 		for (int i = 0; i < IC_DEVICE_ROWS; ++i) {
 			// ADDR_ROW0 == 1 (therefore address == i + 1)
-			for (int dev = (led_matrix.total_devices - 1); dev > 0; --dev) {
-				tx_data = max7219_led_matrix_spi_data_out(i + 1, row_outputs[dev][i]);
-				led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, tx_data, NoLatchData);
+			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
+				tx_data[dev] = max7219_led_matrix_spi_data_out(i + 1, row_outputs[dev][i]);
 			}
-			tx_data = max7219_led_matrix_spi_data_out(i + 1, row_outputs[0][i]);
-			led_matrix_transfer_data(led_matrix.cs, &SPI1->DR, tx_data, LatchData);
+			generic_led_matrix_transfer_data_cascade(led_matrix, &SPI1->DR, tx_data
+			                                        , led_matrix.total_devices, ReverseCascade);
 		}
 	}
 }
