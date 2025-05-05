@@ -97,23 +97,6 @@ TEST led_matrix_data_bus_max7219(struct LedMatrixTxTest led_tx)
 	PASS();
 }
 
-TEST led_matrix_tx_sequence(void)
-{
-	uint8_t data = 0xFF;
-	uint8_t address = 0x21;
-	uint16_t tx_data = max7219_led_matrix_spi_data_out(address, data);
-
-	led_matrix_transfer_data(some_led_matrix.cs, &some_spi_reg, tx_data, LatchData);
-
-	// Verify correct sequence of functions being called
-	ASSERT_EQ((void*) deassert_spi_pin, fff.call_history[0]);
-	ASSERT_EQ((void*) spi_tx_ready_to_transmit, fff.call_history[1]);
-	ASSERT_EQ((void*) trigger_spi_transfer, fff.call_history[2]);
-	ASSERT_EQ((void*) spi_tx_complete, fff.call_history[3]);
-	ASSERT_EQ((void*) assert_spi_pin, fff.call_history[4]);
-	PASS();
-}
-
 TEST led_matrix_devices_set_correctly(void)
 {
 	int total_devices = 8;
@@ -162,6 +145,42 @@ TEST snprintf_return_val(bool sn_error)
 {
 	ASSERT_FALSE(sn_error);
 	PASS();
+}
+
+TEST led_matrix_tx_sequence(enum LedLatchData latch_data)
+{
+	uint8_t data = 0xFF;
+	uint8_t address = 0x21;
+	uint16_t tx_data = max7219_led_matrix_spi_data_out(address, data);
+
+	led_matrix_transfer_data(some_led_matrix.cs, &some_spi_reg, tx_data, latch_data);
+
+	// Verify correct sequence of functions being called
+	ASSERT_EQ((void*) deassert_spi_pin, fff.call_history[0]);
+	ASSERT_EQ((void*) spi_tx_ready_to_transmit, fff.call_history[1]);
+	ASSERT_EQ((void*) trigger_spi_transfer, fff.call_history[2]);
+	ASSERT_EQ((void*) spi_tx_complete, fff.call_history[3]);
+	if (latch_data == LatchData) {
+		ASSERT_EQ(1, assert_spi_pin_fake.call_count);
+		ASSERT_EQ((void*) assert_spi_pin, fff.call_history[4]);
+	} else {
+		ASSERT_EQ(0, assert_spi_pin_fake.call_count);
+	}
+	PASS();
+}
+
+void loop_led_matrix_tx_sequence(void)
+{
+	enum LedLatchData tx_latch[2] = { NoLatchData, LatchData };
+	for (int i = 0; i < 2; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_tx_sequence, tx_latch[i]);
+	}
 }
 
 void loop_test_max7219_led_matrix_data_input(void)
@@ -558,12 +577,12 @@ SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
 	RUN_TEST(led_cs_pin_set_correctly);
-	RUN_TEST(led_matrix_tx_sequence);
 	RUN_TEST(led_matrix_devices_set_correctly);
 	RUN_TEST(led_matrix_set_matrix_from_2d_array);
 	RUN_TEST(verify_reverse_bits_lut);
 	RUN_TEST(led_matrix_fft_conversion);
 	// looped tests
+	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
 	loop_test_max7219_led_matrix_cascade_data();
