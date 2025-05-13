@@ -1,0 +1,45 @@
+From 4c5777a1bd6e14f1d452bc48cd3300605a34d327 Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 18:54:27 +0100
+Subject: [PATCH] Dma interrupt (isr) flag timings
+
+- Not isolated as the DMA just runs in the background, therefore it
+  isn't essential to remove FreeRTOS tasks to isolate the timing
+- Timing is for both the HT (half-transfer) and TC (transfer-complete)
+  flags for the DMA interrupts, one period will denote the time it takes
+  to complete a full transfer (ideally the high to low back to high period
+  timing), the time it takes to go from low to high is for the
+  half-transfer interrupt and the the high to low timing is for the
+  half-transfer to full transfer timing
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/mcu/stm32g4xx_dma.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/mcu/stm32g4xx_dma.c b/src/mcu/stm32g4xx_dma.c
+index c96bc8a..0b4716b 100644
+--- a/src/mcu/stm32g4xx_dma.c
++++ b/src/mcu/stm32g4xx_dma.c
+@@ -1,6 +1,7 @@
+ #include "stm32g4xx_dma.h"
+ #include "extern_i2s_dma_data.h"
+ #include "fft_constants.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx.h"
+ #include "stm32g4xx_ll_dma.h"
+@@ -54,9 +55,11 @@ void DMA1_Channel1_IRQHandler(void)
+ 	if (DMA1->ISR & DMA_ISR_HTIF1) {
+ 		DMA1->IFCR |= DMA_IFCR_CHTIF1;
+ 		dma_flag = 1;
++		deassert_gpio_debug_pin();
+ 	} else if (DMA1->ISR & DMA_ISR_TCIF1) {
+ 		DMA1->IFCR |= DMA_IFCR_CTCIF1;
+ 		dma_flag = 2;
++		assert_gpio_debug_pin();
+ 	}
+ 
+ 	BaseType_t xHigherPriorityTask = pdFALSE;
+-- 
+2.49.0
+

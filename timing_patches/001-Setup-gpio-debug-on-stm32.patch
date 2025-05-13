@@ -1,0 +1,32 @@
+From 86b6f0e5981c00a803c3ace3fac14a52dba81adb Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 14:49:08 +0100
+Subject: [PATCH] Setup gpio debug on stm32
+
+---
+ src/spekky_matrix.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/spekky_matrix.c b/src/spekky_matrix.c
+index 22b2014..7015fb2 100644
+--- a/src/spekky_matrix.c
++++ b/src/spekky_matrix.c
+@@ -3,6 +3,7 @@
+ #include "stm32g4xx_spi.h"
+ #include "stm32g4xx_i2s.h"
+ #include "stm32g4xx_timers.h"
++#include "stm32g4xx_gpio_debug.h"
+ #include "dac.h"
+ #include "spi.h"
+ #include "led_matrix.h"
+@@ -25,6 +26,7 @@ QueueHandle_t xFftCompleteFlagQueue;
+ 
+ int main (void)
+ {
++	setup_hw_gpio_debug();
+ 	setup_hw_spi();
+ 	setup_hw_dma(); // used for I2S
+ 	setup_hw_i2s();
+-- 
+2.49.0
+

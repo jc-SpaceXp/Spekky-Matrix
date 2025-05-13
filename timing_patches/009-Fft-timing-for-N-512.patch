@@ -1,0 +1,39 @@
+From 38fe64e68ece4665e14813637dfa82a211b9e955 Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 23:11:17 +0100
+Subject: [PATCH] Fft timing (for N = 512)
+
+- Again, not isolated as the FFT task is the highest priority task and
+  therefore won't be interrupted
+- Timing data is for the FFT function itself, concerned with the time it
+  takes to go from low to high
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/rtos/fft_rtos.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/rtos/fft_rtos.c b/src/rtos/fft_rtos.c
+index f2e93d8..588d3cc 100644
+--- a/src/rtos/fft_rtos.c
++++ b/src/rtos/fft_rtos.c
+@@ -2,6 +2,7 @@
+ #include "extern_i2s_dma_data.h"
+ #include "mic_data_processing.h"
+ #include "fft_processing.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx_hal.h"
+ #include "stm32g4xx_nucleo.h"
+@@ -87,7 +88,9 @@ void fft_task_processing(void* pvParameters)
+ 
+ 		arm_mult_f32(data_buffer, complex_window_func, fft_input, FFT_DATA_SIZE * 2);
+ 
++		deassert_gpio_debug_pin();
+ 		arm_cfft_f32(&arm_cfft, fft_input, inverse_fft, bit_reverse);
++		assert_gpio_debug_pin();
+ 		// ignore DC component, any gather real frequencies and Nyquist
+ 		arm_cmplx_mag_f32(&fft_input[2], &bin_mags[fft_counter][0], FFT_DATA_SIZE/2);
+ 
+-- 
+2.49.0
+

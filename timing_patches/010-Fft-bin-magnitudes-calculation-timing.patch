@@ -1,0 +1,39 @@
+From 6c5aa70e902a4dd6041b20b9f595f3b0756d88fe Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 23:16:21 +0100
+Subject: [PATCH] Fft bin magnitudes calculation timing
+
+- Again, not isolated as the FFT task is the highest priority one and
+  therefore won't be interrupted
+- Timing is for the conversion of FFT data (complex data) into bin
+  magnitudes, concerned with the time it takes to go from low to high
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/rtos/fft_rtos.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/rtos/fft_rtos.c b/src/rtos/fft_rtos.c
+index f2e93d8..1616e41 100644
+--- a/src/rtos/fft_rtos.c
++++ b/src/rtos/fft_rtos.c
+@@ -2,6 +2,7 @@
+ #include "extern_i2s_dma_data.h"
+ #include "mic_data_processing.h"
+ #include "fft_processing.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx_hal.h"
+ #include "stm32g4xx_nucleo.h"
+@@ -89,7 +90,9 @@ void fft_task_processing(void* pvParameters)
+ 
+ 		arm_cfft_f32(&arm_cfft, fft_input, inverse_fft, bit_reverse);
+ 		// ignore DC component, any gather real frequencies and Nyquist
++		deassert_gpio_debug_pin();
+ 		arm_cmplx_mag_f32(&fft_input[2], &bin_mags[fft_counter][0], FFT_DATA_SIZE/2);
++		assert_gpio_debug_pin();
+ 
+ 		fft_counter += 1;
+ 		if (fft_counter == (int) (FFT_AVERAGE * 2)) {
+-- 
+2.49.0
+
