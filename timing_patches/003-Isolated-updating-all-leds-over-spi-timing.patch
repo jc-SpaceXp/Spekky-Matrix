@@ -1,0 +1,96 @@
+From 9bbcbbc02c83c060c5d0757a1a4cd07b8e6f5892 Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 17:41:14 +0100
+Subject: [PATCH] Isolated updating all leds over spi timing
+
+- Again, "Isolated" as we are only running the LED matrix RTOS task
+- No need for any FreeRTOS queues in this patch
+- Timing is for the updating of all LED matricies over SPI, concerned
+  with the time it takes to go from low to high
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/rtos/led_matrix_rtos.c |  9 +++------
+ src/spekky_matrix.c        | 15 ---------------
+ 2 files changed, 3 insertions(+), 21 deletions(-)
+
+diff --git a/src/rtos/led_matrix_rtos.c b/src/rtos/led_matrix_rtos.c
+index 0ffe96c..131c7e7 100644
+--- a/src/rtos/led_matrix_rtos.c
++++ b/src/rtos/led_matrix_rtos.c
+@@ -2,6 +2,7 @@
+ #include "stm32g4xx_spi.h"
+ #include "spi.h"
+ #include "led_matrix.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx_hal.h"
+ #include "stm32g4xx_nucleo.h"
+@@ -15,7 +16,6 @@
+ #define IC_DEVICE_COLS 8
+ 
+ 
+-extern QueueHandle_t xFftCompleteFlagQueue;
+ extern float db_bin_mags[FFT_DATA_SIZE/2];
+ struct MaximMax7219 led_matrix;
+ 
+@@ -38,12 +38,7 @@ void led_matrix_update_task(void* pvParameters)
+ 	uint8_t bars[led_matrix.total_devices][IC_DEVICE_COLS];
+ 	uint16_t row_outputs[led_matrix.total_devices][IC_DEVICE_ROWS];
+ 	uint16_t tx_data[led_matrix.total_devices];
+-	int fft_complete = 0;
+ 	for (;;) {
+-		while (!xQueueReceive(xFftCompleteFlagQueue, &fft_complete, portMAX_DELAY)) {
+-			// delay/block until data is ready
+-		}
+-
+ 		for (int i = 0; i < IC_DEVICE_COLS; ++i) {
+ 			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
+ 				bars[dev][i] = fft_to_led_bar_conversion(db_bin_mags[i + (dev * IC_DEVICE_COLS)]);
+@@ -55,6 +50,7 @@ void led_matrix_update_task(void* pvParameters)
+ 			                               , BottomToTop, row_outputs[dev]);
+ 		}
+ 
++		deassert_gpio_debug_pin();
+ 		for (int i = 0; i < IC_DEVICE_ROWS; ++i) {
+ 			// ADDR_ROW0 == 1 (therefore address == i + 1)
+ 			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
+@@ -63,5 +59,6 @@ void led_matrix_update_task(void* pvParameters)
+ 			generic_led_matrix_transfer_data_cascade(led_matrix, &SPI1->DR, tx_data
+ 			                                        , led_matrix.total_devices, ReverseCascade);
+ 		}
++		assert_gpio_debug_pin();
+ 	}
+ }
+diff --git a/src/spekky_matrix.c b/src/spekky_matrix.c
+index 7015fb2..9bcc8bd 100644
+--- a/src/spekky_matrix.c
++++ b/src/spekky_matrix.c
+@@ -28,25 +28,10 @@ int main (void)
+ {
+ 	setup_hw_gpio_debug();
+ 	setup_hw_spi();
+-	setup_hw_dma(); // used for I2S
+-	setup_hw_i2s();
+ 	int led_matrices = 4;
+ 	led_matrix_setup(led_matrices);
+ 
+ 
+-	xDmaFlagQueue = xQueueCreate(1, sizeof(int));
+-	(void) xDmaFlagQueue; // suppress compiler warning
+-	assert_param(xDmaFlagQueue == pdPASS);
+-
+-	xFftCompleteFlagQueue = xQueueCreate(1, sizeof(int));
+-	(void) xFftCompleteFlagQueue; // suppress compiler warning
+-	assert_param(xFftCompleteFlagQueue == pdPASS);
+-
+-	BaseType_t fft_task = xTaskCreate(fft_task_processing, "FFT task", 512, NULL
+-	                                 , configMAX_PRIORITIES - 2, NULL);
+-	(void) fft_task; // suppress compiler warning
+-	assert_param(fft_task == pdPASS);
+-
+ 	BaseType_t led_task = xTaskCreate(led_matrix_update_task, "LED task", 256, NULL
+ 	                                 , configMAX_PRIORITIES - 3, NULL);
+ 	(void) led_task; // suppress compiler warning
+-- 
+2.49.0
+

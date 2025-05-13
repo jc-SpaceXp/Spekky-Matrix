@@ -1,0 +1,44 @@
+From dbd8aaedf501e9caa1ce2d79af1e2f8310508bf5 Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 23:30:19 +0100
+Subject: [PATCH] Fft dc signal calculation and offset removal timing
+
+- Not isolated as the FFT task is the highest priority task therefore
+  cannot be interrupted while timing
+- Timing is for the calcultion of the dc signal within the complex data
+  set and its removal, concerned with the time it takes to go from low
+  to high
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/rtos/fft_rtos.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/rtos/fft_rtos.c b/src/rtos/fft_rtos.c
+index f2e93d8..30dc5a1 100644
+--- a/src/rtos/fft_rtos.c
++++ b/src/rtos/fft_rtos.c
+@@ -2,6 +2,7 @@
+ #include "extern_i2s_dma_data.h"
+ #include "mic_data_processing.h"
+ #include "fft_processing.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx_hal.h"
+ #include "stm32g4xx_nucleo.h"
+@@ -79,11 +80,13 @@ void fft_task_processing(void* pvParameters)
+ 		}
+ 
+ 		float32_t dc_signal = 0.0f;
++		deassert_gpio_debug_pin();
+ 		arm_mean_f32(data_buffer, FFT_DATA_SIZE * 2, &dc_signal);
+ 		dc_signal *= 2.0f; // data is complex { a, 0, b, 0 .. }, double to adjust for 0j's
+ 		for (int i = 0; i < (int) FFT_DATA_SIZE; ++i) {
+ 			data_buffer[i * 2] = data_buffer[i * 2] - dc_signal;
+ 		}
++		assert_gpio_debug_pin();
+ 
+ 		arm_mult_f32(data_buffer, complex_window_func, fft_input, FFT_DATA_SIZE * 2);
+ 
+-- 
+2.49.0
+

@@ -1,0 +1,45 @@
+From 28159ac47f1b237143751d117c719312d70a9cab Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 22:56:49 +0100
+Subject: [PATCH] Fft task timing
+
+- Again, not "isolated" as the FFT task is the highest priority task,
+  therefore it won't be interrupted while timing our task
+- Timing is for the completion of the FFT task, minus the time it takes
+  to recieve data from the queue as this can be variable (and is set to
+  max delay), concerned with the time it takes to go from low to high
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/rtos/fft_rtos.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/rtos/fft_rtos.c b/src/rtos/fft_rtos.c
+index f2e93d8..92d3c45 100644
+--- a/src/rtos/fft_rtos.c
++++ b/src/rtos/fft_rtos.c
+@@ -2,6 +2,7 @@
+ #include "extern_i2s_dma_data.h"
+ #include "mic_data_processing.h"
+ #include "fft_processing.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx_hal.h"
+ #include "stm32g4xx_nucleo.h"
+@@ -68,6 +69,7 @@ void fft_task_processing(void* pvParameters)
+ 			// delay/block until data is ready
+ 		}
+ 
++		deassert_gpio_debug_pin();
+ 		if (fft_section == 1) {
+ 			data_buffer = &data_buffer1[0];
+ 			dma_i2s_halfword_to_word_complex_conversion(&i2s_dma_data[0], data_buffer
+@@ -105,5 +107,6 @@ void fft_task_processing(void* pvParameters)
+ 
+ 			xQueueSendToFront(xFftCompleteFlagQueue, &fft_counter, pdMS_TO_TICKS(2));
+ 		}
++		assert_gpio_debug_pin();
+ 	}
+ }
+-- 
+2.49.0
+

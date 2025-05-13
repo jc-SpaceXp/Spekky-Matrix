@@ -1,0 +1,46 @@
+From 0f4168014faf5878e24f25d091fa88f672897b25 Mon Sep 17 00:00:00 2001
+From: Jamal Clarke <jamal_clarke@hotmail.co.uk>
+Date: Tue, 13 May 2025 23:06:19 +0100
+Subject: [PATCH] Dma to complex data conversion timing
+
+- Again, not isolated as the FFT task is the highest priority and
+  therefore won't be interrupted
+- Timing is for the conversion of the DMA array into complex data which
+  is needed to perform the FFT, concerned with the time it takes to go
+  from low to high
+- Must apply the initial gpio debug patch prior to this one
+---
+ src/rtos/fft_rtos.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/rtos/fft_rtos.c b/src/rtos/fft_rtos.c
+index f2e93d8..d034805 100644
+--- a/src/rtos/fft_rtos.c
++++ b/src/rtos/fft_rtos.c
+@@ -2,6 +2,7 @@
+ #include "extern_i2s_dma_data.h"
+ #include "mic_data_processing.h"
+ #include "fft_processing.h"
++#include "stm32g4xx_gpio_debug.h"
+ 
+ #include "stm32g4xx_hal.h"
+ #include "stm32g4xx_nucleo.h"
+@@ -68,6 +69,7 @@ void fft_task_processing(void* pvParameters)
+ 			// delay/block until data is ready
+ 		}
+ 
++		deassert_gpio_debug_pin();
+ 		if (fft_section == 1) {
+ 			data_buffer = &data_buffer1[0];
+ 			dma_i2s_halfword_to_word_complex_conversion(&i2s_dma_data[0], data_buffer
+@@ -77,6 +79,7 @@ void fft_task_processing(void* pvParameters)
+ 			dma_i2s_halfword_to_word_complex_conversion(&i2s_dma_data[DATA_LEN_HALF], data_buffer
+ 		                                               , DATA_LEN_HALF, L);
+ 		}
++		assert_gpio_debug_pin();
+ 
+ 		float32_t dc_signal = 0.0f;
+ 		arm_mean_f32(data_buffer, FFT_DATA_SIZE * 2, &dc_signal);
+-- 
+2.49.0
+
