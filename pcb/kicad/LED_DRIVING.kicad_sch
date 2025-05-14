@@ -5557,6 +5557,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b0e869dc-f873-40b4-b25f-5e9f72ac4552")
 		)
@@ -5906,6 +5915,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1dee2a97-3dd8-49d3-b182-64c3078a4aba")
 		)
@@ -6107,6 +6125,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 186.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "818cbe66-11aa-44dc-85e3-cd61e1906d00")
 		)
@@ -6169,6 +6196,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 68.58 250.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603DRE071KL"
 			(at 68.58 250.19 0)
 			(effects
 				(font
@@ -6247,6 +6283,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 68.58 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8e2fadfb-a969-4c8f-a1d4-e2b99c77d377")
 		)
@@ -6315,6 +6360,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "121c2d4e-2a5d-4085-a6bc-f7e06e7b0d1d")
 		)
@@ -6375,6 +6429,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 59.69 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 254 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6533,6 +6596,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 162.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c1e8f62a-85bb-43c2-bc2c-25613e2313ca")
 		)
@@ -6683,6 +6755,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 255.27 186.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8d0b6d72-67e3-42fc-914b-6530e88581e3")
 		)
@@ -6811,6 +6892,15 @@
 		)
 		(property "Description" "Potentiometer"
 			(at 250.19 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "3386F-1-222LF"
+			(at 250.19 195.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7171,6 +7261,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 212.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b890d19-49b9-4491-a837-a10de65c97b9")
 		)
@@ -7436,6 +7535,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 68.58 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603DRE071KL"
 			(at 68.58 215.9 0)
 			(effects
 				(font
@@ -7716,6 +7824,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 68.58 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3ea76994-ffef-40bf-873c-de632c28a995")
 		)
@@ -7917,6 +8034,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 234.95 186.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ce9305a6-bcdd-4a17-9bc4-be7e1d351d41")
 		)
@@ -7985,6 +8111,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 195.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c7bebf69-c2a9-43a3-a91b-b0e844d197f8")
 		)
@@ -8045,6 +8180,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 245.11 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 245.11 180.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8120,6 +8264,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 246.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "dd53de2e-1653-4506-ae54-dc22a430fe06")
 		)
@@ -8180,6 +8333,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 99.06 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 179.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8394,6 +8556,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 99.06 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 228.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8806,6 +8977,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 68.58 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603DRE071KL"
 			(at 68.58 182.88 0)
 			(effects
 				(font
@@ -9366,6 +9546,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 203.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "80f93764-41d2-4396-8974-ce354967120a")
 		)
@@ -9576,6 +9765,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 68.58 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603DRE071KL"
 			(at 68.58 232.41 0)
 			(effects
 				(font
@@ -9881,6 +10079,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE075K1L"
+			(at 99.06 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6da0ec7f-3a80-4b63-bd20-5fc2f9748a51")
 		)
@@ -9941,6 +10148,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 59.69 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 236.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10299,6 +10515,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 170.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "77fc213f-d521-4783-b9e6-0eb6f7291b55")
 		)
@@ -10359,6 +10584,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 59.69 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 59.69 219.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10436,6 +10670,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 68.58 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a9826ee3-cc9f-466a-a558-7809f5597354")
 		)
@@ -10498,6 +10741,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 68.58 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603DRE071KL"
 			(at 68.58 133.35 0)
 			(effects
 				(font

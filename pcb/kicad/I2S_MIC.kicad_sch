@@ -1097,6 +1097,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "MSM261S4030H0R"
+			(at 83.82 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "a6ea367c-d525-4d7c-a6a2-492e9a38eb34")
 		)

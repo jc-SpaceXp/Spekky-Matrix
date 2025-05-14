@@ -4768,7 +4768,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 69.8499 90)
 			(effects
 				(font
@@ -4805,7 +4805,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 68.58 0)
 			(effects
 				(font
@@ -4848,7 +4848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 36.8299 90)
 			(effects
 				(font
@@ -4885,7 +4885,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 35.56 0)
 			(effects
 				(font
@@ -4928,7 +4928,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 102.8699 90)
 			(effects
 				(font
@@ -4965,7 +4965,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 101.6 0)
 			(effects
 				(font
@@ -5008,7 +5008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 69.8499 90)
 			(effects
 				(font
@@ -5045,7 +5045,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 68.58 0)
 			(effects
 				(font
@@ -5088,7 +5088,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 152.3999 90)
 			(effects
 				(font
@@ -5125,7 +5125,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 151.13 0)
 			(effects
 				(font
@@ -5168,7 +5168,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 102.8699 90)
 			(effects
 				(font
@@ -5205,7 +5205,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 101.6 0)
 			(effects
 				(font
@@ -5248,7 +5248,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 86.3599 90)
 			(effects
 				(font
@@ -5285,7 +5285,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 85.09 0)
 			(effects
 				(font
@@ -5328,7 +5328,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 36.8299 90)
 			(effects
 				(font
@@ -5365,7 +5365,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 35.56 0)
 			(effects
 				(font
@@ -5408,7 +5408,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 119.3799 90)
 			(effects
 				(font
@@ -5445,7 +5445,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 118.11 0)
 			(effects
 				(font
@@ -5488,7 +5488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 86.3599 90)
 			(effects
 				(font
@@ -5525,7 +5525,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 85.09 0)
 			(effects
 				(font
@@ -5568,7 +5568,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 86.3599 90)
 			(effects
 				(font
@@ -5605,7 +5605,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 85.09 0)
 			(effects
 				(font
@@ -5648,7 +5648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 69.8499 90)
 			(effects
 				(font
@@ -5685,7 +5685,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 68.58 0)
 			(effects
 				(font
@@ -5728,7 +5728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 86.3599 90)
 			(effects
 				(font
@@ -5765,7 +5765,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 85.09 0)
 			(effects
 				(font
@@ -5808,7 +5808,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 152.3999 90)
 			(effects
 				(font
@@ -5845,7 +5845,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 151.13 0)
 			(effects
 				(font
@@ -5888,7 +5888,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 152.3999 90)
 			(effects
 				(font
@@ -5925,7 +5925,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 151.13 0)
 			(effects
 				(font
@@ -5968,7 +5968,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 86.3599 90)
 			(effects
 				(font
@@ -6005,7 +6005,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 85.09 0)
 			(effects
 				(font
@@ -6048,7 +6048,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 102.8699 90)
 			(effects
 				(font
@@ -6085,7 +6085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 101.6 0)
 			(effects
 				(font
@@ -6128,7 +6128,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 53.3399 90)
 			(effects
 				(font
@@ -6165,7 +6165,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 52.07 0)
 			(effects
 				(font
@@ -6208,7 +6208,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 69.8499 90)
 			(effects
 				(font
@@ -6245,7 +6245,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 68.58 0)
 			(effects
 				(font
@@ -6288,7 +6288,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 119.3799 90)
 			(effects
 				(font
@@ -6325,7 +6325,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 118.11 0)
 			(effects
 				(font
@@ -6368,7 +6368,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 102.8699 90)
 			(effects
 				(font
@@ -6405,7 +6405,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 101.6 0)
 			(effects
 				(font
@@ -6448,7 +6448,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 53.3399 90)
 			(effects
 				(font
@@ -6485,7 +6485,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 52.07 0)
 			(effects
 				(font
@@ -6528,7 +6528,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 86.3599 90)
 			(effects
 				(font
@@ -6565,7 +6565,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 85.09 0)
 			(effects
 				(font
@@ -6608,7 +6608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 102.8699 90)
 			(effects
 				(font
@@ -6645,7 +6645,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 101.6 0)
 			(effects
 				(font
@@ -6688,7 +6688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 36.8299 90)
 			(effects
 				(font
@@ -6725,7 +6725,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 35.56 0)
 			(effects
 				(font
@@ -6768,7 +6768,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 119.3799 90)
 			(effects
 				(font
@@ -6805,7 +6805,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 118.11 0)
 			(effects
 				(font
@@ -6848,7 +6848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 36.8299 90)
 			(effects
 				(font
@@ -6885,7 +6885,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 35.56 0)
 			(effects
 				(font
@@ -6928,7 +6928,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 69.8499 90)
 			(effects
 				(font
@@ -6965,7 +6965,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 68.58 0)
 			(effects
 				(font
@@ -7008,7 +7008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 53.3399 90)
 			(effects
 				(font
@@ -7045,7 +7045,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 52.07 0)
 			(effects
 				(font
@@ -7088,7 +7088,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 86.3599 90)
 			(effects
 				(font
@@ -7125,7 +7125,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 85.09 0)
 			(effects
 				(font
@@ -7168,7 +7168,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 102.8699 90)
 			(effects
 				(font
@@ -7205,7 +7205,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 101.6 0)
 			(effects
 				(font
@@ -7248,7 +7248,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 119.3799 90)
 			(effects
 				(font
@@ -7285,7 +7285,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 118.11 0)
 			(effects
 				(font
@@ -7328,7 +7328,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 135.8899 90)
 			(effects
 				(font
@@ -7365,7 +7365,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 134.62 0)
 			(effects
 				(font
@@ -7408,7 +7408,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 119.3799 90)
 			(effects
 				(font
@@ -7445,7 +7445,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 118.11 0)
 			(effects
 				(font
@@ -7488,7 +7488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 119.3799 90)
 			(effects
 				(font
@@ -7525,7 +7525,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 118.11 0)
 			(effects
 				(font
@@ -7568,7 +7568,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 135.8899 90)
 			(effects
 				(font
@@ -7605,7 +7605,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 134.62 0)
 			(effects
 				(font
@@ -7648,7 +7648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 36.8299 90)
 			(effects
 				(font
@@ -7685,7 +7685,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 35.56 0)
 			(effects
 				(font
@@ -7728,7 +7728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 135.8899 90)
 			(effects
 				(font
@@ -7765,7 +7765,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 134.62 0)
 			(effects
 				(font
@@ -7808,7 +7808,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 102.8699 90)
 			(effects
 				(font
@@ -7845,7 +7845,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 101.6 0)
 			(effects
 				(font
@@ -7888,7 +7888,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 69.8499 90)
 			(effects
 				(font
@@ -7925,7 +7925,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 68.58 0)
 			(effects
 				(font
@@ -7968,7 +7968,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 119.3799 90)
 			(effects
 				(font
@@ -8005,7 +8005,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 118.11 0)
 			(effects
 				(font
@@ -8048,7 +8048,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 53.3399 90)
 			(effects
 				(font
@@ -8085,7 +8085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 52.07 0)
 			(effects
 				(font
@@ -8128,7 +8128,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 53.3399 90)
 			(effects
 				(font
@@ -8165,7 +8165,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 52.07 0)
 			(effects
 				(font
@@ -8208,7 +8208,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 53.3399 90)
 			(effects
 				(font
@@ -8245,7 +8245,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 52.07 0)
 			(effects
 				(font
@@ -8288,7 +8288,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 36.8299 90)
 			(effects
 				(font
@@ -8325,7 +8325,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 35.56 0)
 			(effects
 				(font
@@ -8368,7 +8368,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 119.3799 90)
 			(effects
 				(font
@@ -8405,7 +8405,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 118.11 0)
 			(effects
 				(font
@@ -8448,7 +8448,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 69.8499 90)
 			(effects
 				(font
@@ -8485,7 +8485,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 68.58 0)
 			(effects
 				(font
@@ -8528,7 +8528,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 36.8299 90)
 			(effects
 				(font
@@ -8565,7 +8565,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 35.56 0)
 			(effects
 				(font
@@ -8608,7 +8608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 86.3599 90)
 			(effects
 				(font
@@ -8645,7 +8645,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 85.09 0)
 			(effects
 				(font
@@ -8688,7 +8688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 152.3999 90)
 			(effects
 				(font
@@ -8725,7 +8725,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 151.13 0)
 			(effects
 				(font
@@ -8768,7 +8768,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 102.8699 90)
 			(effects
 				(font
@@ -8805,7 +8805,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 101.6 0)
 			(effects
 				(font
@@ -8848,7 +8848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 102.8699 90)
 			(effects
 				(font
@@ -8885,7 +8885,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 101.6 0)
 			(effects
 				(font
@@ -8928,7 +8928,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 69.8499 90)
 			(effects
 				(font
@@ -8965,7 +8965,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 68.58 0)
 			(effects
 				(font
@@ -9008,7 +9008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 86.3599 90)
 			(effects
 				(font
@@ -9045,7 +9045,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 85.09 0)
 			(effects
 				(font
@@ -9088,7 +9088,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 119.3799 90)
 			(effects
 				(font
@@ -9125,7 +9125,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 118.11 0)
 			(effects
 				(font
@@ -9168,7 +9168,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 36.8299 90)
 			(effects
 				(font
@@ -9205,7 +9205,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 35.56 0)
 			(effects
 				(font
@@ -9248,7 +9248,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 86.3599 90)
 			(effects
 				(font
@@ -9285,7 +9285,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 85.09 0)
 			(effects
 				(font
@@ -9328,7 +9328,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 152.3999 90)
 			(effects
 				(font
@@ -9365,7 +9365,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 151.13 0)
 			(effects
 				(font
@@ -9408,7 +9408,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 69.8499 90)
 			(effects
 				(font
@@ -9445,7 +9445,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 68.58 0)
 			(effects
 				(font
@@ -9488,7 +9488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 53.3399 90)
 			(effects
 				(font
@@ -9525,7 +9525,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 52.07 0)
 			(effects
 				(font
@@ -9568,7 +9568,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 36.8299 90)
 			(effects
 				(font
@@ -9605,7 +9605,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 35.56 0)
 			(effects
 				(font
@@ -9648,7 +9648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 152.3999 90)
 			(effects
 				(font
@@ -9685,7 +9685,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 151.13 0)
 			(effects
 				(font
@@ -9728,7 +9728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 36.8299 90)
 			(effects
 				(font
@@ -9765,7 +9765,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 35.56 0)
 			(effects
 				(font
@@ -9808,7 +9808,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 119.3799 90)
 			(effects
 				(font
@@ -9845,7 +9845,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 118.11 0)
 			(effects
 				(font
@@ -9888,7 +9888,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 152.3999 90)
 			(effects
 				(font
@@ -9925,7 +9925,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 151.13 0)
 			(effects
 				(font
@@ -9968,7 +9968,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 119.3799 90)
 			(effects
 				(font
@@ -10005,7 +10005,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 118.11 0)
 			(effects
 				(font
@@ -10048,7 +10048,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 86.3599 90)
 			(effects
 				(font
@@ -10085,7 +10085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 85.09 0)
 			(effects
 				(font
@@ -10128,7 +10128,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 119.3799 90)
 			(effects
 				(font
@@ -10165,7 +10165,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 118.11 0)
 			(effects
 				(font
@@ -10208,7 +10208,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 152.3999 90)
 			(effects
 				(font
@@ -10245,7 +10245,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 151.13 0)
 			(effects
 				(font
@@ -10288,7 +10288,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 53.3399 90)
 			(effects
 				(font
@@ -10325,7 +10325,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 52.07 0)
 			(effects
 				(font
@@ -10368,7 +10368,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 102.8699 90)
 			(effects
 				(font
@@ -10405,7 +10405,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 101.6 0)
 			(effects
 				(font
@@ -10448,7 +10448,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 86.3599 90)
 			(effects
 				(font
@@ -10485,7 +10485,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 85.09 0)
 			(effects
 				(font
@@ -10528,7 +10528,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 36.8299 90)
 			(effects
 				(font
@@ -10565,7 +10565,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 35.56 0)
 			(effects
 				(font
@@ -10608,7 +10608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 135.8899 90)
 			(effects
 				(font
@@ -10645,7 +10645,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 134.62 0)
 			(effects
 				(font
@@ -10688,7 +10688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 152.3999 90)
 			(effects
 				(font
@@ -10725,7 +10725,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 151.13 0)
 			(effects
 				(font
@@ -10768,7 +10768,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 152.3999 90)
 			(effects
 				(font
@@ -10805,7 +10805,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 151.13 0)
 			(effects
 				(font
@@ -10848,7 +10848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 69.8499 90)
 			(effects
 				(font
@@ -10885,7 +10885,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 68.58 0)
 			(effects
 				(font
@@ -10928,7 +10928,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 135.8899 90)
 			(effects
 				(font
@@ -10965,7 +10965,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 134.62 0)
 			(effects
 				(font
@@ -11008,7 +11008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 53.3399 90)
 			(effects
 				(font
@@ -11045,7 +11045,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 52.07 0)
 			(effects
 				(font
@@ -11088,7 +11088,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 86.3599 90)
 			(effects
 				(font
@@ -11125,7 +11125,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 85.09 0)
 			(effects
 				(font
@@ -11168,7 +11168,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 152.3999 90)
 			(effects
 				(font
@@ -11205,7 +11205,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 151.13 0)
 			(effects
 				(font
@@ -11248,7 +11248,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 53.3399 90)
 			(effects
 				(font
@@ -11285,7 +11285,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 52.07 0)
 			(effects
 				(font
@@ -11328,7 +11328,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 36.8299 90)
 			(effects
 				(font
@@ -11365,7 +11365,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 35.56 0)
 			(effects
 				(font
@@ -11408,7 +11408,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 102.8699 90)
 			(effects
 				(font
@@ -11445,7 +11445,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 101.6 0)
 			(effects
 				(font
@@ -11488,7 +11488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 135.8899 90)
 			(effects
 				(font
@@ -11525,7 +11525,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 134.62 0)
 			(effects
 				(font
@@ -11568,7 +11568,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 36.8299 90)
 			(effects
 				(font
@@ -11605,7 +11605,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 35.56 0)
 			(effects
 				(font
@@ -11648,7 +11648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 152.3999 90)
 			(effects
 				(font
@@ -11685,7 +11685,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 151.13 0)
 			(effects
 				(font
@@ -11728,7 +11728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 140.97 119.3799 90)
 			(effects
 				(font
@@ -11765,7 +11765,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 137.16 118.11 0)
 			(effects
 				(font
@@ -11808,7 +11808,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 119.3799 90)
 			(effects
 				(font
@@ -11845,7 +11845,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 118.11 0)
 			(effects
 				(font
@@ -11888,7 +11888,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 119.3799 90)
 			(effects
 				(font
@@ -11925,7 +11925,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 118.11 0)
 			(effects
 				(font
@@ -11968,7 +11968,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 69.8499 90)
 			(effects
 				(font
@@ -12005,7 +12005,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 68.58 0)
 			(effects
 				(font
@@ -12048,7 +12048,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 86.3599 90)
 			(effects
 				(font
@@ -12085,7 +12085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 85.09 0)
 			(effects
 				(font
@@ -12128,7 +12128,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 86.3599 90)
 			(effects
 				(font
@@ -12165,7 +12165,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 85.09 0)
 			(effects
 				(font
@@ -12208,7 +12208,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 69.8499 90)
 			(effects
 				(font
@@ -12245,7 +12245,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 68.58 0)
 			(effects
 				(font
@@ -12288,7 +12288,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 135.8899 90)
 			(effects
 				(font
@@ -12325,7 +12325,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 134.62 0)
 			(effects
 				(font
@@ -12368,7 +12368,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 152.3999 90)
 			(effects
 				(font
@@ -12405,7 +12405,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 151.13 0)
 			(effects
 				(font
@@ -12448,7 +12448,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 119.3799 90)
 			(effects
 				(font
@@ -12485,7 +12485,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 118.11 0)
 			(effects
 				(font
@@ -12528,7 +12528,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 135.8899 90)
 			(effects
 				(font
@@ -12565,7 +12565,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 134.62 0)
 			(effects
 				(font
@@ -12608,7 +12608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 36.8299 90)
 			(effects
 				(font
@@ -12645,7 +12645,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 35.56 0)
 			(effects
 				(font
@@ -12688,7 +12688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 86.3599 90)
 			(effects
 				(font
@@ -12725,7 +12725,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 85.09 0)
 			(effects
 				(font
@@ -12768,7 +12768,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 64.77 69.8499 90)
 			(effects
 				(font
@@ -12805,7 +12805,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 60.96 68.58 0)
 			(effects
 				(font
@@ -12848,7 +12848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 102.87 135.8899 90)
 			(effects
 				(font
@@ -12885,7 +12885,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 99.06 134.62 0)
 			(effects
 				(font
@@ -12928,7 +12928,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 189.23 135.8899 90)
 			(effects
 				(font
@@ -12965,7 +12965,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 185.42 134.62 0)
 			(effects
 				(font
@@ -13008,7 +13008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 135.8899 90)
 			(effects
 				(font
@@ -13045,7 +13045,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 134.62 0)
 			(effects
 				(font
@@ -13088,7 +13088,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 69.8499 90)
 			(effects
 				(font
@@ -13125,7 +13125,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 68.58 0)
 			(effects
 				(font
@@ -13168,7 +13168,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 69.8499 90)
 			(effects
 				(font
@@ -13205,7 +13205,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 68.58 0)
 			(effects
 				(font
@@ -13248,7 +13248,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 163.83 53.3399 90)
 			(effects
 				(font
@@ -13285,7 +13285,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 160.02 52.07 0)
 			(effects
 				(font
@@ -13328,7 +13328,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 36.8299 90)
 			(effects
 				(font
@@ -13365,7 +13365,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 35.56 0)
 			(effects
 				(font
@@ -13408,7 +13408,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 102.8699 90)
 			(effects
 				(font
@@ -13445,7 +13445,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 101.6 0)
 			(effects
 				(font
@@ -13488,7 +13488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 52.07 135.8899 90)
 			(effects
 				(font
@@ -13525,7 +13525,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 48.26 134.62 0)
 			(effects
 				(font
@@ -13568,7 +13568,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 53.3399 90)
 			(effects
 				(font
@@ -13605,7 +13605,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 52.07 0)
 			(effects
 				(font
@@ -13648,7 +13648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 102.8699 90)
 			(effects
 				(font
@@ -13685,7 +13685,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 101.6 0)
 			(effects
 				(font
@@ -13728,7 +13728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 53.3399 90)
 			(effects
 				(font
@@ -13765,7 +13765,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 52.07 0)
 			(effects
 				(font
@@ -13808,7 +13808,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 102.8699 90)
 			(effects
 				(font
@@ -13845,7 +13845,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 101.6 0)
 			(effects
 				(font
@@ -13888,7 +13888,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 53.3399 90)
 			(effects
 				(font
@@ -13925,7 +13925,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 52.07 0)
 			(effects
 				(font
@@ -13968,7 +13968,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 135.8899 90)
 			(effects
 				(font
@@ -14005,7 +14005,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 134.62 0)
 			(effects
 				(font
@@ -14048,7 +14048,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 201.93 135.8899 90)
 			(effects
 				(font
@@ -14085,7 +14085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 198.12 134.62 0)
 			(effects
 				(font
@@ -14128,7 +14128,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 90.17 102.8699 90)
 			(effects
 				(font
@@ -14165,7 +14165,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 86.36 101.6 0)
 			(effects
 				(font
@@ -14208,7 +14208,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 102.8699 90)
 			(effects
 				(font
@@ -14245,7 +14245,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 101.6 0)
 			(effects
 				(font
@@ -14288,7 +14288,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 135.8899 90)
 			(effects
 				(font
@@ -14325,7 +14325,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 134.62 0)
 			(effects
 				(font
@@ -14368,7 +14368,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 77.47 53.3399 90)
 			(effects
 				(font
@@ -14405,7 +14405,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 73.66 52.07 0)
 			(effects
 				(font
@@ -14448,7 +14448,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 240.03 36.8299 90)
 			(effects
 				(font
@@ -14485,7 +14485,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 236.22 35.56 0)
 			(effects
 				(font
@@ -14528,7 +14528,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 151.13 152.3999 90)
 			(effects
 				(font
@@ -14565,7 +14565,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 147.32 151.13 0)
 			(effects
 				(font
@@ -14608,7 +14608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 115.57 135.8899 90)
 			(effects
 				(font
@@ -14645,7 +14645,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 111.76 134.62 0)
 			(effects
 				(font
@@ -14688,7 +14688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 176.53 152.3999 90)
 			(effects
 				(font
@@ -14725,7 +14725,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 172.72 151.13 0)
 			(effects
 				(font
@@ -14768,7 +14768,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 214.63 53.3399 90)
 			(effects
 				(font
@@ -14805,7 +14805,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 210.82 52.07 0)
 			(effects
 				(font
@@ -14848,7 +14848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 227.33 69.8499 90)
 			(effects
 				(font
@@ -14885,7 +14885,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 223.52 68.58 0)
 			(effects
 				(font
@@ -14928,7 +14928,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C171KRKT"
+		(property "Value" "LTST-C190KRKT"
 			(at 128.27 152.3999 90)
 			(effects
 				(font
@@ -14965,7 +14965,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "LTST-C171KRKT"
+		(property "MPN" "LTST-C190KRKT"
 			(at 124.46 151.13 0)
 			(effects
 				(font

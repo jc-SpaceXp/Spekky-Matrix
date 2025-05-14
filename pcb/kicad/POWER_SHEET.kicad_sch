@@ -2669,6 +2669,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "10118194-0001LF"
+			(at 68.58 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "175331ea-20e0-47bf-ab54-eff5391393f7")
 		)
@@ -3306,6 +3315,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "RT0603DRE071KL"
+			(at 190.5 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "eb91e2f7-0db2-4e2f-a0d1-c64022104926")
 		)
@@ -3681,7 +3699,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
+		(property "Footprint" "Diode_SMD:D_SOD-523"
 			(at 48.895 63.5 0)
 			(effects
 				(font
@@ -3690,7 +3708,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USKP.pdf"
+		(property "Datasheet" ""
 			(at 53.34 63.5 0)
 			(effects
 				(font
@@ -3699,8 +3717,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "5V, 2000W TVS unidirectional diode, DSN1608-2"
+		(property "Description" "5V, TVS unidirectional diode"
 			(at 53.34 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PESD5V0X1UAB,115"
+			(at 53.34 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
