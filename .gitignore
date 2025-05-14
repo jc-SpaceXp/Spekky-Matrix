@@ -8,3 +8,7 @@
 py_sine_input_test.txt
 py_sine_output_fft_test.txt
 py_sine_1hz_lut_input_test.txt
+**/*backups/*
+*fp-info-cache
+*fp-lib-table
+*.lck
