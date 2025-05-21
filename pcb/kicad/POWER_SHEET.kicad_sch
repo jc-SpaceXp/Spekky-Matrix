@@ -6,8 +6,8 @@
 	(paper "A5")
 	(title_block
 		(title "Power Sheet")
-		(date "2025-05-06")
-		(rev "v06")
+		(date "2025-05-21")
+		(rev "v07")
 		(comment 4 "All things power related")
 	)
 	(lib_symbols
@@ -1895,6 +1895,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "C3 acts as an input \ncapacitor for the LDO"
+		(exclude_from_sim no)
+		(at 149.86 64.516 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f138a466-0d6b-4c3b-a752-d1fe5c804367")
+	)
 	(junction
 		(at 78.74 81.28)
 		(diameter 0)
@@ -1936,12 +1946,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d55dd0b-beb0-43d6-b593-3c9b222b822d")
-	)
-	(junction
-		(at 147.32 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8f7d050b-3246-4545-b1de-d8e7168c63ad")
 	)
 	(junction
 		(at 80.01 73.66)
@@ -2153,16 +2157,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 54.61) (xy 147.32 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74358234-66a9-4b85-9c3e-97f6b2f8142c")
-	)
-	(wire
-		(pts
 			(xy 177.8 66.04) (xy 177.8 68.58)
 		)
 		(stroke
@@ -2200,16 +2194,6 @@
 			(type default)
 		)
 		(uuid "8d2394f0-9697-4a8c-b46b-8987c8bd8b4a")
-	)
-	(wire
-		(pts
-			(xy 147.32 69.85) (xy 162.56 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9749a5a6-84c3-4e97-9495-af7c27ff9cb0")
 	)
 	(wire
 		(pts
@@ -2260,16 +2244,6 @@
 			(type default)
 		)
 		(uuid "a446d923-1098-4858-aafd-89a3514af96f")
-	)
-	(wire
-		(pts
-			(xy 147.32 66.04) (xy 147.32 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a767c948-7089-45c1-a8d7-eb737b67d3dd")
 	)
 	(wire
 		(pts
@@ -2985,7 +2959,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "562646a3-5a8a-48df-abb8-4a264d235bac")
-		(property "Reference" "C5"
+		(property "Reference" "C4"
 			(at 181.61 60.0709 0)
 			(effects
 				(font
@@ -3039,7 +3013,7 @@
 		(instances
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/8084362c-1e50-4cdc-88cb-8f42b053a44a"
-					(reference "C5")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -3466,76 +3440,6 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/8084362c-1e50-4cdc-88cb-8f42b053a44a"
 					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 147.32 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c0d5feb5-da9b-4bd8-bae0-40113bbc126f")
-		(property "Reference" "C4"
-			(at 151.13 60.0709 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 151.13 62.6109 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_4x4.5"
-			(at 148.2852 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 147.32 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 147.32 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6eea06c9-11b5-4ee4-8805-af7482a66ae9")
-		)
-		(pin "2"
-			(uuid "1b17e265-850e-4004-a3a8-8bb472235097")
-		)
-		(instances
-			(project "i2s_spekky_matrix"
-				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/8084362c-1e50-4cdc-88cb-8f42b053a44a"
-					(reference "C4")
 					(unit 1)
 				)
 			)
