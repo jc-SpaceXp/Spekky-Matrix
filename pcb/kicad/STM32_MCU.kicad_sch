@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "STM32G431Kx Schematic")
-		(date "2025-05-21")
-		(rev "v06")
+		(date "2025-05-22")
+		(rev "v07")
 		(comment 1 "No ADC therefore tying VDDA to VDD and GNDA to GND")
 		(comment 2 "Decoupling capacitor info can be found on datasheet and application note AN5093 ")
 		(comment 3 "SB11 and SB8 must be connected for this schematic to work.")
@@ -2315,6 +2315,17 @@
 			(justify left)
 		)
 		(uuid "0ee58e93-a420-441f-906e-68759da0b9fb")
+	)
+	(text "PB3 cannot be used for both SPI_CLK and SWO\nProgrammer must configure between them\nSpekky matrix doesn't use SWO"
+		(exclude_from_sim no)
+		(at 28.702 89.408 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3911d03e-e688-46df-b8ad-2011e9a1793f")
 	)
 	(text "VDD"
 		(exclude_from_sim no)
