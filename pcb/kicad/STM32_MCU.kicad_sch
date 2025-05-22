@@ -7,7 +7,7 @@
 	(title_block
 		(title "STM32G431Kx Schematic")
 		(date "2025-05-22")
-		(rev "v07")
+		(rev "v08")
 		(comment 1 "No ADC therefore tying VDDA to VDD and GNDA to GND")
 		(comment 2 "Decoupling capacitor info can be found on datasheet and application note AN5093 ")
 		(comment 3 "SB11 and SB8 must be connected for this schematic to work.")
@@ -2336,6 +2336,17 @@
 			)
 		)
 		(uuid "5f78f2e3-a13c-4b35-8234-e1dc09280055")
+	)
+	(text "Recommended external reset circuit:\nvia DS12589 Rev 6 (STM32G4x datasheet)\n(plus additional ESD protection)"
+		(exclude_from_sim no)
+		(at 59.436 36.576 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "695144ae-2d47-443b-863e-979f52d77445")
 	)
 	(text "Reset circuit"
 		(exclude_from_sim no)
