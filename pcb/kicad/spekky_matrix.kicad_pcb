@@ -776,6 +776,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "15194da2-e9c9-4c47-8cfc-9d398900ee56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/31eb9130-5823-426f-afca-fe0625f90012")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -1007,6 +1020,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f68ded6e-c3c4-4a69-8f88-85b44550aa03")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "490ffbb8-9ec2-4a4c-8df5-8214ffa6f6f9")
 			(effects
 				(font
 					(size 1 1)
@@ -1252,6 +1278,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "706426ac-51ef-4d80-aff5-c742de570d00")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/53b7d80d-1dc2-4f66-9317-7daef6c9cf5c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -1483,6 +1522,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1c0f4620-0d62-4e96-a40f-139a1421104a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c7a83395-1c9f-4a18-819d-cea58a975cdd")
 			(effects
 				(font
 					(size 1 1)
@@ -1728,6 +1780,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8c9a2288-36b3-4920-ad82-32651904e6f8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/30212aa9-aa84-4a2e-b9c6-05ca0c1724b5")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -1959,6 +2024,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "71e385b6-6e7c-4e4a-b975-b69bee14cb4a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "52f5cbbf-1e12-4349-b5d6-5619e155b571")
 			(effects
 				(font
 					(size 1 1)
@@ -2204,6 +2282,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ad60a49-ed6c-440d-873c-076755f9ff60")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/e9abedfa-e42a-47bd-8dfb-8face590fa07")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -2435,6 +2526,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "be8c843f-8f8f-41db-be74-529719860b6f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "69747bf6-efe0-4e8f-b472-9419d4d2c3e4")
 			(effects
 				(font
 					(size 1 1)
@@ -2680,6 +2784,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "becf8bcf-f956-46e3-b641-c57815fc594f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/c7ed04f6-1408-482b-bf1e-d1cfaad86d91")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -2889,7 +3006,7 @@
 				)
 			)
 		)
-		(property "Description" "16-bit constant current LED sink driver, HTSSOP-24"
+		(property "Description" "16-bit constant current LED sink driver, 5..100mA output current, 20V driving capability, 3.0..5.5V power supply, HTSSOP-24"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -2914,7 +3031,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "HTSSOP*1EP*4.4x7.8mm*P0.65mm*")
+		(property ki_fp_filters "*HTSSOP*1EP*4.4*7.8*P0.65mm*EP3.2x5mm*")
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/89d53c14-278c-42c1-892a-993a7a60afd0")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
@@ -3161,7 +3278,7 @@
 			(roundrect_rratio 0.25)
 			(net 76 "/LED DRIVING/~{OUT0}")
 			(pinfunction "~{OUT0}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "0f20d7af-0d93-43b3-8ba5-e78be827eb87")
 		)
 		(pad "6" smd roundrect
@@ -3171,7 +3288,7 @@
 			(roundrect_rratio 0.25)
 			(net 75 "/LED DRIVING/~{OUT1}")
 			(pinfunction "~{OUT1}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "53d6c2c7-c552-4f17-9a14-dae6efb42876")
 		)
 		(pad "7" smd roundrect
@@ -3181,7 +3298,7 @@
 			(roundrect_rratio 0.25)
 			(net 74 "/LED DRIVING/~{OUT2}")
 			(pinfunction "~{OUT2}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "b7c3b755-0fa1-4221-a044-c0923cfe11bc")
 		)
 		(pad "8" smd roundrect
@@ -3191,7 +3308,7 @@
 			(roundrect_rratio 0.25)
 			(net 73 "/LED DRIVING/~{OUT3}")
 			(pinfunction "~{OUT3}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "6d7ff413-95f8-43e5-9e85-dd6d0ee1d275")
 		)
 		(pad "9" smd roundrect
@@ -3201,7 +3318,7 @@
 			(roundrect_rratio 0.25)
 			(net 72 "/LED DRIVING/~{OUT4}")
 			(pinfunction "~{OUT4}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "b1e9899f-819d-4fc0-9679-48eedb0d7d12")
 		)
 		(pad "10" smd roundrect
@@ -3211,7 +3328,7 @@
 			(roundrect_rratio 0.25)
 			(net 71 "/LED DRIVING/~{OUT5}")
 			(pinfunction "~{OUT5}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "cbcbf13a-e444-48f8-abc7-03998978920f")
 		)
 		(pad "11" smd roundrect
@@ -3221,7 +3338,7 @@
 			(roundrect_rratio 0.25)
 			(net 70 "/LED DRIVING/~{OUT6}")
 			(pinfunction "~{OUT6}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "829ba06a-3940-41d9-966c-324504696d23")
 		)
 		(pad "12" smd roundrect
@@ -3231,7 +3348,7 @@
 			(roundrect_rratio 0.25)
 			(net 69 "/LED DRIVING/~{OUT7}")
 			(pinfunction "~{OUT7}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "2bbbd473-2e1a-46d4-8039-e6dbd3aa0a92")
 		)
 		(pad "13" smd roundrect
@@ -3241,7 +3358,7 @@
 			(roundrect_rratio 0.25)
 			(net 98 "unconnected-(U3-~{OUT8}-Pad13)")
 			(pinfunction "~{OUT8}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "04e41d5a-d6c9-4321-8cfe-ae39b8cb09d7")
 		)
 		(pad "14" smd roundrect
@@ -3251,7 +3368,7 @@
 			(roundrect_rratio 0.25)
 			(net 99 "unconnected-(U3-~{OUT9}-Pad14)")
 			(pinfunction "~{OUT9}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "1a2ffb85-cc19-4211-a855-1b856ed16b64")
 		)
 		(pad "15" smd roundrect
@@ -3261,7 +3378,7 @@
 			(roundrect_rratio 0.25)
 			(net 100 "unconnected-(U3-~{OUT10}-Pad15)")
 			(pinfunction "~{OUT10}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "3295cbbd-9053-435b-ab2f-0361715f06da")
 		)
 		(pad "16" smd roundrect
@@ -3271,7 +3388,7 @@
 			(roundrect_rratio 0.25)
 			(net 101 "unconnected-(U3-~{OUT11}-Pad16)")
 			(pinfunction "~{OUT11}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "3c89a9a6-8fe0-4a9b-8dc1-1d9703df8388")
 		)
 		(pad "17" smd roundrect
@@ -3281,7 +3398,7 @@
 			(roundrect_rratio 0.25)
 			(net 104 "unconnected-(U3-~{OUT12}-Pad17)")
 			(pinfunction "~{OUT12}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "76f3a0e9-46bd-4355-af4d-4386156bf681")
 		)
 		(pad "18" smd roundrect
@@ -3291,7 +3408,7 @@
 			(roundrect_rratio 0.25)
 			(net 107 "unconnected-(U3-~{OUT13}-Pad18)")
 			(pinfunction "~{OUT13}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "fee6d131-5eb0-4534-ad5f-0a81cc6d313b")
 		)
 		(pad "19" smd roundrect
@@ -3301,7 +3418,7 @@
 			(roundrect_rratio 0.25)
 			(net 103 "unconnected-(U3-~{OUT14}-Pad19)")
 			(pinfunction "~{OUT14}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "6ef03564-05da-4f48-bd3b-09a6eae3a806")
 		)
 		(pad "20" smd roundrect
@@ -3311,7 +3428,7 @@
 			(roundrect_rratio 0.25)
 			(net 105 "unconnected-(U3-~{OUT15}-Pad20)")
 			(pinfunction "~{OUT15}")
-			(pintype "output+no_connect")
+			(pintype "open_collector+no_connect")
 			(uuid "da0fe4c2-c323-4c68-b014-2c4beffeb3b4")
 		)
 		(pad "21" smd roundrect
@@ -3341,7 +3458,7 @@
 			(roundrect_rratio 0.25)
 			(net 78 "/LED DRIVING/REXT3")
 			(pinfunction "R-EXT")
-			(pintype "passive")
+			(pintype "output")
 			(uuid "aad280a4-3635-4539-a4fb-bbead8c22fd6")
 		)
 		(pad "24" smd roundrect
@@ -3360,7 +3477,7 @@
 			(property pad_prop_heatsink)
 			(layers "F.Cu" "F.Mask")
 			(net 2 "GND")
-			(pinfunction "GND")
+			(pinfunction "EPAD")
 			(pintype "passive")
 			(zone_connect 2)
 			(uuid "3541b21d-621d-4326-97ee-f55c9f318304")
@@ -3941,6 +4058,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "156adbd8-77b1-42c5-a3cf-c9133aec8a1f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/0f13a4a3-10af-4604-a473-8f166304bf1b")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -4179,6 +4309,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "45bdf182-7b80-4c53-8488-4ee1c133d7c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/479eb13c-faf5-4f94-956e-bbf3fb829df5")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -4410,6 +4553,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "79c1ac4c-f9e3-4132-ad9c-cf8372463c6e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fa4d4fea-1cca-4b38-8021-05d44a41c567")
 			(effects
 				(font
 					(size 1 1)
@@ -5142,6 +5298,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b7f094dd-eb86-48bb-bd91-4ba8334d3316")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/71ccf6d6-79e7-463a-abf0-b5c13e497168")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -5373,6 +5542,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cbc207b4-94c5-4350-adf5-36cc87659684")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b3e7d45a-c577-4187-8fe9-50e41716acee")
 			(effects
 				(font
 					(size 1 1)
@@ -5618,6 +5800,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b4aeffd-f6be-44a6-a22b-4d656de81be1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/1104637d-9d79-4527-a30b-5d7cf5135acb")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -5849,6 +6044,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b08b3344-8092-4296-9211-9c499dcf8f7b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0f5736ac-c3c3-4e0c-9d7f-f26ece65e377")
 			(effects
 				(font
 					(size 1 1)
@@ -6094,6 +6302,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51ba4d11-e34f-4b78-8f6d-867f448f0720")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/c721a1e1-bbb8-4a64-97cc-4c7dc81de564")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -6325,6 +6546,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "345767e9-f722-4a2e-ba56-4d39771034a0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "df570df4-a4e1-4516-9965-5fac8b610492")
 			(effects
 				(font
 					(size 1 1)
@@ -6570,6 +6804,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b1b32f60-06fb-40f2-95cd-f0f66149a455")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/5b365472-e7ea-465e-90c2-226834d45ed8")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -6808,6 +7055,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8265723d-e372-4131-a9b3-42f9ced1f515")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/e83241da-4b94-4729-9515-5b4a1a2b1226")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -7038,6 +7298,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "07c5e87a-98f4-41ca-b936-94119d3bb96d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8aeaafb3-4aa1-47ae-84e1-1ffb5ec4f412")
 			(effects
 				(font
 					(size 1 1)
@@ -7283,6 +7556,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "81b59570-93e8-420e-86fa-ee2edfbfbc8b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/adf0b1f1-ab34-43d1-a1c3-b1f20b152b04")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -7514,6 +7800,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "db6532ab-15c4-48ea-87cc-68705a29e005")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "be8a969e-68b7-4b93-b0cd-d35168c2aeba")
 			(effects
 				(font
 					(size 1 1)
@@ -8241,6 +8540,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5af58f76-01a4-43f2-ac14-499676b190b3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/04fc8e17-32bb-44f5-a053-941fec772587")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -8472,6 +8784,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "15822499-577c-4bc6-96e6-16b7e30de737")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d6a38218-3340-466b-a3e7-c79ed7b0ff86")
 			(effects
 				(font
 					(size 1 1)
@@ -8717,6 +9042,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1f151387-3c51-465a-bfc0-287f5f57ce43")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/8374e2cc-db47-4cc7-8b25-b249685e64d4")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -8948,6 +9286,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ff271cbc-e0ad-4c70-821d-01e838b7b7ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7be72d1b-42cb-42df-9baf-8cf50e808c89")
 			(effects
 				(font
 					(size 1 1)
@@ -9193,6 +9544,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05004ef6-c8db-43e2-a5f1-e63ab2d16bbb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/75190f8e-8e4e-48cb-b27b-15739bafe47a")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -9424,6 +9788,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "693e6348-b895-49c2-96ad-cd75b7621392")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7f73926e-8af2-4b41-baf4-5814d33a662a")
 			(effects
 				(font
 					(size 1 1)
@@ -9669,6 +10046,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "57ac980a-c688-484b-98d1-02c873434eb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/b403d26f-26d3-4ab2-b5ee-03dbe452fe55")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -9907,6 +10297,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2e4fb34d-b334-44cb-8f81-e2bc3c5090bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/2a040295-4709-4a7d-ab85-e5457b225888")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -10138,6 +10541,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "533ab8e5-9b1a-40b6-9da7-444bd270bf27")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7f7814b8-e67d-49d2-bd33-a521b3f3c6c7")
 			(effects
 				(font
 					(size 1 1)
@@ -10597,6 +11013,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6fc77eb2-b0c8-47ef-95ca-293989ebfdc1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/6faa004a-1c17-4ddd-bb22-65018970ea0b")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -11049,6 +11478,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6c824b3-55e2-4bb1-8733-0c1a79707474")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/70fa7a31-5bf4-4a67-9be1-a790a7d6e24d")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -11280,6 +11722,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4b6b7eca-ca50-4300-a1ad-e1070c380bab")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "75620f6a-79ef-4e60-87e0-b40f47262a58")
 			(effects
 				(font
 					(size 1 1)
@@ -11525,6 +11980,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b0dc05e6-8f22-4cba-845b-2e02d78528da")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/06593e80-e4c2-4355-bc22-297073d16713")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -11763,6 +12231,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f34940a2-320b-48eb-823c-5ba59be15ffc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/bbbdd3fa-47b6-41ef-a95d-01cd2ea6519f")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -11994,6 +12475,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4121f51b-29c9-4cca-81ae-c88ce33467dc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4826d227-753a-4310-be7d-1543e7bf8ca4")
 			(effects
 				(font
 					(size 1 1)
@@ -12453,6 +12947,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bdb502a7-71ab-4710-9cbb-32d70399811e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/4e1760df-4af3-4fa3-b445-8ae27cd2544a")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -12885,6 +13392,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3e7d6d19-e4a8-4be2-bfbc-2491472ced76")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a8d7f9e8-12eb-4ea9-8170-07948c54d4a8")
 			(effects
 				(font
 					(size 1 1)
@@ -13562,6 +14082,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "daa22deb-cb71-4222-9cb1-b10bebe2d96a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/1ce8fe32-db0e-448b-abed-4298a15eb388")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -13793,6 +14326,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a70df060-682b-4fff-8447-322b6c0fcc6f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b67fcbe0-0068-4c33-a800-b935f96a99ca")
 			(effects
 				(font
 					(size 1 1)
@@ -15048,6 +15594,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7fbe802-4665-4b80-945e-4da5096d10a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/b78c0d93-07ea-4cd3-a1e7-06f170b339f6")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -15286,6 +15845,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "122b3eb6-c6db-40c2-89ff-fbc3a0241ef6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/9ea7592f-76f1-45d9-a766-3aa3fbffc0eb")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -15517,6 +16089,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d7f5e35c-7c29-44f3-abc8-ea45e8f13f8a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5f0bcab2-5cf7-467f-81ca-557a15b974a7")
 			(effects
 				(font
 					(size 1 1)
@@ -15963,6 +16548,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6208dc08-d71c-450a-abfb-56c9a7fc561b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/54ff88b9-451d-4525-a73e-528a5ca7c21e")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -16194,6 +16792,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f0f3722d-ddf6-4134-9ae2-2f4440b2faaf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4c7ce95f-97fd-403e-b9a5-8b9e60abe0c9")
 			(effects
 				(font
 					(size 1 1)
@@ -16854,6 +17465,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3506416f-4607-418a-a468-afe7bd89da55")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/64592429-6ddb-4ca8-a9b7-3d804c546072")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -17085,6 +17709,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fd40216f-13ba-425d-8351-3921d8068f66")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "26fe4020-af6e-4bdb-b425-e328f88efe72")
 			(effects
 				(font
 					(size 1 1)
@@ -17330,6 +17967,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2fc694c4-5718-468e-ab95-86b9d5ba6cdd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/c7ee65cf-d641-4f93-b5c1-d38700238745")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -17568,6 +18218,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dfaa50c3-bb7a-4f97-b139-06d5a64d8d6b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/dd6940d3-c21d-4673-afe8-e04d105ea3d6")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -17799,6 +18462,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "82010c44-c6c1-4171-aad3-543ab05ee44e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "81d77481-389b-4a19-b1fb-c378ef85a144")
 			(effects
 				(font
 					(size 1 1)
@@ -18258,6 +18934,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4596e538-18ae-4e6b-be67-2d07adc81b0e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/df533bb0-3633-481a-ad93-ce04bfa4e6fb")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -18489,6 +19178,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e87cc2f6-29b3-4b82-900a-51ed66267b75")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08a86af7-03b1-44e8-bb1a-3610ad3c6079")
 			(effects
 				(font
 					(size 1 1)
@@ -18734,6 +19436,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a86f1c2-1e1a-43d1-89a2-2d1dbb376b98")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/93909521-5dae-4fc8-8c56-225851757fc3")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -18972,6 +19687,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e1e0a987-d45b-47ba-94a7-bffc14146836")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/e2ce8726-4638-43df-a221-a6961caf560d")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -19203,6 +19931,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e92e025-71fe-4643-ac53-092804a68433")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3dc6f0c3-5112-47dd-b01e-469f4069c32d")
 			(effects
 				(font
 					(size 1 1)
@@ -19653,6 +20394,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7d53c6d-baba-4ea8-86e9-20fff13a0a21")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ca43fd4d-3405-47f9-9f57-43d6aa3f8e8e")
 			(effects
 				(font
 					(size 1 1)
@@ -20112,6 +20866,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ba0e9ea2-2c65-4005-9af9-d119f63632dd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/8bbbabb9-35f9-4b50-9f06-e7522078b0b7")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -20343,6 +21110,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c14a46c3-307b-4e9c-acb8-62a01d9a7500")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "92506424-9dd9-4a9e-9a30-2b4ab258201a")
 			(effects
 				(font
 					(size 1 1)
@@ -20588,6 +21368,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c74e6ad7-3efe-4d14-9b30-3ad4a9db2f24")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/5539759b-708e-4904-8dff-d6a05b3880fd")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -20819,6 +21612,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "372e0577-32a6-49dd-9e35-3fa92e3f69e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c93799d-66f1-45e7-8fec-95954b7313b5")
 			(effects
 				(font
 					(size 1 1)
@@ -21064,6 +21870,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9d34ffc0-3d89-4956-b3f8-3842404f6996")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/62a84a60-20a0-4da5-970e-c855df9755b7")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -21295,6 +22114,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "90250d45-2408-40b4-a8d9-001e2d9f7cda")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9c3fe96b-7035-412e-9225-bfcbe9fd6f6c")
 			(effects
 				(font
 					(size 1 1)
@@ -21540,6 +22372,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "62e0dd5b-59e3-4edd-b59e-ae514fee7e5d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/01823ca5-d56f-4b52-b522-63bd924273d5")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -21771,6 +22616,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a63958a9-59b3-4221-9430-382263f5599c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3d42207-1bb3-49ae-a800-46d130160e01")
 			(effects
 				(font
 					(size 1 1)
@@ -22016,6 +22874,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01a3bc48-2657-44da-bc09-fb464828e79b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/9cb72c9c-e1d6-47be-b610-9d17caa36488")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -22254,6 +23125,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "81d58878-57bf-4b07-8e86-2f724b65fbd0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/30c63ef1-2b0f-4941-9c85-afe2bcddd78b")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -22485,6 +23369,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6ad328b6-d152-48df-ab6a-c77f93982b32")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6be8ce61-b750-4d4e-aba7-049a753250c3")
 			(effects
 				(font
 					(size 1 1)
@@ -23212,6 +24109,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "af934c94-d59b-4d9e-a663-7e8f66fdafb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/d36a9ba6-b41d-4cd1-a3a7-cfd257b08996")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -23443,6 +24353,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fe01b7ea-7230-43e3-b9d8-2693355373cf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2efd99fa-a8bf-4a5b-82ba-5c128851e398")
 			(effects
 				(font
 					(size 1 1)
@@ -23902,6 +24825,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "099b0842-2e58-469b-bae7-b654931fa52c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/a2636553-3a6c-4a7b-8fc9-54e870834136")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -24133,6 +25069,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "aca3e0b0-a19a-480c-91f6-8af28f4ad41c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c5ebfd1e-bed0-4294-9324-b77cf1602b56")
 			(effects
 				(font
 					(size 1 1)
@@ -24378,6 +25327,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "03eec4c5-3e5a-4e67-9311-c5b18e854b08")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/a744a84b-67a5-4841-9f8a-a3ce9077f4c9")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -24609,6 +25571,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "03081cdb-04e7-438d-a9fa-91deff1ffc57")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6a40ba93-9078-4409-9400-94e2b25c479b")
 			(effects
 				(font
 					(size 1 1)
@@ -24854,6 +25829,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3eb690a7-24ca-4190-8ecb-6f8c94fa77fd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/6e72c308-5fe9-4723-9120-bbf7c7a27195")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -25092,6 +26080,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "29586ced-c490-47d3-be30-aba05ac58b61")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/a748998c-dfb7-487c-a829-39fd874d610b")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -25323,6 +26324,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "15b8cf5c-e9fc-405a-a7c5-c6044fb7d829")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1e4538f7-50f1-4560-9d4b-a2db59d80f2f")
 			(effects
 				(font
 					(size 1 1)
@@ -25782,6 +26796,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "23a9a373-ef33-4b44-8d30-c32293e1dbf2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/c9f461de-a5ff-483e-996c-7f02c7596f99")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -26234,6 +27261,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1b32c4d7-a1bd-4328-be41-31133bc849de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/6c7b8ab7-e0cf-4691-b7a3-796aeb9f4f1c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -26465,6 +27505,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "60d7f2f6-1658-4b91-92b7-77078a140831")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bcf384c9-c2f3-40d2-b264-4d74a4b0bc60")
 			(effects
 				(font
 					(size 1 1)
@@ -26710,6 +27763,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e79b6eb6-507a-44be-9c4d-e45173b61bc2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/e6715c5a-eb98-4c9d-a01e-38127665b3c9")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -26941,6 +28007,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "766e5638-9fed-4b01-91d4-429fe9c7171e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "188da4cd-24a9-4e34-9d00-53fe3aaf3552")
 			(effects
 				(font
 					(size 1 1)
@@ -27186,6 +28265,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "150b808d-4d40-4f3e-96c9-2080c650adf4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/142449f2-8b41-430f-bceb-5b096c886f15")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -27417,6 +28509,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "de6e435c-5aab-43d2-9e0a-c3ca3713d208")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5d35100e-47a3-472c-9fae-8b5c7fd3206e")
 			(effects
 				(font
 					(size 1 1)
@@ -27662,6 +28767,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "489a6a8a-8f5e-44d1-9ad5-ec326b8326b3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/62f838b4-074f-43be-82d0-0a48d96c59b8")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -27893,6 +29011,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6bc12c04-bdf2-417c-948b-619e63da2097")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d20885a-b3c1-4d6e-a3eb-e945d3202404")
 			(effects
 				(font
 					(size 1 1)
@@ -28655,6 +29786,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ebacd124-e344-42a3-becd-86d39012002b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/e28c1895-c643-41b1-a0d6-9b509e9de372")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -29107,6 +30251,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9cd0abcb-9c97-4847-8c88-41c67ae39119")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/41cb801e-71a2-4bd3-aa07-f76ff7452d15")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -29338,6 +30495,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "224db294-d479-4fa8-8e72-bd188dfd0fee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "87cbaea5-a868-4a1a-9f0c-b4373dafb4e2")
 			(effects
 				(font
 					(size 1 1)
@@ -29583,6 +30753,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb5729c6-df05-4bc7-bb70-85a045c9f955")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/8c696aa4-16a8-4b4b-b621-b41ae220e002")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -29800,6 +30983,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7203f92f-3fb9-4440-b9e0-faf157c6e524")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -30241,6 +31437,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2fa63cc-d03c-4822-ba55-5127c8b41fd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/6c5a8118-ec8e-469e-96ab-ff91da5edc2c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -30479,6 +31688,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8d4a4b95-f80a-4e88-b599-d15b58e875cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/da07e29c-7dd4-480f-9dc1-43f02c7a5eb3")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -30710,6 +31932,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dbaa52b7-1376-4b49-88e7-c3ce37a86a0b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e08d7779-f872-4ddd-8ed9-43208f896889")
 			(effects
 				(font
 					(size 1 1)
@@ -31383,6 +32618,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2098100c-7587-4b98-be8c-005e770deb80")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/e3403837-a4b1-434f-80ce-5887129fa9e5")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -31614,6 +32862,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6579fd9e-dc9c-4458-9ff1-0adb2b45c03c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d73c60f-0e9f-4af8-96c9-b3323c1a484f")
 			(effects
 				(font
 					(size 1 1)
@@ -31859,6 +33120,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "acb1f47d-bd23-4d89-9fe7-198357952bb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/8335d81a-baa9-4aca-a019-aa1f649643f2")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -32090,6 +33364,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "14435899-7d76-4046-b1a9-5cf8661f0f70")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "585ab0ae-eeed-4cd7-9a55-ed46f145df67")
 			(effects
 				(font
 					(size 1 1)
@@ -32335,6 +33622,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a601373-ea3b-4a08-a8e5-2edf39bd01f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/2076a51d-d41c-4a06-9555-96def5389066")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -32566,6 +33866,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3aef6ad8-b8e5-414b-9728-00620866333d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "715339bb-83eb-4a4e-abbc-274de81ba611")
 			(effects
 				(font
 					(size 1 1)
@@ -32811,6 +34124,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "39fc78d3-bb3e-41c3-96e6-57f068c18874")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/dfd7566f-a456-4dc6-aa55-5ff9d01fe4c5")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -33049,6 +34375,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5dcb7773-87b9-4d67-92a0-3c0a1f69aa47")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/959e5bb5-e16c-4338-abd6-03d511738bff")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -33280,6 +34619,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9540389b-bb67-48b4-90e5-473169fd88cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c6058d5-7d6e-4ef9-8d6c-31a5c2b86db1")
 			(effects
 				(font
 					(size 1 1)
@@ -33631,6 +34983,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33143f9c-fe03-412b-8583-291ea952297f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/362e0007-f38a-4d94-acbd-e2c545ccd790")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -33975,6 +35340,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a201597-228c-4b95-be75-93c3c2844cec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/9524b3cd-080d-402b-b97f-2a6f9b2f2b17")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -34206,6 +35584,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a4b235c0-55c5-4070-bfad-89adf6366fd0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bf23c896-22a5-470f-aa8b-d4d56e569552")
 			(effects
 				(font
 					(size 1 1)
@@ -34665,6 +36056,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "169c8a57-8b24-4263-be03-057227d7da5f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/06d6e876-83c3-440c-a520-453acace74db")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -34903,6 +36307,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4ad3d410-6e3a-46eb-820d-627a6d02bc0c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/d5c6600c-87f5-4eba-874c-196585d5cce7")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -35134,6 +36551,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1f8112fe-f1d2-473e-b75b-357ad4191b83")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4cef761c-cdee-404a-bef2-cdff519b923a")
 			(effects
 				(font
 					(size 1 1)
@@ -35647,6 +37077,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5b0483f6-69ac-42ed-8a96-9325797be7d5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/cf248a22-225b-4c26-8cc6-f925bcd281aa")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -35856,7 +37299,7 @@
 				)
 			)
 		)
-		(property "Description" "16-bit constant current LED sink driver, HTSSOP-24"
+		(property "Description" "16-bit constant current LED sink driver, 5..100mA output current, 20V driving capability, 3.0..5.5V power supply, HTSSOP-24"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35881,7 +37324,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "HTSSOP*1EP*4.4x7.8mm*P0.65mm*")
+		(property ki_fp_filters "*HTSSOP*1EP*4.4*7.8*P0.65mm*EP3.2x5mm*")
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/a44abbc1-0375-4069-bd42-b76b247e225e")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
@@ -36128,7 +37571,7 @@
 			(roundrect_rratio 0.25)
 			(net 24 "/LED DRIVING/COL17")
 			(pinfunction "~{OUT0}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "989305b9-8cbe-4604-a59c-73474f742010")
 		)
 		(pad "6" smd roundrect
@@ -36138,7 +37581,7 @@
 			(roundrect_rratio 0.25)
 			(net 25 "/LED DRIVING/COL18")
 			(pinfunction "~{OUT1}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "c307fb39-b58c-46af-8d73-6fdcb01bb539")
 		)
 		(pad "7" smd roundrect
@@ -36148,7 +37591,7 @@
 			(roundrect_rratio 0.25)
 			(net 26 "/LED DRIVING/COL19")
 			(pinfunction "~{OUT2}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "229568bc-4ec7-42b0-af67-7a0115b914ba")
 		)
 		(pad "8" smd roundrect
@@ -36158,7 +37601,7 @@
 			(roundrect_rratio 0.25)
 			(net 27 "/LED DRIVING/COL20")
 			(pinfunction "~{OUT3}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "b5bd45b6-b819-4a2d-8a08-3bc101e4d05f")
 		)
 		(pad "9" smd roundrect
@@ -36168,7 +37611,7 @@
 			(roundrect_rratio 0.25)
 			(net 28 "/LED DRIVING/COL21")
 			(pinfunction "~{OUT4}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "cfef4d1b-164d-4029-a872-55c5eb6d5da6")
 		)
 		(pad "10" smd roundrect
@@ -36178,7 +37621,7 @@
 			(roundrect_rratio 0.25)
 			(net 29 "/LED DRIVING/COL22")
 			(pinfunction "~{OUT5}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "48004fcf-238b-4381-b624-54b28d586d99")
 		)
 		(pad "11" smd roundrect
@@ -36188,7 +37631,7 @@
 			(roundrect_rratio 0.25)
 			(net 30 "/LED DRIVING/COL23")
 			(pinfunction "~{OUT6}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "2833e065-acb1-4068-84e3-90c82d7dc8d6")
 		)
 		(pad "12" smd roundrect
@@ -36198,7 +37641,7 @@
 			(roundrect_rratio 0.25)
 			(net 31 "/LED DRIVING/COL24")
 			(pinfunction "~{OUT7}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "da0aacc0-d694-47ff-a972-bd907afbff9b")
 		)
 		(pad "13" smd roundrect
@@ -36208,7 +37651,7 @@
 			(roundrect_rratio 0.25)
 			(net 32 "/LED DRIVING/COL25")
 			(pinfunction "~{OUT8}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "e0a8d902-ef92-4b61-a395-d41103110587")
 		)
 		(pad "14" smd roundrect
@@ -36218,7 +37661,7 @@
 			(roundrect_rratio 0.25)
 			(net 33 "/LED DRIVING/COL26")
 			(pinfunction "~{OUT9}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "c2399d81-d9c5-4ae1-809e-be530074b3b3")
 		)
 		(pad "15" smd roundrect
@@ -36228,7 +37671,7 @@
 			(roundrect_rratio 0.25)
 			(net 34 "/LED DRIVING/COL27")
 			(pinfunction "~{OUT10}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "4bbdd35c-c59d-4924-92e3-f5a1509dfa40")
 		)
 		(pad "16" smd roundrect
@@ -36238,7 +37681,7 @@
 			(roundrect_rratio 0.25)
 			(net 35 "/LED DRIVING/COL28")
 			(pinfunction "~{OUT11}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "facac77c-567f-4e86-94c4-5335f01192e5")
 		)
 		(pad "17" smd roundrect
@@ -36248,7 +37691,7 @@
 			(roundrect_rratio 0.25)
 			(net 36 "/LED DRIVING/COL29")
 			(pinfunction "~{OUT12}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "d0930096-d7c0-4d93-bced-260ee86c752b")
 		)
 		(pad "18" smd roundrect
@@ -36258,7 +37701,7 @@
 			(roundrect_rratio 0.25)
 			(net 37 "/LED DRIVING/COL30")
 			(pinfunction "~{OUT13}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "d1e0a0c0-d4d3-461f-8891-c637a286ba46")
 		)
 		(pad "19" smd roundrect
@@ -36268,7 +37711,7 @@
 			(roundrect_rratio 0.25)
 			(net 38 "/LED DRIVING/COL31")
 			(pinfunction "~{OUT14}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "e02de12e-9f47-4885-801e-6f074c8276f8")
 		)
 		(pad "20" smd roundrect
@@ -36278,7 +37721,7 @@
 			(roundrect_rratio 0.25)
 			(net 39 "/LED DRIVING/COL32")
 			(pinfunction "~{OUT15}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "3f741b5c-6998-4bfa-b44f-4687990101bc")
 		)
 		(pad "21" smd roundrect
@@ -36308,7 +37751,7 @@
 			(roundrect_rratio 0.25)
 			(net 77 "/LED DRIVING/REXT1")
 			(pinfunction "R-EXT")
-			(pintype "passive")
+			(pintype "output")
 			(uuid "471a698c-7d4c-47b6-907f-dc2367802791")
 		)
 		(pad "24" smd roundrect
@@ -36327,7 +37770,7 @@
 			(property pad_prop_heatsink)
 			(layers "F.Cu" "F.Mask")
 			(net 2 "GND")
-			(pinfunction "GND")
+			(pinfunction "EPAD")
 			(pintype "passive")
 			(zone_connect 2)
 			(uuid "935e7b2b-b3ab-4e0f-989b-10c5e3d0b39c")
@@ -36407,6 +37850,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d2d00362-5a0d-40e5-b19b-5d37ff625d03")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4fd9359c-b9f6-42d8-bf1b-a904a9de0059")
 			(effects
 				(font
 					(size 1 1)
@@ -36652,6 +38108,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "46bf5bb2-cb25-4550-8b33-3dd4c133b334")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/077cb780-33e6-4427-91c2-7297fb65e7c7")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -36883,6 +38352,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a8d15938-df49-4696-ab5d-5af465c82343")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d372c596-68d5-4c73-8b0e-4c228756282e")
 			(effects
 				(font
 					(size 1 1)
@@ -37342,6 +38824,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8fdb13b8-a962-46bb-8074-687694e2a582")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/12bfe24f-3a94-4f3b-9297-15cbb28125e6")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -37573,6 +39068,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6d693b9e-aa44-4d3e-b915-3edcc41ce1d0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7a615f29-1caa-4ebe-91c7-b6e09952f4b0")
 			(effects
 				(font
 					(size 1 1)
@@ -38103,6 +39611,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a365a4ce-3061-41d1-94a3-1e83111c7458")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/cfdc4f1a-66bf-4d44-b525-8739dbc548d3")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -38334,6 +39855,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "40d2e51b-70c3-465a-9c2c-e822e7e47fdc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b320dec5-7ed6-41a1-9b1e-257a9d8f96d2")
 			(effects
 				(font
 					(size 1 1)
@@ -38899,6 +40433,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb9be845-6198-4db1-adf1-30eb3d1f1799")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/16f33d48-1d76-4127-b701-d5a5072485b7")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -39130,6 +40677,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7bb3a3ff-8481-425a-9e49-989a7630119b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "88dc0d04-4845-4a5d-8904-316aea5a5681")
 			(effects
 				(font
 					(size 1 1)
@@ -39375,6 +40935,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8c6358ff-665e-49e7-becb-83f037abfd7d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/a0cefba3-f1f9-4883-a1e7-c0babb0d7cd1")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -39606,6 +41179,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "843b02b5-2a20-4a0c-9d07-c585cf41ae64")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54c773d8-effc-4796-a6fc-3096ebb53a21")
 			(effects
 				(font
 					(size 1 1)
@@ -39851,6 +41437,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "576c7d75-46b3-4366-a882-253a3d20f4b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/4908937f-3ccd-4e72-a536-7e92a273522d")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -40082,6 +41681,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fc50fe35-4b31-4a46-9c18-9cb9c62bacd5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb94a17c-da3c-40e3-9d3b-e4f8bfc6452d")
 			(effects
 				(font
 					(size 1 1)
@@ -40327,6 +41939,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d3e434a-bf8a-427c-813a-d630dc8d9984")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/036a611c-6464-483a-ab3e-5b5a1a1f4efe")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -40558,6 +42183,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "844e60f3-dc72-45f4-abcf-43e9f433f19f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ef4c0f25-934d-4f33-a805-14c05fa62460")
 			(effects
 				(font
 					(size 1 1)
@@ -40803,6 +42441,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2f549943-5600-43bc-911c-7c8ea2816a7e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/f2de35e3-1f2c-432d-9eb2-8a822f4ca7a7")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -41034,6 +42685,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "79033bc0-821e-497d-af0c-eee3fc751fb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6f81c84-0751-4cdf-9bf8-6be44ce3de87")
 			(effects
 				(font
 					(size 1 1)
@@ -41279,6 +42943,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0f77d46d-be94-4379-8f6a-56b47973a0b1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/0167c2e2-7919-4135-9307-b93e3b793974")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -41510,6 +43187,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5018ce10-814e-42f6-ae62-cec57c6ccfe0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "517f4f77-898e-42e6-8d8f-cdc86b832979")
 			(effects
 				(font
 					(size 1 1)
@@ -41755,6 +43445,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ac74397-a171-4a16-9be5-0df4cb7eb802")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/9c49a0e8-bd55-4e47-92b3-98baca710be5")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -41986,6 +43689,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "18120b02-1892-401c-adf1-84dc9d7a461f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0f1afe60-2576-46f5-8243-b7edb3659d07")
 			(effects
 				(font
 					(size 1 1)
@@ -42231,6 +43947,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "26736cea-9692-40e1-b458-992a581c2f36")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/ca279a55-8e67-4a38-a987-8b425f998203")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -42462,6 +44191,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "05a0c99a-736c-4b8d-b7b3-c6b8876f5f6f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a554aee6-bbf0-4abe-982e-c7e7949d908c")
 			(effects
 				(font
 					(size 1 1)
@@ -42908,6 +44650,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e4f77270-77e4-4752-b613-89181897497a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/0601f59b-dbae-4fd6-b243-bc09a5f44335")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -43139,6 +44894,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cfc285a0-cbab-4cfd-b9da-7228daa0bea9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3b0723b7-f760-431f-aae1-690973ac631b")
 			(effects
 				(font
 					(size 1 1)
@@ -43384,6 +45152,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c3fbfbcc-80e4-4fda-bbe9-3f6fe923ddc8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/c7a5a601-eb77-439f-906a-ce109af029a3")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -43615,6 +45396,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c5a15e33-5d0b-4117-bc50-61a46c3bf58b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9bf4b4ca-c8c6-40cc-ac1d-1fd0043738a6")
 			(effects
 				(font
 					(size 1 1)
@@ -43860,6 +45654,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "929f71b3-e627-4f60-8045-8758534a6532")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/6a9f001a-f61d-4878-b151-fdd45432984f")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -44091,6 +45898,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "230653f7-d6f7-4b48-a704-f32e5eba1fb2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e80cb459-95bc-49ad-9012-1a944e0f9038")
 			(effects
 				(font
 					(size 1 1)
@@ -44336,6 +46156,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bd0d0ba9-06f1-466a-82f4-416020899c0d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/6ef481e3-672d-429a-b469-0148b8c0a120")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -44567,6 +46400,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "23abd17d-d8f5-468e-8f19-99e0ecb89ac3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d85043f4-8e1e-4363-9324-da83c221bba9")
 			(effects
 				(font
 					(size 1 1)
@@ -45214,6 +47060,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b2416219-34ad-4f8c-a6ef-963b7835e9a0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/7c0d36e6-bc30-4b9b-b52d-9cb65f324e0b")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -45445,6 +47304,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "360c3eea-91ae-4ca5-8de7-88d771a2f978")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9fbad57-b51c-40f5-84c5-6c46851b6b0f")
 			(effects
 				(font
 					(size 1 1)
@@ -45690,6 +47562,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b5e81df-2b89-4901-935f-acc88cd8c83d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/32d77686-6cd2-44f8-898d-9adf88f2116c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -45921,6 +47806,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ffb565f6-fbbc-478d-9d97-9cbfa3042499")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "71a59440-ea76-4875-a8ea-71df4934cf48")
 			(effects
 				(font
 					(size 1 1)
@@ -46434,6 +48332,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7d3d9da2-ffd3-476e-a297-593163dd35a5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/e83e50ef-c27e-49d5-b6e1-2caf73aa9ccb")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -46665,6 +48576,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9227ade2-555e-4b8f-a60d-666f2b0ffaf3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4cf657ef-7ab2-43cf-9bac-ecc5202c6a6d")
 			(effects
 				(font
 					(size 1 1)
@@ -46910,6 +48834,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b0869cdb-c297-4fb2-ae08-31bb97ba7c65")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/82782178-533c-42d9-8330-b0b6e441b018")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -47141,6 +49078,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dce72b9b-2e5b-4d0d-a426-0507ac1f6b79")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2d022109-133e-48d5-84c6-7f6a1ae9057f")
 			(effects
 				(font
 					(size 1 1)
@@ -47386,6 +49336,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9d70a925-ba31-400d-9fa7-3d0a5459896f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/01f57f96-f60d-40fd-a732-8a5db0cf77e8")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -47617,6 +49580,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0b6f6fe3-76dc-4d8c-b87a-6da1b7a61ba3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "710ed2c8-be96-48f1-b0c1-696035c8a9be")
 			(effects
 				(font
 					(size 1 1)
@@ -47862,6 +49838,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38f82cc2-7051-4b29-b8bf-21ebe03d6123")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/000d892e-237d-4865-a291-31bc2b95640a")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -48093,6 +50082,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ab3cca5a-4258-457e-bad4-544caf5c5ef1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c6ae0029-2844-495a-bdb0-1c6cfc1b60f1")
 			(effects
 				(font
 					(size 1 1)
@@ -48740,6 +50742,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0f56e42-396b-4b22-bbe7-a47ac987cb1e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/4e5e41c9-559b-45f6-a8de-45cfe454a5ec")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -48971,6 +50986,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7587a162-0555-451d-8f03-38d2ee404f81")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2eb0d67a-68dd-4771-a759-fc1b3c367176")
 			(effects
 				(font
 					(size 1 1)
@@ -49216,6 +51244,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05cccc74-3371-450f-85b0-63dc4e624b5f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/0e64c19b-d7c5-4b31-bc7b-00415279bf2b")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -49447,6 +51488,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "35ad92b8-8d3c-4e61-9501-52c90842b478")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "221f45a2-c0b2-47df-a5dc-ee561b1cc4a9")
 			(effects
 				(font
 					(size 1 1)
@@ -49906,6 +51960,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "907768a4-fc26-4883-92a2-1eff69a8b63a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/3695f93c-cc1c-4e07-9c47-cb3d4097a590")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -50136,6 +52203,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b7165fdc-29be-4f3e-b154-24eded5865ad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ca9a833f-56ca-42bd-a516-dde1f1a5d991")
 			(effects
 				(font
 					(size 1 1)
@@ -50636,6 +52716,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "109ba9e2-5d43-420e-9d14-34c8b7586576")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/350c9365-f049-4ad5-91ae-9b6632375646")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -50853,6 +52946,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ed7956a-b9ce-4e26-abf8-b8587f3a29f9")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -51088,6 +53194,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7f84f711-9620-4253-b458-f2861f42832b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1ada4659-83b8-4c10-b17e-402b8bde53c2")
 			(effects
 				(font
 					(size 1 1)
@@ -51333,6 +53452,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8379a840-f414-4936-be3e-8ed04b243bb6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/91b4e2e2-05cf-468d-bbc3-852b40adad9a")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -51564,6 +53696,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1aaa4284-0a27-4aa0-9be1-0cc5de49c3b5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7e3fff1d-4887-487b-9efd-ded8026ddd39")
 			(effects
 				(font
 					(size 1 1)
@@ -52526,6 +54671,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aeb179c2-b131-40a3-8210-52a399d12f61")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/a81614b9-fe53-4417-8de1-64fb7f95623f")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -52757,6 +54915,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ea139616-e366-4291-aeef-085bce565ab5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7403ccb5-f722-480c-9c92-d7c52c5a441b")
 			(effects
 				(font
 					(size 1 1)
@@ -53002,6 +55173,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "68205c12-5b5e-405a-9925-685c8260d7e4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/6bcff2a2-e90b-41eb-9d35-d725e29cbeb7")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -53240,6 +55424,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ecaa8df8-35fe-4750-97e7-876d35797d8c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/32e7ad31-d2a9-45e1-8753-2b07eb169f50")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -53471,6 +55668,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e02ae44a-0d46-4550-9701-0d11da0e5c44")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "55e022db-a7ca-4ec2-a8d8-071acb06ea2a")
 			(effects
 				(font
 					(size 1 1)
@@ -54154,6 +56364,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "55d41491-5e63-47f3-8cbc-e468a286258b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/73772616-89c5-4ef8-860c-05f8752b6950")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -54385,6 +56608,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c639e42e-7717-4d32-a37f-8c1b93632200")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8960d81a-0d05-4007-9848-9fb006d02fc2")
 			(effects
 				(font
 					(size 1 1)
@@ -54630,6 +56866,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bcc75387-9797-49b5-aa44-6412ee6ba125")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/6cdb55b4-587a-4041-a086-2fcd689e38b1")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -54861,6 +57110,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "514fbeba-a94d-4166-bd31-98f31ddf8c99")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce59a491-b4d6-4e94-943f-be1560611251")
 			(effects
 				(font
 					(size 1 1)
@@ -55106,6 +57368,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3ca68a9e-a962-4b04-82f4-f3bc652d7344")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/4d411b87-10a1-4113-a980-26d59c4cbe48")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -55337,6 +57612,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d88ba0e0-354a-4469-937f-91fe0a22efba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "575a2856-8c36-4ded-8b91-76efd9f07bea")
 			(effects
 				(font
 					(size 1 1)
@@ -55582,6 +57870,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2b7706df-6890-407a-bbdd-429cf9414aba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/0ea6eba0-a454-49e5-b937-8f43138ed49c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -55813,6 +58114,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ae82c49d-ed83-4a28-800b-4847b67d3a62")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "473c6774-2f3f-4e9e-9e3b-ae92dafb86e6")
 			(effects
 				(font
 					(size 1 1)
@@ -56058,6 +58372,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e25912da-53f4-44f2-a333-6d52f333042b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/dbe6c4bd-e005-4ec8-81ab-fbbcc2c37bd2")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -56289,6 +58616,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8549dd7c-e05f-40b3-b0ce-f53c4001c80c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d3728e13-4a01-4ba1-b455-369f9bd5db67")
 			(effects
 				(font
 					(size 1 1)
@@ -56735,6 +59075,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "98c2d614-6d71-4c9f-be35-a6f24e19588b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/7958db62-5532-407f-ad79-a0ccb4d15e7d")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -56973,6 +59326,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d146762e-31ee-4c75-bc8b-aa3f03116c2a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/faad9ee1-9af6-4ab5-b056-a2413fa83e5f")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -57204,6 +59570,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6c5a374b-bfd9-460e-9075-836fa569f815")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b7715f9d-f0ef-41c5-a44c-f1879703f3e3")
 			(effects
 				(font
 					(size 1 1)
@@ -57650,6 +60029,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eb9c8214-bac9-48bb-86d1-47c2213a3b17")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/ff9434c8-3c3c-4bf5-90c6-4df7bed83d31")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -57881,6 +60273,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c349ea2b-2969-44a3-ae1d-472468a95047")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e9050d6a-2738-4004-ad97-5c145349d391")
 			(effects
 				(font
 					(size 1 1)
@@ -58126,6 +60531,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "37adf6e2-06c4-4d78-ac3e-e1c69d315b5d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/21be3541-c683-4b65-884a-5b8bfdff7c40")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -58357,6 +60775,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a6a4c9ec-12f9-4d28-9395-f12e4dffe5bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "67bc400a-8c17-4701-b9d5-4eebe5b759aa")
 			(effects
 				(font
 					(size 1 1)
@@ -58816,6 +61247,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "053db954-e966-4079-9116-d43d44e6644b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/0958bb4b-619f-4daf-9ad9-f48241fb9739")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -59054,6 +61498,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6958bee3-84bc-4e5f-8bd8-dda52dd2dd70")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/76a84532-6ce3-45ab-a6d0-917ce988ff4d")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -59285,6 +61742,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8fa52030-b03d-464d-b9ac-fc5233fdb452")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bebbaa60-b04b-4a72-a072-2bdf623fe341")
 			(effects
 				(font
 					(size 1 1)
@@ -59636,6 +62106,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8da90476-70a1-4904-8f3d-ecaf0584039b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/e92ee972-5590-4457-8aed-1b987abf5dd2")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -59867,6 +62350,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bbb704e3-86cc-466e-87e7-3dd385614683")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "61955488-b006-4b67-a2c4-430806f64987")
 			(effects
 				(font
 					(size 1 1)
@@ -60112,6 +62608,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "76e68e5d-6804-4661-b347-6db19155113c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/96737524-d696-4d56-9da9-d9fd3f1fc70d")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -60343,6 +62852,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fd9116f5-19b3-48d4-8fcd-5e09577bc13f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f084e9eb-4c05-44bb-8e5d-b6da5569df5e")
 			(effects
 				(font
 					(size 1 1)
@@ -60588,6 +63110,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ba13ae4c-51bc-4c49-872b-94f4765cc59a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/94e2dbca-43ae-4627-96d3-d81991c6b273")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -60826,6 +63361,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "806f9f3a-5e68-4238-9049-88c63f3e5478")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/f9e7cfe7-f522-49e9-acb8-da95bad29ac7")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -61035,7 +63583,7 @@
 				)
 			)
 		)
-		(property "Description" "16-bit constant current LED sink driver, HTSSOP-24"
+		(property "Description" "16-bit constant current LED sink driver, 5..100mA output current, 20V driving capability, 3.0..5.5V power supply, HTSSOP-24"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -61060,7 +63608,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "HTSSOP*1EP*4.4x7.8mm*P0.65mm*")
+		(property ki_fp_filters "*HTSSOP*1EP*4.4*7.8*P0.65mm*EP3.2x5mm*")
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/d3a97634-d3d2-4f5e-9d1e-02b8a2176de9")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
@@ -61307,7 +63855,7 @@
 			(roundrect_rratio 0.25)
 			(net 7 "/LED DRIVING/COL1")
 			(pinfunction "~{OUT0}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "6d65596f-a14e-453a-8991-e2892f09760f")
 		)
 		(pad "6" smd roundrect
@@ -61317,7 +63865,7 @@
 			(roundrect_rratio 0.25)
 			(net 9 "/LED DRIVING/COL2")
 			(pinfunction "~{OUT1}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "122fb551-3865-457c-a397-7ab09d9e8c19")
 		)
 		(pad "7" smd roundrect
@@ -61327,7 +63875,7 @@
 			(roundrect_rratio 0.25)
 			(net 10 "/LED DRIVING/COL3")
 			(pinfunction "~{OUT2}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "8b081093-c293-4aa9-840f-305dbcc8ef21")
 		)
 		(pad "8" smd roundrect
@@ -61337,7 +63885,7 @@
 			(roundrect_rratio 0.25)
 			(net 11 "/LED DRIVING/COL4")
 			(pinfunction "~{OUT3}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "5a6af227-1c41-437d-a1d4-81d4140ae398")
 		)
 		(pad "9" smd roundrect
@@ -61347,7 +63895,7 @@
 			(roundrect_rratio 0.25)
 			(net 12 "/LED DRIVING/COL5")
 			(pinfunction "~{OUT4}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "280fccbf-469c-4577-ab45-0192a420bc12")
 		)
 		(pad "10" smd roundrect
@@ -61357,7 +63905,7 @@
 			(roundrect_rratio 0.25)
 			(net 13 "/LED DRIVING/COL6")
 			(pinfunction "~{OUT5}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "f3a248ce-a469-4d85-b7b4-ca9ec01c54ba")
 		)
 		(pad "11" smd roundrect
@@ -61367,7 +63915,7 @@
 			(roundrect_rratio 0.25)
 			(net 14 "/LED DRIVING/COL7")
 			(pinfunction "~{OUT6}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "882f7a31-81c9-4a97-bcb5-c52626624657")
 		)
 		(pad "12" smd roundrect
@@ -61377,7 +63925,7 @@
 			(roundrect_rratio 0.25)
 			(net 15 "/LED DRIVING/COL8")
 			(pinfunction "~{OUT7}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "d363ce2f-cd15-41e2-8122-1dcddbce4737")
 		)
 		(pad "13" smd roundrect
@@ -61387,7 +63935,7 @@
 			(roundrect_rratio 0.25)
 			(net 16 "/LED DRIVING/COL9")
 			(pinfunction "~{OUT8}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "393c5520-a031-485b-87aa-8a4f5bc5e557")
 		)
 		(pad "14" smd roundrect
@@ -61397,7 +63945,7 @@
 			(roundrect_rratio 0.25)
 			(net 17 "/LED DRIVING/COL10")
 			(pinfunction "~{OUT9}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "3a250519-7b0b-4a75-9ae8-4fcc98c5d891")
 		)
 		(pad "15" smd roundrect
@@ -61407,7 +63955,7 @@
 			(roundrect_rratio 0.25)
 			(net 18 "/LED DRIVING/COL11")
 			(pinfunction "~{OUT10}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "814371c1-3218-4244-b1b5-3e8be6b39967")
 		)
 		(pad "16" smd roundrect
@@ -61417,7 +63965,7 @@
 			(roundrect_rratio 0.25)
 			(net 19 "/LED DRIVING/COL12")
 			(pinfunction "~{OUT11}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "ac06f3c3-eec7-4cfd-bd6a-256f9e63262b")
 		)
 		(pad "17" smd roundrect
@@ -61427,7 +63975,7 @@
 			(roundrect_rratio 0.25)
 			(net 20 "/LED DRIVING/COL13")
 			(pinfunction "~{OUT12}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "9015d7a3-67e0-4bfe-928b-bc390a8d81ad")
 		)
 		(pad "18" smd roundrect
@@ -61437,7 +63985,7 @@
 			(roundrect_rratio 0.25)
 			(net 21 "/LED DRIVING/COL14")
 			(pinfunction "~{OUT13}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "04bda9a2-146e-4055-864a-fbee3809d42b")
 		)
 		(pad "19" smd roundrect
@@ -61447,7 +63995,7 @@
 			(roundrect_rratio 0.25)
 			(net 22 "/LED DRIVING/COL15")
 			(pinfunction "~{OUT14}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "9e8e2e72-386a-49b0-8f5b-4f4d336fbdca")
 		)
 		(pad "20" smd roundrect
@@ -61457,7 +64005,7 @@
 			(roundrect_rratio 0.25)
 			(net 23 "/LED DRIVING/COL16")
 			(pinfunction "~{OUT15}")
-			(pintype "output")
+			(pintype "open_collector")
 			(uuid "8b16a36d-b6af-4cee-bb69-7c6fc50c522d")
 		)
 		(pad "21" smd roundrect
@@ -61487,7 +64035,7 @@
 			(roundrect_rratio 0.25)
 			(net 79 "/LED DRIVING/REXT2")
 			(pinfunction "R-EXT")
-			(pintype "passive")
+			(pintype "output")
 			(uuid "6280f4d8-112a-4f77-ac63-c502a3d2e68c")
 		)
 		(pad "24" smd roundrect
@@ -61506,7 +64054,7 @@
 			(property pad_prop_heatsink)
 			(layers "F.Cu" "F.Mask")
 			(net 2 "GND")
-			(pinfunction "GND")
+			(pinfunction "EPAD")
 			(pintype "passive")
 			(zone_connect 2)
 			(uuid "bc6b9f08-32ba-4b6e-a8b4-b24172b69324")
@@ -61586,6 +64134,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0401d1c-603d-4b3e-a61b-66c91bf22e3e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5f892b1d-9a65-46c4-a420-1d59a04a7ae1")
 			(effects
 				(font
 					(size 1 1)
@@ -61831,6 +64392,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "70d3f399-edc4-4678-89b9-83339a989e4e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/88b6edf7-3fd3-47b3-a9f9-ba1e4780081f")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -62062,6 +64636,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5306b9c1-8192-40f0-a697-5bda50c4c147")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1ea6306b-9055-4993-847a-32d72d83b681")
 			(effects
 				(font
 					(size 1 1)
@@ -62307,6 +64894,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "507519a1-6328-480b-8c56-053c9569fa15")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/674e0c06-af35-4c26-8c1e-d6658a12f6ec")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -62538,6 +65138,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "75b5fe52-57cd-4eec-a854-f2d50849d828")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9924fc01-b21f-4912-8b56-29fbe7239ffc")
 			(effects
 				(font
 					(size 1 1)
@@ -62783,6 +65396,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d25801ad-7aa7-492e-82a3-4dc049b0d23d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/0bba3eb4-49b1-4bf1-93b6-52856dc465af")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -63014,6 +65640,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ff200c92-eeaf-4694-89c4-21c11e98fe5a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c49408c4-7d3f-4e64-8faf-f9a88c69a531")
 			(effects
 				(font
 					(size 1 1)
@@ -63259,6 +65898,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dc02edfd-06ae-45e3-84c5-0bf7c2ed3c57")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/e7687e37-b56f-4c00-88d0-534e218ca47b")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -63490,6 +66142,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "643fafbe-3afc-40e8-8b88-374297ad5f00")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2f2cf552-d820-4c79-9095-6112ef8743d5")
 			(effects
 				(font
 					(size 1 1)
@@ -63735,6 +66400,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b89f2959-5b93-46a8-b62b-14e4bfc666e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/6150f60d-749f-4c99-8361-e8d0ac9e3894")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -63966,6 +66644,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7dabdaaf-f58c-46ef-b1ce-0d94c67c9a2b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "843b1bf3-ac79-48f8-b31d-427ae2b484f5")
 			(effects
 				(font
 					(size 1 1)
@@ -64479,6 +67170,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "194b49a5-c9b5-4c89-98af-d2c7d2121565")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/c5e79835-89a0-4f50-b584-c381fbde5155")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -64710,6 +67414,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5de2f71e-bde0-4f00-a299-e7411a6cafa4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1cc229c9-fa57-4c39-88fa-392cf9e3a216")
 			(effects
 				(font
 					(size 1 1)
@@ -64955,6 +67672,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "60d8b6e8-00f6-4e9b-866d-03af0bfbdcd1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/4965fbfe-eeb2-47d5-bf00-a4a934a184af")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -65186,6 +67916,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "95ea0cb3-b2ee-41f2-96ba-c6f1fc0c77b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dd01cf98-b39f-4cb0-9e8f-c0e1294c87ed")
 			(effects
 				(font
 					(size 1 1)
@@ -65625,6 +68368,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "715410b6-d321-4ec6-b5d5-5a6da7fd9546")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed1326a8-970e-4056-be9d-da33f54c0325")
 			(effects
 				(font
 					(size 1 1)
@@ -66084,6 +68840,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a8a76c2a-ff66-4193-a4e7-cf586a0ae0ee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/18ecb213-20db-4cda-9d36-3208ea1ae657")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -66315,6 +69084,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "12a78d3c-cbc0-4bfb-977d-56610e97932a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "51058a70-349c-4037-8f36-205dd74be4ec")
 			(effects
 				(font
 					(size 1 1)
@@ -66560,6 +69342,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8b063b42-0ee3-4e1b-8d5f-7d7c58033c0f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/59720224-15e8-4ec2-9f40-71742bf3cbe2")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -66791,6 +69586,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d923457b-12ab-489d-b94b-952fc9aaf666")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4301c760-c470-4dcb-b133-bda19bbfdc6a")
 			(effects
 				(font
 					(size 1 1)
@@ -67036,6 +69844,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "12108096-7647-4979-bdbe-d132d42bd4cb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/a0f6b37e-80c9-43be-9283-0cca064d7fe6")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -67267,6 +70088,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9a703975-df69-4b7b-8091-0922c1a629b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e8554995-0f97-43c9-8bd7-1d8f945ebe73")
 			(effects
 				(font
 					(size 1 1)
@@ -67512,6 +70346,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1861dd49-3e65-43ab-ae7c-3e4445ba7352")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/2b2b24c1-844b-400b-8521-20dba0cec32f")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -67743,6 +70590,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f3f63d49-3171-44f3-95d2-c8bc143a43d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c26f4c22-3392-4aea-8bf0-d602b999b8a3")
 			(effects
 				(font
 					(size 1 1)
@@ -67988,6 +70848,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c858af5d-7979-42d2-92ed-eaa4a16c4ddd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/a088109a-bd1b-4fbb-ba1b-0887e2e83fed")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -68219,6 +71092,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4a32078b-8687-46c5-a5e8-113cdd2de77e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "435ba866-51f3-4608-953d-0fd4dbd10831")
 			(effects
 				(font
 					(size 1 1)
@@ -68464,6 +71350,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ddecb704-0a86-43df-86e5-b9d021b0884d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/fdc8c906-9c7d-4514-9b1c-349eb7200506")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -68695,6 +71594,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7ab9b151-e1eb-4e9c-bd96-ff09ddce1b48")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "63e568a6-268c-47a8-9f37-afcf094862ce")
 			(effects
 				(font
 					(size 1 1)
@@ -68940,6 +71852,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "768cdd87-03dd-4a08-aa1a-d84f1d638a03")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/96e75b25-c8e8-4eb4-8a26-af9aec59b87c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -69171,6 +72096,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "10d1d2b5-8b9a-43b6-826d-22597459db31")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "09b178bd-b57a-417f-b83d-cd7deadd1cc5")
 			(effects
 				(font
 					(size 1 1)
@@ -69416,6 +72354,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "040cd338-c560-4fab-80f0-1002d852a1bb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/5162cbb0-55a5-4a98-beda-bbf97d0ca301")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -69647,6 +72598,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cfcbc469-6104-4cda-942d-ebf5cd5544de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6d0e1d2-bc03-4872-a490-8a0f4704d54c")
 			(effects
 				(font
 					(size 1 1)
@@ -69892,6 +72856,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "92aeac8f-969d-4519-8cbc-c24503b8fb7f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/bf779fd8-ab9d-4251-99ca-e664068d4f04")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -70123,6 +73100,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5ce2866c-252a-45cf-9a4d-8a564b7e5d6f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54dcae0d-860e-42d6-a3a7-6c92ef0150f0")
 			(effects
 				(font
 					(size 1 1)
@@ -70582,6 +73572,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d1cfd393-7d77-4d2f-8296-e3904e319708")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/93e31b1c-47b4-4b5b-b8c7-c39b7c2892d0")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -70820,6 +73823,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e8904204-e6fe-4281-82e8-92a1d9ed9329")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/8578a645-a3df-4707-9909-bde619a0b8ef")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -71051,6 +74067,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c36da71e-129c-430d-9ce3-1d6599efdc4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e03dce06-20be-4303-9ed7-526df733ef75")
 			(effects
 				(font
 					(size 1 1)
@@ -72143,6 +75172,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "793e57cc-9e02-433d-8da6-38ad21e86df3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/8e86abfc-07cc-4f73-88c6-24e85e6f068c")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -72379,7 +75421,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "USB*")
+		(property ki_fp_filters "USB*Micro*B*")
 		(path "/8084362c-1e50-4cdc-88cb-8f42b053a44a/2b396af2-b1df-4a99-b997-4b38930cb1d2")
 		(sheetname "/POWER SHEET/")
 		(sheetfile "POWER_SHEET.kicad_sch")
@@ -72916,6 +75958,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "422f9c9f-6a84-4e5b-be9a-a1ca793cc907")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/9afe4d17-bdb3-4bcf-9789-4d7cd7a2c994")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -73147,6 +76202,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "08350a09-2908-44d9-bcf2-65f68bdd5a32")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8a6cc3c3-76cb-44e0-9fad-1ce714c4e1da")
 			(effects
 				(font
 					(size 1 1)
@@ -73392,6 +76460,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c6d3ae64-972b-4e4f-9de9-5d2bfbf908f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/e679e9a2-6271-4500-aad0-420d56b7210a")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -73630,6 +76711,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a8d7a6d3-c3f7-4140-b408-4597c3c1ee4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/b58eb22a-cf33-4299-accc-36faf631b121")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -73861,6 +76955,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0c45b2a2-5dae-418a-a49e-4e6011419df7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3cda9889-4620-4937-8483-e302c2bf5cd6")
 			(effects
 				(font
 					(size 1 1)
@@ -74519,6 +77626,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38cd2993-e841-4536-810c-976f90afb1e2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/a0dc460c-a3e4-4e3a-8e8e-8ff724ff74d9")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -74750,6 +77870,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "68444ed2-095d-4aae-9c76-55496ab9ce40")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9a563e0b-6684-4619-a990-246c6d1e5ac8")
 			(effects
 				(font
 					(size 1 1)
@@ -75189,6 +78322,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8b64ec5c-3df8-40f9-b6dc-01ef19725f8a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94e03940-3b32-4b91-ae40-fb7201d39014")
 			(effects
 				(font
 					(size 1 1)
@@ -75648,6 +78794,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9dc463e1-0a53-4e74-8e4f-7004bd51f2d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/00d0df88-9ac5-4ce3-a0a7-2060c91e1b9d")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -75879,6 +79038,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9ecb3d9b-cfc3-44f2-b129-c9bbffd8eb30")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4c375be6-1715-41bd-933c-69bac4da41b4")
 			(effects
 				(font
 					(size 1 1)
@@ -76124,6 +79296,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "23098251-8a49-478c-b1b2-d7dee0c6754d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/411e46f8-b68c-4607-aa12-5f6fc0b52351")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -76355,6 +79540,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ea2fb127-81eb-4789-b2fd-52f78e7027e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "44729380-b3d0-495c-8658-85e4c0963c3d")
 			(effects
 				(font
 					(size 1 1)
@@ -76600,6 +79798,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "19708108-fc2c-4796-826e-320d5fe94ed7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/03c7417d-9bdb-47a8-8f4f-60894106b8eb")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -76838,6 +80049,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4568e92a-0e51-4fd0-bb45-9e468f0c0255")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/39088b3a-42af-4734-b3db-f39ae6ebf38d")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -77069,6 +80293,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e4cbcc16-e04f-46c8-84a8-eff19e11fdaf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2b98d17f-7b39-408c-aa4f-e71d34cb16e0")
 			(effects
 				(font
 					(size 1 1)
@@ -77528,6 +80765,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3e8df747-4d1e-47e4-8996-f688a538b611")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/761ea430-0831-4cc3-bacc-27f3721c5f25/551cfa92-9ae9-4620-ba2b-c9633e02c36d")
 		(sheetname "/LED MATRIX ARRAY #2/")
@@ -77759,6 +81009,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "67073dea-d40c-4968-9e11-820b3ce1ad74")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "97168203-83ae-4bd9-82a1-57223e404773")
 			(effects
 				(font
 					(size 1 1)
@@ -78485,6 +81748,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bc2db1fa-0c10-492e-b0f4-754e0eca54a9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/826a5fb4-a4c0-4d76-8d6e-f41b1614e760")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -78716,6 +81992,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3e55a576-9497-4e37-976f-3be8b2332856")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5e60e537-1f48-4bc5-956c-25d66a09e78d")
 			(effects
 				(font
 					(size 1 1)
@@ -78961,6 +82250,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "27343434-e53f-48dc-a1ff-80ea8b0b4a9b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/3a67c949-bfe9-475f-b043-f28cb99d3010")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -79192,6 +82494,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2805564b-fc7a-4dbf-ba0e-e6b5b5f8bddd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b0fc90f9-e978-4913-b7cb-623067e9c88e")
 			(effects
 				(font
 					(size 1 1)
@@ -79437,6 +82752,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0cd5a8d-67d8-4fa7-9adf-3eefb8da5dcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/79ad7763-7fd2-418d-8c58-5ce748998d21")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -79675,6 +83003,19 @@
 				)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6f8a1d2a-1ea2-42a3-a5bb-e298f43686de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ac2083cd-79ae-4f90-89f0-3774659c83a1/a2b171bc-0fc9-41dc-af8c-9f7fcc04603b")
 		(sheetname "/LED MATRIX ARRAY #1/")
@@ -79906,6 +83247,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2a21a0a8-e701-4987-98ba-750a37a185ad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8951a01d-0147-4411-8a1b-5917bb8f2beb")
 			(effects
 				(font
 					(size 1 1)

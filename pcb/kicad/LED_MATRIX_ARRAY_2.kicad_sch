@@ -67,6 +67,14 @@
 					(hide yes)
 				)
 			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "ki_keywords" "LED diode"
 				(at 0 0 0)
 				(effects
@@ -4814,6 +4822,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 99.06 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "90a4713a-568b-4f56-b0f2-8dfa0e051169")
 		)
@@ -4886,6 +4903,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 236.22 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 236.22 52.07 0)
 			(effects
 				(font
@@ -4974,6 +5000,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7493d5f4-bbd0-4289-9191-375f34da7778")
 		)
@@ -5046,6 +5081,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 236.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 236.22 101.6 0)
 			(effects
 				(font
@@ -5134,6 +5178,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 160.02 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b310d63f-779d-494b-b30b-fcde7c85d5c9")
 		)
@@ -5206,6 +5259,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 111.76 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 35.56 0)
 			(effects
 				(font
@@ -5294,6 +5356,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 185.42 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e85501a5-8b50-42d5-9e20-640544363e1c")
 		)
@@ -5366,6 +5437,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 160.02 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 160.02 101.6 0)
 			(effects
 				(font
@@ -5454,6 +5534,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 172.72 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b568b8b7-1a0f-4d02-949c-f282e6f6fa71")
 		)
@@ -5526,6 +5615,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 73.66 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 73.66 118.11 0)
 			(effects
 				(font
@@ -5614,6 +5712,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 172.72 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "39e1ff54-3bba-4eb2-9116-90ba26ba632f")
 		)
@@ -5686,6 +5793,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 137.16 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 137.16 85.09 0)
 			(effects
 				(font
@@ -5774,6 +5890,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 172.72 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cd7451ad-cbc5-4517-ab82-e8017fd1fdc7")
 		)
@@ -5846,6 +5971,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 185.42 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 185.42 118.11 0)
 			(effects
 				(font
@@ -5934,6 +6068,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 60.96 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a2a19d17-2c9a-4d83-825f-7cbf245d4b58")
 		)
@@ -6006,6 +6149,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 124.46 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 124.46 85.09 0)
 			(effects
 				(font
@@ -6094,6 +6246,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7d6e5612-5ad6-4911-84d4-d6e699a83fbe")
 		)
@@ -6166,6 +6327,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 48.26 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 48.26 134.62 0)
 			(effects
 				(font
@@ -6254,6 +6424,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0a35a403-2767-4028-b449-d75e036b047e")
 		)
@@ -6326,6 +6505,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 137.16 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 137.16 68.58 0)
 			(effects
 				(font
@@ -6414,6 +6602,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9c57e6b9-0b66-4a3a-ac28-74f6b56cac14")
 		)
@@ -6486,6 +6683,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 99.06 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 99.06 85.09 0)
 			(effects
 				(font
@@ -6574,6 +6780,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 236.22 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c790a54d-2bc3-42a0-b30d-afd2d5035c25")
 		)
@@ -6646,6 +6861,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 210.82 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 210.82 52.07 0)
 			(effects
 				(font
@@ -6734,6 +6958,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 185.42 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d2499fd8-83a2-4719-8a33-8fba1bd062f8")
 		)
@@ -6806,6 +7039,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 160.02 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 160.02 85.09 0)
 			(effects
 				(font
@@ -6894,6 +7136,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 124.46 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9ddf4163-cde6-4722-acbf-1432f1ca3863")
 		)
@@ -6966,6 +7217,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 147.32 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 147.32 134.62 0)
 			(effects
 				(font
@@ -7054,6 +7314,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 223.52 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7dcafe33-1ec6-4738-97a2-0cd63b515b16")
 		)
@@ -7126,6 +7395,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 172.72 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 172.72 68.58 0)
 			(effects
 				(font
@@ -7214,6 +7492,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 223.52 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "499e772d-49f9-4d24-9dca-35c03459f9c7")
 		)
@@ -7286,6 +7573,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 60.96 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 60.96 52.07 0)
 			(effects
 				(font
@@ -7374,6 +7670,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 185.42 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "54760650-2ca6-49bc-a63f-70fa03f96cfd")
 		)
@@ -7446,6 +7751,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 86.36 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 86.36 52.07 0)
 			(effects
 				(font
@@ -7534,6 +7848,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 210.82 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cee0c867-89ac-4919-9923-e48adc4fbbd2")
 		)
@@ -7606,6 +7929,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 198.12 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 198.12 35.56 0)
 			(effects
 				(font
@@ -7694,6 +8026,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 147.32 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "367c93a0-e8b8-4291-bc44-df098a8cc4cf")
 		)
@@ -7766,6 +8107,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 124.46 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 124.46 134.62 0)
 			(effects
 				(font
@@ -7854,6 +8204,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 236.22 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2cfc000f-86d5-486b-b371-553a69cd5431")
 		)
@@ -7926,6 +8285,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 160.02 68.58 0)
 			(effects
 				(font
@@ -8014,6 +8382,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3f9c13b0-9687-46cc-9ba5-49c5ffca9e89")
 		)
@@ -8086,6 +8463,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 137.16 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 137.16 134.62 0)
 			(effects
 				(font
@@ -8174,6 +8560,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 137.16 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "be56fa70-55f2-4c7d-8522-c750295f4b4f")
 		)
@@ -8246,6 +8641,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 124.46 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 124.46 101.6 0)
 			(effects
 				(font
@@ -8334,6 +8738,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 147.32 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "53d9c444-7280-4970-b10e-d23549f64116")
 		)
@@ -8406,6 +8819,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 172.72 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 172.72 134.62 0)
 			(effects
 				(font
@@ -8494,6 +8916,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 60.96 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "02375ff3-a8a1-4e14-ba29-51eab60af532")
 		)
@@ -8566,6 +8997,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 111.76 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 101.6 0)
 			(effects
 				(font
@@ -8654,6 +9094,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 111.76 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2896ca7b-2f31-424d-9d39-8f51cd08d691")
 		)
@@ -8726,6 +9175,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 236.22 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 236.22 134.62 0)
 			(effects
 				(font
@@ -8814,6 +9272,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "393f0c7d-fd6c-4bbf-a874-4553528874d6")
 		)
@@ -8886,6 +9353,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 223.52 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 223.52 68.58 0)
 			(effects
 				(font
@@ -8974,6 +9450,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 172.72 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6132fa35-feff-497f-a35e-56e410382218")
 		)
@@ -9046,6 +9531,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 210.82 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 210.82 68.58 0)
 			(effects
 				(font
@@ -9134,6 +9628,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 124.46 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "377f6490-be50-4abc-bade-7de207e319dc")
 		)
@@ -9206,6 +9709,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 147.32 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 147.32 85.09 0)
 			(effects
 				(font
@@ -9294,6 +9806,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 86.36 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "803cff3f-92bc-46fa-addc-859da7a26995")
 		)
@@ -9366,6 +9887,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 73.66 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 73.66 85.09 0)
 			(effects
 				(font
@@ -9454,6 +9984,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 147.32 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a359e8ac-4ce8-4a59-be64-0f606a852c74")
 		)
@@ -9526,6 +10065,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 147.32 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 147.32 68.58 0)
 			(effects
 				(font
@@ -9614,6 +10162,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cd057af0-f212-42c6-829a-71d37a09749c")
 		)
@@ -9686,6 +10243,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 172.72 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 172.72 35.56 0)
 			(effects
 				(font
@@ -9774,6 +10340,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 160.02 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2b08b552-1262-466c-a335-1129032111e2")
 		)
@@ -9846,6 +10421,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 124.46 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 124.46 118.11 0)
 			(effects
 				(font
@@ -9934,6 +10518,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d7efd1d0-2300-40ce-8b90-a271e82b18d6")
 		)
@@ -10006,6 +10599,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 86.36 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 86.36 85.09 0)
 			(effects
 				(font
@@ -10094,6 +10696,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 185.42 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f61e5472-36d8-40fb-9034-0b255653fcef")
 		)
@@ -10166,6 +10777,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 48.26 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 48.26 35.56 0)
 			(effects
 				(font
@@ -10254,6 +10874,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 99.06 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "802a45d5-fea2-4131-9d7e-5f6444c98f15")
 		)
@@ -10326,6 +10955,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 147.32 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 147.32 118.11 0)
 			(effects
 				(font
@@ -10414,6 +11052,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 160.02 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7b2e2224-4a6f-4b7b-b5b3-69986de2694c")
 		)
@@ -10486,6 +11133,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 223.52 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 223.52 118.11 0)
 			(effects
 				(font
@@ -10574,6 +11230,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 124.46 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d848e67d-fad9-4771-824e-c99a73cab840")
 		)
@@ -10646,6 +11311,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 60.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 60.96 101.6 0)
 			(effects
 				(font
@@ -10734,6 +11408,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 198.12 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2dd8c076-3fff-4ef2-9057-74899951006c")
 		)
@@ -10806,6 +11489,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 111.76 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 151.13 0)
 			(effects
 				(font
@@ -10894,6 +11586,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 86.36 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "042bb14e-f612-41b5-8760-31fbbc86683b")
 		)
@@ -10966,6 +11667,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 185.42 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 185.42 52.07 0)
 			(effects
 				(font
@@ -11054,6 +11764,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 223.52 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "215d6439-01b8-458d-b749-e0a71c05a8ce")
 		)
@@ -11126,6 +11845,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 185.42 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 185.42 68.58 0)
 			(effects
 				(font
@@ -11214,6 +11942,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "27acbe42-5e56-4118-8bda-6b6a1059b0d8")
 		)
@@ -11286,6 +12023,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 210.82 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 210.82 134.62 0)
 			(effects
 				(font
@@ -11374,6 +12120,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 99.06 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f2e3b595-08ff-4a3a-821e-d39e1ef9e853")
 		)
@@ -11446,6 +12201,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 210.82 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 210.82 101.6 0)
 			(effects
 				(font
@@ -11534,6 +12298,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 99.06 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fec5c124-a501-478c-95c1-6069f28ef88c")
 		)
@@ -11606,6 +12379,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 198.12 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 198.12 101.6 0)
 			(effects
 				(font
@@ -11694,6 +12476,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 111.76 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "456700bf-f26b-4bed-a3a8-11d966ed8436")
 		)
@@ -11766,6 +12557,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 60.96 68.58 0)
 			(effects
 				(font
@@ -11854,6 +12654,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 60.96 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cd6f86d2-237f-4ef4-afc4-402383a664a2")
 		)
@@ -11926,6 +12735,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 73.66 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 73.66 52.07 0)
 			(effects
 				(font
@@ -12014,6 +12832,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 99.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8b5fb687-c102-460f-8cd3-7051146ec1fc")
 		)
@@ -12086,6 +12913,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 210.82 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 210.82 35.56 0)
 			(effects
 				(font
@@ -12174,6 +13010,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 86.36 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "eaf310c2-ecde-4356-916b-42a4465a6cda")
 		)
@@ -12246,6 +13091,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 172.72 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 172.72 118.11 0)
 			(effects
 				(font
@@ -12334,6 +13188,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 223.52 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "90dec224-14ba-4976-a33f-d644754b10d4")
 		)
@@ -12406,6 +13269,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 86.36 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 86.36 151.13 0)
 			(effects
 				(font
@@ -12494,6 +13366,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 137.16 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2f39a970-5678-4976-bcf0-818a5f9e8f98")
 		)
@@ -12566,6 +13447,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 147.32 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 147.32 35.56 0)
 			(effects
 				(font
@@ -12654,6 +13544,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 137.16 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0c972eb5-83a8-49c5-b2c3-f6e61587eb5b")
 		)
@@ -12726,6 +13625,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 160.02 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 160.02 35.56 0)
 			(effects
 				(font
@@ -12814,6 +13722,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 137.16 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2f5b0771-0db9-4dfd-af10-b12b05cd3d38")
 		)
@@ -12886,6 +13803,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 99.06 101.6 0)
 			(effects
 				(font
@@ -12974,6 +13900,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 99.06 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "78426085-187d-4897-86d3-e4548afdae3a")
 		)
@@ -13046,6 +13981,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 198.12 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 198.12 85.09 0)
 			(effects
 				(font
@@ -13134,6 +14078,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 210.82 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "45807c54-fff4-441e-8796-2bbb0b5965cf")
 		)
@@ -13206,6 +14159,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 160.02 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 160.02 52.07 0)
 			(effects
 				(font
@@ -13294,6 +14256,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 86.36 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "597fbd99-48ae-40af-91c8-aeffbdf6564e")
 		)
@@ -13366,6 +14337,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 236.22 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 236.22 35.56 0)
 			(effects
 				(font
@@ -13454,6 +14434,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 86.36 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6bfb174b-026d-4d7e-8bb5-05c4021a427e")
 		)
@@ -13526,6 +14515,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 48.26 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 48.26 118.11 0)
 			(effects
 				(font
@@ -13614,6 +14612,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 124.46 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c9bfcb28-e713-4d1c-83c6-cf1c6e925093")
 		)
@@ -13686,6 +14693,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 198.12 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 198.12 134.62 0)
 			(effects
 				(font
@@ -13774,6 +14790,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 223.52 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8e048c2e-6771-449d-b78f-a10b38010739")
 		)
@@ -13846,6 +14871,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 223.52 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 223.52 134.62 0)
 			(effects
 				(font
@@ -13934,6 +14968,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 111.76 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9003b04d-fef2-47ef-8e23-9dbdb0f4f048")
 		)
@@ -14006,6 +15049,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 111.76 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 118.11 0)
 			(effects
 				(font
@@ -14094,6 +15146,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3fd745d7-c82f-4859-9577-3418dff1e375")
 		)
@@ -14166,6 +15227,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 236.22 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 236.22 68.58 0)
 			(effects
 				(font
@@ -14254,6 +15324,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 198.12 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6cb23e2d-a87c-4c89-a2f4-8ecfb34c0b86")
 		)
@@ -14326,6 +15405,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 236.22 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 236.22 151.13 0)
 			(effects
 				(font
@@ -14414,6 +15502,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 198.12 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f265621d-7b8b-4589-9f3e-218a3817ccaf")
 		)
@@ -14486,6 +15583,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 111.76 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 52.07 0)
 			(effects
 				(font
@@ -14574,6 +15680,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 73.66 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d7faca74-0430-4a4f-a443-0558fddb02bb")
 		)
@@ -14646,6 +15761,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 210.82 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 210.82 118.11 0)
 			(effects
 				(font
@@ -14734,6 +15858,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 60.96 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b99dcf76-0d57-41a2-9576-73d3f5f643e8")
 		)
@@ -14806,6 +15939,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 185.42 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 185.42 134.62 0)
 			(effects
 				(font
@@ -14894,6 +16036,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 60.96 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ed803681-ed99-4d0a-ac31-a1999fee89db")
 		)
@@ -14966,6 +16117,15 @@
 			)
 		)
 		(property "MPN" "LTST-C190KRKT"
+			(at 137.16 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
 			(at 137.16 118.11 0)
 			(effects
 				(font
