@@ -6,8 +6,8 @@
 	(paper "A5")
 	(title_block
 		(title "Spekky Matrix Schematic")
-		(date "2025-05-22")
-		(rev "v20")
+		(date "2025-06-14")
+		(rev "v21")
 	)
 	(lib_symbols
 		(symbol "Mechanical:MountingHole_Pad"
@@ -1055,9 +1055,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "adf917a7-9f01-4e02-b9cb-4e18286f96c6")
-		(property "Reference" "#PWR0119"
+		(uuid "d0428f6e-1763-4f1a-b040-2390eb5bad66")
+		(property "Reference" "#PWR01"
 			(at 53.34 132.08 0)
 			(effects
 				(font
@@ -1066,8 +1065,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDREF"
-			(at 53.34 130.81 0)
+		(property "Value" "GND"
+			(at 53.34 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1093,7 +1092,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
 			(at 53.34 125.73 0)
 			(effects
 				(font
@@ -1103,12 +1102,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a2014173-bd3a-4832-b7b0-722ada4aabfd")
+			(uuid "baf8ad6b-ae4a-4cc3-8cbc-ce9df8a27dba")
 		)
 		(instances
-			(project ""
+			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1"
-					(reference "#PWR0119")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)

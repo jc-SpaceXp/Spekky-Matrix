@@ -3453,6 +3453,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDREF")
+		(at 167.64 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "24158d06-8952-4dd7-bff7-69af3d1b74d0")
+		(property "Reference" "#PWR021"
+			(at 167.64 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 167.64 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 167.64 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d81176d-1d43-427c-bac4-e3c29eb8d921")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:PTVS5V0Z1USKP")
 		(at 87.63 57.15 270)
 		(unit 1)
@@ -3531,72 +3597,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDREF")
-		(at 58.42 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "34d5a781-dbf7-4dad-8710-fd3f585a799f")
-		(property "Reference" "#PWR07"
-			(at 58.42 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 58.42 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 58.42 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 58.42 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cf7d4ca2-0e33-4fbe-be37-c9ddb3a5f2f8")
-		)
-		(instances
-			(project "i2s_spekky_matrix"
-				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 53.34 151.13 0)
 		(unit 1)
@@ -3667,15 +3667,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 213.36 129.54 0)
+		(at 100.33 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "55a8346e-d55e-4e37-b2df-e6bb68aaf57d")
-		(property "Reference" "#PWR024"
-			(at 213.36 135.89 0)
+		(uuid "4e5de321-155e-4451-9d78-4d48147b0ab8")
+		(property "Reference" "#PWR019"
+			(at 100.33 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3684,7 +3684,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 213.36 133.35 0)
+			(at 100.33 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3693,7 +3693,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 129.54 0)
+			(at 100.33 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3702,7 +3702,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 129.54 0)
+			(at 100.33 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3710,8 +3710,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 213.36 129.54 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 100.33 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3720,12 +3720,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "90e2ca95-68e1-4474-8644-2315c1ae585d")
+			(uuid "cb97164a-10ba-419a-b299-11d587811558")
 		)
 		(instances
-			(project "i2s_spekky_matrix"
+			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR024")
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 118.11 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "518fb3c0-e01a-487e-896f-32208e0a57de")
+		(property "Reference" "#PWR018"
+			(at 118.11 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 118.11 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 118.11 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "63406c12-17f4-4639-9a1a-9827bc5cbefa")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -3799,15 +3865,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 76.2 71.12 0)
+		(at 213.36 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5d60e01c-25b8-4737-ae94-5713f72ba1d9")
-		(property "Reference" "#PWR09"
-			(at 76.2 77.47 0)
+		(uuid "6b71d482-fc53-4d0a-b14a-e71cf4690ac0")
+		(property "Reference" "#PWR022"
+			(at 213.36 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3816,7 +3882,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 76.2 74.93 0)
+			(at 213.36 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3825,7 +3891,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 71.12 0)
+			(at 213.36 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3834,7 +3900,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 71.12 0)
+			(at 213.36 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3842,8 +3908,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 76.2 71.12 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 213.36 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3852,12 +3918,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7480d061-e3b5-4a18-b139-db36c263953c")
+			(uuid "9045295c-fb7d-44d5-b19e-76cbd4312673")
 		)
 		(instances
-			(project "i2s_spekky_matrix"
+			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR09")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -3871,8 +3937,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6fda9048-2050-4ffe-bfc8-ece34d5f7406")
-		(property "Reference" "#PWR018"
+		(uuid "70a120cc-7cec-4822-93e4-f20912402b33")
+		(property "Reference" "#PWR016"
 			(at 97.79 163.83 0)
 			(effects
 				(font
@@ -3908,7 +3974,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
 			(at 97.79 157.48 0)
 			(effects
 				(font
@@ -3918,12 +3984,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "cfea6772-9c14-4565-b4c8-75fc970318e8")
+			(uuid "11f32d7d-07b2-4bcd-a093-0390a2387eb9")
 		)
 		(instances
-			(project "i2s_spekky_matrix"
+			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR018")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -4519,72 +4585,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDREF")
-		(at 100.33 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b386da52-2d9f-4e3e-baae-4fddb44cbbbc")
-		(property "Reference" "#PWR019"
-			(at 100.33 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 100.33 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 100.33 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 100.33 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 100.33 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fe9646f4-1041-4731-a9ec-30e21ac91d1e")
-		)
-		(instances
-			(project "i2s_spekky_matrix"
-				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 115.57 62.23 0)
 		(unit 1)
@@ -5018,15 +5018,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 167.64 107.95 0)
+		(at 76.2 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "da427d80-64b7-4b69-9421-c17ab69ec60c")
-		(property "Reference" "#PWR022"
-			(at 167.64 114.3 0)
+		(uuid "da95173e-19ec-4609-a102-ff756520c5c4")
+		(property "Reference" "#PWR09"
+			(at 76.2 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5035,7 +5035,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 111.76 0)
+			(at 76.2 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5044,7 +5044,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 107.95 0)
+			(at 76.2 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5053,7 +5053,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 107.95 0)
+			(at 76.2 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5061,8 +5061,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 167.64 107.95 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 76.2 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5071,12 +5071,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "17292a7a-2d0d-40f6-85e0-4e9eb310b21a")
+			(uuid "c8e2de09-c440-45ea-9e00-9591fa6d0702")
 		)
 		(instances
-			(project "i2s_spekky_matrix"
+			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR022")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -5084,15 +5084,15 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
-		(at 118.11 125.73 0)
+		(at 58.42 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ff1d3779-5daa-4e1c-a923-0c7b049a674f")
-		(property "Reference" "#PWR021"
-			(at 118.11 132.08 0)
+		(uuid "f6c7021c-6751-49a0-999f-fc7f52a1f0eb")
+		(property "Reference" "#PWR07"
+			(at 58.42 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5101,7 +5101,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 118.11 129.54 0)
+			(at 58.42 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5110,7 +5110,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 125.73 0)
+			(at 58.42 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5119,7 +5119,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 125.73 0)
+			(at 58.42 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5127,8 +5127,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
-			(at 118.11 125.73 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 58.42 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5137,12 +5137,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "89d5b570-7988-4ca1-aeb8-92b9608cad1c")
+			(uuid "92b83250-0fa0-4dbf-8b94-663c407f0ff9")
 		)
 		(instances
-			(project "i2s_spekky_matrix"
+			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
-					(reference "#PWR021")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)

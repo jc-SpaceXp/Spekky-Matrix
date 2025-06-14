@@ -3490,7 +3490,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground"
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
 			(at 80.01 83.82 0)
 			(effects
 				(font
