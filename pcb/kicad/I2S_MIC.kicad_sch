@@ -1070,7 +1070,7 @@
 				)
 			)
 		)
-		(property "Footprint" "spekky_matrix:LGA-8_2x4_3.0x4.0mm_P1.0mm"
+		(property "Footprint" "spekky_matrix:LGA-8_2x4_3.0x4.0mm_P1.0mm_Hand_Solder"
 			(at 83.82 54.61 0)
 			(effects
 				(font
