@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -3 0)
 		(layer "F.SilkS")
-		(uuid "2b63884f-58c9-470b-90e3-24c74f1e3783")
+		(uuid "df367a39-b329-4bc6-8db6-0c1e4332f213")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "LGA-8_2x4_3.0x4.0mm_P1.0mm_Hand_Solder"
 		(at 0 3 0)
 		(layer "F.Fab")
-		(uuid "fd270c53-dab7-47b9-8978-5a961836d8aa")
+		(uuid "83e71498-8671-4619-a184-9a80e5d413e5")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b70b50a9-17cd-491c-ba68-9d6771f5dd79")
+		(uuid "34dc06f4-6f25-4956-b2f4-75b236a1c552")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "da2bf1c6-11bc-4a69-8f2d-9bdb0f285813")
+		(uuid "fd7522cc-914e-4de3-9c92-8f112f1a2452")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -69,6 +69,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "68513ab4-b914-403a-847d-9acea2d9073a")
+	)
+	(fp_line
+		(start -0.87 2.12)
+		(end -1.5 2.12)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a45ce74d-edec-4648-a9c2-02e8c73f40e3")
 	)
 	(fp_line
 		(start 0.87 -2.12)
@@ -110,16 +120,17 @@
 		(layer "F.SilkS")
 		(uuid "5e80fdaa-9a47-4c5d-be1a-8d22c7e18dcd")
 	)
-	(fp_circle
-		(center -1.55 2.05)
-		(end -1.45 2.05)
-		(stroke
-			(width 0.2)
-			(type default)
+	(fp_poly
+		(pts
+			(xy -1.65 2.134756) (xy -1.65 2.344756) (xy -1.9 2.134756) (xy -1.65 2.134756)
 		)
-		(fill no)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
 		(layer "F.SilkS")
-		(uuid "eba747c9-9828-4c67-b31b-96801d91dc36")
+		(uuid "31209d0f-b1ab-4828-965f-4b277dff07b5")
 	)
 	(fp_line
 		(start -2.15 -2.3)
