@@ -84214,6 +84214,42 @@
 		(layer "User.4")
 		(uuid "ae712d03-6476-42c6-9b65-01b52161d364")
 	)
+	(gr_text "Reset"
+		(at 91.5 132.2 0)
+		(layer "F.SilkS")
+		(uuid "3755f157-3087-4917-b1ad-00d07d3785bd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Adjust LED\nBrightness"
+		(at 155 114 0)
+		(layer "F.SilkS")
+		(uuid "52cafb71-403c-45d7-8172-aec48853dc42")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Max LED\nBrightness\n(Shorted)"
+		(at 152.65 127.65 0)
+		(layer "F.SilkS")
+		(uuid "87ea8436-aa3d-4470-a01c-bdcc778a0a64")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 75.27 121.075)
 		(end 75.195 121)
