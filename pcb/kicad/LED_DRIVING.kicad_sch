@@ -6892,7 +6892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 226.06 0)
 			(effects
 				(font
@@ -6902,7 +6902,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 231.14 0)
 			(effects
 				(font
@@ -7638,7 +7638,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 160.02 0)
 			(effects
 				(font
@@ -7648,7 +7648,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 165.1 0)
 			(effects
 				(font
@@ -7798,7 +7798,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 209.55 0)
 			(effects
 				(font
@@ -7808,7 +7808,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 214.63 0)
 			(effects
 				(font
@@ -8104,7 +8104,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 143.51 0)
 			(effects
 				(font
@@ -8114,7 +8114,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 148.59 0)
 			(effects
 				(font
@@ -10383,7 +10383,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 127 0)
 			(effects
 				(font
@@ -10393,7 +10393,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 132.08 0)
 			(effects
 				(font
@@ -10672,7 +10672,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 243.84 0)
 			(effects
 				(font
@@ -10682,7 +10682,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 248.92 0)
 			(effects
 				(font
@@ -10981,7 +10981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 176.53 0)
 			(effects
 				(font
@@ -10991,7 +10991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 181.61 0)
 			(effects
 				(font
@@ -11217,7 +11217,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMP3125L.pdf"
 			(at 76.2 193.04 0)
 			(effects
 				(font
@@ -11227,7 +11227,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"
+		(property "Description" ""
 			(at 80.01 198.12 0)
 			(effects
 				(font
