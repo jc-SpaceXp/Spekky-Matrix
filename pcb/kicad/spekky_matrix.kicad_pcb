@@ -3897,7 +3897,6 @@
 		)
 		(property "Datasheet" ""
 			(at 0 0 0)
-			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f779b8bc-a82d-4e1e-9c0e-11e0e38b44b3")
@@ -3910,7 +3909,6 @@
 		)
 		(property "Description" "Potentiometer"
 			(at 0 0 0)
-			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0bf3d303-59c9-45d0-8126-6c6a7bdda562")
@@ -3940,155 +3938,97 @@
 		(sheetfile "LED_DRIVING.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -2.23 -7.425)
-			(end -2.23 2.345)
+			(start -2.22 -7.415)
+			(end -2.22 2.335)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "109af7d4-aa3e-4995-ae4b-342f5771538f")
+			(uuid "97b65240-005e-4466-93e4-1d98dcaf7755")
 		)
 		(fp_line
-			(start -2.23 -7.425)
-			(end 7.54 -7.425)
+			(start -2.22 -7.415)
+			(end 7.53 -7.415)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e254c881-3b9e-453a-afb5-04d69f9d96cd")
+			(uuid "6afe6989-4d50-4dbb-877e-66303334364a")
 		)
 		(fp_line
-			(start -2.23 2.345)
-			(end 7.54 2.345)
+			(start -2.22 2.335)
+			(end 7.53 2.335)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "7f1b0c97-a3d0-4cb3-bb02-d3c8fe594537")
+			(uuid "5d131912-edc6-417a-941b-3e4a6c98fd70")
 		)
 		(fp_line
-			(start 7.54 -7.425)
-			(end 7.54 2.345)
+			(start 7.53 -7.415)
+			(end 7.53 2.335)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1a87d34a-5087-4a8e-a0b2-6e2866b2aacc")
+			(uuid "c6456fdc-2a5c-40fb-b734-e0e6a91c9e84")
 		)
-		(fp_line
+		(fp_rect
 			(start -2.36 -7.56)
-			(end -2.36 2.48)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "8a29ebac-cd26-4e42-9ba2-7fa5afeb681a")
-		)
-		(fp_line
-			(start -2.36 2.48)
 			(end 7.67 2.48)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
+			(fill no)
 			(layer "F.CrtYd")
-			(uuid "339c220b-d90b-4755-933f-f6c12fe83837")
+			(uuid "6d8a5086-05da-49d5-9702-39f950c4d2d3")
 		)
 		(fp_line
-			(start 7.67 -7.56)
-			(end -2.36 -7.56)
+			(start 2.782 -3.734)
+			(end 0.586 -1.538)
 			(stroke
-				(width 0.05)
+				(width 0.1)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "55c3fc17-751d-433b-934d-d430f2c99803")
+			(layer "F.Fab")
+			(uuid "3a42e7bf-7cdf-4b31-984e-77705cdb856e")
 		)
 		(fp_line
-			(start 7.67 2.48)
-			(end 7.67 -7.56)
+			(start 2.974 -3.542)
+			(end 0.778 -1.346)
 			(stroke
-				(width 0.05)
+				(width 0.1)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "341a8799-f0c8-49e6-81b9-4a205d0c9834")
+			(layer "F.Fab")
+			(uuid "df2ba94c-13c7-4a56-a035-79b4b0a7c017")
 		)
-		(fp_line
+		(fp_rect
 			(start -2.11 -7.305)
-			(end -2.11 2.225)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "3843fd0d-9e00-4b97-b451-80c5fa73d941")
-		)
-		(fp_line
-			(start -2.11 2.225)
 			(end 7.42 2.225)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "d1bf60a1-7551-4897-b7c1-85f3f63c0cd0")
-		)
-		(fp_line
-			(start 1.781 -0.98)
-			(end 1.781 -4.099)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "79630d7c-d5ee-4398-b4b7-e1e2195e6a68")
-		)
-		(fp_line
-			(start 1.781 -0.98)
-			(end 1.781 -4.099)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "ca29540f-e421-4395-bd4d-6c6c245479ec")
-		)
-		(fp_line
-			(start 7.42 -7.305)
-			(end -2.11 -7.305)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "4f099877-0dce-4923-bc13-ec4b96268588")
-		)
-		(fp_line
-			(start 7.42 2.225)
-			(end 7.42 -7.305)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "c8077767-e5a8-4a84-abde-1d9eb736e9e0")
-		)
-		(fp_circle
-			(center 1.781 -2.54)
-			(end 3.356 -2.54)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "d4b32d12-59bb-4965-9366-1d4489d537e2")
+			(uuid "f5590fc4-bf84-48e3-83ad-c414a9ebef01")
+		)
+		(fp_circle
+			(center 1.78 -2.54)
+			(end 3.355 -2.54)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "ce78220f-b4d2-45d1-a5c2-811008859c35")
 		)
 		(fp_text user "${REFERENCE}"
 			(at -1.11 -2.54 90)
@@ -4135,7 +4075,7 @@
 			(uuid "8ea0c514-f712-4dba-8b2c-6a93b932dd9c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Potentiometer_THT.3dshapes/Potentiometer_Bourns_3386F_Vertical.wrl"
+		(model "${KICAD9_3DMODEL_DIR}/Potentiometer_THT.3dshapes/Potentiometer_Bourns_3386F_Vertical.step"
 			(offset
 				(xyz 0 0 0)
 			)
