@@ -97236,8 +97236,9 @@
 		(uuid "1ca836ee-a7c9-4c73-bd01-027bf9dd8d8b")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.13)
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
 			)
 			(justify bottom)
 		)
