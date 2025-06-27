@@ -6,11 +6,142 @@
 	(paper "A3")
 	(title_block
 		(title "8x32 LED Matrix")
-		(date "2025-06-14")
-		(rev "v06")
+		(date "2025-06-27")
+		(rev "v07")
 		(comment 4 "STP16CP05 based cascaded LED matrices")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint_2Pole"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_2Pole"
+				(at 0 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "2-polar test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_2Pole_0_1"
+				(circle
+					(center -1.778 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.778 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -2931,16 +3062,40 @@
 		(uuid "aec37373-c98b-459c-a9b1-d2d5dd16cf83")
 	)
 	(junction
+		(at 403.86 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00cac4bf-0bf6-4a12-9b7b-92354a4845c0")
+	)
+	(junction
 		(at 68.58 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0beec348-7f38-44ef-a02d-340919c7b64c")
 	)
 	(junction
+		(at 403.86 163.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f60b5ed-36a1-4263-bdf2-031d88fb570c")
+	)
+	(junction
+		(at 375.92 180.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12784912-9cde-4c45-83c0-848ddc996393")
+	)
+	(junction
 		(at 240.03 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1887257f-c459-42f3-973c-9afaafab2878")
+	)
+	(junction
+		(at 403.86 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "227614ef-ccbe-4063-9b02-bd4d34b5d912")
 	)
 	(junction
 		(at 345.44 73.66)
@@ -2961,10 +3116,52 @@
 		(uuid "241ac171-4631-461d-9ed7-58a81b07856e")
 	)
 	(junction
+		(at 403.86 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2530549f-af27-4007-beea-00ce1f3c8685")
+	)
+	(junction
+		(at 375.92 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2aaca1ec-af3b-4811-8b5e-525d102475bb")
+	)
+	(junction
+		(at 403.86 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c8632a0-0e23-4a9c-8efa-cf848f71acc3")
+	)
+	(junction
 		(at 185.42 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e3ca57e-4d9e-4969-83db-36f0bd326ca5")
+	)
+	(junction
+		(at 403.86 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ffb02b1-eaa7-484f-8a89-b44d9b1b55bf")
+	)
+	(junction
+		(at 375.92 190.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3208462e-28ad-44b5-97ab-bfce9534bdee")
+	)
+	(junction
+		(at 375.92 177.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "385a87c3-cf78-45e2-9d85-7d199663e6ca")
+	)
+	(junction
+		(at 403.86 118.11)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "44dfac04-6574-455c-ba43-3b0b01ef25d6")
 	)
 	(junction
 		(at 87.63 228.6)
@@ -2973,16 +3170,58 @@
 		(uuid "4a1fb511-233d-4973-a6d3-7cfc3e858348")
 	)
 	(junction
+		(at 403.86 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a3043f3-ccec-4586-948e-6a3982fb6d64")
+	)
+	(junction
+		(at 403.86 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b285702-11ca-416c-8f41-80ad5b1c6abf")
+	)
+	(junction
+		(at 403.86 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b3f3459-c3c7-4dc2-a60f-78722cc9e088")
+	)
+	(junction
 		(at 68.58 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4ffd0850-c7b1-4843-94ef-30989ce56a4b")
 	)
 	(junction
+		(at 374.65 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "527876c5-3632-4751-a7d0-7e2cfd29b654")
+	)
+	(junction
+		(at 374.65 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "543e6fea-6c85-44f5-a281-7258582e0a23")
+	)
+	(junction
+		(at 403.86 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5631d4e6-3a2e-471d-9200-3c12f2b23043")
+	)
+	(junction
 		(at 68.58 246.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "600d0bbc-8c9c-4b2d-a468-28f579920437")
+	)
+	(junction
+		(at 403.86 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6351e910-2a1e-44fd-9a03-a6b5364cf899")
 	)
 	(junction
 		(at 87.63 195.58)
@@ -2997,6 +3236,24 @@
 		(uuid "6da59ca9-5404-4f79-8520-4743d05a025d")
 	)
 	(junction
+		(at 403.86 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6e5d1aad-5335-4f11-b5cc-37980cd47991")
+	)
+	(junction
+		(at 374.65 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "70408a90-3b4b-43db-a621-74d173bf2886")
+	)
+	(junction
+		(at 374.65 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "744f5e78-efeb-43eb-9981-1c3d36a1129c")
+	)
+	(junction
 		(at 68.58 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3007,6 +3264,54 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7708750c-73f8-4e89-b2ef-152cdc025d5e")
+	)
+	(junction
+		(at 375.92 182.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78684af9-7214-4268-bddb-b06dcd89df7e")
+	)
+	(junction
+		(at 403.86 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "78b36354-a8a5-4fb3-9197-f6b3b6e77907")
+	)
+	(junction
+		(at 374.65 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7b343a7e-5c83-447f-b7dd-2992c7c5d53c")
+	)
+	(junction
+		(at 403.86 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "807af3d2-6801-4837-8c3a-5b40a1e9fe12")
+	)
+	(junction
+		(at 375.92 209.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8281ddf5-a142-43c0-9a2d-1202dc36111d")
+	)
+	(junction
+		(at 375.92 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8b6dcc0e-aa23-4309-80dc-34d97875dd0c")
+	)
+	(junction
+		(at 403.86 168.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8c51f720-cd90-446c-9b60-d32a6d44fb92")
+	)
+	(junction
+		(at 403.86 173.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d6449df-6496-4352-ba58-4dca1ca67adb")
 	)
 	(junction
 		(at 146.05 72.39)
@@ -3021,6 +3326,42 @@
 		(uuid "938baae2-72a2-4c7b-8784-00a4af5e4137")
 	)
 	(junction
+		(at 403.86 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9773d841-6378-4a25-89d5-961a82c40217")
+	)
+	(junction
+		(at 374.65 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c3b7e3b-bc34-4ede-ba68-bf873d228822")
+	)
+	(junction
+		(at 403.86 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9dd5ee84-1304-4b77-bff2-d153e4af623e")
+	)
+	(junction
+		(at 375.92 193.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a881feb9-7c1d-4264-875b-701daf15ed52")
+	)
+	(junction
+		(at 403.86 171.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac6617a7-e0c7-4b52-88a6-aa0984e6fd1c")
+	)
+	(junction
+		(at 403.86 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "af713314-b6c3-4f6d-b56e-ff6d6607dd06")
+	)
+	(junction
 		(at 68.58 203.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3033,10 +3374,22 @@
 		(uuid "b641ec87-6f2f-48ae-b621-2653d1c5bc21")
 	)
 	(junction
+		(at 375.92 187.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9a5dc30-4899-4362-aecf-76d4b7519102")
+	)
+	(junction
 		(at 68.58 254)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b9acad0e-8fef-4367-91b1-e8b4616db030")
+	)
+	(junction
+		(at 403.86 156.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bbc0de1c-f120-4b82-85d2-8e94cf731877")
 	)
 	(junction
 		(at 68.58 153.67)
@@ -3049,6 +3402,30 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2760433-1b33-4afd-9605-26b140945f93")
+	)
+	(junction
+		(at 403.86 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5053d71-e3bf-4c3a-8501-d711d8414aad")
+	)
+	(junction
+		(at 403.86 186.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c8e27607-a751-47b3-85ce-bedf16098001")
+	)
+	(junction
+		(at 375.92 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb912c63-79ee-4cdb-ba04-67cd1338e184")
+	)
+	(junction
+		(at 403.86 179.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cdb6aaaf-78bf-42fe-96db-8bfa69e4358d")
 	)
 	(junction
 		(at 87.63 146.05)
@@ -3069,10 +3446,22 @@
 		(uuid "d34e4e6b-5672-45ba-afc4-a4527c678790")
 	)
 	(junction
+		(at 403.86 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d541b7e0-16f6-44e6-8f9e-67ede6d8d0c9")
+	)
+	(junction
 		(at 87.63 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d62b02f9-b982-476c-a015-1b272f3f8a34")
+	)
+	(junction
+		(at 403.86 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d7fe4ffe-359c-41a2-9fda-39c219606aa5")
 	)
 	(junction
 		(at 247.65 73.66)
@@ -3085,6 +3474,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e2944a18-8cfb-424a-a47d-f484387f6044")
+	)
+	(junction
+		(at 403.86 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e32b5182-8b73-4539-825c-f0c631ec59a1")
 	)
 	(junction
 		(at 68.58 162.56)
@@ -3123,10 +3518,34 @@
 		(uuid "f7c0ba11-30a8-4a96-bf5c-250e57284300")
 	)
 	(junction
+		(at 374.65 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f82bc692-9e11-4d34-8c0d-563031ffa746")
+	)
+	(junction
 		(at 68.58 212.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8fa45b6-b700-4514-92de-0d14e578a287")
+	)
+	(junction
+		(at 403.86 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fae5f0fc-f5b0-4c30-8506-99d4c70b1c8d")
+	)
+	(junction
+		(at 403.86 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fba757ce-e96f-4fa5-9640-30620fb701d1")
+	)
+	(junction
+		(at 403.86 181.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc71c6b6-1d49-4fd4-8b21-4f580546ce2c")
 	)
 	(no_connect
 		(at 109.22 59.69)
@@ -3187,6 +3606,15 @@
 		(uuid "097614c0-7e8d-42b8-a4be-34f8747e3d1c")
 	)
 	(bus_entry
+		(at 384.81 120.65)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09e5f23b-724e-41d5-8b8b-09854a6bca89")
+	)
+	(bus_entry
 		(at 314.96 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3194,6 +3622,42 @@
 			(type default)
 		)
 		(uuid "0bbb3916-d6f0-45c5-95d7-0cc95c6a6658")
+	)
+	(bus_entry
+		(at 384.81 173.99)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ca581ba-53fb-4945-8f98-75bedf9a8c37")
+	)
+	(bus_entry
+		(at 384.81 161.29)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f74ea8f-b2a7-4145-847c-9ef42c0e7b3a")
+	)
+	(bus_entry
+		(at 384.81 153.67)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11d42cdb-5f66-4355-b15c-e55b8ab1349a")
+	)
+	(bus_entry
+		(at 384.81 107.95)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18a64d49-5f0f-4244-ada8-5e794b471ba0")
 	)
 	(bus_entry
 		(at 232.41 53.34)
@@ -3205,6 +3669,24 @@
 		(uuid "196fe013-9650-4a3d-8b09-dcd6311739a7")
 	)
 	(bus_entry
+		(at 384.81 163.83)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b06911e-f90a-47b1-a780-86ee913f0756")
+	)
+	(bus_entry
+		(at 384.81 125.73)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24708d7b-d693-4d21-9c6f-e3853a46efc5")
+	)
+	(bus_entry
 		(at 335.28 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3214,6 +3696,15 @@
 		(uuid "29cf3c6b-f820-4986-8a29-3449c7c8f0f7")
 	)
 	(bus_entry
+		(at 384.81 176.53)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34fdb873-28b6-4eb4-a5c3-5e16941c2094")
+	)
+	(bus_entry
 		(at 217.17 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3221,6 +3712,15 @@
 			(type default)
 		)
 		(uuid "39121734-2c03-48e6-bc1e-deef313c1540")
+	)
+	(bus_entry
+		(at 384.81 110.49)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b5d88af-3dc4-47a1-b48d-eba54b6e530c")
 	)
 	(bus_entry
 		(at 212.09 53.34)
@@ -3241,6 +3741,24 @@
 		(uuid "3f0d49de-55cb-462f-9e1a-58bc7a45123d")
 	)
 	(bus_entry
+		(at 384.81 181.61)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f1ee0fe-6967-41da-898d-a2ed0bbc9ba9")
+	)
+	(bus_entry
+		(at 384.81 140.97)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c194452-a3c5-4892-87aa-3862cfc5c7eb")
+	)
+	(bus_entry
 		(at 234.95 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3259,6 +3777,24 @@
 		(uuid "54cfd3bb-3a2a-4bab-b534-5d7ec09e325b")
 	)
 	(bus_entry
+		(at 384.81 166.37)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55706e8a-4225-474b-a729-2baec297e4ae")
+	)
+	(bus_entry
+		(at 384.81 184.15)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "559ad899-ffe6-4679-92d2-6ed4abdeef38")
+	)
+	(bus_entry
 		(at 332.74 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3266,6 +3802,15 @@
 			(type default)
 		)
 		(uuid "57fc186f-f51e-43c0-a359-cce7dae70c33")
+	)
+	(bus_entry
+		(at 384.81 133.35)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "582b84da-7af1-47f1-b0de-a82e20dd77f7")
 	)
 	(bus_entry
 		(at 299.72 53.34)
@@ -3277,6 +3822,24 @@
 		(uuid "6b8dd831-6bfd-4c20-ac73-c717188a7d21")
 	)
 	(bus_entry
+		(at 384.81 130.81)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d2b62fb-d4f9-43a3-b039-71733e62ab3c")
+	)
+	(bus_entry
+		(at 384.81 168.91)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ec11f7c-496f-4b8b-b044-d2d254648ded")
+	)
+	(bus_entry
 		(at 309.88 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3284,6 +3847,51 @@
 			(type default)
 		)
 		(uuid "806f16a6-aa5a-4851-8792-0733408eb57f")
+	)
+	(bus_entry
+		(at 384.81 135.89)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8109a4bb-50ab-4972-bc74-4ecb4d2b881e")
+	)
+	(bus_entry
+		(at 384.81 128.27)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "818d425b-cb39-4c43-9985-72eb7699033c")
+	)
+	(bus_entry
+		(at 384.81 148.59)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82f47cb8-e408-4f95-8a93-fbe0529903fe")
+	)
+	(bus_entry
+		(at 382.27 148.59)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83abcd13-afea-4bf1-b276-e3c27c9c4d71")
+	)
+	(bus_entry
+		(at 384.81 113.03)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96cfc3fc-6d7b-461e-8141-6b360b81a27b")
 	)
 	(bus_entry
 		(at 214.63 53.34)
@@ -3329,6 +3937,15 @@
 			(type default)
 		)
 		(uuid "a6264c0a-4102-4352-a88d-64c8b5e7b650")
+	)
+	(bus_entry
+		(at 384.81 156.21)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a76fb7a1-05f2-478c-9790-9cc68a5438f2")
 	)
 	(bus_entry
 		(at 224.79 53.34)
@@ -3394,6 +4011,15 @@
 		(uuid "b93e537a-c56b-41a3-8611-c1318bb92251")
 	)
 	(bus_entry
+		(at 384.81 123.19)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9c65e82-5aa9-468b-9946-532b7a03fd18")
+	)
+	(bus_entry
 		(at 302.26 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3410,6 +4036,42 @@
 			(type default)
 		)
 		(uuid "c6019806-c829-485e-b3e4-ab656684052a")
+	)
+	(bus_entry
+		(at 384.81 151.13)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6ab46b3-8ab1-4ac7-b077-897ddb70163c")
+	)
+	(bus_entry
+		(at 384.81 115.57)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c939c24e-3a12-4225-bd63-2981c46c762a")
+	)
+	(bus_entry
+		(at 384.81 158.75)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c96028de-ee38-447c-9949-8535d93c712b")
+	)
+	(bus_entry
+		(at 384.81 143.51)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd58cb83-7efe-4076-b172-78e8704596a5")
 	)
 	(bus_entry
 		(at 204.47 53.34)
@@ -3430,6 +4092,15 @@
 		(uuid "d947ae33-9618-4269-9c79-56318769202b")
 	)
 	(bus_entry
+		(at 384.81 179.07)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da2a66fc-4de8-4e06-aa91-6c14d10f619b")
+	)
+	(bus_entry
 		(at 317.5 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3448,6 +4119,24 @@
 		(uuid "ef8bde70-a2b8-49fe-86b2-347874f5fd87")
 	)
 	(bus_entry
+		(at 384.81 186.69)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3068c3a-5242-4353-8d8a-bf4b568e8f4c")
+	)
+	(bus_entry
+		(at 384.81 138.43)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4670285-ddb8-4f1e-8569-607d94642d30")
+	)
+	(bus_entry
 		(at 201.93 53.34)
 		(size -2.54 -2.54)
 		(stroke
@@ -3455,6 +4144,24 @@
 			(type default)
 		)
 		(uuid "f4a9ac20-0a9c-4bce-a331-e7dca5866741")
+	)
+	(bus_entry
+		(at 384.81 118.11)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb4fb9c4-52b1-4443-83c8-2d17b2538dce")
+	)
+	(bus_entry
+		(at 384.81 171.45)
+		(size -2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff0aaa68-027b-4ee9-8e30-1d81787f1755")
 	)
 	(wire
 		(pts
@@ -3536,6 +4243,26 @@
 		)
 		(uuid "067777dd-d333-4f67-a19a-5844dac88364")
 	)
+	(bus
+		(pts
+			(xy 382.27 113.03) (xy 382.27 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06de2ecb-f63e-41dc-a363-7eae5e5a9dc2")
+	)
+	(wire
+		(pts
+			(xy 384.81 146.05) (xy 392.43 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "070997c0-4f8f-4950-a46b-3a041a6aeba2")
+	)
 	(wire
 		(pts
 			(xy 85.09 74.93) (xy 85.09 72.39)
@@ -3566,6 +4293,36 @@
 		)
 		(uuid "0929105e-cf39-4db2-bb87-a20017f8543b")
 	)
+	(bus
+		(pts
+			(xy 382.27 148.59) (xy 382.27 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09f626e6-0b72-40df-9c7a-75d796cdc1fd")
+	)
+	(wire
+		(pts
+			(xy 402.59 135.89) (xy 403.86 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ae83404-06de-42ee-b3e9-ded52ccaa318")
+	)
+	(wire
+		(pts
+			(xy 403.86 107.95) (xy 402.59 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b1eb4f6-7497-454e-8ee4-c17830baf368")
+	)
 	(wire
 		(pts
 			(xy 87.63 226.06) (xy 87.63 228.6)
@@ -3595,6 +4352,16 @@
 			(type default)
 		)
 		(uuid "0c0c1b61-ba46-48a3-ae63-19c762216b71")
+	)
+	(wire
+		(pts
+			(xy 402.59 151.13) (xy 403.86 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c48b6f5-e734-41e3-8342-d267d08afb8c")
 	)
 	(wire
 		(pts
@@ -3636,6 +4403,16 @@
 		)
 		(uuid "0f66552d-82ef-440b-b64f-ec0e223eef49")
 	)
+	(bus
+		(pts
+			(xy 382.27 115.57) (xy 382.27 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fded7f3-0086-4a3f-9748-be62d58ed238")
+	)
 	(wire
 		(pts
 			(xy 101.6 59.69) (xy 101.6 62.23)
@@ -3668,6 +4445,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 120.65) (xy 392.43 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12628cbe-f28b-4c64-8c70-46ed934c3a30")
+	)
+	(wire
+		(pts
 			(xy 68.58 179.07) (xy 74.93 179.07)
 		)
 		(stroke
@@ -3685,6 +4472,36 @@
 			(type default)
 		)
 		(uuid "12cd05b6-10b1-45a0-af9a-07ec5989b86b")
+	)
+	(wire
+		(pts
+			(xy 375.92 170.18) (xy 375.92 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13964876-4339-4bdd-b7c0-5ba6907820c9")
+	)
+	(wire
+		(pts
+			(xy 402.59 148.59) (xy 403.86 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15112db5-3af6-4b99-af55-8f4a9c5a7ae3")
+	)
+	(bus
+		(pts
+			(xy 382.27 125.73) (xy 382.27 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18dd4897-46c1-48da-9ed9-fa55af1d2e50")
 	)
 	(wire
 		(pts
@@ -3728,6 +4545,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 161.29) (xy 392.43 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e494d45-4b30-4669-b92a-803b7c0cfa5b")
+	)
+	(wire
+		(pts
 			(xy 297.18 53.34) (xy 297.18 63.5)
 		)
 		(stroke
@@ -3748,6 +4575,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 158.75) (xy 392.43 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2308a02b-8431-45e5-aed5-71e669ea8fc1")
+	)
+	(wire
+		(pts
 			(xy 68.58 186.69) (xy 80.01 186.69)
 		)
 		(stroke
@@ -3755,6 +4592,26 @@
 			(type default)
 		)
 		(uuid "23d7c501-cb7f-4a79-8fb2-fc412d04c4bc")
+	)
+	(bus
+		(pts
+			(xy 382.27 118.11) (xy 382.27 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25241c57-3f75-444c-8462-5354ba0fef59")
+	)
+	(wire
+		(pts
+			(xy 374.65 152.4) (xy 374.65 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25baea2a-3b60-49aa-a3f7-6ae669cf2ffe")
 	)
 	(wire
 		(pts
@@ -3765,6 +4622,16 @@
 			(type default)
 		)
 		(uuid "27c0e0da-3cd3-4ce9-aa6a-88b87f4c5b32")
+	)
+	(bus
+		(pts
+			(xy 382.27 189.23) (xy 382.27 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27f721e9-d9a0-4631-9c1b-e4e7e2abb47c")
 	)
 	(wire
 		(pts
@@ -3808,6 +4675,26 @@
 	)
 	(wire
 		(pts
+			(xy 374.65 127) (xy 374.65 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c26f332-c068-44f6-9888-5e3813e38e99")
+	)
+	(wire
+		(pts
+			(xy 375.92 167.64) (xy 375.92 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c506c1e-7274-4475-9aad-ae2e10af969b")
+	)
+	(wire
+		(pts
 			(xy 85.09 72.39) (xy 82.55 72.39)
 		)
 		(stroke
@@ -3838,6 +4725,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 110.49) (xy 392.43 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e55477c-d19b-47ff-8c29-9f8807266a7b")
+	)
+	(wire
+		(pts
 			(xy 146.05 81.28) (xy 146.05 85.09)
 		)
 		(stroke
@@ -3856,6 +4753,16 @@
 		)
 		(uuid "2ee4f228-a348-42f8-b771-39348216e7cf")
 	)
+	(bus
+		(pts
+			(xy 382.27 133.35) (xy 382.27 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f2b7f0f-6e6d-40ab-8df5-6806c9f159c8")
+	)
 	(wire
 		(pts
 			(xy 53.34 170.18) (xy 55.88 170.18)
@@ -3865,6 +4772,16 @@
 			(type default)
 		)
 		(uuid "30197633-18d6-43c8-a75d-27f8774fa59a")
+	)
+	(wire
+		(pts
+			(xy 384.81 153.67) (xy 392.43 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31023f37-6468-417b-8fc1-6d41ce5a5144")
 	)
 	(wire
 		(pts
@@ -3885,6 +4802,16 @@
 			(type default)
 		)
 		(uuid "319f6e2e-bbbd-4b2f-8d80-626f08f00ad6")
+	)
+	(wire
+		(pts
+			(xy 403.86 161.29) (xy 402.59 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32179764-a925-4a6f-8635-eef29203ce74")
 	)
 	(wire
 		(pts
@@ -3918,6 +4845,46 @@
 	)
 	(wire
 		(pts
+			(xy 402.59 130.81) (xy 403.86 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33c4d5e6-ab2a-4681-a2eb-4c7a4335f7a9")
+	)
+	(wire
+		(pts
+			(xy 384.81 138.43) (xy 392.43 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34cd3ceb-8a7f-4f3d-9d13-c8a2ccfbe5fb")
+	)
+	(wire
+		(pts
+			(xy 402.59 156.21) (xy 403.86 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "360e1bf6-14e4-4699-872a-9de56618514e")
+	)
+	(wire
+		(pts
+			(xy 403.86 146.05) (xy 403.86 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "375e8556-beb1-4d39-b9e9-9dee49b1ba00")
+	)
+	(wire
+		(pts
 			(xy 212.09 53.34) (xy 212.09 63.5)
 		)
 		(stroke
@@ -3938,6 +4905,26 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 118.11) (xy 392.43 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a28cc82-f14b-4b20-ab94-116e78c37fed")
+	)
+	(bus
+		(pts
+			(xy 382.27 135.89) (xy 382.27 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b995f67-bd0c-4645-9b3b-66a703a4c5d7")
+	)
+	(wire
+		(pts
 			(xy 299.72 53.34) (xy 299.72 63.5)
 		)
 		(stroke
@@ -3955,6 +4942,26 @@
 			(type default)
 		)
 		(uuid "3c698b9d-1dd4-4bab-84db-28e97a4bf5cd")
+	)
+	(wire
+		(pts
+			(xy 384.81 135.89) (xy 392.43 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3da3280d-4a8f-46f5-b2b3-0a98eb777bda")
+	)
+	(wire
+		(pts
+			(xy 402.59 146.05) (xy 403.86 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3da52d3f-3d87-4d6d-88ad-d0e270c91c16")
 	)
 	(wire
 		(pts
@@ -3998,6 +5005,16 @@
 	)
 	(wire
 		(pts
+			(xy 374.65 146.05) (xy 374.65 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41c670c2-fbf0-453b-be58-bdd4c4bed491")
+	)
+	(wire
+		(pts
 			(xy 129.54 53.34) (xy 129.54 62.23)
 		)
 		(stroke
@@ -4005,6 +5022,36 @@
 			(type default)
 		)
 		(uuid "41cd02bc-f22b-482f-ab75-5026be72b286")
+	)
+	(wire
+		(pts
+			(xy 402.59 110.49) (xy 403.86 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "435975da-afec-4108-b012-17e53a0a61de")
+	)
+	(bus
+		(pts
+			(xy 382.27 156.21) (xy 382.27 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44037c02-d9d8-42fc-ad8e-067df97e0fba")
+	)
+	(wire
+		(pts
+			(xy 375.92 190.5) (xy 375.92 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "442b43a9-5d65-4a38-aa86-444376390e17")
 	)
 	(wire
 		(pts
@@ -4018,6 +5065,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 176.53) (xy 392.43 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47414f69-f911-4020-b5d9-9e102d355f1a")
+	)
+	(wire
+		(pts
 			(xy 250.19 199.39) (xy 250.19 203.2)
 		)
 		(stroke
@@ -4025,6 +5082,16 @@
 			(type default)
 		)
 		(uuid "47419214-ee25-46e8-b324-52556e29cdf0")
+	)
+	(bus
+		(pts
+			(xy 382.27 168.91) (xy 382.27 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48875791-deb3-4ec2-ae28-aaaf81160cf0")
 	)
 	(wire
 		(pts
@@ -4045,6 +5112,26 @@
 			(type default)
 		)
 		(uuid "49768742-f3a1-48db-8a63-1d86bf6b9279")
+	)
+	(bus
+		(pts
+			(xy 382.27 166.37) (xy 382.27 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a18385f-84a9-4b55-af54-c1f7c8dfd200")
+	)
+	(wire
+		(pts
+			(xy 403.86 168.91) (xy 403.86 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a80e8ca-1f54-48b9-9b7d-82925bbf53d2")
 	)
 	(wire
 		(pts
@@ -4096,6 +5183,16 @@
 		)
 		(uuid "4ef45384-1bd8-4700-8161-a60e0d6dffde")
 	)
+	(bus
+		(pts
+			(xy 382.27 163.83) (xy 382.27 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f7948d2-6eeb-49d8-9b5c-192fe34f2bad")
+	)
 	(wire
 		(pts
 			(xy 85.09 146.05) (xy 87.63 146.05)
@@ -4118,6 +5215,46 @@
 	)
 	(wire
 		(pts
+			(xy 374.65 139.7) (xy 374.65 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51a674ff-8b02-4504-a25c-cb4a3654dc65")
+	)
+	(wire
+		(pts
+			(xy 359.41 127) (xy 364.49 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5286f75a-94c5-4fbe-b1ab-910d8643a0dd")
+	)
+	(bus
+		(pts
+			(xy 382.27 128.27) (xy 382.27 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52f88d09-4566-430d-a356-cbf51aebda45")
+	)
+	(wire
+		(pts
+			(xy 402.59 133.35) (xy 403.86 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5321a175-1851-42fc-bc35-ff2a2379860d")
+	)
+	(wire
+		(pts
 			(xy 137.16 53.34) (xy 137.16 62.23)
 		)
 		(stroke
@@ -4128,6 +5265,16 @@
 	)
 	(wire
 		(pts
+			(xy 359.41 146.05) (xy 364.49 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "540eccb1-007f-4d83-bad8-e5db4f2554eb")
+	)
+	(wire
+		(pts
 			(xy 245.11 168.91) (xy 245.11 176.53)
 		)
 		(stroke
@@ -4135,6 +5282,16 @@
 			(type default)
 		)
 		(uuid "5418c9d8-90dd-4ef5-a6c5-0f29d9c25904")
+	)
+	(wire
+		(pts
+			(xy 403.86 128.27) (xy 403.86 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "546e7f4c-8328-41a6-bda6-de9bf2e00281")
 	)
 	(bus
 		(pts
@@ -4208,6 +5365,36 @@
 	)
 	(bus
 		(pts
+			(xy 382.27 176.53) (xy 382.27 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59a60394-6b2d-4c40-9759-41a1c4e29785")
+	)
+	(bus
+		(pts
+			(xy 382.27 186.69) (xy 382.27 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b3a6dc3-40d0-44de-b8a2-aff4c44cf756")
+	)
+	(wire
+		(pts
+			(xy 403.86 138.43) (xy 403.86 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c719122-0ee4-4e53-89b8-35aefd4b693d")
+	)
+	(bus
+		(pts
 			(xy 293.37 50.8) (xy 294.64 50.8)
 		)
 		(stroke
@@ -4228,6 +5415,16 @@
 	)
 	(wire
 		(pts
+			(xy 359.41 107.95) (xy 364.49 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d248304-899b-4e67-a492-f9a4f1dcf0a4")
+	)
+	(wire
+		(pts
 			(xy 146.05 71.12) (xy 146.05 72.39)
 		)
 		(stroke
@@ -4235,6 +5432,16 @@
 			(type default)
 		)
 		(uuid "5d745d0c-5125-4011-a64e-74f602a91efe")
+	)
+	(wire
+		(pts
+			(xy 384.81 163.83) (xy 392.43 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d9be09a-069d-40e4-b644-1767da15666d")
 	)
 	(wire
 		(pts
@@ -4278,6 +5485,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 118.11) (xy 403.86 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "617b24f0-9f6e-4252-82bd-771dd5ee0ac9")
+	)
+	(wire
+		(pts
 			(xy 171.45 55.88) (xy 171.45 99.06)
 		)
 		(stroke
@@ -4308,6 +5525,26 @@
 	)
 	(wire
 		(pts
+			(xy 359.41 114.3) (xy 364.49 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "633901f5-8499-47f4-b6e2-38cdcff30544")
+	)
+	(wire
+		(pts
+			(xy 375.92 212.09) (xy 375.92 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63cfe21e-4369-4984-bd9c-1577fab21678")
+	)
+	(wire
+		(pts
 			(xy 127 53.34) (xy 127 62.23)
 		)
 		(stroke
@@ -4325,6 +5562,16 @@
 			(type default)
 		)
 		(uuid "641c8797-7a40-4287-a73d-c254d9173ecc")
+	)
+	(wire
+		(pts
+			(xy 403.86 163.83) (xy 403.86 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "652b7f2c-a95e-4d17-9ad2-796c288ddb34")
 	)
 	(wire
 		(pts
@@ -4358,6 +5605,16 @@
 	)
 	(wire
 		(pts
+			(xy 402.59 179.07) (xy 403.86 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67c5c1d2-9bad-434b-b34d-516acd721299")
+	)
+	(wire
+		(pts
 			(xy 68.58 146.05) (xy 74.93 146.05)
 		)
 		(stroke
@@ -4376,6 +5633,16 @@
 		)
 		(uuid "68475473-e1a0-4edc-ab7c-a603ca4edcb0")
 	)
+	(bus
+		(pts
+			(xy 382.27 168.91) (xy 382.27 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69fbdaca-1abc-4f18-983b-f7d9009e818a")
+	)
 	(wire
 		(pts
 			(xy 87.63 160.02) (xy 87.63 162.56)
@@ -4385,6 +5652,16 @@
 			(type default)
 		)
 		(uuid "6a5b27a7-5c42-4706-85c7-7137201bc74e")
+	)
+	(wire
+		(pts
+			(xy 403.86 143.51) (xy 403.86 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a7ac06c-3df4-463b-85fd-69f45b27170b")
 	)
 	(wire
 		(pts
@@ -4416,6 +5693,26 @@
 		)
 		(uuid "6b04189e-8448-4c65-a952-b10617f173e6")
 	)
+	(wire
+		(pts
+			(xy 403.86 120.65) (xy 403.86 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ba82ec6-6362-47e9-b348-4faf074e2b31")
+	)
+	(bus
+		(pts
+			(xy 382.27 146.05) (xy 382.27 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c284e76-a868-4e84-9bf1-0861f0c1825f")
+	)
 	(bus
 		(pts
 			(xy 307.34 50.8) (xy 309.88 50.8)
@@ -4425,6 +5722,16 @@
 			(type default)
 		)
 		(uuid "6c47ba6d-f613-4d44-a174-06069cac1d53")
+	)
+	(wire
+		(pts
+			(xy 402.59 123.19) (xy 403.86 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dd83e50-b803-490a-894a-fcee979eae5d")
 	)
 	(bus
 		(pts
@@ -4448,6 +5755,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 186.69) (xy 403.86 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70295e8b-e022-4cf3-974e-5ee22c8a15a7")
+	)
+	(wire
+		(pts
 			(xy 217.17 53.34) (xy 217.17 63.5)
 		)
 		(stroke
@@ -4455,6 +5772,16 @@
 			(type default)
 		)
 		(uuid "702d6784-c04a-4cf1-8a29-a305958bd648")
+	)
+	(wire
+		(pts
+			(xy 402.59 166.37) (xy 403.86 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70ebfc70-cfa9-405f-bd03-e8fed0c52e39")
 	)
 	(wire
 		(pts
@@ -4478,6 +5805,26 @@
 	)
 	(wire
 		(pts
+			(xy 359.41 120.65) (xy 364.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "725b10d3-4dff-423b-aaa9-a873edb2baef")
+	)
+	(wire
+		(pts
+			(xy 402.59 181.61) (xy 403.86 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7304705f-8870-4c41-90fc-c702f7e10e25")
+	)
+	(wire
+		(pts
 			(xy 186.69 76.2) (xy 185.42 76.2)
 		)
 		(stroke
@@ -4485,6 +5832,16 @@
 			(type default)
 		)
 		(uuid "733bac8a-164d-4eb7-b0ed-38eadc3f3fde")
+	)
+	(bus
+		(pts
+			(xy 382.27 143.51) (xy 382.27 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74b87988-094c-42e7-bb7d-c95e0fac7aff")
 	)
 	(wire
 		(pts
@@ -4495,6 +5852,26 @@
 			(type default)
 		)
 		(uuid "759e950a-52bb-4282-85cc-5f3eb87e525f")
+	)
+	(wire
+		(pts
+			(xy 384.81 113.03) (xy 392.43 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7624cb9b-421a-4db7-b54b-f86d839a7bfd")
+	)
+	(wire
+		(pts
+			(xy 402.59 186.69) (xy 403.86 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76f418a0-1229-4ac8-8081-89ca1c1ea6dd")
 	)
 	(wire
 		(pts
@@ -4515,6 +5892,36 @@
 			(type default)
 		)
 		(uuid "7966131f-4e4b-4d56-aa2f-a994c9319703")
+	)
+	(wire
+		(pts
+			(xy 384.81 181.61) (xy 392.43 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79a40533-e267-4eee-be20-b990480d57c2")
+	)
+	(wire
+		(pts
+			(xy 403.86 113.03) (xy 403.86 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a25740f-b790-48f5-9995-3eca60b2209b")
+	)
+	(wire
+		(pts
+			(xy 384.81 168.91) (xy 392.43 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ae58257-c616-466d-90db-7089bd115b85")
 	)
 	(bus
 		(pts
@@ -4538,6 +5945,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 163.83) (xy 403.86 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c6ba52f-eb6d-4cbd-9396-f307efbee541")
+	)
+	(wire
+		(pts
 			(xy 68.58 162.56) (xy 74.93 162.56)
 		)
 		(stroke
@@ -4545,6 +5962,16 @@
 			(type default)
 		)
 		(uuid "7ccc6fe5-84a8-46a6-bb3e-e4ad7b3bd50b")
+	)
+	(bus
+		(pts
+			(xy 382.27 179.07) (xy 382.27 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dd3d14e-06a5-402b-a262-c3de0120396f")
 	)
 	(wire
 		(pts
@@ -4588,6 +6015,26 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 143.51) (xy 392.43 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "828594de-a833-4082-a998-fae98fb54bec")
+	)
+	(wire
+		(pts
+			(xy 403.86 140.97) (xy 403.86 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d6c6ad-852d-47a1-a2df-79a8c205b499")
+	)
+	(wire
+		(pts
 			(xy 53.34 177.8) (xy 53.34 179.07)
 		)
 		(stroke
@@ -4595,6 +6042,16 @@
 			(type default)
 		)
 		(uuid "82f2cc5d-881d-42e4-a7ad-f41890df5c4f")
+	)
+	(wire
+		(pts
+			(xy 402.59 158.75) (xy 403.86 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "832bd4c3-aacc-4332-8d32-8cada4085f8c")
 	)
 	(wire
 		(pts
@@ -4628,6 +6085,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 133.35) (xy 403.86 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "889433a2-4030-4b1c-8852-25fb05d44aab")
+	)
+	(wire
+		(pts
 			(xy 245.11 73.66) (xy 247.65 73.66)
 		)
 		(stroke
@@ -4635,6 +6102,16 @@
 			(type default)
 		)
 		(uuid "88b87d5a-e32c-4206-8faa-7961f9dd9dc0")
+	)
+	(wire
+		(pts
+			(xy 403.86 110.49) (xy 403.86 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88f8bb19-6c28-4b77-ae50-fb49649b59c1")
 	)
 	(wire
 		(pts
@@ -4648,6 +6125,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 156.21) (xy 392.43 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "898ce16e-3f4f-4056-a29c-5aab5c4d3f2b")
+	)
+	(wire
+		(pts
 			(xy 127 86.36) (xy 127 82.55)
 		)
 		(stroke
@@ -4655,6 +6142,26 @@
 			(type default)
 		)
 		(uuid "89998405-faea-4afd-87f0-871af990e26b")
+	)
+	(wire
+		(pts
+			(xy 402.59 173.99) (xy 403.86 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a130155-ae7e-4f90-91bf-39527ce6b5c8")
+	)
+	(wire
+		(pts
+			(xy 403.86 166.37) (xy 403.86 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a28cbf1-8d92-4d75-8e46-f6d0a795ac69")
 	)
 	(bus
 		(pts
@@ -4676,6 +6183,26 @@
 		)
 		(uuid "8a548d1f-ea61-423c-a1df-6c51c1c57ca0")
 	)
+	(bus
+		(pts
+			(xy 382.27 140.97) (xy 382.27 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8abeefa1-c817-4f25-a12a-779769ff8bab")
+	)
+	(wire
+		(pts
+			(xy 384.81 125.73) (xy 392.43 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cf5a47b-7e2c-4df9-9489-91cdabd7011f")
+	)
 	(wire
 		(pts
 			(xy 234.95 53.34) (xy 234.95 63.5)
@@ -4696,6 +6223,16 @@
 		)
 		(uuid "8d45bbea-bf95-43be-ad75-13c07f802661")
 	)
+	(wire
+		(pts
+			(xy 402.59 118.11) (xy 403.86 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d4b5fcd-734c-4e0e-8210-b12a8a05642d")
+	)
 	(bus
 		(pts
 			(xy 212.09 50.8) (xy 214.63 50.8)
@@ -4708,6 +6245,16 @@
 	)
 	(wire
 		(pts
+			(xy 402.59 176.53) (xy 403.86 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e3d652d-c2a3-45ae-a0f5-94b864409e65")
+	)
+	(wire
+		(pts
 			(xy 87.63 209.55) (xy 87.63 212.09)
 		)
 		(stroke
@@ -4715,6 +6262,26 @@
 			(type default)
 		)
 		(uuid "8ea9bc38-af45-4e1e-ad65-802e8425079f")
+	)
+	(wire
+		(pts
+			(xy 403.86 184.15) (xy 403.86 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ee1df11-1635-4767-9539-1dc9742672e1")
+	)
+	(wire
+		(pts
+			(xy 359.41 133.35) (xy 364.49 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f620769-755e-4a35-9bf3-8cbee91d85ec")
 	)
 	(wire
 		(pts
@@ -4738,6 +6305,56 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 177.8) (xy 375.92 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "913a8eb6-21fc-4f26-88a9-8a346bec0db9")
+	)
+	(wire
+		(pts
+			(xy 402.59 140.97) (xy 403.86 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93478421-ff0e-4807-a55f-f2601dd58351")
+	)
+	(wire
+		(pts
+			(xy 402.59 171.45) (xy 403.86 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9436d356-3c60-4783-ba94-8fac260be4c5")
+	)
+	(wire
+		(pts
+			(xy 403.86 115.57) (xy 403.86 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94cad54c-8e27-4100-996a-3db64d45c21c")
+	)
+	(wire
+		(pts
+			(xy 403.86 123.19) (xy 403.86 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95573734-eb78-43e8-a83e-d30487eae07e")
+	)
+	(wire
+		(pts
 			(xy 53.34 195.58) (xy 68.58 195.58)
 		)
 		(stroke
@@ -4758,6 +6375,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 182.88) (xy 375.92 187.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9741fd66-3768-45f4-8ad8-57d27a9759db")
+	)
+	(wire
+		(pts
 			(xy 68.58 129.54) (xy 53.34 129.54)
 		)
 		(stroke
@@ -4765,6 +6392,26 @@
 			(type default)
 		)
 		(uuid "97852861-7cb7-4b26-8186-7c5e977a8c8f")
+	)
+	(bus
+		(pts
+			(xy 382.27 161.29) (xy 382.27 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9945d24c-6529-4234-8573-0d0c07308a69")
+	)
+	(wire
+		(pts
+			(xy 384.81 179.07) (xy 392.43 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99564023-b650-4c60-8cae-69daef2c19ea")
 	)
 	(wire
 		(pts
@@ -4798,6 +6445,46 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 181.61) (xy 403.86 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a5ab773-bed9-4d1e-adbd-26bd3bd84969")
+	)
+	(wire
+		(pts
+			(xy 402.59 153.67) (xy 403.86 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9acab579-369d-419f-8d76-2fcd470616d1")
+	)
+	(wire
+		(pts
+			(xy 402.59 113.03) (xy 403.86 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b003998-e512-42ec-8d52-f2da5415d5c6")
+	)
+	(bus
+		(pts
+			(xy 382.27 120.65) (xy 382.27 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b6861d2-c4f0-4ab8-a0fd-829956fa25c6")
+	)
+	(wire
+		(pts
 			(xy 222.25 53.34) (xy 222.25 63.5)
 		)
 		(stroke
@@ -4805,6 +6492,26 @@
 			(type default)
 		)
 		(uuid "9b91b8e7-2dfb-4ba4-a7f9-9895100603f1")
+	)
+	(wire
+		(pts
+			(xy 374.65 114.3) (xy 374.65 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c2b8ac0-d8ab-44c0-bb54-383221d887ab")
+	)
+	(bus
+		(pts
+			(xy 382.27 158.75) (xy 382.27 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c3e7506-d7bb-4365-9e5f-d224e99485f3")
 	)
 	(wire
 		(pts
@@ -4858,6 +6565,16 @@
 	)
 	(wire
 		(pts
+			(xy 359.41 152.4) (xy 364.49 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a08cdfae-e560-414f-888c-028e0091805c")
+	)
+	(wire
+		(pts
 			(xy 185.42 73.66) (xy 182.88 73.66)
 		)
 		(stroke
@@ -4875,6 +6592,16 @@
 			(type default)
 		)
 		(uuid "a0edfcef-c9b9-43e6-8792-0647512a7ecb")
+	)
+	(bus
+		(pts
+			(xy 382.27 184.15) (xy 382.27 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a15aac62-c513-48ea-a0ad-a45c773e1224")
 	)
 	(bus
 		(pts
@@ -4898,6 +6625,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 184.15) (xy 392.43 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a25f00e0-5b24-4735-96bc-69beaaed22f1")
+	)
+	(wire
+		(pts
 			(xy 146.05 72.39) (xy 144.78 72.39)
 		)
 		(stroke
@@ -4905,6 +6642,16 @@
 			(type default)
 		)
 		(uuid "a35d8f93-64e3-4c7c-b01e-56997e4e5847")
+	)
+	(wire
+		(pts
+			(xy 384.81 115.57) (xy 392.43 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3ea8c8a-e2e8-4c17-8f50-dfa354846568")
 	)
 	(wire
 		(pts
@@ -4968,6 +6715,26 @@
 	)
 	(bus
 		(pts
+			(xy 382.27 130.81) (xy 382.27 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a957ace4-2353-42f1-aba9-41461fc63dac")
+	)
+	(wire
+		(pts
+			(xy 402.59 168.91) (xy 403.86 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa1041db-f489-4a0c-a61c-e27a28b4c700")
+	)
+	(bus
+		(pts
 			(xy 195.58 50.8) (xy 196.85 50.8)
 		)
 		(stroke
@@ -5008,6 +6775,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 107.95) (xy 392.43 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aee51fb9-94db-4dc5-afaa-ee9d3f1c78b6")
+	)
+	(wire
+		(pts
 			(xy 87.63 146.05) (xy 95.25 146.05)
 		)
 		(stroke
@@ -5026,6 +6803,16 @@
 		)
 		(uuid "aefc9c95-e1d0-4f5b-b19f-d6c429a21fb0")
 	)
+	(wire
+		(pts
+			(xy 375.92 205.74) (xy 375.92 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0d925a4-b191-4cbd-ae48-8d1e43ad1461")
+	)
 	(bus
 		(pts
 			(xy 304.8 50.8) (xy 307.34 50.8)
@@ -5035,6 +6822,26 @@
 			(type default)
 		)
 		(uuid "b0e6d604-1fe0-480b-a005-2590102ba690")
+	)
+	(bus
+		(pts
+			(xy 382.27 153.67) (xy 382.27 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b19eaf8c-5b08-4a19-8bdd-769493b7b8e1")
+	)
+	(wire
+		(pts
+			(xy 359.41 139.7) (xy 364.49 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1e52fc8-2675-411c-83c6-3d5f7be215aa")
 	)
 	(wire
 		(pts
@@ -5068,6 +6875,26 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 179.07) (xy 403.86 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3abf6a9-0867-4ccb-b390-8a3e30918768")
+	)
+	(wire
+		(pts
+			(xy 403.86 143.51) (xy 402.59 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3d8e8f0-e0fa-4406-b696-bf679114a664")
+	)
+	(wire
+		(pts
 			(xy 325.12 53.34) (xy 325.12 63.5)
 		)
 		(stroke
@@ -5075,6 +6902,26 @@
 			(type default)
 		)
 		(uuid "b46fa6d9-cd6e-457d-861b-daf5fdc7a0be")
+	)
+	(wire
+		(pts
+			(xy 403.86 158.75) (xy 403.86 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4f6b8e4-b6c2-42ee-88f2-a505ebed339a")
+	)
+	(wire
+		(pts
+			(xy 403.86 135.89) (xy 403.86 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5404e0e-0ac8-4752-ae1d-0cf41ac49ebd")
 	)
 	(wire
 		(pts
@@ -5138,6 +6985,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 133.35) (xy 392.43 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8d2dc16-aebc-4ec4-844f-84b0c9d5fd2e")
+	)
+	(wire
+		(pts
 			(xy 102.87 179.07) (xy 106.68 179.07)
 		)
 		(stroke
@@ -5145,6 +7002,46 @@
 			(type default)
 		)
 		(uuid "b943c4f0-bfc5-4f60-abc7-d767b5c8bbaf")
+	)
+	(wire
+		(pts
+			(xy 375.92 196.85) (xy 375.92 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba4688e6-3f4c-49d2-b693-70761d17aeae")
+	)
+	(wire
+		(pts
+			(xy 403.86 171.45) (xy 403.86 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb51438c-9e6f-48b4-bb59-d177be2ab697")
+	)
+	(wire
+		(pts
+			(xy 403.86 161.29) (xy 403.86 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc16240a-7431-4f7e-94aa-bcb1a68574a4")
+	)
+	(wire
+		(pts
+			(xy 384.81 151.13) (xy 392.43 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcd9df10-83d7-40d6-997f-cf0c4e496819")
 	)
 	(wire
 		(pts
@@ -5165,6 +7062,26 @@
 			(type default)
 		)
 		(uuid "bdfb755a-e2f7-42f7-858d-44d50582ae92")
+	)
+	(wire
+		(pts
+			(xy 402.59 163.83) (xy 403.86 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beac8496-a957-460c-b386-1beecd64ae61")
+	)
+	(wire
+		(pts
+			(xy 374.65 120.65) (xy 374.65 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf01cdaf-d9cd-4150-897c-819c8e616c33")
 	)
 	(wire
 		(pts
@@ -5195,6 +7112,16 @@
 			(type default)
 		)
 		(uuid "bfccd92b-cdfe-49a1-841c-f5f67a18b294")
+	)
+	(wire
+		(pts
+			(xy 384.81 128.27) (xy 392.43 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0637cc1-d4fe-46dc-bf54-7f586d595087")
 	)
 	(wire
 		(pts
@@ -5238,6 +7165,26 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 148.59) (xy 403.86 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1bdc094-bb0a-4306-8407-c3f2b2fb3390")
+	)
+	(wire
+		(pts
+			(xy 402.59 115.57) (xy 403.86 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1f7976e-34cd-4d37-a5c5-41fac8853ced")
+	)
+	(wire
+		(pts
 			(xy 224.79 53.34) (xy 224.79 63.5)
 		)
 		(stroke
@@ -5255,6 +7202,16 @@
 			(type default)
 		)
 		(uuid "c3843d8f-bae7-4d4f-a116-1c2487f6da10")
+	)
+	(wire
+		(pts
+			(xy 384.81 173.99) (xy 392.43 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c417682e-3d48-4ef7-b987-a3aa4c191db2")
 	)
 	(wire
 		(pts
@@ -5278,6 +7235,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 176.53) (xy 403.86 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4f3dd5d-aeef-40aa-858e-cc200f75e2f3")
+	)
+	(wire
+		(pts
 			(xy 124.46 53.34) (xy 124.46 62.23)
 		)
 		(stroke
@@ -5295,6 +7262,16 @@
 			(type default)
 		)
 		(uuid "c67a1c1d-16ff-4000-8e9c-caee58f8b49d")
+	)
+	(wire
+		(pts
+			(xy 402.59 128.27) (xy 403.86 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6d4020c-2452-48cf-9aa9-e53eacc7395b")
 	)
 	(wire
 		(pts
@@ -5336,6 +7313,26 @@
 		)
 		(uuid "cd7e144d-7513-4ed3-882d-f4728a6d48e0")
 	)
+	(wire
+		(pts
+			(xy 384.81 166.37) (xy 392.43 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cddcb614-84bb-4065-80fb-6298259c380e")
+	)
+	(wire
+		(pts
+			(xy 374.65 107.95) (xy 374.65 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cde86b33-ad40-4342-8c13-850c5473af66")
+	)
 	(bus
 		(pts
 			(xy 207.01 50.8) (xy 209.55 50.8)
@@ -5355,6 +7352,16 @@
 			(type default)
 		)
 		(uuid "cf3e1eec-1a15-46a8-b97c-bd404703f766")
+	)
+	(bus
+		(pts
+			(xy 382.27 123.19) (xy 382.27 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf481b99-931b-4801-ab8e-136dd9e05ddd")
 	)
 	(wire
 		(pts
@@ -5378,6 +7385,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 130.81) (xy 403.86 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d20281bb-64eb-4c08-a9b8-9264728b729c")
+	)
+	(wire
+		(pts
 			(xy 85.09 246.38) (xy 87.63 246.38)
 		)
 		(stroke
@@ -5385,6 +7402,16 @@
 			(type default)
 		)
 		(uuid "d30d8cfe-890d-452b-ac7f-93b366910ad2")
+	)
+	(wire
+		(pts
+			(xy 384.81 130.81) (xy 392.43 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d30fa4ac-5a58-4c23-ae77-89d6c12fc290")
 	)
 	(wire
 		(pts
@@ -5446,6 +7473,36 @@
 		)
 		(uuid "d97821a3-8020-46d4-937e-9b10f519db70")
 	)
+	(bus
+		(pts
+			(xy 382.27 146.05) (xy 382.27 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9dacc70-5743-44c9-b228-927b773069eb")
+	)
+	(wire
+		(pts
+			(xy 374.65 133.35) (xy 374.65 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da8709de-6031-4479-a665-b337c06bba56")
+	)
+	(wire
+		(pts
+			(xy 375.92 209.55) (xy 375.92 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbdcf290-90b3-42ce-94b2-d3436660bbda")
+	)
 	(wire
 		(pts
 			(xy 182.88 73.66) (xy 182.88 74.93)
@@ -5456,6 +7513,16 @@
 		)
 		(uuid "dcb6c3ac-8bc9-4ea2-89a6-a3ccea83c74f")
 	)
+	(bus
+		(pts
+			(xy 382.27 190.5) (xy 382.27 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd05a11b-63c6-428a-bfa0-ab0d79656172")
+	)
 	(wire
 		(pts
 			(xy 247.65 82.55) (xy 247.65 86.36)
@@ -5465,6 +7532,16 @@
 			(type default)
 		)
 		(uuid "dd21e11f-4ccd-47b3-bfb6-569c45931ab1")
+	)
+	(wire
+		(pts
+			(xy 375.92 172.72) (xy 375.92 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd4877e4-5f99-4ba5-b5df-9a7e83f66f8c")
 	)
 	(wire
 		(pts
@@ -5556,6 +7633,16 @@
 		)
 		(uuid "e53fa0ed-15fc-409a-a638-3150168e7020")
 	)
+	(bus
+		(pts
+			(xy 382.27 138.43) (xy 382.27 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5611070-0b3b-4471-a5cd-546a1efe73d3")
+	)
 	(wire
 		(pts
 			(xy 85.09 162.56) (xy 87.63 162.56)
@@ -5565,6 +7652,16 @@
 			(type default)
 		)
 		(uuid "e591c9cd-7769-4046-a343-50521b13d6a3")
+	)
+	(wire
+		(pts
+			(xy 384.81 186.69) (xy 392.43 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5c0c872-aa10-493f-99cd-5c42d4cf9d11")
 	)
 	(wire
 		(pts
@@ -5598,6 +7695,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 187.96) (xy 375.92 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e685defd-d164-49c7-8fdb-bf898c8835fa")
+	)
+	(wire
+		(pts
 			(xy 292.1 55.88) (xy 292.1 63.5)
 		)
 		(stroke
@@ -5615,6 +7722,16 @@
 			(type default)
 		)
 		(uuid "e828ee0b-6e78-4014-b811-a2ed4b7ccfc8")
+	)
+	(bus
+		(pts
+			(xy 382.27 173.99) (xy 382.27 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e82af026-cdd7-475a-ab4d-2b501964a602")
 	)
 	(wire
 		(pts
@@ -5635,6 +7752,26 @@
 			(type default)
 		)
 		(uuid "e9915986-c04d-4fcf-8d3a-b50e2af405fb")
+	)
+	(wire
+		(pts
+			(xy 384.81 148.59) (xy 392.43 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1f9792-eead-49ec-8136-4637cf239c28")
+	)
+	(wire
+		(pts
+			(xy 403.86 151.13) (xy 403.86 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea37bbff-c95c-442f-a327-165d73b09fca")
 	)
 	(wire
 		(pts
@@ -5668,6 +7805,16 @@
 	)
 	(wire
 		(pts
+			(xy 384.81 123.19) (xy 392.43 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebeb8e76-f187-4f42-9e49-c9da39b73bf5")
+	)
+	(wire
+		(pts
 			(xy 87.63 176.53) (xy 87.63 179.07)
 		)
 		(stroke
@@ -5698,6 +7845,16 @@
 	)
 	(wire
 		(pts
+			(xy 403.86 156.21) (xy 403.86 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3e03dce-e6fc-421e-82e4-26e814885901")
+	)
+	(wire
+		(pts
 			(xy 111.76 59.69) (xy 111.76 62.23)
 		)
 		(stroke
@@ -5705,6 +7862,16 @@
 			(type default)
 		)
 		(uuid "f573e5fc-23b5-4071-b96e-a17bc52698b7")
+	)
+	(wire
+		(pts
+			(xy 403.86 125.73) (xy 402.59 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f58e501c-aa58-4eb9-9abe-129dbeec2f27")
 	)
 	(wire
 		(pts
@@ -5718,6 +7885,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 180.34) (xy 375.92 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6727e69-5b2f-4818-bb77-fcbaf33a9fbb")
+	)
+	(wire
+		(pts
 			(xy 146.05 72.39) (xy 146.05 73.66)
 		)
 		(stroke
@@ -5725,6 +7902,36 @@
 			(type default)
 		)
 		(uuid "f6e2c8e8-eb62-4d0c-9e94-47a84b2c7977")
+	)
+	(wire
+		(pts
+			(xy 402.59 138.43) (xy 403.86 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6e5cb3c-4714-403e-a34e-22012754cc3b")
+	)
+	(wire
+		(pts
+			(xy 384.81 171.45) (xy 392.43 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7586fa0-fe3b-4d7d-adff-a6670b5bc2f4")
+	)
+	(wire
+		(pts
+			(xy 403.86 115.57) (xy 403.86 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7bde477-30e7-4b32-af8b-d2cd902f67d4")
 	)
 	(bus
 		(pts
@@ -5735,6 +7942,66 @@
 			(type default)
 		)
 		(uuid "f829e85a-3873-4d46-b8eb-2f4312fb370f")
+	)
+	(wire
+		(pts
+			(xy 384.81 140.97) (xy 392.43 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8a4d2d7-5e86-4134-aa6f-8ec26f2556d3")
+	)
+	(bus
+		(pts
+			(xy 382.27 179.07) (xy 382.27 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8f276d2-df88-4e33-9d96-d83df6cbb94e")
+	)
+	(wire
+		(pts
+			(xy 403.86 153.67) (xy 403.86 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9ca1b60-fb8c-4538-add6-1dff910b5db7")
+	)
+	(wire
+		(pts
+			(xy 402.59 184.15) (xy 403.86 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fab8b97d-00ce-4af3-b409-4aa3292fdfac")
+	)
+	(wire
+		(pts
+			(xy 402.59 120.65) (xy 403.86 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb0ce1a2-f239-4ba8-8fa8-68b01128ecd3")
+	)
+	(wire
+		(pts
+			(xy 403.86 173.99) (xy 403.86 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb6cbfaa-f37b-40ac-891e-def043c711a4")
 	)
 	(wire
 		(pts
@@ -5756,6 +8023,16 @@
 		)
 		(uuid "ff3d85fe-942a-4a1b-8bab-34889ebb91c3")
 	)
+	(label "COL18"
+		(at 392.43 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "000febb7-f1af-472d-b7ef-f6ab75c446f2")
+	)
 	(label "COL31"
 		(at 299.72 59.69 90)
 		(effects
@@ -5765,6 +8042,16 @@
 			(justify left bottom)
 		)
 		(uuid "015ef0cd-d7dd-42cc-9bc3-a4097d951233")
+	)
+	(label "COL22"
+		(at 392.43 161.29 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0220a310-643b-4249-8217-e0e7a5c13e35")
 	)
 	(label "COL4"
 		(at 229.87 60.96 90)
@@ -5786,6 +8073,16 @@
 		)
 		(uuid "10e63755-dea6-4e08-82cf-ecdd4a1e18c4")
 	)
+	(label "COL20"
+		(at 392.43 156.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1120d262-493b-472b-adb6-d14347960a48")
+	)
 	(label "COL28"
 		(at 307.34 59.69 90)
 		(effects
@@ -5795,6 +8092,16 @@
 			(justify left bottom)
 		)
 		(uuid "12a9e757-d809-4a18-9f25-a1fecb024292")
+	)
+	(label "COL23"
+		(at 392.43 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "14b1c17f-689e-4b94-8e9e-06fbf02688e9")
 	)
 	(label "COL3"
 		(at 232.41 60.96 90)
@@ -5816,6 +8123,26 @@
 		)
 		(uuid "1c30c525-ec8a-41e6-a7da-53580a7f95c2")
 	)
+	(label "COL8"
+		(at 392.43 125.73 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1f1465e8-0f2b-43fc-9f63-b5eaa0792369")
+	)
+	(label "COL1"
+		(at 392.43 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "201c7be7-ef1a-443b-98f4-9d132ffc6bb3")
+	)
 	(label "COL15"
 		(at 201.93 60.96 90)
 		(effects
@@ -5825,6 +8152,16 @@
 			(justify left bottom)
 		)
 		(uuid "2347c61a-6d85-4ec5-b0bd-94d18fb1256c")
+	)
+	(label "COL16"
+		(at 392.43 146.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "251e00bd-e8d9-432d-8b7f-ff3e16e912ac")
 	)
 	(label "COL12"
 		(at 209.55 60.96 90)
@@ -5845,6 +8182,66 @@
 			(justify left bottom)
 		)
 		(uuid "2973213a-8617-4304-bee6-b8ec5060b0cf")
+	)
+	(label "COL9"
+		(at 392.43 128.27 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2e456c7d-9f61-480b-b549-3b0513761b30")
+	)
+	(label "SDO_CASCADE1"
+		(at 262.89 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f27d4af-163b-450e-928d-963a74a8fab6")
+	)
+	(label "COL10"
+		(at 392.43 130.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "33889489-2ce9-40d8-a6b9-7711ce852de0")
+	)
+	(label "COL24"
+		(at 392.43 166.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3408581c-64ca-4bd4-ad38-3cfdb8019318")
+	)
+	(label "COL14"
+		(at 392.43 140.97 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "35f5f2a7-8188-4e94-8f58-4c2a92be168f")
+	)
+	(label "COL31"
+		(at 392.43 184.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "36423d12-51f2-48cf-80fe-320328416709")
 	)
 	(label "COL27"
 		(at 309.88 59.69 90)
@@ -5896,6 +8293,16 @@
 		)
 		(uuid "47a0a937-960c-449f-b2da-8829e40a0320")
 	)
+	(label "COL12"
+		(at 392.43 135.89 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4bad039c-a10f-49cf-8f21-0ddcee60fbe2")
+	)
 	(label "COL19"
 		(at 330.2 59.69 90)
 		(effects
@@ -5906,6 +8313,16 @@
 		)
 		(uuid "4c3e9152-93b5-4bac-8c10-397980a99f45")
 	)
+	(label "COL6"
+		(at 392.43 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "501f7a21-87f6-4490-82ec-47cfe358d892")
+	)
 	(label "COL8"
 		(at 219.71 60.96 90)
 		(effects
@@ -5915,6 +8332,26 @@
 			(justify left bottom)
 		)
 		(uuid "5294e596-d930-4ca1-9a68-e1fbd583513d")
+	)
+	(label "SDO_CASCADE2"
+		(at 171.45 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "56b86442-ced3-45ce-85ca-7bad328664f6")
+	)
+	(label "COL17"
+		(at 392.43 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "56bf772b-ca84-4dbe-85c2-5a15ef54df14")
 	)
 	(label "COL9"
 		(at 217.17 60.96 90)
@@ -5955,6 +8392,16 @@
 			(justify right bottom)
 		)
 		(uuid "616cdd85-04ee-4bc7-8437-cc0eaac9138b")
+	)
+	(label "COL2"
+		(at 392.43 110.49 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6597d5de-7778-4d95-a6b6-42fda26a371b")
 	)
 	(label "COL20"
 		(at 327.66 59.69 90)
@@ -6016,6 +8463,16 @@
 		)
 		(uuid "77401bf7-0d32-487b-9af0-ad2f5f1f29be")
 	)
+	(label "COL13"
+		(at 392.43 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7c027d22-cd87-4d66-a3e9-537d8d6eec17")
+	)
 	(label "COL22"
 		(at 322.58 59.69 90)
 		(effects
@@ -6036,6 +8493,16 @@
 		)
 		(uuid "834931f9-30f7-4562-a078-bbe4b429c89a")
 	)
+	(label "COL21"
+		(at 392.43 158.75 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "83f80583-335c-4c8e-96ff-10beb4ba8807")
+	)
 	(label "COL14"
 		(at 204.47 60.96 90)
 		(effects
@@ -6045,6 +8512,26 @@
 			(justify left bottom)
 		)
 		(uuid "8a3db36a-ae9f-42de-884e-52b20ac7f863")
+	)
+	(label "COL30"
+		(at 392.43 181.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "91358a6f-051e-473c-85d4-c738af8108ac")
+	)
+	(label "SDO_CASCADE1"
+		(at 365.76 209.55 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "91fafdbd-f89c-48d1-b52f-339bad7be2da")
 	)
 	(label "COL10"
 		(at 214.63 60.96 90)
@@ -6065,6 +8552,16 @@
 			(justify left bottom)
 		)
 		(uuid "960f2f84-6395-4f3a-a78f-0a6bef890ab7")
+	)
+	(label "COL7"
+		(at 392.43 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "96422077-ad26-4d98-9853-0c2ff5c434ff")
 	)
 	(label "REXT2"
 		(at 269.24 186.69 90)
@@ -6116,6 +8613,26 @@
 		)
 		(uuid "a2aff4df-0275-4706-8f27-e457bf4131f9")
 	)
+	(label "COL29"
+		(at 392.43 179.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a3c9922b-a5df-424c-8e00-0115f9250335")
+	)
+	(label "COL28"
+		(at 392.43 176.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a5d9191e-e111-4a5d-bf3f-a73a0456b453")
+	)
 	(label "COL5"
 		(at 227.33 60.96 90)
 		(effects
@@ -6136,6 +8653,16 @@
 		)
 		(uuid "a945282a-cc79-4eca-8fc6-9e6058b64d2d")
 	)
+	(label "COL5"
+		(at 392.43 118.11 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ab748979-a54e-4785-aeca-c5242af97a1b")
+	)
 	(label "COL26"
 		(at 312.42 59.69 90)
 		(effects
@@ -6145,6 +8672,16 @@
 			(justify left bottom)
 		)
 		(uuid "ae56a6f8-84aa-4c05-82bf-1cdd0010d647")
+	)
+	(label "COL3"
+		(at 392.43 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "afd7c95f-01ff-4cd7-b011-ad6eb8e3bc29")
 	)
 	(label "~{OUT5}"
 		(at 124.46 53.34 270)
@@ -6166,6 +8703,26 @@
 		)
 		(uuid "b8a2855e-e5cc-4956-ae20-555bb8392209")
 	)
+	(label "COL4"
+		(at 392.43 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bba8f958-c2d8-49c0-964a-13b2515abd94")
+	)
+	(label "COL25"
+		(at 392.43 168.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c48acb67-365c-4b07-8f42-7af5e11f3111")
+	)
 	(label "~{OUT5}"
 		(at 53.34 170.18 180)
 		(effects
@@ -6175,6 +8732,26 @@
 			(justify right bottom)
 		)
 		(uuid "c8187d84-90f4-4213-b02e-6612452180a7")
+	)
+	(label "COL15"
+		(at 392.43 143.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ca0fb3fa-cc19-44d5-9cca-fbd7ea4476f2")
+	)
+	(label "COL19"
+		(at 392.43 153.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cd0fd58a-96d6-466d-b188-8cd292178a8e")
 	)
 	(label "~{OUT4}"
 		(at 53.34 186.69 180)
@@ -6196,6 +8773,16 @@
 		)
 		(uuid "d3447253-8210-4472-84aa-1a64b00db4ea")
 	)
+	(label "COL11"
+		(at 392.43 133.35 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d3908dad-2ce7-47c5-8cab-8b1cfdc36292")
+	)
 	(label "~{OUT7}"
 		(at 53.34 137.16 180)
 		(effects
@@ -6205,6 +8792,16 @@
 			(justify right bottom)
 		)
 		(uuid "d78f8541-2e44-4fad-bf20-c9d1366efc9e")
+	)
+	(label "SDO_CASCADE2"
+		(at 365.76 212.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "de7beb02-6374-477b-8b58-1e5f13bb3924")
 	)
 	(label "REXT1"
 		(at 220.98 186.69 90)
@@ -6236,6 +8833,16 @@
 		)
 		(uuid "e7d1412a-cea5-4e1a-95bf-879a9fe420da")
 	)
+	(label "COL27"
+		(at 392.43 173.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eb517ff3-8f42-4fcd-895f-14039692db7e")
+	)
 	(label "~{OUT1}"
 		(at 53.34 236.22 180)
 		(effects
@@ -6245,6 +8852,16 @@
 			(justify right bottom)
 		)
 		(uuid "ed11deee-b53a-4473-b423-04d566a84036")
+	)
+	(label "COL32"
+		(at 392.43 186.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eecff35b-14ec-4636-88f9-5589ba996bdf")
 	)
 	(label "COL30"
 		(at 302.26 59.69 90)
@@ -6265,6 +8882,16 @@
 			(justify left bottom)
 		)
 		(uuid "ef234a70-4c45-4ca7-8817-2dcfd39adb49")
+	)
+	(label "COL26"
+		(at 392.43 171.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f7b00bb6-3700-4bd8-9bd9-ea2ae21ebd4f")
 	)
 	(label "~{OUT2}"
 		(at 132.08 53.34 270)
@@ -6295,6 +8922,17 @@
 			(justify left bottom)
 		)
 		(uuid "ff450598-cc8f-4fc2-97fd-33010c7f0a82")
+	)
+	(hierarchical_label "ROW4"
+		(shape output)
+		(at 359.41 133.35 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1720680f-b26a-4dae-8678-4469718a9073")
 	)
 	(hierarchical_label "SPI_CLK"
 		(shape input)
@@ -6362,6 +9000,17 @@
 		)
 		(uuid "3f3a63f1-9b09-43ce-a52e-916ddbd88eb1")
 	)
+	(hierarchical_label "GPIO_LE"
+		(shape input)
+		(at 365.76 170.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "41d3ea78-73c5-4bd9-9898-779222c54e69")
+	)
 	(hierarchical_label "ROW8"
 		(shape output)
 		(at 87.63 127 0)
@@ -6372,6 +9021,39 @@
 			(justify left)
 		)
 		(uuid "42c1969e-94a0-4215-8912-3bf98f7f5930")
+	)
+	(hierarchical_label "ROW1"
+		(shape output)
+		(at 359.41 152.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "445074c3-40d8-4e5d-9d76-12df3d169166")
+	)
+	(hierarchical_label "ROW7"
+		(shape output)
+		(at 359.41 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4a8e87a5-525e-4f9a-8981-52edd2e8ea6b")
+	)
+	(hierarchical_label "SPI_OE"
+		(shape input)
+		(at 365.76 177.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4ab9c465-abbd-4e4a-990e-7cf938f4d61e")
 	)
 	(hierarchical_label "GPIO_LE"
 		(shape input)
@@ -6384,6 +9066,17 @@
 		)
 		(uuid "4cfc3858-2702-4843-80a3-d02101294de2")
 	)
+	(hierarchical_label "SPI_OE"
+		(shape input)
+		(at 365.76 187.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "515e6b18-7700-4395-a151-ad4feb758e13")
+	)
 	(hierarchical_label "GPIO_LE"
 		(shape input)
 		(at 229.87 87.63 270)
@@ -6394,6 +9087,39 @@
 			(justify right)
 		)
 		(uuid "6bbbcf15-b41f-47fb-a268-829ab766f08b")
+	)
+	(hierarchical_label "SPI_OE"
+		(shape input)
+		(at 365.76 167.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "763b06ec-8236-4d9c-9250-77c1ef63974d")
+	)
+	(hierarchical_label "ROW8"
+		(shape output)
+		(at 359.41 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7e4a4213-d4f5-4afd-88be-395017f63cd4")
+	)
+	(hierarchical_label "SPI_CLK"
+		(shape input)
+		(at 365.76 193.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f191fc6-135f-4bcf-8b16-75f07d9e240b")
 	)
 	(hierarchical_label "SPI_CLK"
 		(shape input)
@@ -6428,6 +9154,72 @@
 		)
 		(uuid "8a2faf26-3974-4a76-96e7-4906537cfcb9")
 	)
+	(hierarchical_label "ROW2"
+		(shape output)
+		(at 359.41 146.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8b19f858-7908-4971-b2b7-91e0a240bcf2")
+	)
+	(hierarchical_label "SPI_CLK"
+		(shape input)
+		(at 365.76 182.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a3263978-40bc-46c7-9d7a-73214759b8fc")
+	)
+	(hierarchical_label "ROW6"
+		(shape output)
+		(at 359.41 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b1711a99-4bf6-4dcb-af56-87e2e87f3d09")
+	)
+	(hierarchical_label "ROW3"
+		(shape output)
+		(at 359.41 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b33621db-a892-468d-b18d-c2ec69f010b3")
+	)
+	(hierarchical_label "SPI_MOSI"
+		(shape input)
+		(at 365.76 205.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b365e51f-6f28-4143-9fd4-87c0911477ec")
+	)
+	(hierarchical_label "ROW5"
+		(shape output)
+		(at 359.41 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c017248d-d4b0-42cb-a319-5dfb263db672")
+	)
 	(hierarchical_label "COL[1..16]"
 		(shape output)
 		(at 195.58 50.8 180)
@@ -6438,6 +9230,17 @@
 			(justify right)
 		)
 		(uuid "c0b52bb3-4944-419c-9de7-7c2c7749f85e")
+	)
+	(hierarchical_label "GPIO_LE"
+		(shape input)
+		(at 365.76 180.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c2869a4b-bde8-40ea-b02a-de84d580d244")
 	)
 	(hierarchical_label "SPI_MOSI"
 		(shape input)
@@ -6483,6 +9286,28 @@
 		)
 		(uuid "d33b4294-cd80-4982-a690-3dbe306c36d3")
 	)
+	(hierarchical_label "COL[1..32]"
+		(shape output)
+		(at 382.27 190.5 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d7a9cf47-cd6d-4048-b8d7-6f6fcc32fdbc")
+	)
+	(hierarchical_label "SPI_CLK"
+		(shape input)
+		(at 365.76 172.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e28c3d13-36a6-4f2f-9f36-f4fb18977d62")
+	)
 	(hierarchical_label "ROW6"
 		(shape output)
 		(at 87.63 160.02 0)
@@ -6504,6 +9329,17 @@
 			(justify right)
 		)
 		(uuid "e5c6de55-6207-4ca6-9b02-3e88a9e7b449")
+	)
+	(hierarchical_label "GPIO_LE"
+		(shape input)
+		(at 365.76 190.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ee25d619-f9ca-4313-a25a-259ef400952d")
 	)
 	(hierarchical_label "COL[17..32]"
 		(shape output)
@@ -6577,6 +9413,74 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03d5b75f-52f3-4ece-b165-cfc60836a8ac")
+		(property "Reference" "TP24"
+			(at 397.51 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "36e68ea3-67e5-4e3b-ac97-d31bc9be621e")
+		)
+		(pin "1"
+			(uuid "74c27d9c-6e95-40d6-b68d-89d887f34f1e")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP24")
 					(unit 1)
 				)
 			)
@@ -6939,6 +9843,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "102173b5-413a-45ee-8892-7aaf9a0b0a2d")
+		(property "Reference" "TP10"
+			(at 369.57 144.272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dc13f10c-0eb0-4a23-bb70-631e2aa85e0b")
+		)
+		(pin "1"
+			(uuid "dd843eaa-0f8c-4ea2-abff-8d9b0c862b19")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "108ffb6b-3b65-4966-ae72-fb2ac091fd20")
+		(property "Reference" "TP52"
+			(at 397.51 177.292 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0cd88ca2-3947-4d51-a00c-d67d541354a0")
+		)
+		(pin "1"
+			(uuid "6dd5b01d-e163-420f-a132-0c46b184a591")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 59.69 137.16 90)
 		(unit 1)
@@ -7074,6 +10114,140 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1e4ddccc-9f9e-472c-b5ee-27fc410c210e")
+		(property "Reference" "TP19"
+			(at 370.84 188.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "841d75a0-97e1-4133-bc4b-3da4cb3948f2")
+		)
+		(pin "1"
+			(uuid "60c41db7-459f-436b-acfb-4c1061b06191")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 374.65 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "200a9401-b2f4-448f-b86e-d45729ea39e6")
+		(property "Reference" "#PWR055"
+			(at 374.65 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 374.65 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 374.65 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 374.65 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 374.65 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1a991c28-0fc1-49c5-9520-20e39fd5e9df")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -7364,6 +10538,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2dbea85f-71d8-4301-98e2-909fc1bb1010")
+		(property "Reference" "TP30"
+			(at 397.51 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "86840252-f46e-4ab5-9c09-cd5fed2f0bf8")
+		)
+		(pin "1"
+			(uuid "769a9b08-d022-43e1-97b1-c22d58f602d4")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP30")
 					(unit 1)
 				)
 			)
@@ -7762,6 +11004,140 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 166.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "33337309-5691-4091-9a2b-2d5612835f46")
+		(property "Reference" "TP47"
+			(at 397.51 164.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a3982da7-8ed9-4cb4-ba0e-a1fa04711a85")
+		)
+		(pin "1"
+			(uuid "9b37f8c6-14b9-4bf7-b61c-c94c5e0ea9e6")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 375.92 214.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "352db0e0-b8ea-42de-969d-afe6eb91378b")
+		(property "Reference" "#PWR057"
+			(at 375.92 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 375.92 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 375.92 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "21f779b6-f64a-4152-a8d5-125945ab84f4")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:AO3401A")
 		(at 80.01 214.63 270)
 		(mirror x)
@@ -7986,6 +11362,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3a662f14-5fa6-4e20-89e7-467723756a49")
+		(property "Reference" "TP16"
+			(at 370.84 178.562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4120249f-ba7e-41ec-835c-1fd4a19a9257")
+		)
+		(pin "1"
+			(uuid "db1e6aa9-fd58-48ba-9108-51dc6e4f1dd5")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Potentiometer")
 		(at 250.19 195.58 270)
 		(mirror x)
@@ -8151,6 +11595,210 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c32e706-c81b-4652-99fd-aa04ed68437c")
+		(property "Reference" "TP15"
+			(at 370.84 176.022 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "42d3a41c-f16a-458d-ad16-8a17e36e3358")
+		)
+		(pin "1"
+			(uuid "e3138b21-413d-42de-a3b2-d356c6087632")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3eac5652-26da-4b60-b068-125ea2915364")
+		(property "Reference" "TP7"
+			(at 369.57 125.222 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "265bdc9d-2c46-4cbc-a463-9fc98a3a1346")
+		)
+		(pin "1"
+			(uuid "485f3b74-a3aa-4202-98ad-485062df69c5")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45b88ec4-bcee-4e68-a968-a80114f74432")
+		(property "Reference" "TP32"
+			(at 397.51 126.492 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b9b7d254-4442-4c98-acc4-1dcc83b85a9d")
+		)
+		(pin "1"
+			(uuid "9a152b78-150e-4eec-a9b3-e6f7577d90ce")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDREF")
 		(at 182.88 74.93 0)
 		(unit 1)
@@ -8211,6 +11859,142 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "48b7c39d-4fb5-4b20-8290-44538aa82922")
+		(property "Reference" "TP39"
+			(at 397.51 144.272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f3af1f66-715a-4d3b-a93c-405b55741305")
+		)
+		(pin "1"
+			(uuid "da929290-43fe-4f05-be6d-21df9c96e2a5")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 163.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "48efa4d5-91dc-4b62-ad52-3e4e03d625c8")
+		(property "Reference" "TP46"
+			(at 397.51 162.052 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31232232-1b6e-45c6-8935-554b1cd418c9")
+		)
+		(pin "1"
+			(uuid "4d30da47-5d3e-46a0-8209-eb2c9d397506")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP46")
 					(unit 1)
 				)
 			)
@@ -8359,6 +12143,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5df32be7-5e29-4624-be07-259d8a53730b")
+		(property "Reference" "TP9"
+			(at 369.57 137.922 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "98a5325c-a82c-4b0a-b193-b1c2caba7875")
+		)
+		(pin "1"
+			(uuid "dba6b110-3e4b-41e8-8b72-dd4dca633e9c")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "60258260-f3a5-45ea-9fd3-a0cd8d43bbe1")
+		(property "Reference" "TP37"
+			(at 397.51 139.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0cc5b4bf-adf8-4c0e-9301-cf3b14c131f4")
+		)
+		(pin "1"
+			(uuid "3ed79859-55ef-4147-8f4e-4f0b2a09bf99")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 146.05 77.47 0)
 		(unit 1)
@@ -8422,6 +12342,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6593f2f2-c4aa-4d9c-9312-269bcc9db503")
+		(property "Reference" "TP11"
+			(at 369.57 150.622 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "53be6149-de00-4bca-8eb9-c6c1eb7f5fee")
+		)
+		(pin "1"
+			(uuid "557a4044-4c96-4221-9d68-51f3e3215900")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -8501,6 +12489,344 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 375.92 196.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "65af2f8d-9885-4b0e-abca-eac9033ff415")
+		(property "Reference" "#PWR056"
+			(at 375.92 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 375.92 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 375.92 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "61014cf9-b1e7-49f7-8ce4-2e4aa1ce9463")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d13bd7e-da77-4a05-a9f9-5124304581f8")
+		(property "Reference" "TP31"
+			(at 397.51 123.952 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a7e712ea-e7c1-4e71-ae12-f964013cb8b3")
+		)
+		(pin "1"
+			(uuid "b0cdc707-6dce-482b-b3a5-8c1e7347e842")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f7d1522-3f35-4c2a-897c-a79d339d6964")
+		(property "Reference" "TP49"
+			(at 397.51 169.672 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f5649918-b1f0-46c8-9c07-284d9b3fd1d9")
+		)
+		(pin "1"
+			(uuid "07dc9fb8-2370-4e34-84ff-5217e492a59c")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 209.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7094db1b-743c-4cf3-9c9e-c69191380f13")
+		(property "Reference" "TP22"
+			(at 370.84 207.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b3dc2733-b93d-4186-b1f4-3c34b8c352e7")
+		)
+		(pin "1"
+			(uuid "c6814604-ab4a-4d9b-b181-c5ba45dc26d2")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 156.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "71e1fade-2fde-439b-af60-652b7e7fc2d9")
+		(property "Reference" "TP43"
+			(at 397.51 154.432 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "032838fb-8cca-4d0c-b967-a21474cc2ff1")
+		)
+		(pin "1"
+			(uuid "859c2084-b4ff-473e-b6ca-354e7d887451")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP43")
 					(unit 1)
 				)
 			)
@@ -8702,6 +13028,142 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7853da2c-b44a-4eb4-8a5d-5fa423cdb68a")
+		(property "Reference" "TP14"
+			(at 370.84 170.942 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "08824927-0c3a-4013-8f70-9addfbf5d535")
+		)
+		(pin "1"
+			(uuid "52917eee-a83b-403d-afaf-72b60843c4d6")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "79515bcc-1e4f-4a5a-bde4-57bf4c966666")
+		(property "Reference" "TP4"
+			(at 369.57 106.172 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e64b46a9-fb79-4a67-b8a2-c21f02821fd7")
+		)
+		(pin "1"
+			(uuid "791c7dd4-d05a-4491-82b2-0a85fd624b60")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -8986,6 +13448,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "80c2832e-25ba-409f-85bf-1d4f8223b949")
+		(property "Reference" "TP50"
+			(at 397.51 172.212 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ba85e1bb-00c3-4abd-86aa-995d3868eafa")
+		)
+		(pin "1"
+			(uuid "f8f51610-877d-47f6-9451-896972f442bc")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "80d510d3-8d19-418e-9178-e9b5a9b304ab")
+		(property "Reference" "TP40"
+			(at 397.51 146.812 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "95b78f01-8e50-4f41-ae2f-54325db856e3")
+		)
+		(pin "1"
+			(uuid "f99074dd-112f-43d6-95e6-ae05b802b871")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 234.95 186.69 270)
 		(unit 1)
@@ -9056,6 +13654,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "828f44db-502b-420d-b603-2b214167e86c")
+		(property "Reference" "TP42"
+			(at 397.51 151.892 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "82a0a509-6940-4d59-9043-e85c6342f931")
+		)
+		(pin "1"
+			(uuid "f4a86f23-6f89-400e-886c-e03a64a55ca6")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP42")
 					(unit 1)
 				)
 			)
@@ -9133,6 +13799,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 113.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8548586e-cf5d-4dd3-934b-64db579ec0e4")
+		(property "Reference" "TP26"
+			(at 397.51 111.252 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "61188d7a-41d1-4f83-9a7b-fffd90a0e6ef")
+		)
+		(pin "1"
+			(uuid "bed90224-bbc7-43e6-9f86-7b676616a9ab")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP26")
 					(unit 1)
 				)
 			)
@@ -9515,6 +14249,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8b033360-7f2f-4f37-9383-e5ecd75e25cc")
+		(property "Reference" "TP44"
+			(at 397.51 156.972 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c902f7f8-7b7c-48f2-8418-6e324039c25e")
+		)
+		(pin "1"
+			(uuid "fda4ad22-4971-42a1-aca4-afaca18e78a7")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 212.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8ea9c16b-1677-4b11-ad20-e92c86853038")
+		(property "Reference" "TP23"
+			(at 370.84 210.312 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e9ed9e50-dcfc-4bf7-8a9e-7ce9965db6da")
+		)
+		(pin "1"
+			(uuid "c5c11c19-2565-43eb-9719-52c60ce478ae")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDREF")
 		(at 240.03 203.2 0)
 		(unit 1)
@@ -9652,6 +14522,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "995ad9b7-d334-4489-904d-167966c97ea8")
+		(property "Reference" "TP54"
+			(at 397.51 182.372 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4e371a16-e28d-46a6-b013-b2e2d97b11fd")
+		)
+		(pin "1"
+			(uuid "47becbbd-46c5-419e-a497-ff2316afc31a")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP54")
 					(unit 1)
 				)
 			)
@@ -10067,6 +15005,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a4f30914-c413-442b-bec5-23f2c4d8dcc1")
+		(property "Reference" "TP35"
+			(at 397.51 134.112 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dcfa52e5-84f9-4767-83a5-94407dedfcd1")
+		)
+		(pin "1"
+			(uuid "fcabec01-a01a-486d-86f0-f3bd1dd276c7")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GNDREF")
 		(at 106.68 229.87 0)
 		(unit 1)
@@ -10127,6 +15133,74 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a5c243cb-50cd-4fa4-a632-7bde99c3f232")
+		(property "Reference" "TP8"
+			(at 369.57 131.572 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "859e76f4-2e5d-46b9-bb28-554fb17359bb")
+		)
+		(pin "1"
+			(uuid "1723b487-5ae7-4509-aede-849bf3b265a4")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -10347,6 +15421,142 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b63c7095-db82-4654-8a8b-8d66f838346c")
+		(property "Reference" "TP55"
+			(at 397.51 184.912 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bc7f7042-712a-4b75-9b8b-a089562316c5")
+		)
+		(pin "1"
+			(uuid "2a63b89b-5373-4b0a-b336-5c64975f2c02")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b65b44fb-afbc-4c7c-8a68-cb840e8837cc")
+		(property "Reference" "TP25"
+			(at 397.51 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "987acf8a-fde5-4a58-b932-18f6eee8f6bc")
+		)
+		(pin "1"
+			(uuid "13731778-7c90-414d-b8b8-80947a8d8419")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:AO3401A")
 		(at 80.01 132.08 270)
 		(mirror x)
@@ -10489,6 +15699,346 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8e7dfb7-0946-4c40-aca5-fd2d8eece162")
+		(property "Reference" "TP41"
+			(at 397.51 149.352 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "49de989e-44b2-4146-9563-329e1dcfe0da")
+		)
+		(pin "1"
+			(uuid "e068bd0d-18e9-4c5d-9059-1735351ff36c")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "babe4922-8d85-4007-b3ee-5b7881f9ff59")
+		(property "Reference" "TP27"
+			(at 397.51 113.792 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bda3d4d1-5b68-4e5a-8ca9-0c9e4d615f34")
+		)
+		(pin "1"
+			(uuid "b24b29f6-b527-4699-b392-d4577dcc636f")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bfb8fcbe-57b2-4e73-8fd3-83cbd35ae95c")
+		(property "Reference" "TP34"
+			(at 397.51 131.572 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0bee1fb6-63e1-408b-a4ff-b262c1055f1b")
+		)
+		(pin "1"
+			(uuid "d1ffb30b-d826-40b6-8d52-03d390049340")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c0fb5119-bbbf-43bc-af04-c4ff16c5ae6c")
+		(property "Reference" "TP5"
+			(at 369.57 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2a17ee09-99b1-4f47-a94d-401666708311")
+		)
+		(pin "1"
+			(uuid "3ffacbcc-7d72-4400-9270-4c94ccdafd52")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2ddd605-3797-448d-b38a-e095534f5ca2")
+		(property "Reference" "TP28"
+			(at 397.51 116.332 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c60e911a-f978-4739-9dae-21f6447013bd")
+		)
+		(pin "1"
+			(uuid "fa74b5d0-f1df-402c-b2b5-d1945d9525b9")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP28")
 					(unit 1)
 				)
 			)
@@ -10713,6 +16263,208 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ca209425-e9d6-45ae-958e-6729520cfd90")
+		(property "Reference" "TP51"
+			(at 397.51 174.752 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fc33cfbe-01f6-415a-b82b-0ddf781c44ee")
+		)
+		(pin "1"
+			(uuid "28d4e739-b29c-4042-a6ea-f60a285d7a01")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cd2b0e02-d94a-4478-a9b5-56aa2b188add")
+		(property "Reference" "TP20"
+			(at 370.84 191.262 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "520c8843-be60-43a4-ada2-25349be4ece5")
+		)
+		(pin "1"
+			(uuid "b906b9f1-75e7-406e-a7a9-9e63be9f95fb")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 403.86 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d095363d-c83d-4288-acdb-413197646057")
+		(property "Reference" "#PWR058"
+			(at 403.86 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 403.86 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 403.86 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 403.86 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 403.86 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db3f1c39-f885-4e8f-8758-f5a11c19da09")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -10945,6 +16697,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 187.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d6d05ae2-c83f-49f2-a3b8-70e315b7309d")
+		(property "Reference" "TP18"
+			(at 370.84 186.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "59e9a719-2e39-40eb-aadd-fa2841e5d554")
+		)
+		(pin "1"
+			(uuid "7011549c-ebcb-4323-9fb6-e05453c9b936")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:AO3401A")
 		(at 80.01 181.61 270)
 		(mirror x)
@@ -11099,6 +16919,278 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "db55f053-e029-4a7d-a322-a3320b078d5c")
+		(property "Reference" "TP48"
+			(at 397.51 167.132 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c2114a7d-ede8-4ca7-a1db-b941a566f4ef")
+		)
+		(pin "1"
+			(uuid "f702eecc-7392-424a-9f70-3b4ec1611baa")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 161.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "db76ec73-77df-4c52-ad3a-e46d5c977b92")
+		(property "Reference" "TP45"
+			(at 397.51 159.512 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "02dbcd2d-d0cb-46ae-84ca-afddd4f29312")
+		)
+		(pin "1"
+			(uuid "ab71f6cf-eac0-4f60-869c-c935f27ef945")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 167.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dbc0ab36-864b-4f5a-a125-53f81324ad02")
+		(property "Reference" "TP12"
+			(at 370.84 165.862 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "cf26aaaf-bedb-43b6-91cb-fd3b3c709055")
+		)
+		(pin "1"
+			(uuid "c5061943-374f-4595-87f9-6d26de89c98c")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 369.57 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dbf07e3b-e0ee-480e-bd65-cb3e3936a9d6")
+		(property "Reference" "TP6"
+			(at 369.57 118.872 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 369.57 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 369.57 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 369.57 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 369.57 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fea94662-777e-4143-9a87-0acfc9df603f")
+		)
+		(pin "1"
+			(uuid "4ae6650c-7cb3-48a6-9b67-f0a2b4cb1717")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -11264,6 +17356,210 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3494a9d-c757-4f45-ac01-375ad2f75f82")
+		(property "Reference" "TP29"
+			(at 397.51 118.872 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0bcaf702-8205-47c3-90dc-4f1a59d1bedb")
+		)
+		(pin "1"
+			(uuid "14724ea2-9ef1-4dba-9513-3de432c8c982")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e4ec61fe-f147-4ec0-b0f5-82638409cb64")
+		(property "Reference" "TP36"
+			(at 397.51 136.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "134b2e76-d22e-4cf6-b17a-56b2ae1750e1")
+		)
+		(pin "1"
+			(uuid "a21682cf-d6a3-45ef-96ee-ac22d8eddaa6")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e95205da-dea7-4a61-905f-81be69e4c2fe")
+		(property "Reference" "TP38"
+			(at 397.51 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "718765b9-4e9e-4e6a-bf1f-95f14a730e48")
+		)
+		(pin "1"
+			(uuid "3012a230-d8c5-4d67-bdb1-1a2a8995fc02")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 59.69 170.18 90)
 		(unit 1)
@@ -11334,6 +17630,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "eb89102b-834d-4913-86b6-97314a9ff611")
+		(property "Reference" "TP33"
+			(at 397.51 129.032 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "061cdb07-e72d-421e-bb07-1dd9db071b64")
+		)
+		(pin "1"
+			(uuid "41ffa7be-d8ba-4f21-b2cb-791376b06f06")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP33")
 					(unit 1)
 				)
 			)
@@ -11416,6 +17780,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ede9b008-f29a-4bfe-abe6-b5574f6d5c3d")
+		(property "Reference" "TP21"
+			(at 370.84 203.962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "44831bba-02ce-4664-9057-d37cabc3341c")
+		)
+		(pin "1"
+			(uuid "f8c32248-8041-40fa-9bf9-6f0fd561ab99")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 68.58 199.39 180)
 		(unit 1)
@@ -11489,6 +17921,74 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 397.51 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3ae36fd-b7be-4510-93ae-951ea94ebc4d")
+		(property "Reference" "TP53"
+			(at 397.51 179.832 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 397.51 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 397.51 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 397.51 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7010798d-9ac6-4ec3-9e2f-c9f0c079d38a")
+		)
+		(pin "1"
+			(uuid "40d46d65-197f-4b7c-8e2b-998f63c0a830")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP53")
 					(unit 1)
 				)
 			)
@@ -11700,6 +18200,142 @@
 			(project "i2s_spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 182.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe8b37e2-ddb2-4990-8980-1fa220099dcb")
+		(property "Reference" "TP17"
+			(at 370.84 181.102 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "54c0e39a-a59f-474f-8144-df0ae760bb24")
+		)
+		(pin "1"
+			(uuid "45c4b0bf-ee7c-4c75-bf32-de310749acca")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 370.84 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ff74b7ee-950a-4d06-8fd6-448cc336f720")
+		(property "Reference" "TP13"
+			(at 370.84 168.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 370.84 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 370.84 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 370.84 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 370.84 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5f9555f7-b5a7-4058-8f22-54b1424968f8")
+		)
+		(pin "1"
+			(uuid "c40a6392-e8bf-498a-8a49-04139e7db29a")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
