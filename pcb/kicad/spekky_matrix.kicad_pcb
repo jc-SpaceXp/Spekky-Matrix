@@ -9,9 +9,12 @@
 	(paper "A4")
 	(title_block
 		(title "Spekky Matrix PCB")
-		(date "2025-05-28")
+		(date "2025-06-27")
 		(rev "v01")
-		(comment 2 "Top mount I2S MEMS Mic")
+		(comment 1 "Potentiometer for brightness control, programmable STM32 via SWD connector")
+		(comment 2 "5V from USB, 3V3 from LDO (with ESD protection and pi-filtering)")
+		(comment 3 "Top mount I2S MEMS Mic")
+		(comment 4 "8x32 SMD (0603 Imperial) LED matrix driven by 3x cascaded STPCP05 IC drivers")
 	)
 	(layers
 		(0 "F.Cu" signal)
