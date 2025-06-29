@@ -97315,6 +97315,18 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "(3V3)"
+		(at 105.025 124.075 0)
+		(layer "F.SilkS")
+		(uuid "40fe3926-9628-4498-933d-da5bb52cfdf6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.13)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "CLK"
 		(at 88.15 95.4 0)
 		(layer "F.SilkS")
@@ -97406,6 +97418,18 @@
 		(effects
 			(font
 				(size 0.6 0.6)
+				(thickness 0.13)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "(GPIO DEBUG)"
+		(at 128.55 116.975 0)
+		(layer "F.SilkS")
+		(uuid "a153aa12-e400-4fb5-a75d-9c61b06b2a29")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.13)
 			)
 			(justify left bottom)
