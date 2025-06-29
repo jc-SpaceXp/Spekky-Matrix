@@ -295,6 +295,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2ff0333c-d95d-4343-99cb-9e5d44c3c561")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/4c40f768-ab24-4cf9-9d78-ba9cfb5a4db0")
 		(sheetname "/STM32 MCU/")
@@ -845,7 +858,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/102173b5-413a-45ee-8892-7aaf9a0b0a2d")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -1019,7 +1032,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1270,7 +1283,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1521,7 +1534,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1772,7 +1785,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2023,7 +2036,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2274,7 +2287,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2525,7 +2538,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2815,7 +2828,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/ede9b008-f29a-4bfe-abe6-b5574f6d5c3d")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -2989,7 +3002,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3240,7 +3253,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4355,7 +4368,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/db76ec73-77df-4c52-ad3a-e46d5c977b92")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -4749,7 +4762,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5000,7 +5013,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5251,7 +5264,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5824,6 +5837,19 @@
 				)
 			)
 		)
+		(property "MPN" "GCM188R71H103KA37J"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "93f7adef-40bd-4d9a-b4e8-9dfa170d9ed8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/8084362c-1e50-4cdc-88cb-8f42b053a44a/6a232fc0-30de-4411-830f-e560c53de591")
 		(sheetname "/POWER SHEET/")
@@ -6029,7 +6055,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/e3494a9d-c757-4f45-ac01-375ad2f75f82")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -6203,7 +6229,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6454,7 +6480,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6705,7 +6731,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6956,7 +6982,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7207,7 +7233,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7458,7 +7484,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7749,7 +7775,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/a4f30914-c413-442b-bec5-23f2c4d8dcc1")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -7923,7 +7949,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8174,7 +8200,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8464,7 +8490,7 @@
 		(path "/8084362c-1e50-4cdc-88cb-8f42b053a44a/4b4021df-9425-4384-90b9-abd130802352")
 		(sheetname "/POWER SHEET/")
 		(sheetfile "POWER_SHEET.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -8637,7 +8663,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8888,7 +8914,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9139,7 +9165,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9991,7 +10017,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/3c32e706-c81b-4652-99fd-aa04ed68437c")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -10165,7 +10191,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10416,7 +10442,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10667,7 +10693,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10918,7 +10944,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11169,7 +11195,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11420,7 +11446,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11671,7 +11697,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11961,7 +11987,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/79515bcc-1e4f-4a5a-bde4-57bf4c966666")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -12135,7 +12161,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12386,7 +12412,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12891,7 +12917,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/6f7d1522-3f35-4c2a-897c-a79d339d6964")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -13105,7 +13131,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/e4ec61fe-f147-4ec0-b0f5-82638409cb64")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -13279,7 +13305,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13745,7 +13771,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13996,7 +14022,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14286,7 +14312,7 @@
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/fe147414-8f1d-420a-9598-6a624188449f")
 		(sheetname "/STM32 MCU/")
 		(sheetfile "STM32_MCU.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -14460,7 +14486,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14711,7 +14737,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14962,7 +14988,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15427,7 +15453,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -15714,6 +15740,19 @@
 				)
 			)
 		)
+		(property "MPN" "GCG188L8EE105KA07D"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fd2cb00a-8684-42ee-bb69-16fb6beac1f2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/aa5923af-98af-4d94-ac6e-6a9eeee45be8")
 		(sheetname "/STM32 MCU/")
@@ -15879,7 +15918,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16162,6 +16201,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "EDH106M016A9BAA"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fafc9d5f-0bea-4b04-aed2-5b8959cdac49")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -16562,7 +16614,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16813,7 +16865,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17103,7 +17155,7 @@
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/6392e6f7-67f4-4020-a229-3f487a5c7ab9")
 		(sheetname "/STM32 MCU/")
 		(sheetfile "STM32_MCU.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -18248,7 +18300,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18499,7 +18551,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18750,7 +18802,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19037,6 +19089,19 @@
 				)
 			)
 		)
+		(property "MPN" "GRM188Z71C475KE21D"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2d9a832e-426c-4e7c-8166-8573773057e6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/1fa93157-29d3-4bc7-867b-dde49562c00b")
 		(sheetname "/STM32 MCU/")
@@ -19202,7 +19267,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19453,7 +19518,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19743,7 +19808,7 @@
 		(path "/8084362c-1e50-4cdc-88cb-8f42b053a44a/18f74308-2e9b-45d3-a242-ee34716b722d")
 		(sheetname "/POWER SHEET/")
 		(sheetfile "POWER_SHEET.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -20167,6 +20232,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "43716acf-52ad-4d7e-a6de-d3e52b43c13e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/6141ef7a-eae5-4064-b0af-3a034822307f")
 		(sheetname "/LED DRIVING/")
@@ -20332,7 +20410,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20583,7 +20661,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20834,7 +20912,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21085,7 +21163,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21336,7 +21414,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21801,7 +21879,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22052,7 +22130,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22303,7 +22381,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22554,7 +22632,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22805,7 +22883,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23269,7 +23347,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23774,7 +23852,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/d6d05ae2-c83f-49f2-a3b8-70e315b7309d")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.089999 0)
 			(end -1.04 0)
@@ -23948,7 +24026,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24199,7 +24277,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24450,7 +24528,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24741,7 +24819,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/ca209425-e9d6-45ae-958e-6729520cfd90")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -24915,7 +24993,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25166,7 +25244,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25417,7 +25495,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25668,7 +25746,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25919,7 +25997,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26170,7 +26248,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26421,7 +26499,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26672,7 +26750,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27485,7 +27563,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27776,7 +27854,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/bfb8fcbe-57b2-4e73-8fd3-83cbd35ae95c")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -27950,7 +28028,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28416,7 +28494,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28707,7 +28785,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/80c2832e-25ba-409f-85bf-1d4f8223b949")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -28921,7 +28999,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/108ffb6b-3b65-4966-ae72-fb2ac091fd20")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -29134,7 +29212,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/b63c7095-db82-4654-8a8b-8d66f838346c")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -29308,7 +29386,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29559,7 +29637,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29810,7 +29888,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30061,7 +30139,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30312,7 +30390,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30563,7 +30641,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31028,7 +31106,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31493,7 +31571,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -31784,7 +31862,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/f3ae36fd-b7be-4510-93ae-951ea94ebc4d")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -31958,7 +32036,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -32209,7 +32287,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -32499,7 +32577,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/dbc0ab36-864b-4f5a-a125-53f81324ad02")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -32712,7 +32790,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/03d5b75f-52f3-4ece-b165-cfc60836a8ac")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -32886,7 +32964,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33137,7 +33215,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33388,7 +33466,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33639,7 +33717,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33890,7 +33968,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34396,7 +34474,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/babe4922-8d85-4007-b3ee-5b7881f9ff59")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -34924,7 +35002,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/1e4ddccc-9f9e-472c-b5ee-27fc410c210e")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -35098,7 +35176,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35389,7 +35467,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/b8e7dfb7-0946-4c40-aca5-fd2d8eece162")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -35777,7 +35855,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36028,7 +36106,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36279,7 +36357,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36529,7 +36607,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_Small_Filled"
+		(property "Value" "3V3 LED (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36571,6 +36649,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7203f92f-3fb9-4440-b9e0-faf157c6e524")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KRKT"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fa791fae-f1f6-4cf7-a82b-039abb240e10")
 			(effects
 				(font
 					(size 1 1)
@@ -36799,6 +36890,19 @@
 				)
 			)
 		)
+		(property "MPN" "C1608X5R1A106K080AC"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "928d26eb-edb7-4a2a-983a-17598fe88836")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/caff8704-a6ad-414b-a861-33b9c55688a3/f9c1deb7-71d8-47f9-a58e-e2894181b499")
 		(sheetname "/I2S MIC/")
@@ -36964,7 +37068,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37215,7 +37319,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37466,7 +37570,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38146,7 +38250,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38397,7 +38501,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38648,7 +38752,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38899,7 +39003,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -39150,7 +39254,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -39401,7 +39505,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -39652,7 +39756,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -39903,7 +40007,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -40154,7 +40258,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -40511,7 +40615,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -40868,7 +40972,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41119,7 +41223,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41410,7 +41514,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/8b033360-7f2f-4f37-9383-e5ecd75e25cc")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -41838,7 +41942,7 @@
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/12f52266-8bb9-466a-998b-578e444f48d6")
 		(sheetname "/STM32 MCU/")
 		(sheetfile "STM32_MCU.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -42012,7 +42116,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42263,7 +42367,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42514,7 +42618,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42805,7 +42909,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/eb89102b-834d-4913-86b6-97314a9ff611")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -43364,7 +43468,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/fe8b37e2-ddb2-4990-8980-1fa220099dcb")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -43538,7 +43642,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -43829,7 +43933,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/33337309-5691-4091-9a2b-2d5612835f46")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -44651,7 +44755,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/8ea9c16b-1677-4b11-ad20-e92c86853038")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -44825,7 +44929,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -45076,7 +45180,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -45367,7 +45471,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/828f44db-502b-420d-b603-2b214167e86c")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -45541,7 +45645,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -46046,7 +46150,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/ff74b7ee-950a-4d06-8fd6-448cc336f720")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -46220,7 +46324,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -46471,7 +46575,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -47007,7 +47111,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -47258,7 +47362,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -47830,7 +47934,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -48081,7 +48185,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -48332,7 +48436,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -48583,7 +48687,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -48834,7 +48938,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -49085,7 +49189,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -49336,7 +49440,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -49587,7 +49691,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -49878,7 +49982,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/c2ddd605-3797-448d-b38a-e095534f5ca2")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -50052,7 +50156,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -50303,7 +50407,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -50594,7 +50698,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/e95205da-dea7-4a61-905f-81be69e4c2fe")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -50768,7 +50872,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -51019,7 +51123,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -51270,7 +51374,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -51521,7 +51625,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -51772,7 +51876,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -52023,7 +52127,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -52313,7 +52417,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/7094db1b-743c-4cf3-9c9e-c69191380f13")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -52527,7 +52631,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/8548586e-cf5d-4dd3-934b-64db579ec0e4")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -52737,6 +52841,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d9835b71-e101-4083-a87f-0038ecde34c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/8084362c-1e50-4cdc-88cb-8f42b053a44a/4ad41fd5-3159-43f2-9721-881620e0d218")
 		(sheetname "/POWER SHEET/")
@@ -52902,7 +53019,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -53153,7 +53270,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -53404,7 +53521,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -53655,7 +53772,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -53906,7 +54023,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -54157,7 +54274,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -54408,7 +54525,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -54698,7 +54815,7 @@
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/cbdbeb70-127f-4022-b977-b7c17ff4bb71")
 		(sheetname "/STM32 MCU/")
 		(sheetfile "STM32_MCU.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -54872,7 +54989,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -55159,6 +55276,19 @@
 				)
 			)
 		)
+		(property "MPN" "H4P100KDZA"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cd7b2566-69f7-424f-8a60-5ff065febaaf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/caff8704-a6ad-414b-a861-33b9c55688a3/a05737bc-da38-4173-a2cf-3027043d7705")
 		(sheetname "/I2S MIC/")
@@ -55323,7 +55453,7 @@
 				)
 			)
 		)
-		(property "Value" "30R @ 100 MHz"
+		(property "Value" "300R @ 100 MHz"
 			(at -11.62 -0.03 0)
 			(layer "F.Fab")
 			(uuid "b9715ae4-14d7-49f5-81ba-424a42389542")
@@ -55356,6 +55486,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "HI2220R301R-10"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2a120430-16bd-4ee1-ad95-a43c1faea67d")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -55525,7 +55668,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -55776,7 +55919,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -56027,7 +56170,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -56278,7 +56421,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -56915,7 +57058,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/6593f2f2-c4aa-4d9c-9312-269bcc9db503")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -57089,7 +57232,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -57340,7 +57483,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -57591,7 +57734,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -57881,7 +58024,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/dbf07e3b-e0ee-480e-bd65-cb3e3936a9d6")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -58055,7 +58198,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -58306,7 +58449,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -58557,7 +58700,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -58808,7 +58951,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -59059,7 +59202,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -59346,6 +59489,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b8664d4f-6408-482f-a907-af2cfeb78906")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/b30a6a6a-2fc4-4d42-af01-e901d9fbc91d")
 		(sheetname "/LED DRIVING/")
@@ -59547,6 +59703,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e6e56797-13ac-4c00-ab67-65d39df118b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/28e7ddf7-c713-4c3f-b64e-ccdcceea1662")
 		(sheetname "/LED DRIVING/")
@@ -59712,7 +59881,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -59963,7 +60132,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -60214,7 +60383,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -60465,7 +60634,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -60931,7 +61100,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -61221,7 +61390,7 @@
 		(path "/8084362c-1e50-4cdc-88cb-8f42b053a44a/7600017c-b918-4945-b687-c85ea11ccec2")
 		(sheetname "/POWER SHEET/")
 		(sheetfile "POWER_SHEET.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -61434,7 +61603,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/a5c243cb-50cd-4fa4-a632-7bde99c3f232")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -61607,7 +61776,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -61896,7 +62065,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/72d25495-d8f6-425f-93c4-f89258f80703")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(fp_line
 			(start -1.38 -1.38)
 			(end 0 -1.38)
@@ -62151,7 +62320,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/6d13bd7e-da77-4a05-a9f9-5124304581f8")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -62325,7 +62494,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -62575,7 +62744,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_Small_Filled"
+		(property "Value" "GPIO Debug LED (GREEN)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -62617,6 +62786,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6ed7956a-b9ce-4e26-abf8-b8587f3a29f9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f165fb9e-2ab6-4b01-976f-5c9ebe738ab0")
 			(effects
 				(font
 					(size 1 1)
@@ -62811,7 +62993,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -63062,7 +63244,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -63313,7 +63495,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -63596,6 +63778,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "TL3305AF260QG"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0e24702-aec7-4407-a70d-c03c1fa8d8be")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -64360,7 +64555,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -64611,7 +64806,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -64862,7 +65057,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -65152,7 +65347,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/3a662f14-5fa6-4e20-89e7-467723756a49")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -65326,7 +65521,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -65617,7 +65812,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/71e1fade-2fde-439b-af60-652b7e7fc2d9")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -65791,7 +65986,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -66438,7 +66633,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/cd2b0e02-d94a-4478-a9b5-56aa2b188add")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -66612,7 +66807,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -66903,7 +67098,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/45b88ec4-bcee-4e68-a968-a80114f74432")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -67077,7 +67272,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -67328,7 +67523,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -67579,7 +67774,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -67830,7 +68025,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -68081,7 +68276,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -68332,7 +68527,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -68583,7 +68778,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -68834,7 +69029,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -69085,7 +69280,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -69372,6 +69567,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c5e4e10-9f3d-48c4-b21a-a7a40f9a47a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/81172a33-7ab8-45e1-ace4-6ba739a98a46")
 		(sheetname "/STM32 MCU/")
@@ -69537,7 +69745,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -69788,7 +69996,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -70039,7 +70247,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -70326,6 +70534,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08f4a620-e115-47da-b9be-740959e536dc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/926fd19a-44e9-4fa9-8080-2ee7dbdd20da")
 		(sheetname "/STM32 MCU/")
@@ -70491,7 +70712,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -70742,7 +70963,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -70993,7 +71214,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -71244,7 +71465,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -71710,7 +71931,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -71961,7 +72182,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -72212,7 +72433,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -72569,7 +72790,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -72820,7 +73041,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -73071,7 +73292,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -73322,7 +73543,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -73612,7 +73833,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/3eac5652-26da-4b60-b068-125ea2915364")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -73786,7 +74007,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -74037,7 +74258,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -74328,7 +74549,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/80d510d3-8d19-418e-9178-e9b5a9b304ab")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -75111,7 +75332,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -75362,7 +75583,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -75613,7 +75834,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -75903,7 +76124,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/7853da2c-b44a-4eb4-8a5d-5fa423cdb68a")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -76077,7 +76298,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -76328,7 +76549,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -76579,7 +76800,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -76830,7 +77051,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -77081,7 +77302,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -77332,7 +77553,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -77583,7 +77804,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -77834,7 +78055,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -78432,7 +78653,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -78683,7 +78904,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -78934,7 +79155,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -79185,7 +79406,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -79472,6 +79693,19 @@
 				)
 			)
 		)
+		(property "MPN" "RT0603FRE0710RL"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5ad56b44-3eba-4bd8-ba95-b486c7aca179")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/84493873-4ed7-498b-a3d2-ab409d72dc6d")
 		(sheetname "/STM32 MCU/")
@@ -79637,7 +79871,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -80103,7 +80337,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -80354,7 +80588,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -80605,7 +80839,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -80896,7 +81130,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/48efa4d5-91dc-4b62-ad52-3e4e03d625c8")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -81110,7 +81344,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/db55f053-e029-4a7d-a322-a3320b078d5c")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -81324,7 +81558,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/b65b44fb-afbc-4c7c-8a68-cb840e8837cc")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -81498,7 +81732,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -81749,7 +81983,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -82000,7 +82234,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -82290,7 +82524,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/c0fb5119-bbbf-43bc-af04-c4ff16c5ae6c")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -82464,7 +82698,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -82715,7 +82949,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -82966,7 +83200,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -83217,7 +83451,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -83468,7 +83702,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -83719,7 +83953,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -83970,7 +84204,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -84261,7 +84495,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/48b7c39d-4fb5-4b20-8290-44538aa82922")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -84435,7 +84669,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -84686,7 +84920,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -84937,7 +85171,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -85188,7 +85422,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -85439,7 +85673,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -85729,7 +85963,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/5df32be7-5e29-4624-be07-259d8a53730b")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -86118,7 +86352,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -86369,7 +86603,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -86620,7 +86854,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -86907,6 +87141,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a0e4363-870f-48e8-b6c6-1f2980152902")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/caff8704-a6ad-414b-a861-33b9c55688a3/858da9b2-5edd-4172-8154-f879436932fd")
 		(sheetname "/I2S MIC/")
@@ -87104,6 +87351,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "EDH106M016A9BAA"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3d6acae9-a5f9-4872-8534-d87ec455b6bc")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -87719,7 +87979,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -88010,7 +88270,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/60258260-f3a5-45ea-9fd3-a0cd8d43bbe1")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -88763,7 +89023,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/995ad9b7-d334-4489-904d-167966c97ea8")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -88937,7 +89197,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -89188,7 +89448,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -89439,7 +89699,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -89690,7 +89950,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -89941,7 +90201,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -90222,6 +90482,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "FTSH-105-01-L-D-K"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3ac93670-f3da-4718-8421-2fc7a39021d5")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -90563,7 +90836,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -90814,7 +91087,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -91101,6 +91374,19 @@
 				)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0d01c1e4-302a-4a3e-b804-a2e45902d397")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/a94a638a-4aca-4eb4-a11b-127bd621569f/d094fb35-fc9c-4bc0-8adf-920d7c6915ed")
 		(sheetname "/STM32 MCU/")
@@ -91266,7 +91552,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -91732,7 +92018,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -91983,7 +92269,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -92234,7 +92520,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -92485,7 +92771,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -92736,7 +93022,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -92987,7 +93273,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -93238,7 +93524,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -93703,7 +93989,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -93954,7 +94240,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -94245,7 +94531,7 @@
 		(path "/4cb753b0-d3ca-49e3-8f9f-0ad77b1cdcd0/2dbea85f-71d8-4301-98e2-909fc1bb1010")
 		(sheetname "/LED DRIVING/")
 		(sheetfile "LED_DRIVING.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom)
 		(fp_circle
 			(center -1.09 0)
 			(end -1.04 0)
@@ -94980,7 +95266,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -95231,7 +95517,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -95482,7 +95768,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -95733,7 +96019,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -95984,7 +96270,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -96235,7 +96521,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -96486,7 +96772,7 @@
 				)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(hide yes)

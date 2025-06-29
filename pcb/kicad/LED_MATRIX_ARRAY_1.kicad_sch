@@ -4776,7 +4776,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 69.8499 90)
 			(effects
 				(font
@@ -4865,7 +4865,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 36.8299 90)
 			(effects
 				(font
@@ -4954,7 +4954,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 102.8699 90)
 			(effects
 				(font
@@ -5043,7 +5043,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 69.8499 90)
 			(effects
 				(font
@@ -5132,7 +5132,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 152.3999 90)
 			(effects
 				(font
@@ -5221,7 +5221,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 102.8699 90)
 			(effects
 				(font
@@ -5310,7 +5310,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 86.3599 90)
 			(effects
 				(font
@@ -5399,7 +5399,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 36.8299 90)
 			(effects
 				(font
@@ -5488,7 +5488,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 119.3799 90)
 			(effects
 				(font
@@ -5577,7 +5577,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 86.3599 90)
 			(effects
 				(font
@@ -5666,7 +5666,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 86.3599 90)
 			(effects
 				(font
@@ -5755,7 +5755,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 69.8499 90)
 			(effects
 				(font
@@ -5844,7 +5844,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 86.3599 90)
 			(effects
 				(font
@@ -5933,7 +5933,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 152.3999 90)
 			(effects
 				(font
@@ -6022,7 +6022,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 152.3999 90)
 			(effects
 				(font
@@ -6111,7 +6111,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 86.3599 90)
 			(effects
 				(font
@@ -6200,7 +6200,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 102.8699 90)
 			(effects
 				(font
@@ -6289,7 +6289,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 53.3399 90)
 			(effects
 				(font
@@ -6378,7 +6378,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 69.8499 90)
 			(effects
 				(font
@@ -6467,7 +6467,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 119.3799 90)
 			(effects
 				(font
@@ -6556,7 +6556,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 102.8699 90)
 			(effects
 				(font
@@ -6645,7 +6645,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 53.3399 90)
 			(effects
 				(font
@@ -6734,7 +6734,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 86.3599 90)
 			(effects
 				(font
@@ -6823,7 +6823,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 102.8699 90)
 			(effects
 				(font
@@ -6912,7 +6912,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 36.8299 90)
 			(effects
 				(font
@@ -7001,7 +7001,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 119.3799 90)
 			(effects
 				(font
@@ -7090,7 +7090,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 36.8299 90)
 			(effects
 				(font
@@ -7179,7 +7179,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 69.8499 90)
 			(effects
 				(font
@@ -7268,7 +7268,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 53.3399 90)
 			(effects
 				(font
@@ -7357,7 +7357,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 86.3599 90)
 			(effects
 				(font
@@ -7446,7 +7446,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 102.8699 90)
 			(effects
 				(font
@@ -7535,7 +7535,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 119.3799 90)
 			(effects
 				(font
@@ -7624,7 +7624,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 135.8899 90)
 			(effects
 				(font
@@ -7713,7 +7713,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 119.3799 90)
 			(effects
 				(font
@@ -7802,7 +7802,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 119.3799 90)
 			(effects
 				(font
@@ -7891,7 +7891,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 135.8899 90)
 			(effects
 				(font
@@ -7980,7 +7980,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 36.8299 90)
 			(effects
 				(font
@@ -8069,7 +8069,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 135.8899 90)
 			(effects
 				(font
@@ -8158,7 +8158,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 102.8699 90)
 			(effects
 				(font
@@ -8247,7 +8247,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 69.8499 90)
 			(effects
 				(font
@@ -8336,7 +8336,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 119.3799 90)
 			(effects
 				(font
@@ -8425,7 +8425,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 53.3399 90)
 			(effects
 				(font
@@ -8514,7 +8514,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 53.3399 90)
 			(effects
 				(font
@@ -8603,7 +8603,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 53.3399 90)
 			(effects
 				(font
@@ -8692,7 +8692,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 36.8299 90)
 			(effects
 				(font
@@ -8781,7 +8781,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 119.3799 90)
 			(effects
 				(font
@@ -8870,7 +8870,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 69.8499 90)
 			(effects
 				(font
@@ -8959,7 +8959,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 36.8299 90)
 			(effects
 				(font
@@ -9048,7 +9048,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 86.3599 90)
 			(effects
 				(font
@@ -9137,7 +9137,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 152.3999 90)
 			(effects
 				(font
@@ -9226,7 +9226,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 102.8699 90)
 			(effects
 				(font
@@ -9315,7 +9315,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 102.8699 90)
 			(effects
 				(font
@@ -9404,7 +9404,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 69.8499 90)
 			(effects
 				(font
@@ -9493,7 +9493,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 86.3599 90)
 			(effects
 				(font
@@ -9582,7 +9582,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 119.3799 90)
 			(effects
 				(font
@@ -9671,7 +9671,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 36.8299 90)
 			(effects
 				(font
@@ -9760,7 +9760,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 86.3599 90)
 			(effects
 				(font
@@ -9849,7 +9849,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 152.3999 90)
 			(effects
 				(font
@@ -9938,7 +9938,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 69.8499 90)
 			(effects
 				(font
@@ -10027,7 +10027,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 53.3399 90)
 			(effects
 				(font
@@ -10116,7 +10116,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 36.8299 90)
 			(effects
 				(font
@@ -10205,7 +10205,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 152.3999 90)
 			(effects
 				(font
@@ -10294,7 +10294,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 36.8299 90)
 			(effects
 				(font
@@ -10383,7 +10383,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 119.3799 90)
 			(effects
 				(font
@@ -10472,7 +10472,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 152.3999 90)
 			(effects
 				(font
@@ -10561,7 +10561,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 119.3799 90)
 			(effects
 				(font
@@ -10650,7 +10650,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 86.3599 90)
 			(effects
 				(font
@@ -10739,7 +10739,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 119.3799 90)
 			(effects
 				(font
@@ -10828,7 +10828,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 152.3999 90)
 			(effects
 				(font
@@ -10917,7 +10917,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 53.3399 90)
 			(effects
 				(font
@@ -11006,7 +11006,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 102.8699 90)
 			(effects
 				(font
@@ -11095,7 +11095,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 86.3599 90)
 			(effects
 				(font
@@ -11184,7 +11184,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 36.8299 90)
 			(effects
 				(font
@@ -11273,7 +11273,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 135.8899 90)
 			(effects
 				(font
@@ -11362,7 +11362,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 152.3999 90)
 			(effects
 				(font
@@ -11451,7 +11451,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 152.3999 90)
 			(effects
 				(font
@@ -11540,7 +11540,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 69.8499 90)
 			(effects
 				(font
@@ -11629,7 +11629,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 135.8899 90)
 			(effects
 				(font
@@ -11718,7 +11718,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 53.3399 90)
 			(effects
 				(font
@@ -11807,7 +11807,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 86.3599 90)
 			(effects
 				(font
@@ -11896,7 +11896,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 152.3999 90)
 			(effects
 				(font
@@ -11985,7 +11985,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 53.3399 90)
 			(effects
 				(font
@@ -12074,7 +12074,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 36.8299 90)
 			(effects
 				(font
@@ -12163,7 +12163,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 102.8699 90)
 			(effects
 				(font
@@ -12252,7 +12252,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 135.8899 90)
 			(effects
 				(font
@@ -12341,7 +12341,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 36.8299 90)
 			(effects
 				(font
@@ -12430,7 +12430,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 152.3999 90)
 			(effects
 				(font
@@ -12519,7 +12519,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 140.97 119.3799 90)
 			(effects
 				(font
@@ -12608,7 +12608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 119.3799 90)
 			(effects
 				(font
@@ -12697,7 +12697,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 119.3799 90)
 			(effects
 				(font
@@ -12786,7 +12786,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 69.8499 90)
 			(effects
 				(font
@@ -12875,7 +12875,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 86.3599 90)
 			(effects
 				(font
@@ -12964,7 +12964,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 86.3599 90)
 			(effects
 				(font
@@ -13053,7 +13053,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 69.8499 90)
 			(effects
 				(font
@@ -13142,7 +13142,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 135.8899 90)
 			(effects
 				(font
@@ -13231,7 +13231,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 152.3999 90)
 			(effects
 				(font
@@ -13320,7 +13320,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 119.3799 90)
 			(effects
 				(font
@@ -13409,7 +13409,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 135.8899 90)
 			(effects
 				(font
@@ -13498,7 +13498,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 36.8299 90)
 			(effects
 				(font
@@ -13587,7 +13587,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 86.3599 90)
 			(effects
 				(font
@@ -13676,7 +13676,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 64.77 69.8499 90)
 			(effects
 				(font
@@ -13765,7 +13765,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 102.87 135.8899 90)
 			(effects
 				(font
@@ -13854,7 +13854,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 189.23 135.8899 90)
 			(effects
 				(font
@@ -13943,7 +13943,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 135.8899 90)
 			(effects
 				(font
@@ -14032,7 +14032,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 69.8499 90)
 			(effects
 				(font
@@ -14121,7 +14121,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 69.8499 90)
 			(effects
 				(font
@@ -14210,7 +14210,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 163.83 53.3399 90)
 			(effects
 				(font
@@ -14299,7 +14299,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 36.8299 90)
 			(effects
 				(font
@@ -14388,7 +14388,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 102.8699 90)
 			(effects
 				(font
@@ -14477,7 +14477,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 52.07 135.8899 90)
 			(effects
 				(font
@@ -14566,7 +14566,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 53.3399 90)
 			(effects
 				(font
@@ -14655,7 +14655,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 102.8699 90)
 			(effects
 				(font
@@ -14744,7 +14744,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 53.3399 90)
 			(effects
 				(font
@@ -14833,7 +14833,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 102.8699 90)
 			(effects
 				(font
@@ -14922,7 +14922,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 53.3399 90)
 			(effects
 				(font
@@ -15011,7 +15011,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 135.8899 90)
 			(effects
 				(font
@@ -15100,7 +15100,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 201.93 135.8899 90)
 			(effects
 				(font
@@ -15189,7 +15189,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 90.17 102.8699 90)
 			(effects
 				(font
@@ -15278,7 +15278,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 102.8699 90)
 			(effects
 				(font
@@ -15367,7 +15367,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 135.8899 90)
 			(effects
 				(font
@@ -15456,7 +15456,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 77.47 53.3399 90)
 			(effects
 				(font
@@ -15545,7 +15545,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 240.03 36.8299 90)
 			(effects
 				(font
@@ -15634,7 +15634,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 151.13 152.3999 90)
 			(effects
 				(font
@@ -15723,7 +15723,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 115.57 135.8899 90)
 			(effects
 				(font
@@ -15812,7 +15812,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 176.53 152.3999 90)
 			(effects
 				(font
@@ -15901,7 +15901,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 214.63 53.3399 90)
 			(effects
 				(font
@@ -15990,7 +15990,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 227.33 69.8499 90)
 			(effects
 				(font
@@ -16079,7 +16079,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LTST-C190KRKT"
+		(property "Value" "LED Matrix (RED)"
 			(at 128.27 152.3999 90)
 			(effects
 				(font

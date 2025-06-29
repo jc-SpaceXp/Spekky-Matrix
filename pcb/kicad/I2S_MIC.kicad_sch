@@ -1455,6 +1455,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 134.62 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "17e81022-095c-4213-92ca-b028638dd0b6")
 		)
@@ -1517,6 +1526,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 125.73 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "H4P100KDZA"
 			(at 125.73 69.85 0)
 			(effects
 				(font
@@ -1652,6 +1670,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 134.62 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C1608X5R1A106K080AC"
+			(at 134.62 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)

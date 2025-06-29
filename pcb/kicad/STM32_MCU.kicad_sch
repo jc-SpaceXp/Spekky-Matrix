@@ -3652,7 +3652,7 @@
 		(at 151.13 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "12f52266-8bb9-466a-998b-578e444f48d6")
@@ -3761,6 +3761,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 87.63 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188Z71C475KE21D"
 			(at 87.63 151.13 0)
 			(effects
 				(font
@@ -3974,6 +3983,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 53.34 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C0603C104J3RACTU"
 			(at 53.34 151.13 0)
 			(effects
 				(font
@@ -4266,7 +4284,7 @@
 		(at 153.67 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "6392e6f7-67f4-4020-a229-3f487a5c7ab9")
@@ -4581,6 +4599,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 109.22 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bf6fd708-cc22-4d3d-a0b9-02618630896c")
 		)
@@ -4642,6 +4669,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 100.33 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT0603FRE0710RL"
 			(at 100.33 106.68 0)
 			(effects
 				(font
@@ -4966,6 +5002,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 97.79 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5789d94c-11c7-4929-85b7-9559a7334edc")
 		)
@@ -5093,6 +5138,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 63.5 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GCG188L8EE105KA07D"
 			(at 63.5 151.13 0)
 			(effects
 				(font
@@ -5236,6 +5290,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "TL3305AF260QG"
+			(at 64.77 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8c9fcb6e-a4c9-4a06-9388-8129bfd686c3")
 		)
@@ -5268,7 +5331,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_Small_Filled"
+		(property "Value" "GPIO Debug LED (GREEN)"
 			(at 161.2265 92.71 0)
 			(effects
 				(font
@@ -5313,6 +5376,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "LTST-C190KGKT"
+			(at 161.29 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6f1bdee6-440f-4d8e-85f4-2a5090c4e425")
 		)
@@ -5333,7 +5405,7 @@
 		(at 140.97 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "cbdbeb70-127f-4022-b977-b7c17ff4bb71")
@@ -5450,6 +5522,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 76.2 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a39ced41-e33f-45fe-8869-99b27a2b2064")
 		)
@@ -5512,6 +5593,15 @@
 			)
 		)
 		(property "Description" "Cortex Debug Connector, standard ARM Cortex-M SWD and JTAG interface"
+			(at 213.36 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FTSH-105-01-L-D-K"
 			(at 213.36 110.49 0)
 			(effects
 				(font
@@ -5828,7 +5918,7 @@
 		(at 151.13 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "fe147414-8f1d-420a-9598-6a624188449f")

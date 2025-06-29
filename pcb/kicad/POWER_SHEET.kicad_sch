@@ -2702,7 +2702,7 @@
 		(at 44.45 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "18f74308-2e9b-45d3-a242-ee34716b722d")
@@ -2811,6 +2811,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
+			(at 113.03 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "EDH106M016A9BAA"
 			(at 113.03 60.96 0)
 			(effects
 				(font
@@ -3006,7 +3015,7 @@
 				)
 			)
 		)
-		(property "Value" "LED_Small_Filled"
+		(property "Value" "3V3 LED (RED)"
 			(at 184.0865 50.8 0)
 			(effects
 				(font
@@ -3051,6 +3060,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "LTST-C190KRKT"
+			(at 184.15 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4a707c94-b715-424e-854d-7c946990ec18")
 		)
@@ -3084,7 +3102,7 @@
 				)
 			)
 		)
-		(property "Value" "30R @ 100 MHz"
+		(property "Value" "300R @ 100 MHz"
 			(at 91.3892 49.53 90)
 			(effects
 				(font
@@ -3112,6 +3130,15 @@
 		)
 		(property "Description" "Ferrite bead"
 			(at 91.44 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "HI2220R301R-10"
+			(at 91.44 54.61 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3253,6 +3280,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "C0603C104J3RACTU"
+			(at 100.33 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "08343d7d-82b8-42a4-b5d5-6be23ee12dd8")
 		)
@@ -3273,7 +3309,7 @@
 		(at 44.45 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "4b4021df-9425-4384-90b9-abd130802352")
@@ -3456,6 +3492,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "EDH106M016A9BAA"
+			(at 177.8 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ad1a5c64-ae31-4c8f-9ef6-e23ca62db8d7")
 		)
@@ -3606,6 +3651,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "GCM188R71H103KA37J"
+			(at 81.28 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9d22719b-34d8-43df-880b-f39f8c2a1e45")
 		)
@@ -3626,7 +3680,7 @@
 		(at 44.45 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "7600017c-b918-4945-b687-c85ea11ccec2")
