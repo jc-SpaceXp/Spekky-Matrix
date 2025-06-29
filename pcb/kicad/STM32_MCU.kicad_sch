@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "STM32G431Kx Schematic")
-		(date "2025-05-22")
-		(rev "v08")
+		(date "2025-06-29")
+		(rev "v09")
 		(comment 1 "No ADC therefore tying VDDA to VDD and GNDA to GND")
 		(comment 2 "Decoupling capacitor info can be found on datasheet and application note AN5093 ")
 		(comment 3 "SB11 and SB8 must be connected for this schematic to work.")
@@ -361,6 +361,137 @@
 						)
 					)
 					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:TestPoint_2Pole"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_2Pole"
+				(at 0 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "2-polar test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_2Pole_0_1"
+				(circle
+					(center -1.778 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.778 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2326,6 +2457,16 @@
 		)
 		(uuid "3911d03e-e688-46df-b8ad-2011e9a1793f")
 	)
+	(text "Breakout extra GPIO pins via test points"
+		(exclude_from_sim no)
+		(at 151.638 61.214 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "46ef8c97-a65c-4dbd-97fd-566ee53064e8")
+	)
 	(text "VDD"
 		(exclude_from_sim no)
 		(at 108.712 141.224 0)
@@ -2427,6 +2568,12 @@
 		(uuid "abc6be97-650d-4c31-800f-6bde1b50b822")
 	)
 	(junction
+		(at 161.29 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "af1e237c-acfd-4a4b-b0ba-ee757fc42917")
+	)
+	(junction
 		(at 58.42 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2443,10 +2590,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e9e58886-9e27-400a-8a86-731b544ef58f")
-	)
-	(no_connect
-		(at 130.81 88.9)
-		(uuid "21b066c2-62ca-4f27-812f-5a507f266c8e")
 	)
 	(no_connect
 		(at 130.81 104.14)
@@ -2469,10 +2612,6 @@
 		(uuid "7bd01b6a-e8e4-49aa-960a-a4361b450ae0")
 	)
 	(no_connect
-		(at 130.81 73.66)
-		(uuid "88d3fbda-92a3-4452-9ec1-4ebf229e0ae1")
-	)
-	(no_connect
 		(at 130.81 78.74)
 		(uuid "8a304eaa-2f37-439b-a24f-8f8bf050d3f9")
 	)
@@ -2483,10 +2622,6 @@
 	(no_connect
 		(at 226.06 115.57)
 		(uuid "c21e1cab-69f9-4665-98cf-e7a9f493304d")
-	)
-	(no_connect
-		(at 130.81 86.36)
-		(uuid "c4e4e044-1c44-47d0-a0b9-0f150326766d")
 	)
 	(no_connect
 		(at 105.41 99.06)
@@ -2566,6 +2701,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 88.9) (xy 146.05 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f0650fd-c90c-4812-a309-e9d0cf919c67")
+	)
+	(wire
+		(pts
 			(xy 87.63 156.21) (xy 87.63 154.94)
 		)
 		(stroke
@@ -2606,6 +2751,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 53.34) (xy 148.59 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "147bcc1f-7309-47f6-a517-f4a9610a2e9a")
+	)
+	(wire
+		(pts
 			(xy 120.65 64.77) (xy 120.65 66.04)
 		)
 		(stroke
@@ -2626,6 +2781,26 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 73.66) (xy 147.32 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bd4ba90-733f-4bf4-839a-ed33c6157937")
+	)
+	(wire
+		(pts
+			(xy 135.89 73.66) (xy 130.81 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d3b0cc2-a72a-4da0-a267-836af75bd1aa")
+	)
+	(wire
+		(pts
 			(xy 64.77 46.99) (xy 64.77 52.07)
 		)
 		(stroke
@@ -2643,6 +2818,16 @@
 			(type default)
 		)
 		(uuid "213ae7bd-f399-46ea-b50c-43c24735efb5")
+	)
+	(wire
+		(pts
+			(xy 130.81 88.9) (xy 146.05 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24fc1343-6160-4fd5-80f7-2adf8119548b")
 	)
 	(wire
 		(pts
@@ -2746,6 +2931,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 73.66) (xy 147.32 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e226db1-1320-4d4c-a2b6-9045da4402fb")
+	)
+	(wire
+		(pts
 			(xy 115.57 63.5) (xy 115.57 66.04)
 		)
 		(stroke
@@ -2763,6 +2958,16 @@
 			(type default)
 		)
 		(uuid "50fc9452-580b-4a31-87a1-52238b56ed94")
+	)
+	(wire
+		(pts
+			(xy 146.05 86.36) (xy 130.81 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5164c7ea-de19-4123-906a-9e45c7a86a9c")
 	)
 	(wire
 		(pts
@@ -3126,6 +3331,26 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 90.17) (xy 161.29 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce37d9ff-a210-4385-816b-26c923959ab4")
+	)
+	(wire
+		(pts
+			(xy 156.21 90.17) (xy 161.29 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1aed55b-3982-4939-b5fc-b71f82ca7291")
+	)
+	(wire
+		(pts
 			(xy 58.42 157.48) (xy 58.42 156.21)
 		)
 		(stroke
@@ -3133,6 +3358,16 @@
 			(type default)
 		)
 		(uuid "d1c1541c-280d-4fc8-ba23-a07a75e21b29")
+	)
+	(wire
+		(pts
+			(xy 160.02 53.34) (xy 158.75 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d225b996-855f-43d9-aa0c-bd8044796873")
 	)
 	(wire
 		(pts
@@ -3146,6 +3381,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 90.17) (xy 167.64 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2246c43-7f49-4ec7-9645-44f5d88ef4ae")
+	)
+	(wire
+		(pts
 			(xy 213.36 92.71) (xy 213.36 95.25)
 		)
 		(stroke
@@ -3153,6 +3398,16 @@
 			(type default)
 		)
 		(uuid "e303661f-846a-45f8-ac52-20bd952410c0")
+	)
+	(wire
+		(pts
+			(xy 161.29 86.36) (xy 156.21 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e602167a-3272-4c9b-96e1-11d3779bd05b")
 	)
 	(wire
 		(pts
@@ -3263,6 +3518,16 @@
 			(justify right bottom)
 		)
 		(uuid "b0e31583-ed9d-40ca-ab57-6699fc64a00e")
+	)
+	(label "GPIO_DEBUG1"
+		(at 147.32 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d75de302-7fb1-48ae-baee-8aa4aadb35e4")
 	)
 	(label "NRST"
 		(at 99.06 73.66 180)
@@ -3381,6 +3646,74 @@
 			(justify right)
 		)
 		(uuid "b2d69e6c-b3c5-4d1d-8e2f-7075011f94d9")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 151.13 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "12f52266-8bb9-466a-998b-578e444f48d6")
+		(property "Reference" "TP58"
+			(at 151.13 84.582 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 151.13 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 151.13 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 151.13 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a35cdbf5-b6cf-4ee7-911a-01cc93025e74")
+		)
+		(pin "1"
+			(uuid "d6409d57-e670-4f44-8e1c-83c341652b15")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "TP58")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3864,6 +4197,140 @@
 	)
 	(symbol
 		(lib_id "power:GNDREF")
+		(at 167.64 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "628b9e78-947a-433d-b9ee-a07e3fa387b8")
+		(property "Reference" "#PWR061"
+			(at 167.64 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 167.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 167.64 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8de7a83-8ad5-49b3-b03f-66d472dc878c")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 153.67 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6392e6f7-67f4-4020-a229-3f487a5c7ab9")
+		(property "Reference" "TP56"
+			(at 153.67 51.562 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 153.67 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 153.67 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 153.67 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ff14f677-e975-410c-8340-cccde8d5628e")
+		)
+		(pin "1"
+			(uuid "9147b6a3-23b5-482d-a1ba-bbea0f23e05f")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "TP56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
 		(at 213.36 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3989,6 +4456,72 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 160.02 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7cfc1549-58a9-4b21-b6d0-e127e9bb5371")
+		(property "Reference" "#PWR059"
+			(at 160.02 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 160.02 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3356ccd-5502-474b-a2ce-fcb1fcfa1752")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -4796,6 +5329,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 140.97 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cbdbeb70-127f-4022-b977-b7c17ff4bb71")
+		(property "Reference" "TP57"
+			(at 140.97 71.882 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 140.97 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 140.97 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 140.97 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d66ed413-4af2-4a3c-a0b7-fa987912b8a1")
+		)
+		(pin "1"
+			(uuid "f9965513-65fa-4ec5-9219-e771e5c390e3")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "TP57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 76.2 57.15 180)
 		(unit 1)
@@ -5151,6 +5752,140 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 147.32 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fca0138f-047f-4d03-8af6-5b56846d17d4")
+		(property "Reference" "#PWR060"
+			(at 147.32 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.32 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 147.32 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6268a7b6-8911-4cf6-b3dc-e06e5face3c8")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "#PWR060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 151.13 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe147414-8f1d-420a-9598-6a624188449f")
+		(property "Reference" "TP59"
+			(at 151.13 88.392 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 151.13 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 151.13 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "85e720cd-3547-4bc4-b99d-9dc26bdc6203")
+		)
+		(pin "1"
+			(uuid "73706b3e-0aa6-4410-927c-6bfc870e5194")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/a94a638a-4aca-4eb4-a11b-127bd621569f"
+					(reference "TP59")
 					(unit 1)
 				)
 			)

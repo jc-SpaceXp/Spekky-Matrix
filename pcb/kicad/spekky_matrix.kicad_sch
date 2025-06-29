@@ -7,7 +7,7 @@
 	(title_block
 		(title "Spekky Matrix Schematic")
 		(date "2025-06-26")
-		(rev "v23")
+		(rev "v24")
 	)
 	(lib_symbols
 		(symbol "Mechanical:MountingHole_Pad"
