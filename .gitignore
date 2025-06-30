@@ -12,3 +12,4 @@ py_sine_1hz_lut_input_test.txt
 *fp-info-cache
 *fp-lib-table
 *.lck
+*.kicad_prl
