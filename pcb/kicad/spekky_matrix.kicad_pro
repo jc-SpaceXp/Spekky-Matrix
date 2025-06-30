@@ -532,9 +532,9 @@
       "field_delimiter": ",",
       "keep_line_breaks": false,
       "keep_tabs": false,
-      "name": "CSV",
+      "name": "---",
       "ref_delimiter": ",",
-      "ref_range_delimiter": "",
+      "ref_range_delimiter": "-",
       "string_delimiter": "\""
     },
     "bom_presets": [],
