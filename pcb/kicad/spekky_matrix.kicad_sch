@@ -6,7 +6,7 @@
 	(paper "A5")
 	(title_block
 		(title "Spekky Matrix Schematic")
-		(date "2025-06-26")
+		(date "2025-06-29")
 		(rev "v24")
 	)
 	(lib_symbols
