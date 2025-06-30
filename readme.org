@@ -58,6 +58,9 @@ Note: Gif is played at 2.5x speed, see mp4 for realtime playback and audio of sw
 *** KiCad PCB
 **** BOM
 [[file:pcb/kicad/spekky_matrix_bom.csv]]
+**** 3D Renders
+[[file:pcb/kicad/pcb_3d_front.png]]
+[[file:pcb/kicad/pcb_3d_back.png]]
 *** Execution Timeline
 Rough timing of how long each task/sub-task takes to complete
 
