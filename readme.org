@@ -54,7 +54,10 @@ Note: Gif is played at 2.5x speed, see mp4 for realtime playback and audio of sw
 
 [[file:media/blackman_harris_sine_sweep.gif]]
 *** Schematic
-[[file:schematic_v03.pdf]]
+[[file:schematic_v24.pdf]]
+*** KiCad PCB
+**** BOM
+[[file:pcb/kicad/spekky_matrix_bom.csv]]
 *** Execution Timeline
 Rough timing of how long each task/sub-task takes to complete
 
