@@ -16,7 +16,7 @@
 "Q1-Q8","8","DMP3125L-7","DMP3125L-7","Package_TO_SOT_SMD:SOT-23",""
 "R1,R4,R13-R20,R29-R31","13","RT0603DRE071KL","1K","Resistor_SMD:R_0603_1608Metric",""
 "R2","1","H4P100KDZA","100K","Resistor_SMD:R_0603_1608Metric",""
-"R3","1","RT0603FRE0710RL","10K","Resistor_SMD:R_0603_1608Metric",""
+"R3","1","RT0603FRE0710KL","10K","Resistor_SMD:R_0603_1608Metric",""
 "R5-R12","8","RT0603FRE0710RL","10R","Resistor_SMD:R_0603_1608Metric",""
 "R21-R28","8","RT0603FRE075K1L","5K1","Resistor_SMD:R_0603_1608Metric",""
 "RV1","1","3386F-1-222LF","2K2","Potentiometer_THT:Potentiometer_Bourns_3386F_Vertical",""
