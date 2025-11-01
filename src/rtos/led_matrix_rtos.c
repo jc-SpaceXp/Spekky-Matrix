@@ -26,6 +26,9 @@ void led_matrix_setup(int total_devices)
 	set_total_led_matrix_devices(&led_matrix, total_devices);
 
 	max7219_led_matrix_init_all_quick(led_matrix, &SPI1->DR, DATA_BRIGHTNESS_LEVEL1);
+
+	// Pull OE to GND (all LEDs could be set)
+	deassert_spi_pin(led_cs.assert_address, SPI_OE_PIN);
 }
 
 void led_matrix_update_task(void* pvParameters)
