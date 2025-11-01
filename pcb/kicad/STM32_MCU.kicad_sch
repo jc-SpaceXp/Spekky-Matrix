@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "STM32G431Kx Schematic")
-		(date "2025-06-29")
-		(rev "v09")
+		(date "2025-11-01")
+		(rev "v10")
 		(comment 1 "No ADC therefore tying VDDA to VDD and GNDA to GND")
 		(comment 2 "Decoupling capacitor info can be found on datasheet and application note AN5093 ")
 		(comment 3 "SB11 and SB8 must be connected for this schematic to work.")
@@ -2841,6 +2841,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 93.98) (xy 134.62 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2de6780b-d289-497d-b290-da9dfec747b7")
+	)
+	(wire
+		(pts
 			(xy 226.06 110.49) (xy 246.38 110.49)
 		)
 		(stroke
@@ -3051,7 +3061,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 83.82) (xy 134.62 83.82)
+			(xy 133.35 82.55) (xy 134.62 82.55)
 		)
 		(stroke
 			(width 0)
@@ -3171,6 +3181,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 83.82) (xy 130.81 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94589dc0-f625-47b8-b68f-f9506f799ace")
+	)
+	(wire
+		(pts
 			(xy 167.64 96.52) (xy 167.64 99.06)
 		)
 		(stroke
@@ -3248,6 +3268,16 @@
 			(type default)
 		)
 		(uuid "bda8e7fd-f96e-42ac-946b-a13c41b10427")
+	)
+	(wire
+		(pts
+			(xy 133.35 82.55) (xy 133.35 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfd28a33-7ec4-4e65-9ff5-c87fdb59fbc5")
 	)
 	(wire
 		(pts
@@ -3411,16 +3441,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 93.98) (xy 134.62 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb0f97d0-848f-4921-8d58-a49ede1815ad")
-	)
-	(wire
-		(pts
 			(xy 58.42 143.51) (xy 58.42 146.05)
 		)
 		(stroke
@@ -3540,7 +3560,7 @@
 		(uuid "dd8fb363-9f2b-40fe-b574-ef46e1cf585e")
 	)
 	(label "GPIO_DEBUG1"
-		(at 143.51 96.52 0)
+		(at 146.05 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3614,7 +3634,7 @@
 		)
 		(uuid "a1e00dc4-5c9a-4b72-ab1c-f3ef6a7c2b1a")
 	)
-	(hierarchical_label "SPI_CS"
+	(hierarchical_label "GPIO_OE"
 		(shape output)
 		(at 134.62 93.98 0)
 		(effects
@@ -3625,9 +3645,9 @@
 		)
 		(uuid "acd41424-eaf4-4b35-a0d8-5074531f612b")
 	)
-	(hierarchical_label "GPIO_LE"
+	(hierarchical_label "GPIO_SPI_CS"
 		(shape output)
-		(at 134.62 83.82 0)
+		(at 134.62 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
