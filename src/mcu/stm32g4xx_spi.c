@@ -14,10 +14,10 @@ static void spi_gpio_setup(void)
 	GPIOB->MODER &= ~ (eGET_REG(GPIO_MODER_MODE, SPI_CLK_PIN)
 	                  | eGET_REG(GPIO_MODER_MODE, SPI_MISO_PIN)
 	                  | eGET_REG(GPIO_MODER_MODE, SPI_MOSI_PIN));
-	// Set GPIO (and SPI1 CS) to outputs and SPI1 to AF
+	// SPI1 to AF
 	GPIOB->MODER |= eGET_REG_BIT1(GPIO_MODER_MODE, SPI_CLK_PIN)
-	                | eGET_REG_BIT1(GPIO_MODER_MODE, SPI_MOSI_PIN);
-	GPIOA->MODER |= eGET_REG_BIT0(GPIO_MODER_MODE, SPI_MISO_PIN);
+	                | eGET_REG_BIT1(GPIO_MODER_MODE, SPI_MOSI_PIN)
+	                | eGET_REG_BIT1(GPIO_MODER_MODE, SPI_MISO_PIN);
 	// Use SPI alternative function
 	GPIOB->AFR[0] |= (GPIO_AF5_SPI1 << eGET_AFRL_REG(GPIO_AFRL_AFSEL, SPI_CLK_PIN))
 	                 | (GPIO_AF5_SPI1 << eGET_AFRL_REG(GPIO_AFRL_AFSEL, SPI_MISO_PIN))
