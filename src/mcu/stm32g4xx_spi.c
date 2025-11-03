@@ -27,6 +27,7 @@ static void spi_gpio_setup(void)
 	GPIOB->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_CLK_PIN)
 	                  | eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_MISO_PIN)
 	                  | eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_MOSI_PIN);
+	// Clear reset bit on B4 (MISO, no pull-up or pull-down)
 	GPIOB->PUPDR &= ~eGET_REG(GPIO_PUPDR_PUPD, SPI_MISO_PIN);
 
 	// GPIO setup
@@ -40,7 +41,7 @@ static void spi_gpio_setup(void)
 	// High speed pins
 	SPI_CS_PORT->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_CS_PIN);
 	SPI_OE_PORT->OSPEEDR |= eGET_REG_BIT1(GPIO_OSPEEDR_OSPEED, SPI_OE_PIN);
-	// Clear reset bit on B4 (MISO, no pull-up or pull-down)¬
+	// No pull-up or pull-down resistors
 	SPI_CS_PORT->PUPDR &= ~eGET_REG(GPIO_PUPDR_PUPD, SPI_CS_PIN);
 	SPI_OE_PORT->PUPDR &= ~eGET_REG(GPIO_PUPDR_PUPD, SPI_OE_PIN);
 }
