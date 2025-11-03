@@ -62,6 +62,12 @@ void set_total_stp16cp05_led_matrix_devices(struct Stp16cp05* matrix, int total_
 	matrix->total_devices = total_devices;
 }
 
+void set_led_matrix_device_cascade_bytes(uint16_t* matrix, unsigned int device_number
+                                        , uint16_t tx_data)
+{
+	matrix[device_number] = tx_data;
+}
+
 uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data)
 {
 	unsigned int data_address = address & 0x0F; // address in only 4 bits wide

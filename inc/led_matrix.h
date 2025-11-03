@@ -41,6 +41,8 @@ void max7219_led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint
 void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                                  , const unsigned int (*matrix)[8][8]);
 unsigned int led_matrix_set_bit_in_row_conversion(uint8_t col);
+void set_led_matrix_device_cascade_bytes(uint16_t* matrix, unsigned int device_number
+                                        , uint16_t tx_data);
 void led_matrix_convert_bars_to_rows(uint8_t *col_height
                                     , unsigned int process_rows, unsigned int process_cols
                                     , enum LedDirection direction

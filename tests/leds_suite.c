@@ -580,6 +580,23 @@ TEST led_matrix_fft_conversion(void)
 	PASS();
 }
 
+TEST led_matrix_set_cascade_bytes(void)
+{
+	unsigned int total_devices = 4;
+	uint16_t cascade_data[total_devices];
+
+	for (int i = 0; i < (int) total_devices; ++i) {
+		set_led_matrix_device_cascade_bytes(cascade_data, i, i + 1);
+	}
+
+	ASSERT_EQ_FMT((uint16_t) cascade_data[0], 1, "%.4X");
+	ASSERT_EQ_FMT((uint16_t) cascade_data[1], 2, "%.4X");
+	ASSERT_EQ_FMT((uint16_t) cascade_data[2], 3, "%.4X");
+	ASSERT_EQ_FMT((uint16_t) cascade_data[3], 4, "%.4X");
+
+	PASS();
+}
+
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
@@ -588,6 +605,7 @@ SUITE(leds_driver)
 	RUN_TEST(led_matrix_set_matrix_from_2d_array);
 	RUN_TEST(verify_reverse_bits_lut);
 	RUN_TEST(led_matrix_fft_conversion);
+	RUN_TEST(led_matrix_set_cascade_bytes);
 	// looped tests
 	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
