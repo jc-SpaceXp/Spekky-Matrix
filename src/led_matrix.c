@@ -47,7 +47,7 @@ void set_spi_pin_details(struct LedSpiPin* spi_pin
 	*spi_pin = ((struct LedSpiPin) { assert_addr, deassert_addr, pin } );
 }
 
-void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
+void copy_spi_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
 {
 	*dest = *src;
 }

@@ -61,7 +61,7 @@ static void setup_led_matrix_tests(void* arg)
 {
 	unsigned int cs_pin = 9;
 	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_c, cs_pin);
-	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
+	copy_spi_pin_details(&some_led_matrix.cs, &some_cs_pin);
 
 	RESET_FAKE(assert_spi_pin);
 	RESET_FAKE(deassert_spi_pin);
@@ -80,7 +80,7 @@ TEST led_cs_pin_set_correctly(void)
 {
 	unsigned int cs_pin = 4;
 	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_x, cs_pin);
-	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
+	copy_spi_pin_details(&some_led_matrix.cs, &some_cs_pin);
 
 	ASSERT_EQ(cs_pin, some_led_matrix.cs.pin);
 	ASSERT_MEM_EQ(&some_gpio_port_c, some_led_matrix.cs.assert_address, 4);
