@@ -21,7 +21,7 @@ struct MaximMax7219 led_matrix;
 
 void led_matrix_setup(int total_devices)
 {
-	struct LedSpiPin led_cs = { &GPIOA->BSRR, &GPIOA->ODR, SPI_CS_PIN };
+	struct LedSpiPin led_cs = { &SPI_CS_PORT->BSRR, &SPI_CS_PORT->ODR, SPI_CS_PIN };
 	copy_spi_pin_details(&led_matrix.cs, &led_cs);
 	set_total_led_matrix_devices(&led_matrix, total_devices);
 
@@ -33,7 +33,7 @@ void led_matrix_update_task(void* pvParameters)
 {
 	(void) pvParameters;
 
-	struct LedSpiPin led_cs = { &GPIOA->BSRR, &GPIOA->ODR, SPI_CS_PIN };
+	struct LedSpiPin led_cs = { &SPI_CS_PORT->BSRR, &SPI_CS_PORT->ODR, SPI_CS_PIN };
 	copy_spi_pin_details(&led_matrix.cs, &led_cs);
 
 	uint8_t bars[led_matrix.total_devices][IC_DEVICE_COLS];
