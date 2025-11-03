@@ -61,7 +61,7 @@ void led_matrix_update_task(void* pvParameters)
 			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
 				tx_data[dev] = max7219_led_matrix_spi_data_out(i + 1, row_outputs[dev][i]);
 			}
-			generic_led_matrix_transfer_data_cascade(led_matrix, &SPI1->DR, tx_data
+			generic_led_matrix_transfer_data_cascade(led_matrix.cs, &SPI1->DR, tx_data
 			                                        , led_matrix.total_devices, ReverseCascade);
 		}
 	}

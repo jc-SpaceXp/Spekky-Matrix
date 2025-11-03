@@ -92,23 +92,23 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 	}
 }
 
-void generic_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
+void generic_led_matrix_transfer_data_cascade(struct LedSpiPin cs_or_le
                                              , volatile uint32_t* spi_tx_reg, uint16_t* tx_data
                                              , int total_devices
                                              , enum LedCascadeReverse reverse_order)
 {
 	if (reverse_order == ReverseCascade) {
 		for (int i = total_devices - 1; i >= 0; --i) {
-			led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data[i], NoLatchData);
+			led_matrix_transfer_data(cs_or_le, spi_tx_reg, tx_data[i], NoLatchData);
 		}
 	} else {
 		for (int i = 0; i < total_devices; ++i) {
-			led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data[i], NoLatchData);
+			led_matrix_transfer_data(cs_or_le, spi_tx_reg, tx_data[i], NoLatchData);
 		}
 	}
 
 	// Latch data (pull CS high)
-	assert_spi_pin(matrix.cs.assert_address, matrix.cs.pin);
+	assert_spi_pin(cs_or_le.assert_address, cs_or_le.pin);
 }
 
 void max7219_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix

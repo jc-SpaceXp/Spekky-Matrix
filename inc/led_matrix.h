@@ -23,7 +23,7 @@ void set_total_stp16cp05_led_matrix_devices(struct Stp16cp05* matrix, int total_
 uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data);
 void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                              , uint16_t tx_data, enum LedLatchData latch);
-void generic_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
+void generic_led_matrix_transfer_data_cascade(struct LedSpiPin cs_or_le
                                              , volatile uint32_t* spi_tx_reg, uint16_t* tx_data
                                              , int total_devices
                                              , enum LedCascadeReverse reverse_order);

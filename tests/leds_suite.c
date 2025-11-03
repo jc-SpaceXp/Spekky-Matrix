@@ -285,7 +285,7 @@ TEST generic_led_matrix_cascade_data_calls(enum LedCascadeReverse reverse_order)
 	int total_devices = 2;
 	uint16_t tx_data[2] = { 0x0001, 0xFF00 };
 
-	generic_led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, &tx_data[0]
+	generic_led_matrix_transfer_data_cascade(some_led_matrix.cs, &some_spi_reg, &tx_data[0]
 	                                        , total_devices, reverse_order);
 
 	ASSERT_EQ_FMT((unsigned int) total_devices, trigger_spi_transfer_fake.call_count, "%u");
