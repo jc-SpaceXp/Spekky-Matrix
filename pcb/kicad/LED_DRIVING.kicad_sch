@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "8x32 LED Matrix")
-		(date "2025-06-27")
-		(rev "v07")
+		(date "2025-11-01")
+		(rev "v08")
 		(comment 4 "STP16CP05 based cascaded LED matrices")
 	)
 	(lib_symbols
@@ -8956,7 +8956,7 @@
 		)
 		(uuid "1fee414c-44f1-4d25-950e-1ffdb4980e3c")
 	)
-	(hierarchical_label "SPI_OE"
+	(hierarchical_label "GLOBAL_LED_OE"
 		(shape input)
 		(at 325.12 87.63 270)
 		(effects
@@ -8967,7 +8967,7 @@
 		)
 		(uuid "264f0fff-1137-4642-a484-e50c1126362f")
 	)
-	(hierarchical_label "SPI_OE"
+	(hierarchical_label "GLOBAL_LED_OE"
 		(shape input)
 		(at 227.33 87.63 270)
 		(effects
@@ -9044,7 +9044,7 @@
 		)
 		(uuid "4a8e87a5-525e-4f9a-8981-52edd2e8ea6b")
 	)
-	(hierarchical_label "SPI_OE"
+	(hierarchical_label "GLOBAL_LED_OE"
 		(shape input)
 		(at 365.76 177.8 180)
 		(effects
@@ -9066,7 +9066,7 @@
 		)
 		(uuid "4cfc3858-2702-4843-80a3-d02101294de2")
 	)
-	(hierarchical_label "SPI_OE"
+	(hierarchical_label "GLOBAL_LED_OE"
 		(shape input)
 		(at 365.76 187.96 180)
 		(effects
@@ -9088,7 +9088,7 @@
 		)
 		(uuid "6bbbcf15-b41f-47fb-a268-829ab766f08b")
 	)
-	(hierarchical_label "SPI_OE"
+	(hierarchical_label "GLOBAL_LED_OE"
 		(shape input)
 		(at 365.76 167.64 180)
 		(effects
@@ -9319,7 +9319,7 @@
 		)
 		(uuid "e339a65d-bf0e-49d3-bd32-11d1c29ee338")
 	)
-	(hierarchical_label "SPI_OE"
+	(hierarchical_label "GLOBAL_LED_OE"
 		(shape input)
 		(at 127 86.36 270)
 		(effects

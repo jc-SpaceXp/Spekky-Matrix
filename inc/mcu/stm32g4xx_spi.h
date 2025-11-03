@@ -10,7 +10,9 @@
 #define SPI_MISO_PORT  GPIOB
 #define SPI_MOSI_PIN   5
 #define SPI_MOSI_PORT  GPIOB
-#define SPI_CS_PIN     8      // GPIO (can be any pin)
+#define SPI_OE_PIN     8      // GPIO controlled
+#define SPI_OE_PORT    GPIOA
+#define SPI_CS_PIN     4      // GPIO controlled
 #define SPI_CS_PORT    GPIOA
 
 void setup_hw_spi(void);

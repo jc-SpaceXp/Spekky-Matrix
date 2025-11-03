@@ -6,8 +6,8 @@
 	(paper "A5")
 	(title_block
 		(title "Spekky Matrix Schematic")
-		(date "2025-06-29")
-		(rev "v24")
+		(date "2025-11-01")
+		(rev "v25")
 	)
 	(lib_symbols
 		(symbol "Mechanical:MountingHole_Pad"
@@ -1266,9 +1266,9 @@
 				(justify right)
 			)
 		)
-		(pin "SPI_OE" input
-			(at 124.46 74.93 180)
-			(uuid "4bc606c4-b583-4d99-a66e-ac0b188d6ebb")
+		(pin "GPIO_LE" input
+			(at 124.46 77.47 180)
+			(uuid "a031ccef-23f4-42d9-bd10-db381294038e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1276,9 +1276,9 @@
 				(justify left)
 			)
 		)
-		(pin "GPIO_LE" input
-			(at 124.46 77.47 180)
-			(uuid "a031ccef-23f4-42d9-bd10-db381294038e")
+		(pin "GLOBAL_LED_OE" input
+			(at 124.46 74.93 180)
+			(uuid "5cf37471-246f-4f70-b71a-4de8ac4fbf20")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1511,16 +1511,6 @@
 				(justify right)
 			)
 		)
-		(pin "SPI_CS" output
-			(at 115.57 74.93 0)
-			(uuid "2b3831db-cfdf-485f-a70f-7405682095e9")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "I2S_WS" output
 			(at 77.47 74.93 180)
 			(uuid "61212831-fa39-4ce3-ab73-fab1b62292ec")
@@ -1561,9 +1551,19 @@
 				(justify right)
 			)
 		)
-		(pin "GPIO_LE" output
+		(pin "GPIO_OE" output
+			(at 115.57 74.93 0)
+			(uuid "441da4fa-722d-4ada-bedf-edd8fd6c1139")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GPIO_SPI_CS" output
 			(at 115.57 77.47 0)
-			(uuid "843e3d4c-2f57-4284-83b3-782e5073a806")
+			(uuid "356011b3-cdfb-4121-8676-0fa26c463738")
 			(effects
 				(font
 					(size 1.27 1.27)
