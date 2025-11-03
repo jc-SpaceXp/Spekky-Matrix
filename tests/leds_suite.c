@@ -105,9 +105,11 @@ TEST led_matrix_data_bus_max7219(struct LedMatrixTxTest led_tx)
 TEST led_matrix_devices_set_correctly(void)
 {
 	int total_devices = 8;
-	set_total_led_matrix_devices(&some_led_matrix, total_devices);
+	set_total_maxim_led_matrix_devices(&some_led_matrix, total_devices);
+	set_total_stp16cp05_led_matrix_devices(&some_stp_led_matrix, total_devices);
 
 	ASSERT_EQ(total_devices, some_led_matrix.total_devices);
+	ASSERT_EQ(total_devices, some_stp_led_matrix.total_devices);
 	PASS();
 }
 
@@ -240,7 +242,7 @@ TEST max7219_led_matrix_cascade_data_calls(struct Max7219LedMatrixCascadeNopWrit
 {
 	uint16_t tx_data = max7219_led_matrix_spi_data_out(led_cascade->address, led_cascade->data);
 	int total_devices = led_cascade->total_devices;
-	set_total_led_matrix_devices(&some_led_matrix, total_devices);
+	set_total_maxim_led_matrix_devices(&some_led_matrix, total_devices);
 
 	max7219_led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, tx_data
 	                                        , led_cascade->device_write);

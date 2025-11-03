@@ -52,7 +52,12 @@ void copy_spi_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
 	*dest = *src;
 }
 
-void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices)
+void set_total_maxim_led_matrix_devices(struct MaximMax7219* matrix, int total_devices)
+{
+	matrix->total_devices = total_devices;
+}
+
+void set_total_stp16cp05_led_matrix_devices(struct Stp16cp05* matrix, int total_devices)
 {
 	matrix->total_devices = total_devices;
 }

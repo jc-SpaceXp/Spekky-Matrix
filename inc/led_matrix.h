@@ -18,7 +18,8 @@ void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , unsigned int pin);
 
 void copy_spi_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src);
-void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices);
+void set_total_maxim_led_matrix_devices(struct MaximMax7219* matrix, int total_devices);
+void set_total_stp16cp05_led_matrix_devices(struct Stp16cp05* matrix, int total_devices);
 uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data);
 void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                              , uint16_t tx_data, enum LedLatchData latch);

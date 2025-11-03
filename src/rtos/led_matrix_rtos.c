@@ -23,7 +23,7 @@ void led_matrix_setup(int total_devices)
 {
 	struct LedSpiPin led_cs = { &SPI_CS_PORT->BSRR, &SPI_CS_PORT->ODR, SPI_CS_PIN };
 	copy_spi_pin_details(&led_matrix.cs, &led_cs);
-	set_total_led_matrix_devices(&led_matrix, total_devices);
+	set_total_maxim_led_matrix_devices(&led_matrix, total_devices);
 
 	// Pull OE to GND (all LEDs could be set)
 	deassert_spi_pin(led_cs.assert_address, SPI_OE_PIN);
