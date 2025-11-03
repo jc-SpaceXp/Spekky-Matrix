@@ -18,6 +18,7 @@ FAKE_VALUE_FUNC(bool, spi_tx_complete);
 
 static struct LedSpiPin some_cs_pin;
 static struct MaximMax7219 some_led_matrix;
+static struct Stp16cp05 some_stp_led_matrix;
 
 struct LedMatrixTxTest {
 	uint8_t address;
@@ -76,15 +77,19 @@ static void setup_led_matrix_tests(void* arg)
 }
 
 
-TEST led_cs_pin_set_correctly(void)
+TEST led_gpio_pins_set_correctly(void)
 {
 	unsigned int cs_pin = 4;
 	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_x, cs_pin);
 	copy_spi_pin_details(&some_led_matrix.cs, &some_cs_pin);
+	copy_spi_pin_details(&some_stp_led_matrix.le, &some_cs_pin);
 
 	ASSERT_EQ(cs_pin, some_led_matrix.cs.pin);
 	ASSERT_MEM_EQ(&some_gpio_port_c, some_led_matrix.cs.assert_address, 4);
 	ASSERT_MEM_EQ(&some_gpio_port_x, some_led_matrix.cs.deassert_address, 4);
+	ASSERT_EQ(cs_pin, some_stp_led_matrix.le.pin);
+	ASSERT_MEM_EQ(&some_gpio_port_c, some_stp_led_matrix.le.assert_address, 4);
+	ASSERT_MEM_EQ(&some_gpio_port_x, some_stp_led_matrix.le.deassert_address, 4);
 	PASS();
 }
 
@@ -576,7 +581,7 @@ TEST led_matrix_fft_conversion(void)
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
-	RUN_TEST(led_cs_pin_set_correctly);
+	RUN_TEST(led_gpio_pins_set_correctly);
 	RUN_TEST(led_matrix_devices_set_correctly);
 	RUN_TEST(led_matrix_set_matrix_from_2d_array);
 	RUN_TEST(verify_reverse_bits_lut);
