@@ -308,8 +308,9 @@ void new_matrix_convert_bars_to_rows(uint8_t *bar_value
 			output = 0;
 		}
 	} else if (direction == Horizontal) {
-		for (int b = 0; b < (int) total_bars; ++b) {
-			output = led_matrix_set_line_in_row_conversion(bar_value[b]);
+		for (int row = 0; row < (int) max_rows; ++row) {
+			output = led_matrix_set_line_in_row_conversion(bar_value[row]);
+			row_outputs[row] = output;
 		}
 	}
 }
