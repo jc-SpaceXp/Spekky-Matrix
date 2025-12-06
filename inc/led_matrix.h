@@ -11,6 +11,8 @@ enum LedCascadeReverse { NormalCascade, ReverseCascade };
 // RightToLeft is default direction of MAX7219 LED matrix
 enum LedDirection { RightToLeft, LeftToRight, BottomToTop, TopToBottom };
 enum LedLatchData { NoLatchData, LatchData };
+enum NewLedDirection { Horizontal, Vertical };
+enum NewLedDirectionInversion { NoInversion, InvertDirection };
 
 void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , volatile uint32_t* assert_addr
@@ -47,6 +49,12 @@ void led_matrix_convert_bars_to_rows(uint8_t *col_height
                                     , unsigned int process_rows, unsigned int process_cols
                                     , enum LedDirection direction
                                     , uint16_t* row_outputs);
+void new_matrix_convert_bars_to_rows(uint8_t *col_height
+                                    , unsigned int total_bars
+                                    , unsigned int max_rows
+                                    , enum NewLedDirection direction
+                                    , enum NewLedDirectionInversion inversion
+                                    , uint32_t* row_outputs);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 
 #endif /* LED_MATRIX_H */

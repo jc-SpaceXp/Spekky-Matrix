@@ -357,6 +357,7 @@ TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 		    , 0xFF00 | reverse_bits_lut[0x7F] }
 		  , LeftToRight }
 
+		// ASAN error here, left shift is too much
 		, { {  0x0F,   0x1F,   0x2A,   0x3B,   0x4C,   0x5D,   0x6E,   0xFF}
 		  , {0x7FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF}
 		  , RightToLeft }
@@ -597,6 +598,60 @@ TEST led_matrix_set_cascade_bytes(void)
 	PASS();
 }
 
+TEST led_32_bit_test(void)
+{
+	uint8_t bars[32]; // 32 bars
+	uint32_t rows[8]; // store each row as a upper 16bit and lower 16bit pair
+	uint32_t expected_rows[8] = { 0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000
+	                            , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	                            };
+
+	for (int i = 0; i < 32; ++i) {
+		bars[i] = 0x01;
+	}
+	int total_bars = 32;
+	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, NoInversion, rows);
+
+	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
+
+	PASS();
+}
+
+TEST led_32_bit_test_2(void)
+{
+	uint8_t bars[32]; // 32 bars
+	uint32_t rows[8];
+	uint32_t expected_rows[8] = { 0x80000000, 0x80000000, 0x80000000, 0x80000000
+	                            , 0x80000000, 0x80000000, 0x80000000, 0x80000000
+	                            };
+
+	for (int i = 0; i < 32; ++i) {
+		bars[i] = 0x00;
+	}
+	bars[31] = 8; // only set
+
+	int total_bars = 32;
+	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, NoInversion, rows);
+
+	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
+
+	PASS();
+}
+
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
@@ -606,13 +661,15 @@ SUITE(leds_driver)
 	RUN_TEST(verify_reverse_bits_lut);
 	RUN_TEST(led_matrix_fft_conversion);
 	RUN_TEST(led_matrix_set_cascade_bytes);
+	RUN_TEST(led_32_bit_test);
+	RUN_TEST(led_32_bit_test_2);
 	// looped tests
 	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
 	loop_test_max7219_led_matrix_cascade_data();
 	loop_test_generic_led_matrix_cascade_data();
-	loop_test_led_matrix_bar_conversions_8_rows();
+	loop_test_led_matrix_bar_conversions_8_rows(); // causes a shift greater than 31
 	loop_test_led_matrix_bar_conversions_16_rows();
 }
 

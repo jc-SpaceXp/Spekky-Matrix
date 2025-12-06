@@ -17,6 +17,17 @@
  * Row 6
  * Row 7  1111 1111 (0xFF)
  * BOTTOM
+ *
+ * LED Matrix (STP16CP05)
+ * Row 1 --> 0x01 to U3 (Top)
+ * ...
+ * Row 8 --> 0x80 to U3 (Bottom)
+ *
+ *       Col 32     ...       Col 1
+ *  0x8000 | 0x0000 ...  0x0000 | 0x0001
+ *  U5     | U4     ...  U5     | U4
+ *
+ *  Cascade writes: array[3] = { U3, U4, U5 } (U3 == Rows, U4 == Cols16..01, U5 == Cols32..17)
  */
 
 const uint8_t reverse_bits_lut[256] = {
@@ -229,7 +240,7 @@ void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx
 
 unsigned int led_matrix_set_bit_in_row_conversion(uint8_t col)
 {
-	return 1 << col;
+	return 1u << col;
 }
 
 static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
@@ -273,6 +284,33 @@ void led_matrix_convert_bars_to_rows(uint8_t *col_heights
 			}
 		}
 		row_outputs[row] = output;
+	}
+}
+
+void new_matrix_convert_bars_to_rows(uint8_t *bar_value
+                                    , unsigned int total_bars
+                                    , unsigned int max_rows
+                                    , enum NewLedDirection direction
+                                    , enum NewLedDirectionInversion inversion
+                                    , uint32_t *row_outputs)
+{
+	uint32_t output = 0;
+	if (direction == Vertical) {
+		// check row: ...... ....... and check if col[all_bars] exceed each row
+		// e.g. if row 8 (top) we need col[bar] > 8
+		for (int row = 0; row < (int) max_rows; ++row) {
+			for (int b = 0; b < (int) total_bars; ++b) {
+				if ((int) bar_value[b] > row) {
+					output |= led_matrix_set_bit_in_row_conversion(b);
+				}
+			}
+			row_outputs[row] = output;
+			output = 0;
+		}
+	} else if (direction == Horizontal) {
+		for (int b = 0; b < (int) total_bars; ++b) {
+			output = led_matrix_set_line_in_row_conversion(bar_value[b]);
+		}
 	}
 }
 
