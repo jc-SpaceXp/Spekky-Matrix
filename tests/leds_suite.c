@@ -117,7 +117,7 @@ TEST led_matrix_data_set_one_bit_only(unsigned int col)
 {
 	unsigned int tx_data = led_matrix_set_bit_in_row_conversion(col);
 
-	ASSERT_EQ((int) tx_data, 1 << col);
+	ASSERT_EQ((unsigned int) tx_data, 1u << col);
 	PASS();
 }
 
@@ -211,7 +211,7 @@ void loop_test_max7219_led_matrix_data_input(void)
 
 void loop_test_set_1_bit_in_led_matrix(void)
 {
-	for (int i = 0; i < 8; ++i) {
+	for (int i = 0; i < 32; ++i) {
 		char test_suffix[5];
 		int sn = snprintf(test_suffix, 4, "%u", i);
 		bool sn_error = (sn > 5) || (sn < 0);
