@@ -28,7 +28,7 @@ int main (void)
 	setup_hw_spi();
 	setup_hw_dma(); // used for I2S
 	setup_hw_i2s();
-	int led_matrices = 4;
+	int led_matrices = 3;
 	led_matrix_setup(led_matrices);
 
 
