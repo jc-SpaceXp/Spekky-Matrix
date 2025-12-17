@@ -247,7 +247,7 @@ static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
 {
 	unsigned int output = 0;
 	for (int i = 0; i < length; ++i) {
-		output |= (1 << i);
+		output |= (1u << (i & 31));
 	}
 	return output;
 }
