@@ -319,8 +319,20 @@ void led_matrix_inversions(uint32_t* matrix_data
                           , enum NewLedHorizontalInversion horz_inversion
                           , enum NewLedVerticalInversion vert_inversion)
 {
+	uint32_t original_matrix_data[max_rows];
+
 	if ((horz_inversion == DontFlipLeftRight) && (vert_inversion == DontFlipVertically)) {
 		goto early_return;
+	}
+
+	for (int i = 0; i < (int) max_rows; ++i) {
+		original_matrix_data[i] = matrix_data[i];
+	}
+
+	if (vert_inversion == DoFlipVertically) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			matrix_data[i] = original_matrix_data[max_rows - 1 - i];
+		}
 	}
 
 	early_return:
