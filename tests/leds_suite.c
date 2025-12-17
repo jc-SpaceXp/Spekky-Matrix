@@ -610,7 +610,7 @@ TEST led_32_bit_test(void)
 		bars[i] = 0x01;
 	}
 	int total_bars = 32;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, NoInversion, rows);
+	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, rows);
 
 	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
 	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
@@ -638,7 +638,7 @@ TEST led_32_bit_test_2(void)
 	bars[31] = 8; // only set
 
 	int total_bars = 32;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, NoInversion, rows);
+	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, rows);
 
 	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
 	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
@@ -665,7 +665,7 @@ TEST led_32_bit_test_3(void)
 	}
 
 	int total_bars = 8;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Horizontal, NoInversion, rows);
+	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Horizontal, rows);
 
 	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
 	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");

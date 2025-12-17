@@ -291,7 +291,6 @@ void new_matrix_convert_bars_to_rows(uint8_t *bar_value
                                     , unsigned int total_bars
                                     , unsigned int max_rows
                                     , enum NewLedDirection direction
-                                    , enum NewLedDirectionInversion inversion
                                     , uint32_t *row_outputs)
 {
 	uint32_t output = 0;

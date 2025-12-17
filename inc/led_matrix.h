@@ -53,7 +53,6 @@ void new_matrix_convert_bars_to_rows(uint8_t *col_height
                                     , unsigned int total_bars
                                     , unsigned int max_rows
                                     , enum NewLedDirection direction
-                                    , enum NewLedDirectionInversion inversion
                                     , uint32_t* row_outputs);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 
