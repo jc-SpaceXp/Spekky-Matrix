@@ -252,38 +252,29 @@ static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
 	return output;
 }
 
-void led_matrix_convert_bars_to_rows(uint8_t *col_heights
+void led_matrix_bar_conversion_16bit(uint8_t* col_heights
                                     , unsigned int process_rows, unsigned int process_cols
-                                    , enum LedDirection direction
-                                    , uint16_t *row_outputs)
+                                    , enum NewLedDirection direction
+                                    , uint16_t* row_outputs)
 {
-	for (int row = 0; row < (int) process_rows; ++row) {
-		uint16_t output = led_matrix_set_line_in_row_conversion(col_heights[row]);
-
-		if (direction == LeftToRight) {
-			uint16_t upper_byte = reverse_bits_lut[output & 0xFF] << 8;
-			uint8_t lower_byte = reverse_bits_lut[output >> 8];
-			output = upper_byte | lower_byte;
-		} else if (direction == TopToBottom) {
-			output = 0;
-			for (int bar = 0; bar < (int) process_cols; ++bar) {
-				// check each height exceeds the current row being checked
-				// e.g. if height is equal to one then only 0th row of that bit/bar will be set
-				if (col_heights[bar] > row) {
-					output |= (1 << (process_cols - 1 - bar));
+	uint16_t output = 0;
+	if (direction == Vertical) {
+		// check row: ...... ....... and check if col[all_bars] exceed each row
+		// e.g. if row 8 (top) we need col[bar] > 8
+		for (int row = 0; row < (int) process_rows; ++row) {
+			for (int b = 0; b < (int) process_cols; ++b) {
+				if ((int) col_heights[b] > row) {
+					output |= led_matrix_set_bit_in_row_conversion(process_cols - 1 - b);
 				}
 			}
-		} else if (direction == BottomToTop) {
+			row_outputs[row] = output;
 			output = 0;
-			for (int bar = 0; bar < (int) process_cols; ++bar) {
-				// check each height exceeds the current (inverted) row being checked
-				// e.g. if height is equal to one then only 7th row of that bit/bar will be set
-				if (col_heights[bar] > (process_cols - 1 - row)) {
-					output |= (1 << (process_cols - 1 - bar));
-				}
-			}
 		}
-		row_outputs[row] = output;
+	} else if (direction == Horizontal) {
+		for (int row = 0; row < (int) process_rows; ++row) {
+			output = led_matrix_set_line_in_row_conversion(col_heights[row]);
+			row_outputs[row] = output;
+		}
 	}
 }
 
