@@ -770,6 +770,35 @@ TEST led_32_bit_inversion_3_flip_leftright(void)
 	PASS();
 }
 
+TEST led_32_bit_inversion_3_flip_leftright_and_vertically(void)
+{
+	int total_bars = 8;
+	uint32_t rows[8] = { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
+	                   , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5
+	                   };
+	// D2 = 1101 0010 --> 0100 1011 = 4B
+	// 91 = 1001 0001 --> 1000 1001 = 89
+	// 05 = 0000 0101 --> 1010 0000 = A0
+	// 01 = 0000 0001 --> 1000 0000 = 80
+	uint32_t expected_rows[8] = { 0x00000000, 0x80000000, 0xC0300000, 0x00000008
+	                            , 0x4B89A080, 0x08840099, 0x0F0F0F0F, 0xA5A58888
+	                            };
+
+	led_matrix_inversions(rows, total_bars, DoFlipLeftRight, DoFlipVertically);
+
+
+	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[7], "%.8X");
+
+	PASS();
+}
+
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
@@ -785,6 +814,7 @@ SUITE(leds_driver)
 	RUN_TEST(led_32_bit_inversion_1_no_flips);
 	RUN_TEST(led_32_bit_inversion_2_flip_vertically);
 	RUN_TEST(led_32_bit_inversion_3_flip_leftright);
+	RUN_TEST(led_32_bit_inversion_3_flip_leftright_and_vertically);
 	// looped tests
 	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
