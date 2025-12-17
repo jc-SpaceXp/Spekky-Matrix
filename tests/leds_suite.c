@@ -679,124 +679,77 @@ TEST led_32_bit_test_3(void)
 	PASS();
 }
 
-TEST led_32_bit_inversion_1_no_flips(void)
+TEST led_matrix_32_bit_inversions(unsigned int t)
 {
-	uint8_t bars[8]; // 8 (horizontal) bars
-	uint32_t rows[8];
-	uint32_t expected_rows[8] = { 0x00000000, 0x00000001, 0x00000003, 0x00000007
-	                            , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F
-	                            };
+	int total_bars = 8;
+	struct MatrixDataAndInversion {
+		uint32_t matrix_data[8];
+		uint32_t expected_output[8];
+		enum NewLedHorizontalInversion horz_inversion;
+		enum NewLedVerticalInversion vert_inversion;
+	} matrix[4] = {
+		{  { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+	       , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
 
-	for (int i = 0; i < 8; ++i) {
-		bars[i] = i;
+		  , { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+	        , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+		  , DontFlipLeftRight, DontFlipVertically }
+
+		, { { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+		    , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+
+		  , { 0x0000007F, 0x0000003F, 0x0000001F, 0x0000000F
+		    , 0x00000007, 0x00000003, 0x00000001, 0x00000000 }
+		  , DontFlipLeftRight, DoFlipVertically }
+
+		, { { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
+		    , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5 }
+		    // D2 = 1101 0010 --> 0100 1011 = 4B
+		    // 91 = 1001 0001 --> 1000 1001 = 89
+		    // 05 = 0000 0101 --> 1010 0000 = A0
+		    // 01 = 0000 0001 --> 1000 0000 = 80
+		  , { 0x00000000, 0x80000000, 0xC0300000, 0x00000008
+		    , 0x4B89A080, 0x08840099, 0x0F0F0F0F, 0xA5A58888 }
+		  , DoFlipLeftRight, DontFlipVertically }
+
+		, { { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
+		    , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5 }
+		    // D2 = 1101 0010 --> 0100 1011 = 4B
+		    // 91 = 1001 0001 --> 1000 1001 = 89
+		    // 05 = 0000 0101 --> 1010 0000 = A0
+		    // 01 = 0000 0001 --> 1000 0000 = 80
+		  , { 0xA5A58888, 0x0F0F0F0F, 0x08840099, 0x4B89A080
+		    , 0x00000008, 0xC0300000, 0x80000000, 0x00000000 }
+		  , DoFlipLeftRight, DoFlipVertically }
+	};
+
+
+	led_matrix_inversions(matrix[t].matrix_data, total_bars, matrix[t].horz_inversion, matrix[t].vert_inversion);
+
+
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[0], matrix[t].matrix_data[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[1], matrix[t].matrix_data[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[2], matrix[t].matrix_data[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[3], matrix[t].matrix_data[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[4], matrix[t].matrix_data[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[5], matrix[t].matrix_data[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[6], matrix[t].matrix_data[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[7], matrix[t].matrix_data[7], "%.8X");
+
+	PASS();
+}
+
+void loop_test_led_matrix_inversions_32_bit(void)
+{
+	for (int i = 0; i < 4; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_32_bit_inversions, i);
 	}
-
-	int total_bars = 8;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Horizontal, rows);
-
-
-	led_matrix_inversions(rows, total_bars, DontFlipLeftRight, DontFlipVertically);
-
-
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
-
-	PASS();
-}
-
-TEST led_32_bit_inversion_2_flip_vertically(void)
-{
-	uint8_t bars[8]; // 8 (horizontal) bars
-	uint32_t rows[8];
-	uint32_t expected_rows[8] = { 0x0000007F, 0x0000003F, 0x0000001F, 0x0000000F
-	                            , 0x00000007, 0x00000003, 0x00000001, 0x00000000
-	                            };
-
-	for (int i = 0; i < 8; ++i) {
-		bars[i] = i;
-	}
-
-	int total_bars = 8;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Horizontal, rows);
-
-
-	led_matrix_inversions(rows, total_bars, DontFlipLeftRight, DoFlipVertically);
-
-
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
-
-	PASS();
-}
-
-TEST led_32_bit_inversion_3_flip_leftright(void)
-{
-	int total_bars = 8;
-	uint32_t rows[8] = { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
-	                   , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5
-	                   };
-	// D2 = 1101 0010 --> 0100 1011 = 4B
-	// 91 = 1001 0001 --> 1000 1001 = 89
-	// 05 = 0000 0101 --> 1010 0000 = A0
-	// 01 = 0000 0001 --> 1000 0000 = 80
-	uint32_t expected_rows[8] = { 0x00000000, 0x80000000, 0xC0300000, 0x00000008
-	                            , 0x4B89A080, 0x08840099, 0x0F0F0F0F, 0xA5A58888
-	                            };
-
-	led_matrix_inversions(rows, total_bars, DoFlipLeftRight, DontFlipVertically);
-
-
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
-
-	PASS();
-}
-
-TEST led_32_bit_inversion_3_flip_leftright_and_vertically(void)
-{
-	int total_bars = 8;
-	uint32_t rows[8] = { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
-	                   , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5
-	                   };
-	// D2 = 1101 0010 --> 0100 1011 = 4B
-	// 91 = 1001 0001 --> 1000 1001 = 89
-	// 05 = 0000 0101 --> 1010 0000 = A0
-	// 01 = 0000 0001 --> 1000 0000 = 80
-	uint32_t expected_rows[8] = { 0x00000000, 0x80000000, 0xC0300000, 0x00000008
-	                            , 0x4B89A080, 0x08840099, 0x0F0F0F0F, 0xA5A58888
-	                            };
-
-	led_matrix_inversions(rows, total_bars, DoFlipLeftRight, DoFlipVertically);
-
-
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[7], "%.8X");
-
-	PASS();
 }
 
 SUITE(leds_driver)
@@ -811,10 +764,6 @@ SUITE(leds_driver)
 	RUN_TEST(led_32_bit_test);
 	RUN_TEST(led_32_bit_test_2);
 	RUN_TEST(led_32_bit_test_3);
-	RUN_TEST(led_32_bit_inversion_1_no_flips);
-	RUN_TEST(led_32_bit_inversion_2_flip_vertically);
-	RUN_TEST(led_32_bit_inversion_3_flip_leftright);
-	RUN_TEST(led_32_bit_inversion_3_flip_leftright_and_vertically);
 	// looped tests
 	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
@@ -823,5 +772,6 @@ SUITE(leds_driver)
 	loop_test_generic_led_matrix_cascade_data();
 	//loop_test_led_matrix_bar_conversions_8_rows(); // causes a shift greater than 31
 	//loop_test_led_matrix_bar_conversions_16_rows();
+	loop_test_led_matrix_inversions_32_bit();
 }
 
