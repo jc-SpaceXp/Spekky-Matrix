@@ -598,86 +598,95 @@ TEST led_matrix_set_cascade_bytes(void)
 	PASS();
 }
 
-TEST led_32_bit_test(void)
+TEST led_matrix_bar_conversion_32_bit_test(unsigned int t)
 {
-	uint8_t bars[32]; // 32 bars
-	uint32_t rows[8]; // store each row as a upper 16bit and lower 16bit pair
-	uint32_t expected_rows[8] = { 0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000
-	                            , 0x00000000, 0x00000000, 0x00000000, 0x00000000
-	                            };
+	struct MatrixDataAndDirection {
+		uint8_t bars[32];
+		uint32_t rows[8];
+		uint32_t expected_output[8];
+		enum NewLedDirection led_direction;
+		int total_bars_or_rows;
+	} matrix[3] = {
+		{  { 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 // 8
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 // 16
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 // 24
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 } // 32
 
-	for (int i = 0; i < 32; ++i) {
-		bars[i] = 0x01;
-	}
-	int total_bars = 32;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, rows);
+	      , { } // rows (filled out by function below)
 
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
+		  , { 0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 }
+		  , Vertical, 32 }
+
+		, { { 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 8
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 16
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 24
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000008 } // 32 (only last bar set (to max))
+
+	      , { } // rows (filled out by function below)
+
+		  // 32nd col is max therefore each row must have the 32nd led set
+		  , { 0x80000000, 0x80000000, 0x80000000, 0x80000000
+		    , 0x80000000, 0x80000000, 0x80000000, 0x80000000 }
+		  , Vertical, 32 }
+
+		, { { 0x00000000, 0x00000001, 0x00000002, 0x00000003
+	        , 0x00000004, 0x00000005, 0x00000006, 0x00000007 // 8 (only using first 8 bars)
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 16
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 24
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 } // 32
+
+	      , { } // rows (filled out by function below)
+
+	      , { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+	        , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+		  , Horizontal, 8 }
+	};
+
+
+	new_matrix_convert_bars_to_rows(&matrix[t].bars[0]
+	                               , matrix[t].total_bars_or_rows
+	                               , 8
+	                               , matrix[t].led_direction
+	                               , matrix[t].rows);
+
+
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[0], matrix[t].rows[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[1], matrix[t].rows[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[2], matrix[t].rows[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[3], matrix[t].rows[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[4], matrix[t].rows[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[5], matrix[t].rows[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[6], matrix[t].rows[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[7], matrix[t].rows[7], "%.8X");
 
 	PASS();
 }
 
-TEST led_32_bit_test_2(void)
+void loop_test_led_matrix_bar_conversions_32_bit(void)
 {
-	uint8_t bars[32]; // 32 bars
-	uint32_t rows[8];
-	uint32_t expected_rows[8] = { 0x80000000, 0x80000000, 0x80000000, 0x80000000
-	                            , 0x80000000, 0x80000000, 0x80000000, 0x80000000
-	                            };
-
-	for (int i = 0; i < 32; ++i) {
-		bars[i] = 0x00;
+	for (int i = 0; i < 3; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_bar_conversion_32_bit_test, i);
 	}
-	bars[31] = 8; // only set
-
-	int total_bars = 32;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Vertical, rows);
-
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
-
-	PASS();
 }
 
-TEST led_32_bit_test_3(void)
-{
-	uint8_t bars[8]; // 8 (horizontal) bars
-	uint32_t rows[8];
-	uint32_t expected_rows[8] = { 0x00000000, 0x00000001, 0x00000003, 0x00000007
-	                            , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F
-	                            };
-
-	for (int i = 0; i < 8; ++i) {
-		bars[i] = i;
-	}
-
-	int total_bars = 8;
-	new_matrix_convert_bars_to_rows(&bars[0], total_bars, 8, Horizontal, rows);
-
-	ASSERT_EQ_FMT((uint32_t) expected_rows[0], rows[0], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[1], rows[1], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[2], rows[2], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[3], rows[3], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[4], rows[4], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[5], rows[5], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[6], rows[6], "%.8X");
-	ASSERT_EQ_FMT((uint32_t) expected_rows[7], rows[7], "%.8X");
-
-	PASS();
-}
 
 TEST led_matrix_32_bit_inversions(unsigned int t)
 {
@@ -761,9 +770,6 @@ SUITE(leds_driver)
 	RUN_TEST(verify_reverse_bits_lut);
 	RUN_TEST(led_matrix_fft_conversion);
 	RUN_TEST(led_matrix_set_cascade_bytes);
-	RUN_TEST(led_32_bit_test);
-	RUN_TEST(led_32_bit_test_2);
-	RUN_TEST(led_32_bit_test_3);
 	// looped tests
 	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
@@ -772,6 +778,7 @@ SUITE(leds_driver)
 	loop_test_generic_led_matrix_cascade_data();
 	//loop_test_led_matrix_bar_conversions_8_rows(); // causes a shift greater than 31
 	//loop_test_led_matrix_bar_conversions_16_rows();
+	loop_test_led_matrix_bar_conversions_32_bit();
 	loop_test_led_matrix_inversions_32_bit();
 }
 
