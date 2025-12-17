@@ -287,11 +287,11 @@ void led_matrix_convert_bars_to_rows(uint8_t *col_heights
 	}
 }
 
-void new_matrix_convert_bars_to_rows(uint8_t *bar_value
+void new_matrix_convert_bars_to_rows(uint8_t* bar_value
                                     , unsigned int total_bars
                                     , unsigned int max_rows
                                     , enum NewLedDirection direction
-                                    , uint32_t *row_outputs)
+                                    , uint32_t* row_outputs)
 {
 	uint32_t output = 0;
 	if (direction == Vertical) {
