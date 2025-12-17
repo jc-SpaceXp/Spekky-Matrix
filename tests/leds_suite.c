@@ -760,7 +760,7 @@ TEST led_matrix_32_bit_inversions(unsigned int t)
 	};
 
 
-	led_matrix_inversions(matrix[t].matrix_data, total_bars, matrix[t].horz_inversion, matrix[t].vert_inversion);
+	led_matrix_inversions_32bit(matrix[t].matrix_data, total_bars, matrix[t].horz_inversion, matrix[t].vert_inversion);
 
 
 	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[0], matrix[t].matrix_data[0], "%.8X");

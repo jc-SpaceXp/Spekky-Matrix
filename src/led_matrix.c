@@ -341,10 +341,10 @@ void led_matrix_inversions_16bit(uint16_t* matrix_data
 		return;
 }
 
-void led_matrix_inversions(uint32_t* matrix_data
-                          , unsigned int max_rows
-                          , enum LedHorizontalInversion horz_inversion
-                          , enum LedVerticalInversion vert_inversion)
+void led_matrix_inversions_32bit(uint32_t* matrix_data
+                                , unsigned int max_rows
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion)
 {
 	uint32_t original_matrix_data[max_rows];
 

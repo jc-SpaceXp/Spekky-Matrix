@@ -53,10 +53,10 @@ void new_matrix_convert_bars_to_rows(uint8_t* bar_value
                                     , unsigned int max_rows
                                     , enum LedDirection direction
                                     , uint32_t* row_outputs);
-void led_matrix_inversions(uint32_t* matrix_data, unsigned int max_rows
-                          , enum LedHorizontalInversion horz_inversion
-                          , enum LedVerticalInversion vert_inversion);
 void led_matrix_inversions_16bit(uint16_t* matrix_data, unsigned int max_rows
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion);
+void led_matrix_inversions_32bit(uint32_t* matrix_data, unsigned int max_rows
                                 , enum LedHorizontalInversion horz_inversion
                                 , enum LedVerticalInversion vert_inversion);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
