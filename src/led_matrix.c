@@ -335,6 +335,21 @@ void led_matrix_inversions(uint32_t* matrix_data
 		}
 	}
 
+	if (horz_inversion == DoFlipLeftRight) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			uint8_t reversed_bytes[4] = { 0 };
+			reversed_bytes[0] = reverse_bits_lut[(uint8_t) matrix_data[i]];
+			reversed_bytes[1] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 8)];
+			reversed_bytes[2] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 16)];
+			reversed_bytes[3] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 24)];
+
+			matrix_data[i] = ((uint32_t) reversed_bytes[0]) << 24U;
+			matrix_data[i] |= ((uint32_t) reversed_bytes[1]) << 16U;
+			matrix_data[i] |= ((uint32_t) reversed_bytes[2]) << 8U;
+			matrix_data[i] |= (uint32_t) reversed_bytes[3];
+		}
+	}
+
 	early_return:
 		return;
 }
