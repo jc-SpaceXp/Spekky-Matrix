@@ -320,7 +320,7 @@ TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 	struct DataAndDirection {
 		uint8_t input[8]; // 8 rows or cols depending on enum
 		uint16_t output[8]; // 8x16 matrix
-		enum NewLedDirection direction;
+		enum LedDirection direction;
 	} expected[7] = {
 		{ {0x00,       0x00,   0x00,   0x00,   0x00,   0x00,   0x00,   0x00}
 		  , {0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000}
@@ -382,8 +382,8 @@ TEST led_matrix_inversions_16_bit_test(unsigned int t)
 	struct DataAndDirection {
 		uint16_t input[16];
 		uint16_t output[16];
-		enum NewLedHorizontalInversion horz_inversion;
-		enum NewLedVerticalInversion vert_inversion;
+		enum LedHorizontalInversion horz_inversion;
+		enum LedVerticalInversion vert_inversion;
 		unsigned int max_rows;
 	} expected[11] = {
 	      { { 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF }
@@ -509,7 +509,7 @@ TEST led_matrix_bar_conversions_16_rows_variations(unsigned int t)
 	struct DataAndDirection {
 		uint8_t input[16]; // 16 rows or cols depending on enum
 		uint16_t output[16]; // 16x16 matrix
-		enum NewLedDirection direction;
+		enum LedDirection direction;
 	} expected[5] = {
 		// read as 4 down, 4 down, 4 down etc. (from right to left)
 		// therefore first 4 rows are all filled 4 columns down
@@ -631,7 +631,7 @@ TEST led_matrix_bar_conversion_32_bit_test(unsigned int t)
 		uint8_t bars[32];
 		uint32_t rows[8];
 		uint32_t expected_output[8];
-		enum NewLedDirection led_direction;
+		enum LedDirection led_direction;
 		int total_bars_or_rows;
 	} matrix[3] = {
 		{  { 0x00000001, 0x00000001, 0x00000001, 0x00000001
@@ -721,8 +721,8 @@ TEST led_matrix_32_bit_inversions(unsigned int t)
 	struct MatrixDataAndInversion {
 		uint32_t matrix_data[8];
 		uint32_t expected_output[8];
-		enum NewLedHorizontalInversion horz_inversion;
-		enum NewLedVerticalInversion vert_inversion;
+		enum LedHorizontalInversion horz_inversion;
+		enum LedVerticalInversion vert_inversion;
 	} matrix[4] = {
 		{  { 0x00000000, 0x00000001, 0x00000003, 0x00000007
 	       , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }

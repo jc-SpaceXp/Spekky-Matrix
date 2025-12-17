@@ -8,12 +8,10 @@
 extern const uint8_t reverse_bits_lut[256];
 
 enum LedCascadeReverse { NormalCascade, ReverseCascade };
-// RightToLeft is default direction of MAX7219 LED matrix
-enum LedDirection { RightToLeft, LeftToRight, BottomToTop, TopToBottom };
 enum LedLatchData { NoLatchData, LatchData };
-enum NewLedDirection { Horizontal, Vertical };
-enum NewLedHorizontalInversion { DontFlipLeftRight, DoFlipLeftRight };
-enum NewLedVerticalInversion { DontFlipVertically, DoFlipVertically };
+enum LedDirection { Horizontal, Vertical };
+enum LedHorizontalInversion { DontFlipLeftRight, DoFlipLeftRight };
+enum LedVerticalInversion { DontFlipVertically, DoFlipVertically };
 
 void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , volatile uint32_t* assert_addr
@@ -48,19 +46,19 @@ void set_led_matrix_device_cascade_bytes(uint16_t* matrix, unsigned int device_n
                                         , uint16_t tx_data);
 void led_matrix_bar_conversion_16bit(uint8_t* col_height
                                     , unsigned int process_rows, unsigned int process_cols
-                                    , enum NewLedDirection direction
+                                    , enum LedDirection direction
                                     , uint16_t* row_outputs);
 void new_matrix_convert_bars_to_rows(uint8_t* bar_value
                                     , unsigned int total_bars
                                     , unsigned int max_rows
-                                    , enum NewLedDirection direction
+                                    , enum LedDirection direction
                                     , uint32_t* row_outputs);
 void led_matrix_inversions(uint32_t* matrix_data, unsigned int max_rows
-                          , enum NewLedHorizontalInversion horz_inversion
-                          , enum NewLedVerticalInversion vert_inversion);
+                          , enum LedHorizontalInversion horz_inversion
+                          , enum LedVerticalInversion vert_inversion);
 void led_matrix_inversions_16bit(uint16_t* matrix_data, unsigned int max_rows
-                                , enum NewLedHorizontalInversion horz_inversion
-                                , enum NewLedVerticalInversion vert_inversion);
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 
 #endif /* LED_MATRIX_H */

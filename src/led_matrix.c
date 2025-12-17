@@ -254,7 +254,7 @@ static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
 
 void led_matrix_bar_conversion_16bit(uint8_t* col_heights
                                     , unsigned int process_rows, unsigned int process_cols
-                                    , enum NewLedDirection direction
+                                    , enum LedDirection direction
                                     , uint16_t* row_outputs)
 {
 	uint16_t output = 0;
@@ -281,7 +281,7 @@ void led_matrix_bar_conversion_16bit(uint8_t* col_heights
 void new_matrix_convert_bars_to_rows(uint8_t* bar_value
                                     , unsigned int total_bars
                                     , unsigned int max_rows
-                                    , enum NewLedDirection direction
+                                    , enum LedDirection direction
                                     , uint32_t* row_outputs)
 {
 	uint32_t output = 0;
@@ -307,8 +307,8 @@ void new_matrix_convert_bars_to_rows(uint8_t* bar_value
 
 void led_matrix_inversions_16bit(uint16_t* matrix_data
                                 , unsigned int max_rows
-                                , enum NewLedHorizontalInversion horz_inversion
-                                , enum NewLedVerticalInversion vert_inversion)
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion)
 {
 	uint16_t original_matrix_data[max_rows];
 
@@ -343,8 +343,8 @@ void led_matrix_inversions_16bit(uint16_t* matrix_data
 
 void led_matrix_inversions(uint32_t* matrix_data
                           , unsigned int max_rows
-                          , enum NewLedHorizontalInversion horz_inversion
-                          , enum NewLedVerticalInversion vert_inversion)
+                          , enum LedHorizontalInversion horz_inversion
+                          , enum LedVerticalInversion vert_inversion)
 {
 	uint32_t original_matrix_data[max_rows];
 
