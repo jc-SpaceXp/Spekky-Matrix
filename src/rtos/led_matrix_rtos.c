@@ -54,7 +54,7 @@ void led_matrix_update_task(void* pvParameters)
 			bars[i] = i / 4;
 		}
 
-		new_matrix_convert_bars_to_rows(&bars[0], COLS, ROWS, Vertical, NoInversion, row_outputs);
+		new_matrix_convert_bars_to_rows(&bars[0], COLS, ROWS, Vertical, row_outputs);
 
 		for (int i = 0; i < ROWS; ++i) {
 			set_led_matrix_device_cascade_bytes(tx_data, 0
