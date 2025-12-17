@@ -682,7 +682,7 @@ TEST led_matrix_bar_conversion_32_bit_test(unsigned int t)
 	};
 
 
-	new_matrix_convert_bars_to_rows(&matrix[t].bars[0]
+	led_matrix_bar_conversion_32bit(&matrix[t].bars[0]
 	                               , matrix[t].total_bars_or_rows
 	                               , 8
 	                               , matrix[t].led_direction
