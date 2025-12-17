@@ -305,6 +305,42 @@ void new_matrix_convert_bars_to_rows(uint8_t* bar_value
 	}
 }
 
+void led_matrix_inversions_16bit(uint16_t* matrix_data
+                                , unsigned int max_rows
+                                , enum NewLedHorizontalInversion horz_inversion
+                                , enum NewLedVerticalInversion vert_inversion)
+{
+	uint16_t original_matrix_data[max_rows];
+
+	if ((horz_inversion == DontFlipLeftRight) && (vert_inversion == DontFlipVertically)) {
+		goto early_return;
+	}
+
+	for (int i = 0; i < (int) max_rows; ++i) {
+		original_matrix_data[i] = matrix_data[i];
+	}
+
+	if (vert_inversion == DoFlipVertically) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			matrix_data[i] = original_matrix_data[max_rows - 1 - i];
+		}
+	}
+
+	if (horz_inversion == DoFlipLeftRight) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			uint8_t reversed_bytes[2] = { 0 };
+			reversed_bytes[0] = reverse_bits_lut[(uint8_t) matrix_data[i]];
+			reversed_bytes[1] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 8)];
+
+			matrix_data[i] = ((uint16_t) reversed_bytes[0]) << 8U;
+			matrix_data[i] |= (uint16_t) reversed_bytes[1];
+		}
+	}
+
+	early_return:
+		return;
+}
+
 void led_matrix_inversions(uint32_t* matrix_data
                           , unsigned int max_rows
                           , enum NewLedHorizontalInversion horz_inversion
