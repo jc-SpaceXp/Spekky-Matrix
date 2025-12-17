@@ -12,7 +12,8 @@ enum LedCascadeReverse { NormalCascade, ReverseCascade };
 enum LedDirection { RightToLeft, LeftToRight, BottomToTop, TopToBottom };
 enum LedLatchData { NoLatchData, LatchData };
 enum NewLedDirection { Horizontal, Vertical };
-enum NewLedDirectionInversion { NoInversion, InvertDirection };
+enum NewLedHorizontalInversion { DontFlipLeftRight, DoFlipLeftRight };
+enum NewLedVerticalInversion { DontFlipVertically, DoFlipVertically };
 
 void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , volatile uint32_t* assert_addr
@@ -54,6 +55,9 @@ void new_matrix_convert_bars_to_rows(uint8_t *col_height
                                     , unsigned int max_rows
                                     , enum NewLedDirection direction
                                     , uint32_t* row_outputs);
+void led_matrix_inversions(uint32_t* matrix_data, unsigned int max_rows
+                          , enum NewLedHorizontalInversion horz_inversion
+                          , enum NewLedVerticalInversion vert_inversion);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 
 #endif /* LED_MATRIX_H */

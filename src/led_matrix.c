@@ -314,6 +314,19 @@ void new_matrix_convert_bars_to_rows(uint8_t *bar_value
 	}
 }
 
+void led_matrix_inversions(uint32_t* matrix_data
+                          , unsigned int max_rows
+                          , enum NewLedHorizontalInversion horz_inversion
+                          , enum NewLedVerticalInversion vert_inversion)
+{
+	if ((horz_inversion == DontFlipLeftRight) && (vert_inversion == DontFlipVertically)) {
+		goto early_return;
+	}
+
+	early_return:
+		return;
+}
+
 uint8_t fft_to_led_bar_conversion(float input_bin_mags)
 {
 	uint8_t bars = 0;
