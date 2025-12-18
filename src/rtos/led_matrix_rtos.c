@@ -31,6 +31,24 @@ void led_matrix_setup(int total_devices)
 	deassert_spi_pin(led_oe.assert_address, led_oe.pin);
 }
 
+void reduce_led_matrix_ghosting(int row)
+{
+	uint16_t tx_data[led_matrix.total_devices];
+	tx_data[1] = 0x0000;
+	tx_data[2] = 0x0000;
+	// blank current and next row leds to turn off transistors before
+	// switching rows (transistors)
+	set_led_matrix_device_cascade_bytes(tx_data, 0
+	                                   , led_matrix_set_bit_in_row_conversion(row));
+	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
+	                                        , led_matrix.total_devices, NormalCascade);
+	// make sure row is between 0 & 7
+	set_led_matrix_device_cascade_bytes(tx_data, 0
+	                                   , led_matrix_set_bit_in_row_conversion((row + 1) & 0x07));
+	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
+	                                        , led_matrix.total_devices, NormalCascade);
+}
+
 void led_matrix_update_task(void* pvParameters)
 {
 	(void) pvParameters;
@@ -51,7 +69,8 @@ void led_matrix_update_task(void* pvParameters)
 
 		for (int i = 0; i < COLS; ++i) {
 			//bars[i] = fft_to_led_bar_conversion(db_bin_mags[i]);
-			bars[i] = (i % 8) + 1;
+			//bars[i] = i / 4; // test pattern 1
+			bars[i] = (i % 8) + 1; // test pattern 2
 		}
 		bars[0] = 0; // keep 1st col empty to display an empty column
 
@@ -68,18 +87,7 @@ void led_matrix_update_task(void* pvParameters)
 
 			set_led_matrix_device_cascade_bytes(tx_data, 0
 			                                   , led_matrix_set_bit_in_row_conversion(i));
-			// BLANK TWICE TO REDUCE GHOSTING
-			// blank led to turn off transistors before switching rows
-			tx_data[1] = 0x0000;
-			tx_data[2] = 0x0000;
-			generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
-			                                        , led_matrix.total_devices, NormalCascade);
-
-			// blank led to turn off transistors before switching rows
-			set_led_matrix_device_cascade_bytes(tx_data, 0
-			                                   , led_matrix_set_bit_in_row_conversion(i));
-			generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
-			                                        , led_matrix.total_devices, NormalCascade);
+			reduce_led_matrix_ghosting(i);
 		}
 
 	}
