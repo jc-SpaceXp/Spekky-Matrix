@@ -17,6 +17,17 @@
  * Row 6
  * Row 7  1111 1111 (0xFF)
  * BOTTOM
+ *
+ * LED Matrix (STP16CP05)
+ * Row 1 --> 0x01 to U3 (Top)
+ * ...
+ * Row 8 --> 0x80 to U3 (Bottom)
+ *
+ *       Col 32     ...       Col 1
+ *  0x8000 | 0x0000 ...  0x0000 | 0x0001
+ *  U5     | U4     ...  U5     | U4
+ *
+ *  Cascade writes: array[3] = { U3, U4, U5 } (U3 == Rows, U4 == Cols16..01, U5 == Cols32..17)
  */
 
 const uint8_t reverse_bits_lut[256] = {
@@ -47,14 +58,25 @@ void set_spi_pin_details(struct LedSpiPin* spi_pin
 	*spi_pin = ((struct LedSpiPin) { assert_addr, deassert_addr, pin } );
 }
 
-void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
+void copy_spi_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src)
 {
 	*dest = *src;
 }
 
-void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices)
+void set_total_maxim_led_matrix_devices(struct MaximMax7219* matrix, int total_devices)
 {
 	matrix->total_devices = total_devices;
+}
+
+void set_total_stp16cp05_led_matrix_devices(struct Stp16cp05* matrix, int total_devices)
+{
+	matrix->total_devices = total_devices;
+}
+
+void set_led_matrix_device_cascade_bytes(uint16_t* matrix, unsigned int device_number
+                                        , uint16_t tx_data)
+{
+	matrix[device_number] = tx_data;
 }
 
 uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data)
@@ -87,23 +109,23 @@ void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
 	}
 }
 
-void generic_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
+void generic_led_matrix_transfer_data_cascade(struct LedSpiPin cs_or_le
                                              , volatile uint32_t* spi_tx_reg, uint16_t* tx_data
                                              , int total_devices
                                              , enum LedCascadeReverse reverse_order)
 {
 	if (reverse_order == ReverseCascade) {
 		for (int i = total_devices - 1; i >= 0; --i) {
-			led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data[i], NoLatchData);
+			led_matrix_transfer_data(cs_or_le, spi_tx_reg, tx_data[i], NoLatchData);
 		}
 	} else {
 		for (int i = 0; i < total_devices; ++i) {
-			led_matrix_transfer_data(matrix.cs, spi_tx_reg, tx_data[i], NoLatchData);
+			led_matrix_transfer_data(cs_or_le, spi_tx_reg, tx_data[i], NoLatchData);
 		}
 	}
 
 	// Latch data (pull CS high)
-	assert_spi_pin(matrix.cs.assert_address, matrix.cs.pin);
+	assert_spi_pin(cs_or_le.assert_address, cs_or_le.pin);
 }
 
 void max7219_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
@@ -218,51 +240,145 @@ void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx
 
 unsigned int led_matrix_set_bit_in_row_conversion(uint8_t col)
 {
-	return 1 << col;
+	return 1u << col;
 }
 
 static unsigned int led_matrix_set_line_in_row_conversion(uint8_t length)
 {
 	unsigned int output = 0;
 	for (int i = 0; i < length; ++i) {
-		output |= (1 << i);
+		output |= (1u << (i & 31));
 	}
 	return output;
 }
 
-void led_matrix_convert_bars_to_rows(uint8_t *col_heights
+void led_matrix_bar_conversion_16bit(uint8_t* col_heights
                                     , unsigned int process_rows, unsigned int process_cols
                                     , enum LedDirection direction
-                                    , uint16_t *row_outputs)
+                                    , uint16_t* row_outputs)
 {
-	for (int row = 0; row < (int) process_rows; ++row) {
-		uint16_t output = led_matrix_set_line_in_row_conversion(col_heights[row]);
-
-		if (direction == LeftToRight) {
-			uint16_t upper_byte = reverse_bits_lut[output & 0xFF] << 8;
-			uint8_t lower_byte = reverse_bits_lut[output >> 8];
-			output = upper_byte | lower_byte;
-		} else if (direction == TopToBottom) {
-			output = 0;
-			for (int bar = 0; bar < (int) process_cols; ++bar) {
-				// check each height exceeds the current row being checked
-				// e.g. if height is equal to one then only 0th row of that bit/bar will be set
-				if (col_heights[bar] > row) {
-					output |= (1 << (process_cols - 1 - bar));
+	uint16_t output = 0;
+	if (direction == Vertical) {
+		// check row: ...... ....... and check if col[all_bars] exceed each row
+		// e.g. if row 8 (top) we need col[bar] > 8
+		for (int row = 0; row < (int) process_rows; ++row) {
+			for (int b = 0; b < (int) process_cols; ++b) {
+				if ((int) col_heights[b] > row) {
+					output |= led_matrix_set_bit_in_row_conversion(process_cols - 1 - b);
 				}
 			}
-		} else if (direction == BottomToTop) {
+			row_outputs[row] = output;
 			output = 0;
-			for (int bar = 0; bar < (int) process_cols; ++bar) {
-				// check each height exceeds the current (inverted) row being checked
-				// e.g. if height is equal to one then only 7th row of that bit/bar will be set
-				if (col_heights[bar] > (process_cols - 1 - row)) {
-					output |= (1 << (process_cols - 1 - bar));
-				}
-			}
 		}
-		row_outputs[row] = output;
+	} else if (direction == Horizontal) {
+		for (int row = 0; row < (int) process_rows; ++row) {
+			output = led_matrix_set_line_in_row_conversion(col_heights[row]);
+			row_outputs[row] = output;
+		}
 	}
+}
+
+void led_matrix_bar_conversion_32bit(uint8_t* bar_value
+                                    , unsigned int total_bars
+                                    , unsigned int max_rows
+                                    , enum LedDirection direction
+                                    , uint32_t* row_outputs)
+{
+	uint32_t output = 0;
+	if (direction == Vertical) {
+		// check row: ...... ....... and check if col[all_bars] exceed each row
+		// e.g. if row 8 (top) we need col[bar] > 8
+		for (int row = 0; row < (int) max_rows; ++row) {
+			for (int b = 0; b < (int) total_bars; ++b) {
+				if ((int) bar_value[b] > row) {
+					output |= led_matrix_set_bit_in_row_conversion(b);
+				}
+			}
+			row_outputs[row] = output;
+			output = 0;
+		}
+	} else if (direction == Horizontal) {
+		for (int row = 0; row < (int) max_rows; ++row) {
+			output = led_matrix_set_line_in_row_conversion(bar_value[row]);
+			row_outputs[row] = output;
+		}
+	}
+}
+
+void led_matrix_inversions_16bit(uint16_t* matrix_data
+                                , unsigned int max_rows
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion)
+{
+	uint16_t original_matrix_data[max_rows];
+
+	if ((horz_inversion == DontFlipLeftRight) && (vert_inversion == DontFlipVertically)) {
+		goto early_return;
+	}
+
+	for (int i = 0; i < (int) max_rows; ++i) {
+		original_matrix_data[i] = matrix_data[i];
+	}
+
+	if (vert_inversion == DoFlipVertically) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			matrix_data[i] = original_matrix_data[max_rows - 1 - i];
+		}
+	}
+
+	if (horz_inversion == DoFlipLeftRight) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			uint8_t reversed_bytes[2] = { 0 };
+			reversed_bytes[0] = reverse_bits_lut[(uint8_t) matrix_data[i]];
+			reversed_bytes[1] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 8)];
+
+			matrix_data[i] = ((uint16_t) reversed_bytes[0]) << 8U;
+			matrix_data[i] |= (uint16_t) reversed_bytes[1];
+		}
+	}
+
+	early_return:
+		return;
+}
+
+void led_matrix_inversions_32bit(uint32_t* matrix_data
+                                , unsigned int max_rows
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion)
+{
+	uint32_t original_matrix_data[max_rows];
+
+	if ((horz_inversion == DontFlipLeftRight) && (vert_inversion == DontFlipVertically)) {
+		goto early_return;
+	}
+
+	for (int i = 0; i < (int) max_rows; ++i) {
+		original_matrix_data[i] = matrix_data[i];
+	}
+
+	if (vert_inversion == DoFlipVertically) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			matrix_data[i] = original_matrix_data[max_rows - 1 - i];
+		}
+	}
+
+	if (horz_inversion == DoFlipLeftRight) {
+		for (int i = 0; i < (int) max_rows; ++i) {
+			uint8_t reversed_bytes[4] = { 0 };
+			reversed_bytes[0] = reverse_bits_lut[(uint8_t) matrix_data[i]];
+			reversed_bytes[1] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 8)];
+			reversed_bytes[2] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 16)];
+			reversed_bytes[3] = reverse_bits_lut[(uint8_t) (matrix_data[i] >> 24)];
+
+			matrix_data[i] = ((uint32_t) reversed_bytes[0]) << 24U;
+			matrix_data[i] |= ((uint32_t) reversed_bytes[1]) << 16U;
+			matrix_data[i] |= ((uint32_t) reversed_bytes[2]) << 8U;
+			matrix_data[i] |= (uint32_t) reversed_bytes[3];
+		}
+	}
+
+	early_return:
+		return;
 }
 
 uint8_t fft_to_led_bar_conversion(float input_bin_mags)

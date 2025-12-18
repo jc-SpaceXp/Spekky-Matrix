@@ -8,21 +8,23 @@
 extern const uint8_t reverse_bits_lut[256];
 
 enum LedCascadeReverse { NormalCascade, ReverseCascade };
-// RightToLeft is default direction of MAX7219 LED matrix
-enum LedDirection { RightToLeft, LeftToRight, BottomToTop, TopToBottom };
 enum LedLatchData { NoLatchData, LatchData };
+enum LedDirection { Horizontal, Vertical };
+enum LedHorizontalInversion { DontFlipLeftRight, DoFlipLeftRight };
+enum LedVerticalInversion { DontFlipVertically, DoFlipVertically };
 
 void set_spi_pin_details(struct LedSpiPin* spi_pin
                         , volatile uint32_t* assert_addr
                         , volatile uint32_t* deassert_addr
                         , unsigned int pin);
 
-void set_led_cs_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src);
-void set_total_led_matrix_devices(struct MaximMax7219* matrix, int total_devices);
+void copy_spi_pin_details(struct LedSpiPin* dest, const struct LedSpiPin* src);
+void set_total_maxim_led_matrix_devices(struct MaximMax7219* matrix, int total_devices);
+void set_total_stp16cp05_led_matrix_devices(struct Stp16cp05* matrix, int total_devices);
 uint16_t max7219_led_matrix_spi_data_out(uint8_t address, uint8_t data);
 void led_matrix_transfer_data(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                              , uint16_t tx_data, enum LedLatchData latch);
-void generic_led_matrix_transfer_data_cascade(struct MaximMax7219 matrix
+void generic_led_matrix_transfer_data_cascade(struct LedSpiPin cs_or_le
                                              , volatile uint32_t* spi_tx_reg, uint16_t* tx_data
                                              , int total_devices
                                              , enum LedCascadeReverse reverse_order);
@@ -40,10 +42,23 @@ void max7219_led_matrix_init_all_quick(struct MaximMax7219 matrix, volatile uint
 void led_matrix_set_from_2d_array(struct LedSpiPin cs, volatile uint32_t* spi_tx_reg
                                  , const unsigned int (*matrix)[8][8]);
 unsigned int led_matrix_set_bit_in_row_conversion(uint8_t col);
-void led_matrix_convert_bars_to_rows(uint8_t *col_height
+void set_led_matrix_device_cascade_bytes(uint16_t* matrix, unsigned int device_number
+                                        , uint16_t tx_data);
+void led_matrix_bar_conversion_16bit(uint8_t* col_height
                                     , unsigned int process_rows, unsigned int process_cols
                                     , enum LedDirection direction
                                     , uint16_t* row_outputs);
+void led_matrix_bar_conversion_32bit(uint8_t* bar_value
+                                    , unsigned int total_bars
+                                    , unsigned int max_rows
+                                    , enum LedDirection direction
+                                    , uint32_t* row_outputs);
+void led_matrix_inversions_16bit(uint16_t* matrix_data, unsigned int max_rows
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion);
+void led_matrix_inversions_32bit(uint32_t* matrix_data, unsigned int max_rows
+                                , enum LedHorizontalInversion horz_inversion
+                                , enum LedVerticalInversion vert_inversion);
 uint8_t fft_to_led_bar_conversion(float input_bin_mags);
 
 #endif /* LED_MATRIX_H */

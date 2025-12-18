@@ -14,4 +14,10 @@ struct MaximMax7219 {
 	int total_devices;
 };
 
+struct Stp16cp05 {
+	struct LedSpiPin le; // LE, latch enable
+	struct LedSpiPin oe; // OE, output enable (active low)
+	int total_devices;
+};
+
 #endif /* LED_MATRIX_PRIVATE_H */

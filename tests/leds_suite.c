@@ -18,6 +18,7 @@ FAKE_VALUE_FUNC(bool, spi_tx_complete);
 
 static struct LedSpiPin some_cs_pin;
 static struct MaximMax7219 some_led_matrix;
+static struct Stp16cp05 some_stp_led_matrix;
 
 struct LedMatrixTxTest {
 	uint8_t address;
@@ -61,7 +62,7 @@ static void setup_led_matrix_tests(void* arg)
 {
 	unsigned int cs_pin = 9;
 	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_c, cs_pin);
-	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
+	copy_spi_pin_details(&some_led_matrix.cs, &some_cs_pin);
 
 	RESET_FAKE(assert_spi_pin);
 	RESET_FAKE(deassert_spi_pin);
@@ -76,15 +77,19 @@ static void setup_led_matrix_tests(void* arg)
 }
 
 
-TEST led_cs_pin_set_correctly(void)
+TEST led_gpio_pins_set_correctly(void)
 {
 	unsigned int cs_pin = 4;
 	set_spi_pin_details(&some_cs_pin, &some_gpio_port_c, &some_gpio_port_x, cs_pin);
-	set_led_cs_pin_details(&some_led_matrix.cs, &some_cs_pin);
+	copy_spi_pin_details(&some_led_matrix.cs, &some_cs_pin);
+	copy_spi_pin_details(&some_stp_led_matrix.le, &some_cs_pin);
 
 	ASSERT_EQ(cs_pin, some_led_matrix.cs.pin);
 	ASSERT_MEM_EQ(&some_gpio_port_c, some_led_matrix.cs.assert_address, 4);
 	ASSERT_MEM_EQ(&some_gpio_port_x, some_led_matrix.cs.deassert_address, 4);
+	ASSERT_EQ(cs_pin, some_stp_led_matrix.le.pin);
+	ASSERT_MEM_EQ(&some_gpio_port_c, some_stp_led_matrix.le.assert_address, 4);
+	ASSERT_MEM_EQ(&some_gpio_port_x, some_stp_led_matrix.le.deassert_address, 4);
 	PASS();
 }
 
@@ -100,9 +105,11 @@ TEST led_matrix_data_bus_max7219(struct LedMatrixTxTest led_tx)
 TEST led_matrix_devices_set_correctly(void)
 {
 	int total_devices = 8;
-	set_total_led_matrix_devices(&some_led_matrix, total_devices);
+	set_total_maxim_led_matrix_devices(&some_led_matrix, total_devices);
+	set_total_stp16cp05_led_matrix_devices(&some_stp_led_matrix, total_devices);
 
 	ASSERT_EQ(total_devices, some_led_matrix.total_devices);
+	ASSERT_EQ(total_devices, some_stp_led_matrix.total_devices);
 	PASS();
 }
 
@@ -110,7 +117,7 @@ TEST led_matrix_data_set_one_bit_only(unsigned int col)
 {
 	unsigned int tx_data = led_matrix_set_bit_in_row_conversion(col);
 
-	ASSERT_EQ((int) tx_data, 1 << col);
+	ASSERT_EQ((unsigned int) tx_data, 1u << col);
 	PASS();
 }
 
@@ -204,7 +211,7 @@ void loop_test_max7219_led_matrix_data_input(void)
 
 void loop_test_set_1_bit_in_led_matrix(void)
 {
-	for (int i = 0; i < 8; ++i) {
+	for (int i = 0; i < 32; ++i) {
 		char test_suffix[5];
 		int sn = snprintf(test_suffix, 4, "%u", i);
 		bool sn_error = (sn > 5) || (sn < 0);
@@ -235,7 +242,7 @@ TEST max7219_led_matrix_cascade_data_calls(struct Max7219LedMatrixCascadeNopWrit
 {
 	uint16_t tx_data = max7219_led_matrix_spi_data_out(led_cascade->address, led_cascade->data);
 	int total_devices = led_cascade->total_devices;
-	set_total_led_matrix_devices(&some_led_matrix, total_devices);
+	set_total_maxim_led_matrix_devices(&some_led_matrix, total_devices);
 
 	max7219_led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, tx_data
 	                                        , led_cascade->device_write);
@@ -278,7 +285,7 @@ TEST generic_led_matrix_cascade_data_calls(enum LedCascadeReverse reverse_order)
 	int total_devices = 2;
 	uint16_t tx_data[2] = { 0x0001, 0xFF00 };
 
-	generic_led_matrix_transfer_data_cascade(some_led_matrix, &some_spi_reg, &tx_data[0]
+	generic_led_matrix_transfer_data_cascade(some_led_matrix.cs, &some_spi_reg, &tx_data[0]
 	                                        , total_devices, reverse_order);
 
 	ASSERT_EQ_FMT((unsigned int) total_devices, trigger_spi_transfer_fake.call_count, "%u");
@@ -314,56 +321,22 @@ TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 		uint8_t input[8]; // 8 rows or cols depending on enum
 		uint16_t output[8]; // 8x16 matrix
 		enum LedDirection direction;
-	} expected[13] = {
+	} expected[7] = {
 		{ {0x00,       0x00,   0x00,   0x00,   0x00,   0x00,   0x00,   0x00}
 		  , {0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000}
-		  , RightToLeft }
+		  , Horizontal }
 
 		, { {  0x00,   0x01,   0x02,   0x03,   0x04,   0x05,   0x06,   0x07}
 		  , {0x0000, 0x0001, 0x0003, 0x0007, 0x000F, 0x001F, 0x003F, 0x007F}
-		  , RightToLeft }
+		  , Horizontal }
 
 		, { {  0x08,   0x09,   0x0A,   0x0B,   0x0C,   0x0D,   0x0E,   0x0F}
 		  , {0x00FF, 0x01FF, 0x03FF, 0x07FF, 0x0FFF, 0x1FFF, 0x3FFF, 0x7FFF}
-		  , RightToLeft }
-
-		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08}
-		  , { reverse_bits_lut[0x01] << 8
-		    , reverse_bits_lut[0x03] << 8
-		    , reverse_bits_lut[0x07] << 8
-		    , reverse_bits_lut[0x0F] << 8
-		    , reverse_bits_lut[0x1F] << 8
-		    , reverse_bits_lut[0x3F] << 8
-		    , reverse_bits_lut[0x7F] << 8
-		    , reverse_bits_lut[0xFF] << 8 }
-		  , LeftToRight }
-
-
-		, { {0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F}
-		  , { 0xFF00 // 8 = 0x00FF (8 bits set)
-		    , 0xFF00 | reverse_bits_lut[0x01]
-		    , 0xFF00 | reverse_bits_lut[0x03]
-		    , 0xFF00 | reverse_bits_lut[0x07]
-		    , 0xFF00 | reverse_bits_lut[0x0F]
-		    , 0xFF00 | reverse_bits_lut[0x1F]
-		    , 0xFF00 | reverse_bits_lut[0x3F]
-		    , 0xFF00 | reverse_bits_lut[0x7F] }
-		  , LeftToRight }
+		  , Horizontal }
 
 		, { {  0x0F,   0x1F,   0x2A,   0x3B,   0x4C,   0x5D,   0x6E,   0xFF}
 		  , {0x7FFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF}
-		  , RightToLeft }
-
-		, { {0x08, 0xF0, 0x20, 0x88, 0x10, 0x39, 0x4A, 0xFF}
-		  , { 0xFF00 // 8 = 0x00FF (8 bits set)
-		    , 0xFF00 | reverse_bits_lut[0xFF]
-		    , 0xFF00 | reverse_bits_lut[0xFF]
-		    , 0xFF00 | reverse_bits_lut[0xFF]
-		    , 0xFF00 | reverse_bits_lut[0xFF]
-		    , 0xFF00 | reverse_bits_lut[0xFF]
-		    , 0xFF00 | reverse_bits_lut[0xFF]
-		    , 0xFF00 | reverse_bits_lut[0xFF] }
-		  , LeftToRight }
+		  , Horizontal }
 
 		// TopToBottom and BottomToTop examples are limited to 8 cols
 		// due to the input[8]
@@ -372,33 +345,19 @@ TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 		// therefore first 4 rows are all filled 4 columns down
 		, { {0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04}
 		  , {0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00}
-		  , TopToBottom }
-
-		// read as 5 up, 5 up, 5 up etc. (from right to left)
-		// therefore last 5 rows are all filled 5 columns up
-		, { {0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05}
-		  , {0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}
-		  , BottomToTop }
+		  , Vertical }
 
 		, { {0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08}
 		  , {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}
-		  , BottomToTop }
-
-		, { {0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08}
-		  , {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}
-		  , TopToBottom }
-
-		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08}
-		  , {0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF}
-		  , BottomToTop }
+		  , Vertical }
 
 		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08}
 		  , {0xFF, 0x7F, 0x3F, 0x1F, 0x0F, 0x07, 0x03, 0x01}
-		  , TopToBottom }
+		  , Vertical }
 	};
 
 	uint16_t row_output[8] = { 0 };
-	led_matrix_convert_bars_to_rows(expected[t].input, rows, cols
+	led_matrix_bar_conversion_16bit(expected[t].input, rows, cols
 	                               , expected[t].direction, row_output);
 
 	ASSERT_MEM_EQ(&expected[t].output[0], row_output, 16);
@@ -407,7 +366,7 @@ TEST led_matrix_bar_conversions_8_rows_variations(unsigned int t)
 
 void loop_test_led_matrix_bar_conversions_8_rows(void)
 {
-	for (int i = 0; i < 13; ++i) {
+	for (int i = 0; i < 7; ++i) {
 		char test_suffix[5];
 		int sn = snprintf(test_suffix, 4, "%u", i);
 		bool sn_error = (sn > 5) || (sn < 0);
@@ -415,6 +374,131 @@ void loop_test_led_matrix_bar_conversions_8_rows(void)
 		RUN_TEST1(snprintf_return_val, sn_error);
 		greatest_set_test_suffix((const char*) &test_suffix);
 		RUN_TEST1(led_matrix_bar_conversions_8_rows_variations, i);
+	}
+}
+
+TEST led_matrix_inversions_16_bit_test(unsigned int t)
+{
+	struct DataAndDirection {
+		uint16_t input[16];
+		uint16_t output[16];
+		enum LedHorizontalInversion horz_inversion;
+		enum LedVerticalInversion vert_inversion;
+		unsigned int max_rows;
+	} expected[11] = {
+	      { { 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF }
+		  , { reverse_bits_lut[0x01] << 8
+		    , reverse_bits_lut[0x03] << 8
+		    , reverse_bits_lut[0x07] << 8
+		    , reverse_bits_lut[0x0F] << 8
+		    , reverse_bits_lut[0x1F] << 8
+		    , reverse_bits_lut[0x3F] << 8
+		    , reverse_bits_lut[0x7F] << 8
+		    , reverse_bits_lut[0xFF] << 8 }
+		  , DoFlipLeftRight, DontFlipVertically, 8 }
+
+
+		, { { 0x00FF, 0x01FF, 0x03FF, 0x07FF, 0x0FFF, 0x1FFF, 0x3FFF, 0x7FFF }
+		  , { 0xFF00
+		    , 0xFF00 | reverse_bits_lut[0x01]
+		    , 0xFF00 | reverse_bits_lut[0x03]
+		    , 0xFF00 | reverse_bits_lut[0x07]
+		    , 0xFF00 | reverse_bits_lut[0x0F]
+		    , 0xFF00 | reverse_bits_lut[0x1F]
+		    , 0xFF00 | reverse_bits_lut[0x3F]
+		    , 0xFF00 | reverse_bits_lut[0x7F] }
+		  , DoFlipLeftRight, DontFlipVertically, 8 }
+
+
+		, { { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }
+		  , { 0xFF00, 0xFF00, 0xFF00, 0xFF00, 0xFF00, 0xFF00, 0xFF00, 0xFF00 }
+		  , DoFlipLeftRight, DontFlipVertically, 8 }
+
+
+		, { { 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x0000, 0x0000, 0x0000 }
+		  , { 0x0000, 0x0000, 0x0000, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF }
+		  , DontFlipLeftRight, DoFlipVertically, 8 }
+
+
+		, { { 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF }
+		  , { 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF }
+		  , DontFlipLeftRight, DoFlipVertically, 8 }
+
+
+		, { { 0x0001, 0x0003, 0x0007, 0x000F, 0x001F, 0x003F, 0x007F, 0x00FF }
+		  , { 0x00FF, 0x007F, 0x003F, 0x001F, 0x000F, 0x0007, 0x0003, 0x0001 }
+		  , DontFlipLeftRight, DoFlipVertically, 8 }
+
+
+		, { { 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF }
+		  , { 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF, 0x00FF }
+		  , DontFlipLeftRight, DoFlipVertically, 8 }
+
+
+		, { { 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x0000, 0x0000, 0x0000
+		    , 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000 }
+
+		  , { 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000
+		    , 0x0000, 0x0000, 0x0000, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
+		  , DontFlipLeftRight, DoFlipVertically, 16 }
+
+
+		, { { 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF
+		    , 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
+
+		  , { 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF
+		    , 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
+		  , DontFlipLeftRight, DoFlipVertically, 16 }
+
+
+		, { { 0xFFFF, 0x7FFF, 0x3FFF, 0x1FFF, 0x0FFF, 0x07FF, 0x03FF, 0x01FF
+		    , 0x00FF, 0x007F, 0x003F, 0x001F, 0x000F, 0x0007, 0x0003, 0x0001 }
+
+		  , { 0x0001, 0x0003, 0x0007, 0x000F, 0x001F, 0x003F, 0x007F, 0x00FF
+		    , 0x01FF, 0x03FF, 0x07FF, 0x0FFF, 0x1FFF, 0x3FFF, 0x7FFF, 0xFFFF }
+		  , DontFlipLeftRight, DoFlipVertically, 16 }
+
+
+		, { { 0x0001, 0x0003, 0x0007, 0x000F, 0x001F, 0x003F, 0x007F, 0x00FF
+		    , 0xFF01, 0xFF03, 0xFF07, 0xFF0F, 0xFF1F, 0xFF3F, 0xFF7F, 0xFFFF }
+
+		  , { reverse_bits_lut[0x01] << 8
+		    , reverse_bits_lut[0x03] << 8
+		    , reverse_bits_lut[0x07] << 8
+		    , reverse_bits_lut[0x0F] << 8
+		    , reverse_bits_lut[0x1F] << 8
+		    , reverse_bits_lut[0x3F] << 8
+		    , reverse_bits_lut[0x7F] << 8
+		    , reverse_bits_lut[0xFF] << 8
+		    , 0xFF00 | reverse_bits_lut[0x01]
+		    , 0xFF00 | reverse_bits_lut[0x03]
+		    , 0xFF00 | reverse_bits_lut[0x07]
+		    , 0xFF00 | reverse_bits_lut[0x0F]
+		    , 0xFF00 | reverse_bits_lut[0x1F]
+		    , 0xFF00 | reverse_bits_lut[0x3F]
+		    , 0xFF00 | reverse_bits_lut[0x7F]
+		    , 0xFF00 | reverse_bits_lut[0xFF] }
+		  , DoFlipLeftRight, DontFlipVertically, 16 }
+	};
+
+	led_matrix_inversions_16bit(expected[t].input, expected[t].max_rows
+	                           , expected[t].horz_inversion
+	                           , expected[t].vert_inversion);
+
+	ASSERT_MEM_EQ(&expected[t].output[0], expected[t].input, 16);
+	PASS();
+}
+
+void loop_test_led_matrix_inversions_16_bit(void)
+{
+	for (int i = 0; i < 11; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_inversions_16_bit_test, i);
 	}
 }
 
@@ -426,92 +510,42 @@ TEST led_matrix_bar_conversions_16_rows_variations(unsigned int t)
 		uint8_t input[16]; // 16 rows or cols depending on enum
 		uint16_t output[16]; // 16x16 matrix
 		enum LedDirection direction;
-	} expected[10] = {
-		// TopToBottom and BottomToTop examples are limited to 16 cols
-		// due to the input[16]
-
+	} expected[5] = {
 		// read as 4 down, 4 down, 4 down etc. (from right to left)
 		// therefore first 4 rows are all filled 4 columns down
 		{ {0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04
 		    , 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04 }
 		  , {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0x00, 0x00, 0x00, 0x00
 		    , 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
-		  , TopToBottom }
-
-		// read as 5 up, 5 up, 5 up etc. (from right to left)
-		// therefore last 5 rows are all filled 5 columns up
-		, { {0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05
-		    , 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05 }
-		  , {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		    , 0x00, 0x00, 0x00, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
-		  , BottomToTop }
+		  , Vertical }
 
 		, { {0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F
 		    , 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F }
 		  , {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF
 		    , 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
-		  , BottomToTop }
-
-		, { {0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F
-		    , 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F }
-		  , {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF
-		    , 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
-		  , TopToBottom }
-
-		, { {0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08
-		    , 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08 }
-		  , {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-		    , 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF }
-		  , BottomToTop }
+		  , Vertical }
 
 		, { {0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08
 		    , 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08, 0x08 }
 		  , {0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF, 0xFFFF
 		    , 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
-		  , TopToBottom }
-
-		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-		    , 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x1F }
-		  , {0x0001, 0x0003, 0x0007, 0x000F, 0x001F, 0x003F, 0x007F, 0x00FF
-		    , 0x01FF, 0x03FF, 0x07FF, 0x0FFF, 0x1FFF, 0x3FFF, 0x7FFF, 0xFFFF }
-		  , BottomToTop }
+		  , Vertical }
 
 		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
 		    , 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x1F }
 		  , {0xFFFF, 0x7FFF, 0x3FFF, 0x1FFF, 0x0FFF, 0x07FF, 0x03FF, 0x01FF
 		    , 0x00FF, 0x007F, 0x003F, 0x001F, 0x000F, 0x0007, 0x0003, 0x0001 }
-		  , TopToBottom }
+		  , Vertical }
 
 		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
 		    , 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x1F }
 		  , {0x0001, 0x0003, 0x0007, 0x000F, 0x001F, 0x003F, 0x007F, 0x00FF
 		    , 0x01FF, 0x03FF, 0x07FF, 0x0FFF, 0x1FFF, 0x3FFF, 0x7FFF, 0xFFFF }
-		  , RightToLeft }
-
-		, { {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-		    , 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x1F }
-		  , { reverse_bits_lut[0x01] << 8
-		    , reverse_bits_lut[0x03] << 8
-		    , reverse_bits_lut[0x07] << 8
-		    , reverse_bits_lut[0x0F] << 8
-		    , reverse_bits_lut[0x1F] << 8
-		    , reverse_bits_lut[0x3F] << 8
-		    , reverse_bits_lut[0x7F] << 8
-		    , reverse_bits_lut[0xFF] << 8
-			// more than 8 bits set, therefore 0xFF00 is always set
-		    , 0xFF00 | reverse_bits_lut[0x01]
-		    , 0xFF00 | reverse_bits_lut[0x03]
-		    , 0xFF00 | reverse_bits_lut[0x07]
-		    , 0xFF00 | reverse_bits_lut[0x0F]
-		    , 0xFF00 | reverse_bits_lut[0x1F]
-		    , 0xFF00 | reverse_bits_lut[0x3F]
-		    , 0xFF00 | reverse_bits_lut[0x7F]
-		    , 0xFF00 | reverse_bits_lut[0xFF] }
-		  , LeftToRight }
+		  , Horizontal }
 	};
 
 	uint16_t row_output[16] = { 0 };
-	led_matrix_convert_bars_to_rows(expected[t].input, rows, cols
+	led_matrix_bar_conversion_16bit(expected[t].input, rows, cols
 	                               , expected[t].direction, row_output);
 
 	ASSERT_MEM_EQ(&expected[t].output[0], row_output, 32);
@@ -520,7 +554,7 @@ TEST led_matrix_bar_conversions_16_rows_variations(unsigned int t)
 
 void loop_test_led_matrix_bar_conversions_16_rows(void)
 {
-	for (int i = 0; i < 10; ++i) {
+	for (int i = 0; i < 5; ++i) {
 		char test_suffix[5];
 		int sn = snprintf(test_suffix, 4, "%u", i);
 		bool sn_error = (sn > 5) || (sn < 0);
@@ -530,6 +564,7 @@ void loop_test_led_matrix_bar_conversions_16_rows(void)
 		RUN_TEST1(led_matrix_bar_conversions_16_rows_variations, i);
 	}
 }
+
 
 TEST led_matrix_fft_conversion(void)
 {
@@ -573,21 +608,205 @@ TEST led_matrix_fft_conversion(void)
 	PASS();
 }
 
+TEST led_matrix_set_cascade_bytes(void)
+{
+	unsigned int total_devices = 4;
+	uint16_t cascade_data[total_devices];
+
+	for (int i = 0; i < (int) total_devices; ++i) {
+		set_led_matrix_device_cascade_bytes(cascade_data, i, i + 1);
+	}
+
+	ASSERT_EQ_FMT((uint16_t) cascade_data[0], 1, "%.4X");
+	ASSERT_EQ_FMT((uint16_t) cascade_data[1], 2, "%.4X");
+	ASSERT_EQ_FMT((uint16_t) cascade_data[2], 3, "%.4X");
+	ASSERT_EQ_FMT((uint16_t) cascade_data[3], 4, "%.4X");
+
+	PASS();
+}
+
+TEST led_matrix_bar_conversion_32_bit_test(unsigned int t)
+{
+	struct MatrixDataAndDirection {
+		uint8_t bars[32];
+		uint32_t rows[8];
+		uint32_t expected_output[8];
+		enum LedDirection led_direction;
+		int total_bars_or_rows;
+	} matrix[3] = {
+		{  { 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 // 8
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 // 16
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 // 24
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001
+	       , 0x00000001, 0x00000001, 0x00000001, 0x00000001 } // 32
+
+	      , { } // rows (filled out by function below)
+
+		  , { 0xFFFFFFFF, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 }
+		  , Vertical, 32 }
+
+		, { { 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 8
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 16
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 24
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000008 } // 32 (only last bar set (to max))
+
+	      , { } // rows (filled out by function below)
+
+		  // 32nd col is max therefore each row must have the 32nd led set
+		  , { 0x80000000, 0x80000000, 0x80000000, 0x80000000
+		    , 0x80000000, 0x80000000, 0x80000000, 0x80000000 }
+		  , Vertical, 32 }
+
+		, { { 0x00000000, 0x00000001, 0x00000002, 0x00000003
+	        , 0x00000004, 0x00000005, 0x00000006, 0x00000007 // 8 (only using first 8 bars)
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 16
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 // 24
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000
+	        , 0x00000000, 0x00000000, 0x00000000, 0x00000000 } // 32
+
+	      , { } // rows (filled out by function below)
+
+	      , { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+	        , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+		  , Horizontal, 8 }
+	};
+
+
+	led_matrix_bar_conversion_32bit(&matrix[t].bars[0]
+	                               , matrix[t].total_bars_or_rows
+	                               , 8
+	                               , matrix[t].led_direction
+	                               , matrix[t].rows);
+
+
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[0], matrix[t].rows[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[1], matrix[t].rows[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[2], matrix[t].rows[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[3], matrix[t].rows[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[4], matrix[t].rows[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[5], matrix[t].rows[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[6], matrix[t].rows[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[7], matrix[t].rows[7], "%.8X");
+
+	PASS();
+}
+
+void loop_test_led_matrix_bar_conversions_32_bit(void)
+{
+	for (int i = 0; i < 3; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_bar_conversion_32_bit_test, i);
+	}
+}
+
+
+TEST led_matrix_32_bit_inversions(unsigned int t)
+{
+	int total_bars = 8;
+	struct MatrixDataAndInversion {
+		uint32_t matrix_data[8];
+		uint32_t expected_output[8];
+		enum LedHorizontalInversion horz_inversion;
+		enum LedVerticalInversion vert_inversion;
+	} matrix[4] = {
+		{  { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+	       , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+
+		  , { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+	        , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+		  , DontFlipLeftRight, DontFlipVertically }
+
+		, { { 0x00000000, 0x00000001, 0x00000003, 0x00000007
+		    , 0x0000000F, 0x0000001F, 0x0000003F, 0x0000007F }
+
+		  , { 0x0000007F, 0x0000003F, 0x0000001F, 0x0000000F
+		    , 0x00000007, 0x00000003, 0x00000001, 0x00000000 }
+		  , DontFlipLeftRight, DoFlipVertically }
+
+		, { { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
+		    , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5 }
+		    // D2 = 1101 0010 --> 0100 1011 = 4B
+		    // 91 = 1001 0001 --> 1000 1001 = 89
+		    // 05 = 0000 0101 --> 1010 0000 = A0
+		    // 01 = 0000 0001 --> 1000 0000 = 80
+		  , { 0x00000000, 0x80000000, 0xC0300000, 0x00000008
+		    , 0x4B89A080, 0x08840099, 0x0F0F0F0F, 0xA5A58888 }
+		  , DoFlipLeftRight, DontFlipVertically }
+
+		, { { 0x00000000, 0x00000001, 0x00000C03, 0x10000000
+		    , 0x010591D2, 0x99002110, 0xF0F0F0F0, 0x1111A5A5 }
+		    // D2 = 1101 0010 --> 0100 1011 = 4B
+		    // 91 = 1001 0001 --> 1000 1001 = 89
+		    // 05 = 0000 0101 --> 1010 0000 = A0
+		    // 01 = 0000 0001 --> 1000 0000 = 80
+		  , { 0xA5A58888, 0x0F0F0F0F, 0x08840099, 0x4B89A080
+		    , 0x00000008, 0xC0300000, 0x80000000, 0x00000000 }
+		  , DoFlipLeftRight, DoFlipVertically }
+	};
+
+
+	led_matrix_inversions_32bit(matrix[t].matrix_data, total_bars, matrix[t].horz_inversion, matrix[t].vert_inversion);
+
+
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[0], matrix[t].matrix_data[0], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[1], matrix[t].matrix_data[1], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[2], matrix[t].matrix_data[2], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[3], matrix[t].matrix_data[3], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[4], matrix[t].matrix_data[4], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[5], matrix[t].matrix_data[5], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[6], matrix[t].matrix_data[6], "%.8X");
+	ASSERT_EQ_FMT((uint32_t) matrix[t].expected_output[7], matrix[t].matrix_data[7], "%.8X");
+
+	PASS();
+}
+
+void loop_test_led_matrix_inversions_32_bit(void)
+{
+	for (int i = 0; i < 4; ++i) {
+		char test_suffix[5];
+		int sn = snprintf(test_suffix, 4, "%u", i);
+		bool sn_error = (sn > 5) || (sn < 0);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(snprintf_return_val, sn_error);
+		greatest_set_test_suffix((const char*) &test_suffix);
+		RUN_TEST1(led_matrix_32_bit_inversions, i);
+	}
+}
+
 SUITE(leds_driver)
 {
 	GREATEST_SET_SETUP_CB(setup_led_matrix_tests, NULL);
-	RUN_TEST(led_cs_pin_set_correctly);
+	RUN_TEST(led_gpio_pins_set_correctly);
 	RUN_TEST(led_matrix_devices_set_correctly);
 	RUN_TEST(led_matrix_set_matrix_from_2d_array);
 	RUN_TEST(verify_reverse_bits_lut);
 	RUN_TEST(led_matrix_fft_conversion);
+	RUN_TEST(led_matrix_set_cascade_bytes);
 	// looped tests
 	loop_led_matrix_tx_sequence();
 	loop_test_max7219_led_matrix_data_input();
 	loop_test_set_1_bit_in_led_matrix();
 	loop_test_max7219_led_matrix_cascade_data();
 	loop_test_generic_led_matrix_cascade_data();
-	loop_test_led_matrix_bar_conversions_8_rows();
+	loop_test_led_matrix_bar_conversions_8_rows(); // causes a shift greater than 31
 	loop_test_led_matrix_bar_conversions_16_rows();
+	loop_test_led_matrix_bar_conversions_32_bit();
+	loop_test_led_matrix_inversions_16_bit();
+	loop_test_led_matrix_inversions_32_bit();
 }
 

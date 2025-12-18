@@ -11,35 +11,55 @@
 
 #include "fft_constants.h"
 
-#define IC_DEVICE_ROWS 8
-#define IC_DEVICE_COLS 8
+#define ROWS 8
+#define COLS 32
 
 
 extern QueueHandle_t xFftCompleteFlagQueue;
 extern float db_bin_mags[FFT_DATA_SIZE/2];
-struct MaximMax7219 led_matrix;
+struct Stp16cp05 led_matrix;
 
 void led_matrix_setup(int total_devices)
 {
-	struct LedSpiPin led_cs = { &GPIOA->BSRR, &GPIOA->ODR, SPI_CS_PIN };
-	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
-	set_total_led_matrix_devices(&led_matrix, total_devices);
+	struct LedSpiPin led_le = { &SPI_CS_PORT->BSRR, &SPI_CS_PORT->ODR, SPI_CS_PIN };
+	struct LedSpiPin led_oe = { &SPI_OE_PORT->BSRR, &SPI_OE_PORT->ODR, SPI_OE_PIN };
+	copy_spi_pin_details(&led_matrix.le, &led_le);
+	copy_spi_pin_details(&led_matrix.oe, &led_oe);
+	set_total_stp16cp05_led_matrix_devices(&led_matrix, total_devices);
 
-	max7219_led_matrix_init_all_quick(led_matrix, &SPI1->DR, DATA_BRIGHTNESS_LEVEL1);
+	// Pull OE to GND (all LEDs could be set, active low)
+	deassert_spi_pin(led_oe.assert_address, led_oe.pin);
+}
 
-	// Pull OE to GND (all LEDs could be set)
-	deassert_spi_pin(led_cs.assert_address, SPI_OE_PIN);
+void reduce_led_matrix_ghosting(int row)
+{
+	uint16_t tx_data[led_matrix.total_devices];
+	tx_data[1] = 0x0000;
+	tx_data[2] = 0x0000;
+	// blank current and next row leds to turn off transistors before
+	// switching rows (transistors)
+	set_led_matrix_device_cascade_bytes(tx_data, 0
+	                                   , led_matrix_set_bit_in_row_conversion(row));
+	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
+	                                        , led_matrix.total_devices, NormalCascade);
+	// make sure row is between 0 & 7
+	set_led_matrix_device_cascade_bytes(tx_data, 0
+	                                   , led_matrix_set_bit_in_row_conversion((row + 1) & 0x07));
+	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
+	                                        , led_matrix.total_devices, NormalCascade);
 }
 
 void led_matrix_update_task(void* pvParameters)
 {
 	(void) pvParameters;
 
-	struct LedSpiPin led_cs = { &GPIOA->BSRR, &GPIOA->ODR, SPI_CS_PIN };
-	set_led_cs_pin_details(&led_matrix.cs, &led_cs);
+	struct LedSpiPin led_le = { &SPI_CS_PORT->BSRR, &SPI_CS_PORT->ODR, SPI_CS_PIN };
+	struct LedSpiPin led_oe = { &SPI_OE_PORT->BSRR, &SPI_OE_PORT->ODR, SPI_OE_PIN };
+	copy_spi_pin_details(&led_matrix.le, &led_le);
+	copy_spi_pin_details(&led_matrix.oe, &led_oe);
 
-	uint8_t bars[led_matrix.total_devices][IC_DEVICE_COLS];
-	uint16_t row_outputs[led_matrix.total_devices][IC_DEVICE_ROWS];
+	uint8_t bars[COLS];
+	uint32_t row_outputs[ROWS];
 	uint16_t tx_data[led_matrix.total_devices];
 	int fft_complete = 0;
 	for (;;) {
@@ -47,24 +67,28 @@ void led_matrix_update_task(void* pvParameters)
 			// delay/block until data is ready
 		}
 
-		for (int i = 0; i < IC_DEVICE_COLS; ++i) {
-			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-				bars[dev][i] = fft_to_led_bar_conversion(db_bin_mags[i + (dev * IC_DEVICE_COLS)]);
-			}
+		for (int i = 0; i < COLS; ++i) {
+			//bars[i] = fft_to_led_bar_conversion(db_bin_mags[i]);
+			//bars[i] = i / 4; // test pattern 1
+			bars[i] = (i % 8) + 1; // test pattern 2
+		}
+		bars[0] = 0; // keep 1st col empty to display an empty column
+
+		led_matrix_bar_conversion_32bit(&bars[0], COLS, ROWS, Vertical, row_outputs);
+		led_matrix_inversions_32bit(row_outputs, ROWS, DoFlipLeftRight, DoFlipVertically);
+
+		for (int i = 0; i < ROWS; ++i) {
+			set_led_matrix_device_cascade_bytes(tx_data, 0
+			                                   , led_matrix_set_bit_in_row_conversion(i));
+			set_led_matrix_device_cascade_bytes(tx_data, 1, (uint16_t) row_outputs[i]);
+			set_led_matrix_device_cascade_bytes(tx_data, 2, (uint16_t) (row_outputs[i] >> 16u));
+			generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
+			                                        , led_matrix.total_devices, NormalCascade);
+
+			set_led_matrix_device_cascade_bytes(tx_data, 0
+			                                   , led_matrix_set_bit_in_row_conversion(i));
+			reduce_led_matrix_ghosting(i);
 		}
 
-		for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-			led_matrix_convert_bars_to_rows(bars[dev], IC_DEVICE_ROWS, IC_DEVICE_COLS
-			                               , BottomToTop, row_outputs[dev]);
-		}
-
-		for (int i = 0; i < IC_DEVICE_ROWS; ++i) {
-			// ADDR_ROW0 == 1 (therefore address == i + 1)
-			for (int dev = (led_matrix.total_devices - 1); dev >= 0; --dev) {
-				tx_data[dev] = max7219_led_matrix_spi_data_out(i + 1, row_outputs[dev][i]);
-			}
-			generic_led_matrix_transfer_data_cascade(led_matrix, &SPI1->DR, tx_data
-			                                        , led_matrix.total_devices, ReverseCascade);
-		}
 	}
 }
