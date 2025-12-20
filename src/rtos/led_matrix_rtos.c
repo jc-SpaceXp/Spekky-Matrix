@@ -33,19 +33,14 @@ void led_matrix_setup(int total_devices)
 
 void reduce_led_matrix_ghosting(int row)
 {
-	uint16_t tx_data[led_matrix.total_devices];
-	tx_data[1] = 0x0000;
-	tx_data[2] = 0x0000;
-	// blank current and next row leds to turn off transistors before
-	// switching rows (transistors)
-	set_led_matrix_device_cascade_bytes(tx_data, 0
-	                                   , led_matrix_set_bit_in_row_conversion(row));
-	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
-	                                        , led_matrix.total_devices, NormalCascade);
-	// make sure row is between 0 & 7
-	set_led_matrix_device_cascade_bytes(tx_data, 0
+	uint16_t blank_tx_data[led_matrix.total_devices];
+	blank_tx_data[1] = 0x0000;
+	blank_tx_data[2] = 0x0000;
+	// blank next row LEDs to turn off transistors before switching rows (transistors)
+	// and setting LEDs (also make sure row is between 0 & 7)
+	set_led_matrix_device_cascade_bytes(blank_tx_data, 0
 	                                   , led_matrix_set_bit_in_row_conversion((row + 1) & 0x07));
-	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
+	generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, blank_tx_data
 	                                        , led_matrix.total_devices, NormalCascade);
 }
 
@@ -85,8 +80,6 @@ void led_matrix_update_task(void* pvParameters)
 			generic_led_matrix_transfer_data_cascade(led_matrix.le, &SPI1->DR, tx_data
 			                                        , led_matrix.total_devices, NormalCascade);
 
-			set_led_matrix_device_cascade_bytes(tx_data, 0
-			                                   , led_matrix_set_bit_in_row_conversion(i));
 			reduce_led_matrix_ghosting(i);
 		}
 
