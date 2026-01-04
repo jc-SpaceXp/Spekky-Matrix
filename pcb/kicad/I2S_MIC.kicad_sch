@@ -6,11 +6,142 @@
 	(paper "A5")
 	(title_block
 		(title "I2S Mic")
-		(date "2025-05-21")
-		(rev "v02")
+		(date "2026-01-04")
+		(rev "v03")
 		(comment 4 "Same as Fermion I2S mic breakout board")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint_2Pole"
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_2Pole"
+				(at 0 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "2-polar test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_2Pole_0_1"
+				(circle
+					(center -1.778 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.778 0)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Custom_Symbols:MSM261S4030H0R_I2S_Mic"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -794,6 +925,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 63.5) (xy 172.72 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1810633b-99b7-459a-b815-7d3f4f0e6d0b")
+	)
+	(wire
+		(pts
 			(xy 105.41 58.42) (xy 121.92 58.42)
 		)
 		(stroke
@@ -914,6 +1055,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 63.5) (xy 158.75 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "899b705a-a5ba-4c66-b51d-10ff4a75e452")
+	)
+	(wire
+		(pts
 			(xy 67.31 53.34) (xy 67.31 66.04)
 		)
 		(stroke
@@ -931,6 +1082,16 @@
 			(type default)
 		)
 		(uuid "9121cdcc-b6fd-40a5-9adb-41b98d7bd539")
+	)
+	(wire
+		(pts
+			(xy 168.91 63.5) (xy 172.72 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97a6eaee-ba84-44c7-836d-f2b94fa9921c")
 	)
 	(wire
 		(pts
@@ -1022,6 +1183,17 @@
 			(justify left)
 		)
 		(uuid "02a1a4c5-af7a-4dfc-910e-ab7f3776dd4a")
+	)
+	(hierarchical_label "I2S_SCK"
+		(shape input)
+		(at 156.21 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "86a161b9-698d-45c7-9af4-614bbc9e1feb")
 	)
 	(hierarchical_label "I2S_WS"
 		(shape input)
@@ -1200,6 +1372,72 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/caff8704-a6ad-414b-a861-33b9c55688a3"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDREF")
+		(at 172.72 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3a930273-1c56-4da6-9642-b71f4ad6a8a5")
+		(property "Reference" "#PWR062"
+			(at 172.72 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 172.72 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.72 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 172.72 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , reference supply ground"
+			(at 172.72 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3d73b27b-3778-4b4e-9b11-b6c26c1a30c5")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/caff8704-a6ad-414b-a861-33b9c55688a3"
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -1619,6 +1857,74 @@
 			(project "spekky_matrix"
 				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/caff8704-a6ad-414b-a861-33b9c55688a3"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_2Pole")
+		(at 163.83 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "aea1835e-2d81-421a-93a8-4160e44e6bcc")
+		(property "Reference" "TP60"
+			(at 163.83 61.722 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint_2Pole"
+			(at 163.83 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MicroMELF"
+			(at 163.83 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 163.83 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4171ae31-019a-4ab5-9108-b54a2633ab4e")
+		)
+		(pin "1"
+			(uuid "50f74a11-9b9d-43da-ad3c-25dc1236f626")
+		)
+		(instances
+			(project "spekky_matrix"
+				(path "/e164be4c-4870-49b4-a08f-d162a756edc1/caff8704-a6ad-414b-a861-33b9c55688a3"
+					(reference "TP60")
 					(unit 1)
 				)
 			)
