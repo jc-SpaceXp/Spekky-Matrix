@@ -2723,7 +2723,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric"
 			(at 44.45 111.76 0)
 			(effects
 				(font
@@ -3330,7 +3330,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_MicroMELF"
 			(at 44.45 119.38 0)
 			(effects
 				(font
@@ -3701,7 +3701,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
+		(property "Footprint" "Diode_SMD:D_MicroMELF"
 			(at 44.45 104.14 0)
 			(effects
 				(font
