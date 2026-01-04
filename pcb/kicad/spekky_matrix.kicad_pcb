@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "Spekky Matrix PCB")
-		(date "2025-11-01")
-		(rev "v03")
+		(date "2026-01-04")
+		(rev "v04")
 		(comment 1 "Potentiometer for brightness control, programmable STM32 via SWD connector")
 		(comment 2 "5V from USB, 3V3 from LDO (with ESD protection and pi-filtering)")
 		(comment 3 "Top mount I2S MEMS Mic")
@@ -99900,7 +99900,7 @@
 			)
 		)
 	)
-	(gr_text "Spekky Matrix v03\n8x32 SMD (0603 Imperial) LED Matrix"
+	(gr_text "Spekky Matrix v04\n8x32 SMD (0603 Imperial) LED Matrix"
 		(at 131.5 48.1 0)
 		(layer "F.SilkS")
 		(uuid "1ca836ee-a7c9-4c73-bd01-027bf9dd8d8b")
