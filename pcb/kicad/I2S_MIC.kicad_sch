@@ -879,6 +879,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Can probe the SD and WS pins directly\n(PCBite works handsfree when the GND pin\nis 2 pins away)"
+		(exclude_from_sim no)
+		(at 164.084 75.184 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "61af2436-d2e0-403d-bf56-44015a9db91b")
+	)
 	(junction
 		(at 121.92 40.64)
 		(diameter 0)
