@@ -6,8 +6,8 @@
 	(paper "A5")
 	(title_block
 		(title "Spekky Matrix Schematic")
-		(date "2025-11-01")
-		(rev "v25")
+		(date "2026-01-04")
+		(rev "v26")
 	)
 	(lib_symbols
 		(symbol "Mechanical:MountingHole_Pad"

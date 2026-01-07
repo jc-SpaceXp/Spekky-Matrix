@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "9.0.4"
+      "Version": "9.0.6"
     },
-    "CreationDate": "2025-09-23T11:36:05+01:00"
+    "CreationDate": "2026-01-07T08:25:33+00:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "spekky_matrix",
       "GUID": "7370656b-6b79-45f6-9d61-747269782e6b",
-      "Revision": "v02"
+      "Revision": "v04"
     },
     "Size": {
       "X": 153.05,
