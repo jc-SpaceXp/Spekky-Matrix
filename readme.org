@@ -1,12 +1,17 @@
 ** Spekky Matrix
 A FreeRTOS based project were a spectrum analyser is displayed on a LED matrix board run from a STM32 device
 *** Detailed Description
-A MAX7219 based 8x8 led matrix displays the fast fourier transform (FFT) of
-an incoming audio signal picked up by a microphone. The incoming audio
-is a double buffered DMA signal. The led matrix is driven via the STM32's
-SPI interface. All while internal hardware timers and FreeRTOS are
-responsible for accurate timing e.g. refresh rate of led matrix and data
+A series of cascaded STP16CP05 LED IC drivers forms a 8x32 SMD (0603 Imperial)
+LED matrix. This LED matrix then displays the fast fourier transform (FFT) of
+an incoming audio signal picked up by a I2S digital microphone. The incoming
+audio is a double buffered DMA signal. The LED matrix is driven via the
+STM32's SPI interface. All while internal hardware timers and FreeRTOS are
+responsible for accurate timing e.g. refresh rate of LED matrix and data
 acquisition.
+
+The Manhattan prototype uses a MAX7219 based 8x8 LED matrix breakout board
+which was then cascaded to for a 8x32 LED matrix as well. In the PCB version
+the STP16CP05 LED IC driver replaces the MAX7219 8x8 LED matrix.
 *** Tools
 The following tools are needed to build this project
 - make
@@ -27,6 +32,7 @@ The following tools are needed to build this project
 - [X] Perform FFT on mic data sampled by STM32 with a sine wave test tone (off-target)
 - [X] Verify that LED matrix can be driven along with data capture and processing
 - [X] Perform FFT on captured mic data to drive LED matrix
+- [X] Adapt project to PCB
 *** I2S Mic FFT Data Visualised
 **** Logic Analyser Data (Sine 1kHz Test Tone)
 FFT size = 64, start offset = 0, next offset = 32, FPS = 4
@@ -61,6 +67,12 @@ Note: Gif is played at 2.5x speed, see mp4 for realtime playback and audio of sw
 **** 3D Renders
 [[file:pcb/kicad/pcb_3d_front.png]]
 [[file:pcb/kicad/pcb_3d_back.png]]
+**** PCB v01 Test Patterns
+Only displaying test patterns on PCB as v01 has the I2S footprint in the wrong orientation.
+
+Attempted fix hasn't worked, PCB revision v04 contains fixed I2S footprint and test points.
+[[file:media/pcb_v01_test_pattern_01.jpg]]
+[[file:media/pcb_v01_test_pattern_02.jpg]]
 *** Execution Timeline
 Rough timing of how long each task/sub-task takes to complete
 
