@@ -47,12 +47,13 @@ void setup_hw_i2s(void)
 	// Minimum clock speed needs to be > 1MHz for I2S mics, otherwise low power mode
 	// Setting Fs >= 16 kHz is suitable
 	// Setting clock rate to be as close to 44.1 kHz as possible, SCK = Fs * 64
-	// Fs = Fi2sclk/(32(1)((2*I2SDIV)+ODD) (for no MCLK I2S setting)
+	// Fs = Fi2sclk/(32(2)((2*I2SDIV)+ODD) (for no MCLK I2S setting)
 	// Where Fi2sclk is equal to the APB clock for the SPI/I2S block
 	// which is HCLK * APB prescaler
-	// 32((2*I2SDIV)+ODD) = 16E6/44.1E3 --> 2*I2SDIV+ODD = 0.5E6/44.1E3
-	// for 16MHz, ODD = 1 and I2SDIV = 5 are the closest values possible
-	SPI2->I2SPR |= SPI_I2SPR_ODD | 0x05;
+	// 64((2*I2SDIV)+ODD) = 16E6/44.1E3 --> 2*I2SDIV+ODD = 0.25E6/44.1E3
+	// for 16MHz, ODD = 1 and I2SDIV = 2, Fs = 50KHz
+	//         or ODD = 0 and I2SDIV = 3, Fs = 41.666KHz
+	SPI2->I2SPR |= 0x03;
 	SPI2->I2SCFGR |= SPI_I2SCFGR_I2SMOD; // I2S mode
 	SPI2->I2SCFGR |= SPI_I2SCFGR_CKPOL; // Fermion mic is active low
 	SPI2->I2SCFGR |= LL_I2S_DATAFORMAT_24B; // 24 bit data
